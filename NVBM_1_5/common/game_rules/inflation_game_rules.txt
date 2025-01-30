@@ -1,0 +1,10 @@
+zz_infaltion_reports_gr = {
+	default = inflation_reports_enabled
+
+	inflation_reports_enabled = {
+		
+	}
+	inflation_reports_disabled = {
+	
+	}
+}

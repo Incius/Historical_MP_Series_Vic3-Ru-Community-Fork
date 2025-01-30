@@ -1,0 +1,13 @@
+{
+  "name" : "NVBM(1.8 lite)",
+  "id" : "",
+  "version" : "3.1",
+  "supported_game_version" : "1.8.*",
+  "picture": "thumbnail.png",
+  "short_description" : "",
+  "tags" : ["Graphics","Economy And Buildings","Fixes"],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}

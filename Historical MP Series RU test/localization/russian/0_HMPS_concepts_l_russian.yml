@@ -1,0 +1,13 @@
+﻿l_russian:
+ 
+ concept_literacy:0 "Уровень образовваности"
+ concept_literate:0 "Образован"
+ concept_literacy_desc:2 "Уровень образованности в [concept_pop]. Определенные [Concept('concept_profession', '$concept_professions$')] требуют $concept_literacy$ чем другие, ограничивая [concept_pop_qualifications] для $concept_pops$ в других $concept_professions$ если их $concept_literacy$ недостаточно высока. Вы можете инвестировать в [SelectLocalization(GetPlayer.IsValid,'concept_literacy_desc_added','Education')] чтобы повысить $concept_literacy$ в вашем $concept_population$ со временем."
+
+ REPUDIATE_OBLIGATION_EFFECTS:0 "- Сильно ухудшает [concept_relations] с [concept_country] чью [concept_obligation] мы отвергли \n- Понижены [concept_relations] со всеми страннами перед которыми мы имеем [concept_obligation]\n- 
+ Уменьшает [concept_prestige] & [concept_influence], повышает [concept_budget_interest] выплаты, и снижает спад [concept_infamy] на #v 10#! years, в течении этого времени [Concept('concept_country','$concept_countries$')] будут считать [Concept('concept_obligation', '$concept_obligations$')] от нас низкими по значимости"
+ 
+ DIPLOMATIC_ACCEPTANCE_WAR_ALLY:0 "Военные союзники"
+ 
+ POP_POLLUTED_STATE: "[Concept('concept_pop', '$concept_pops$')] живущих в [Concept('concept_state', '$concept_states$')] с высоким [concept_pollution_impact]"
+ POP_LOW_SOL: "[Concept('concept_pop', '$concept_pops$')] живущих в [Concept('concept_state', '$concept_states$')] с высоким[concept_expected_sol]"

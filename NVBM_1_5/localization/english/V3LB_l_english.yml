@@ -1,0 +1,13 @@
+﻿l_english:
+
+ V3LB_war_events.3.t:0 "The Forever Victorious Army"
+ V3LB_war_events.3.d:0 "Our Army has won #bold #green 3#!#! consecutive battles, not losing a single one, which raised the morale of the [SCOPE.sCountry('root_scope').GetAdjective] nation and increased of the people's support and confidence in our [SCOPE.gsInterestGroup('armed_forces_scope').GetName]."
+ V3LB_war_events.3.a:0 "Hurray!"
+ V3LB_war_events.3.f:0 "“ Be ashamed to die until you have won some victory for the glorious [SCOPE.sCountry('root_scope').GetAdjective] nation! “"
+
+NO_GOOD_SHORTAGES:0 "No shortages"
+OTLINER_SHORTAGES:0 "Shortages"
+
+ japan_military_reward_nvbm: "Japanese Military Reform"
+ japan_diplomatic_reward_nvbm: "Japanese Ambassadors"
+ japan_production_reward_nvbm: "Modern Japanese Railway"

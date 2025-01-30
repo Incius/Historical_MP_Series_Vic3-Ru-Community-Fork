@@ -1,0 +1,2058 @@
+recalculate_inflation = {
+	set_variable = {
+		name = inflation
+		value = 0
+	}
+	set_variable = {
+		name = currency_standard_inflation
+		value = 0
+	}
+	set_variable = {
+		name = inflation_from_central_policy
+		value = 0
+	}
+	remove_modifier = modifier_inflation
+	remove_modifier = modifier_deflation
+	remove_modifier = modifier_inflation_minor
+	remove_modifier = modifier_deflation_minor
+	remove_modifier = modifier_inflation_gdp_growth
+	remove_modifier = modifier_inflation_minor_over10
+	remove_modifier = modifier_inflation_over10
+	clear_variable_list = goods_shortages_inflation
+	clear_variable_list = goods_expensive_inflation
+	clear_variable_list = goods_cheaper_inflation
+	clear_variable_list = goods_vital_shortages_inflation
+	clear_variable_list = goods_vital_expensive_inflation
+	set_variable = {
+		name = inflation_decrease_one_varr
+		value = -1
+	}
+	set_variable = {
+		name = inflation_increase_one_varr
+		value = 1
+	}
+	market = {
+		if = {
+			limit = {
+				mg:ammunition = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:ammunition
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:small_arms = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:small_arms
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:grain = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:grain
+				}
+				add_to_variable_list = {
+					name = goods_vital_shortages_inflation
+					target = g:grain
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:fish = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:fish
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:fabric = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:fabric
+				}
+				add_to_variable_list = {
+					name = goods_vital_shortages_inflation
+					target = g:fabric
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:wood = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:wood
+				}
+				add_to_variable_list = {
+					name = goods_vital_shortages_inflation
+					target = g:wood
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:groceries = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:groceries
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:clothes = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:clothes
+				}
+				add_to_variable_list = {
+					name = goods_vital_shortages_inflation
+					target = g:clothes
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:furniture = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:furniture
+				}
+				add_to_variable_list = {
+					name = goods_vital_shortages_inflation
+					target = g:furniture
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:paper = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:paper
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:silk = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:silk
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:dye = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:dye
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:sulfur = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:sulfur
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:coal = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:coal
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:iron = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:iron
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:lead = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:lead
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:hardwood = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:hardwood
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:rubber = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:rubber
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:oil = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:oil
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:engines = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:engines
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:steel = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:steel
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:glass = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:glass
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:fertilizer = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:fertilizer
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:tools = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:tools
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:explosives = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:explosives
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:porcelain = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:porcelain
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:meat = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:meat
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:fruit = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:fruit
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:liquor = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:liquor
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:wine = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:wine
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:tea = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:tea
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:coffee = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:coffee
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:sugar = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:sugar
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:tobacco = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:tobacco
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:luxury_clothes = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:luxury_clothes
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:radios = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:radios
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:telephones = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:telephones
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:automobiles = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:automobiles
+				}
+			}
+		}
+		#if = {
+		#	limit = {
+		#		mg:opium = {
+		#			market_goods_has_goods_shortage = yes
+		#		}
+		#	}
+		#	root = {
+		#		add_to_variable_list = {
+		#			name = goods_shortages_inflation
+		#			target = g:opium
+		#		}
+		#	}
+		#}
+		if = {
+			limit = {
+				mg:luxury_furniture = {
+					market_goods_has_goods_shortage = yes
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_shortages_inflation
+					target = g:luxury_furniture
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:ammunition = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:ammunition
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:small_arms = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:small_arms
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:grain = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:grain
+				}
+				add_to_variable_list = {
+					name = goods_vital_expensive_inflation
+					target = g:grain
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:fish = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:fish
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:fabric = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:fabric
+				}
+				add_to_variable_list = {
+					name = goods_vital_expensive_inflation
+					target = g:fabric
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:wood = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:wood
+				}
+				add_to_variable_list = {
+					name = goods_vital_expensive_inflation
+					target = g:wood
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:groceries = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:groceries
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:clothes = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:clothes
+				}
+				add_to_variable_list = {
+					name = goods_vital_expensive_inflation
+					target = g:clothes
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:furniture = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:furniture
+				}
+				add_to_variable_list = {
+					name = goods_vital_expensive_inflation
+					target = g:furniture
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:paper = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:paper
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:silk = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:silk
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:dye = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:dye
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:sulfur = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:sulfur
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:coal = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:coal
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:iron = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:iron
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:lead = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:lead
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:hardwood = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:hardwood
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:rubber = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:rubber
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:oil = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:oil
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:engines = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:engines
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:steel = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:steel
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:glass = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:glass
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:fertilizer = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:fertilizer
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:tools = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:tools
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:explosives = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:explosives
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:porcelain = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:porcelain
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:meat = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:meat
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:fruit = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:fruit
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:liquor = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:liquor
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:wine = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:wine
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:tea = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:tea
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:coffee = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:coffee
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:sugar = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:sugar
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:tobacco = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:tobacco
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:luxury_clothes = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:luxury_clothes
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:radios = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:radios
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:telephones = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:telephones
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:automobiles = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:automobiles
+				}
+			}
+		}
+		#if = {
+		#	limit = {
+		#		mg:opium = {
+		#			market_goods_pricier > 0.3
+		#		}
+		#	}
+		#	root = {
+		#		add_to_variable_list = {
+		#			name = goods_expensive_inflation
+		#			target = g:opium
+		#		}
+		#	}
+		#}
+		if = {
+			limit = {
+				mg:luxury_furniture = {
+					market_goods_pricier > 0.3
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_expensive_inflation
+					target = g:luxury_furniture
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:ammunition = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:ammunition
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:small_arms = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:small_arms
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:grain = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:grain
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:fish = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:fish
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:fabric = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:fabric
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:wood = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:wood
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:groceries = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:groceries
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:clothes = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:clothes
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:furniture = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:furniture
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:paper = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:paper
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:silk = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:silk
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:dye = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:dye
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:sulfur = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:sulfur
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:coal = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:coal
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:iron = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:iron
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:lead = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:lead
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:hardwood = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:hardwood
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:rubber = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:rubber
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:oil = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:oil
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:engines = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:engines
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:steel = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:steel
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:glass = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:glass
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:fertilizer = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:fertilizer
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:tools = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:tools
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:explosives = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:explosives
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:porcelain = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:porcelain
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:meat = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:meat
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:fruit = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:fruit
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:liquor = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:liquor
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:wine = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:wine
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:tea = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:tea
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:coffee = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:coffee
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:sugar = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:sugar
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:tobacco = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:tobacco
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:luxury_clothes = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:luxury_clothes
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:radios = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:radios
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:telephones = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:telephones
+				}
+			}
+		}
+		if = {
+			limit = {
+				mg:automobiles = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:automobiles
+				}
+			}
+		}
+		#if = {
+		#	limit = {
+		#		mg:opium = {
+		#			market_goods_cheaper > 0.4
+		#		}
+		#	}
+		#	root = {
+		#		add_to_variable_list = {
+		#			name = goods_cheaper_inflation
+		#			target = g:opium
+		#		}
+		#	}
+		#}
+		if = {
+			limit = {
+				mg:luxury_furniture = {
+					market_goods_cheaper > 0.4
+				}
+			}
+			root = {
+				add_to_variable_list = {
+					name = goods_cheaper_inflation
+					target = g:luxury_furniture
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			capital = {
+				any_scope_building = {
+					is_building_type = building_central_bank
+					has_active_production_method = pm_issue_new_banknotes
+				}
+			}
+		}
+		set_variable = {
+			name = inflation_from_central_policy
+			value = 5
+		}
+		change_variable = {
+			name = inflation
+			add = 5
+		}
+	}
+	if = {
+		limit = {
+			capital = {
+				any_scope_building = {
+					is_building_type = building_central_bank
+					has_active_production_method = pm_reduce_banknotes
+				}
+			}
+		}
+		set_variable = {
+			name = inflation_from_central_policy
+			value = -5
+		}
+		change_variable = {
+			name = inflation
+			subtract = 5
+		}
+	}
+	if = {
+		limit = {
+			has_law = law_type:law_credit_standard
+		}
+		change_variable = {
+			name = currency_standard_inflation
+			add = 3
+		}
+		change_variable = {
+			name = inflation
+			add = 3
+		}
+	}
+	if = {
+		limit = {
+			has_law = law_type:law_gold_standard
+		}
+		change_variable = {
+			name = currency_standard_inflation
+			subtract = 2
+		}
+		change_variable = {
+			name = inflation
+			subtract = 2
+		}
+	}
+	if = {
+		limit = {
+			has_law = law_type:law_silver_standard
+		}
+		change_variable = {
+			name = currency_standard_inflation
+			subtract = 1
+		}
+		change_variable = {
+			name = inflation
+			subtract = 1
+		}
+	}
+	if = {
+		limit = {
+			has_law = law_type:law_metallic_currency
+		}
+		change_variable = {
+			name = currency_standard_inflation
+			add = 5
+		}
+		change_variable = {
+			name = inflation
+			add = 5
+		}
+	}
+	every_in_list = {
+		variable = goods_expensive_inflation
+		root = {
+			change_variable = {
+				name = inflation
+				add = 1
+			}
+		}
+	}
+	every_in_list = {
+		variable = goods_shortages_inflation
+		root = {
+			change_variable = {
+				name = inflation
+				add = 1
+			}
+		}
+	}
+	every_in_list = {
+		variable = goods_vital_expensive_inflation
+		root = {
+			change_variable = {
+				name = inflation
+				add = 1
+			}
+		}
+	}
+	every_in_list = {
+		variable = goods_vital_shortages_inflation
+		root = {
+			change_variable = {
+				name = inflation
+				add = 1
+			}
+		}
+	}
+	every_in_list = {
+		variable = goods_cheaper_inflation
+		root = {
+			change_variable = {
+				name = inflation
+				subtract = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_variable = first_count_gdp_inflation_varr
+			has_variable = secound_count_gdp_inflation_varr
+			var:first_count_gdp_inflation_varr > 100000
+		}
+		set_variable = {
+			name = yearoveryeargrowthinflation_var
+			value = var:gdp_inflation_2_varr
+		}
+		change_variable = {
+			name = yearoveryeargrowthinflation_var
+			subtract = var:gdp_inflation_1_varr
+		}
+		if = {
+			limit = {
+				var:yearoveryeargrowthinflation_var > 0
+			}
+			set_variable = {
+				name = yearoveryeargrowthinflation_1_var
+				value = var:yearoveryeargrowthinflation_var
+			}
+			change_variable = {
+				name = yearoveryeargrowthinflation_1_var
+				divide = var:gdp_inflation_1_varr
+			}
+			change_variable = {
+				name = yearoveryeargrowthinflation_1_var
+				multiply = 10
+			}
+			change_variable = {
+				name = inflation
+				add = var:yearoveryeargrowthinflation_1_var
+			}
+		}
+		else = {
+			set_variable = {
+				name = yearoveryeargrowthinflation_1_var
+				value = 0
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_variable = first_count_gdp_inflation_varr
+				has_variable = secound_count_gdp_inflation_varr
+			}
+		}
+		set_variable = {
+			name = yearoveryeargrowthinflation_1_var
+			value = 0
+		}
+	}
+	if = {
+		limit = {
+			has_variable = yearoveryeargrowthinflation_1_var
+		}
+		add_modifier = {
+			name = modifier_inflation_gdp_growth
+			multiplier = var:yearoveryeargrowthinflation_1_var
+		}
+	}
+	if = {
+		limit = {
+			country_rank > rank_value:minor_power
+		}
+		if = {
+			limit = {
+				var:inflation < 0
+			}
+			add_modifier = {
+				name = modifier_deflation
+				multiplier = var:inflation
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					var:inflation >= 10
+				}
+				add_modifier = {
+					name = modifier_inflation_over10
+					multiplier = var:inflation
+				}
+			}
+			else = {
+				add_modifier = {
+					name = modifier_inflation
+					multiplier = var:inflation
+				}
+			}
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				var:inflation < 0
+			}
+			add_modifier = {
+				name = modifier_deflation_minor
+				multiplier = var:inflation
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					var:inflation >= 10
+				}
+				add_modifier = {
+					name = modifier_inflation_minor_over10
+					multiplier = var:inflation
+				}
+			}
+			else = {
+				add_modifier = {
+					name = modifier_inflation_minor
+					multiplier = var:inflation
+				}
+			}
+		}
+	}
+	calculate_quarterly_change_in_inflation = yes
+}
+calculate_year_over_year_gdp_growth_inflation = { # Calculate year-over-year GDP difference for inflation purposes
+	if = {
+		limit = {
+			has_variable = first_count_gdp_inflation_varr
+			NOT = {
+				has_variable = secound_count_gdp_inflation_varr
+			}
+		}
+		set_variable = {
+			name = gdp_inflation_2_varr
+			value = root.gdp
+		}
+		set_variable = secound_count_gdp_inflation_varr
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_variable = first_count_gdp_inflation_varr
+			}
+		}
+		set_variable = {
+			name = gdp_inflation_1_varr
+			value = root.gdp
+		}
+		set_variable = first_count_gdp_inflation_varr
+	}
+	else_if = {
+		limit = {
+			has_variable = first_count_gdp_inflation_varr
+			has_variable = secound_count_gdp_inflation_varr
+		}
+		set_variable = {
+			name = gdp_inflation_1_varr
+			value = var:gdp_inflation_2_varr
+		}
+		set_variable = {
+			name = gdp_inflation_2_varr
+			value = root.gdp
+		}
+	}
+}
+calculate_quarterly_change_in_inflation = { # Calculate quarterly change in inflation
+	set_variable = {
+		name = change_in_inflation_varr
+		value = 0
+	}
+	if = {
+		limit = {
+			has_variable = first_count_change_inflation_varr
+			NOT = {
+				has_variable = secound_count_change_inflation_varr
+			}
+		}
+		set_variable = {
+			name = change_inflation_2_varr
+			value = var:inflation
+		}
+		set_variable = secound_count_change_inflation_varr
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_variable = first_count_change_inflation_varr
+			}
+		}
+		set_variable = {
+			name = change_inflation_1_varr
+			value = var:inflation
+		}
+		set_variable = first_count_change_inflation_varr
+	}
+	else_if = {
+		limit = {
+			has_variable = first_count_change_inflation_varr
+			has_variable = secound_count_change_inflation_varr
+		}
+		set_variable = {
+			name = change_inflation_1_varr
+			value = var:change_inflation_2_varr
+		}
+		set_variable = {
+			name = change_inflation_2_varr
+			value = var:inflation
+		}
+	}
+	if = {
+		limit = {
+			has_variable = change_inflation_2_varr
+			has_variable = change_inflation_1_varr
+			var:change_inflation_1_varr > var:change_inflation_2_varr
+		}
+		set_variable = {
+			name = change_in_inflation_varr
+			value = var:change_inflation_1_varr
+		}
+		change_variable = {
+			name = change_in_inflation_varr
+			subtract = var:change_inflation_2_varr
+		}
+		if = {
+			limit = {
+				OR = {
+					var:change_in_inflation_varr = 10
+					var:change_in_inflation_varr = -10
+					var:change_in_inflation_varr > 10
+					var:change_in_inflation_varr < -10
+				}
+			}
+			trigger_event = { id = inflation.8 }
+		}
+	}
+	else_if = {
+		limit = {
+			has_variable = change_inflation_2_varr
+			has_variable = change_inflation_1_varr
+			var:change_inflation_1_varr < var:change_inflation_2_varr
+		}
+		set_variable = {
+			name = change_in_inflation_varr
+			value = var:change_inflation_2_varr
+		}
+		change_variable = {
+			name = change_in_inflation_varr
+			subtract = var:change_inflation_1_varr
+		}
+		if = {
+			limit = {
+				OR = {
+					var:change_in_inflation_varr = 10
+					var:change_in_inflation_varr = -10
+					var:change_in_inflation_varr > 10
+					var:change_in_inflation_varr < -10
+				}
+			}
+			trigger_event = { id = inflation.8 }
+		}
+	}
+}
+on_quarterly_pulse = { # A method to implement the 'every quarter' pulse, because there's no on_action pulse for it
+	if = {
+		limit = {
+			NOT = {
+				has_variable = quarterly_pulse
+			}
+		}
+		set_variable = {
+			name = quarterly_pulse
+			value = 0
+		}
+	}
+	if = {
+		limit = {
+			var:quarterly_pulse = 4
+		}
+		set_variable = {
+			name = quarterly_pulse
+			value = 0
+		}
+	}
+	else = {
+		change_variable = {
+			name = quarterly_pulse
+			add = 1
+		}
+	}
+}

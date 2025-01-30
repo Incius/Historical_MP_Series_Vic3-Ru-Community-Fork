@@ -1,0 +1,116 @@
+namespace = sokoto_nvbm
+sokoto_nvbm.2 = {
+	type = country_event
+	placement = ROOT
+
+	title = sokoto_nvbm.2.t
+	desc = sokoto_nvbm.2.d
+	flavor = sokoto_nvbm.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "asia_hinduism_sikhism"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	minor_left_icon = c:SOK
+	#minor_right_icon = scope:doctrine_of_lapse_target_country
+
+	immediate = {
+        random_state = {
+            limit = {
+                owner = {
+                    is_player = no
+					is_country_type = decentralized
+                    OR = { 
+                        capital.region = sr:region_niger
+                        capital.region = sr:region_senegal
+                    }
+                }
+            }
+            save_scope_as = sokoto_domination_target_state_1
+        }
+        random_state = {
+            limit = {
+                owner = {
+                    is_player = no
+					is_country_type = decentralized
+                    OR = { 
+                        capital.region = sr:region_niger
+                        capital.region = sr:region_senegal
+                    }
+                }
+                NOT = { this = scope:sokoto_domination_target_state_1 }
+            }
+            save_scope_as = sokoto_domination_target_state_2
+        }
+        random_state = {
+            limit = {
+                owner = {
+                    is_player = no
+					is_country_type = decentralized
+                    OR = { 
+                        capital.region = sr:region_niger
+                        capital.region = sr:region_senegal
+                    }
+                }
+                NOT = { this = scope:sokoto_domination_target_state_1 }
+                NOT = { this = scope:sokoto_domination_target_state_2 }
+            }
+            save_scope_as = sokoto_domination_target_state_3
+        }
+    }
+
+	option = {
+		name = sokoto_nvbm.2.a
+		default_option = yes
+		scope:sokoto_domination_target_state_1 = {
+			set_state_owner = ROOT
+			add_radicals_in_state = {
+				value = very_large_radicals
+			}
+		}
+		create_incident = {
+			country = scope:sokoto_domination_target_state_1.owner
+			value = 20
+		}
+	}
+
+	option = {
+		name = sokoto_nvbm.2.b
+		trigger = {
+			exists = scope:sokoto_domination_target_state_2
+		}
+		scope:sokoto_domination_target_state_2 = {
+			set_state_owner = ROOT
+			add_radicals_in_state = {
+				value = very_large_radicals
+			}
+		}
+		create_incident = {
+			country = scope:sokoto_domination_target_state_2.owner
+			value = 20
+		}
+	}
+	
+	option = {
+		name = sokoto_nvbm.2.c
+		trigger = {
+			exists = scope:sokoto_domination_target_state_3
+		}
+		scope:sokoto_domination_target_state_3 = {
+			set_state_owner = ROOT
+			add_radicals_in_state = {
+				value = very_large_radicals
+			}
+		}
+		create_incident = {
+			country = scope:sokoto_domination_target_state_3.owner
+			value = 20
+		}
+	}
+}

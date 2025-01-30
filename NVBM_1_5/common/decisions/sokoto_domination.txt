@@ -1,0 +1,42 @@
+﻿sokoto_domination = {
+	is_shown = {
+		c:SOK = {
+			is_player = yes
+		}
+		exists = c:SOK
+		root = c:SOK
+		NOT = { has_variable = sokoto_domination_cooldown }
+	}
+
+	possible = {
+		c:SOK = {
+			is_player = yes
+		}
+		is_at_war = no
+		custom_tooltip = {
+			text = sokoto_domination_cooldown_tt
+			NOT = { has_variable = sokoto_domination_cooldown }
+		}
+		every_scope_country = {
+			AND = {
+				is_country_type = decentralized
+				OR = {
+					capital.region = sr:region_niger
+					capital.region = sr:region_senegal
+				}
+			}
+		}
+	}
+
+	when_taken = {
+		trigger_event = { id = sokoto_nvbm.2 days = 0 popup = yes }
+		set_variable = {
+			name = sokoto_domination_cooldown
+			years = 4
+		}
+	}
+
+	ai_chance = {
+		base = 5
+	}
+}

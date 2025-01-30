@@ -1,0 +1,18 @@
+﻿l_russian:
+
+concept_battalion:0 "Батальон"
+concept_battalions:1 "Батальоны"
+concept_battalions_desc:0 "[concept_unit] вооружённых сил [Concept('concept_country', 'страны')]. Их создают и обеспечивают [SelectLocalization(GetPlayer.IsValid,'concept_battalion_desc_added', 'казармы')], а возглавляют [Concept('concept_general', 'генералы')]."
+concept_battalions_desc_added:0 "[GetBuildingType('building_barracks').GetName]"
+
+concept_interest_group:0 "Заинтересованная группа"
+concept_interest_groups:0 "Заинтересованные группы"
+concept_interest_group_possessive:0 "Заинтересованной группы"
+
+concept_political_movement:0 "Политическое движение"
+concept_political_movement_short:0 "Движение"
+concept_political_movements_short:0 "Движения"
+
+ concept_convoys:0 "Конвои"
+ concept_convoy:0 "Конвой"
+ concept_convoys_desc:2 "Конвои производятся в [SelectLocalization(GetPlayer.IsValid,'concept_convoys_desc_added','портах')] и необходимы для использования [Concept('concept_shipping_lane','маршрутов поставок')]."

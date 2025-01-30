@@ -1,0 +1,307 @@
+﻿pm_scholastic_education = {
+	texture = "gfx/interface/icons/production_method_icons/scholastic_education.dds"
+	
+	country_modifiers = {
+		workforce_scaled = { 
+			country_weekly_innovation_add = 1.5
+		}	
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 3
+			goods_input_services_add = 10
+		}	
+	
+		level_scaled = {
+			building_employment_clerks_add = 1000
+			building_employment_laborers_add = 1000
+		}
+	}
+	
+}
+
+pm_philosophy_department = {
+	texture = "gfx/interface/icons/production_method_icons/philosophy_dept.dds"
+	
+	unlocking_technologies = {
+		dialectics
+	}
+	
+	country_modifiers = {
+		workforce_scaled = { 
+			country_weekly_innovation_add = 3
+		}	
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 5
+			goods_input_services_add = 15
+		}
+		
+		level_scaled = {
+			building_employment_clerks_add = 1500
+			building_employment_laborers_add = 1000
+		}					
+	}
+	
+}
+
+pm_analytical_philosophy_department = {
+	texture = "gfx/interface/icons/production_method_icons/analytical_philosophy_department.dds"
+	
+	unlocking_technologies = {
+		philosophical_pragmatism
+	}
+	
+	country_modifiers = {
+		workforce_scaled = { 
+			country_weekly_innovation_add = 7
+		}	
+	}
+
+	building_modifiers = {
+		workforce_scaled = { 
+			goods_input_paper_add = 10
+			goods_input_services_add = 25
+		}
+		
+		level_scaled = {
+			building_employment_clerks_add = 2000
+			building_employment_laborers_add = 500
+		}					
+	}
+	
+}	
+
+
+pm_secular_academia = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_academics.dds"
+	
+	disallowing_laws = {
+		law_state_religion
+	}
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 1000
+		}
+	}			
+}
+
+pm_school_clergy = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
+	
+	disallowing_laws = {
+		law_total_separation
+		law_state_atheism
+	}	
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clergymen_add = 500
+			building_employment_academics_add = 500
+		}
+	}
+	state_modifiers = {
+		level_scaled = {
+			state_conversion_mult = 0.05
+			state_assimilation_mult = 0.05
+		}
+	}			
+}			
+
+pm_school_private = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_aristocrats.dds"
+
+	pollution_generation = 1
+
+	disallowing_laws = {
+		law_council_republic
+		law_command_economy
+	}
+
+	unlocking_laws = {
+		law_private_schools
+		law_public_schools
+	}
+
+	unlocking_technologies = {
+		academia
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 100
+		}
+	}
+	state_modifiers = {
+		level_scaled = {
+			state_education_access_wealth_add = 0.02
+		}
+	}
+}
+pm_school_public = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_bureacrats.dds"
+		
+	unlocking_technologies = {
+		empiricism
+	}
+
+	unlocking_laws = {
+		law_public_schools
+	}
+
+	pollution_generation = 1
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 7
+			goods_input_services_add = 10
+			goods_input_groceries_add = 10
+		}
+		level_scaled = {
+			building_employment_bureaucrats_add = 100
+		}
+	}
+	state_modifiers = {
+		level_scaled = {
+			state_education_access_add = 0.02
+		}
+	}
+}
+pm_school_primary = {
+	texture = "gfx/interface/icons/production_method_icons/primaryschool.dds"
+
+	pollution_generation = 1
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_services_add = 15
+			goods_input_paper_add = 5
+		}
+
+		level_scaled = {
+			building_employment_academics_add = 3500
+			building_employment_clerks_add = 300
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_pop_qualifications_mult = 0.1
+			state_education_access_add = 0.03
+		}
+	}
+}
+pm_school_secondary = {
+	texture = "gfx/interface/icons/production_method_icons/secondaryschool.dds"
+
+	pollution_generation = 1
+
+	unlocking_technologies = {
+		dialectics
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_services_add = 20
+			goods_input_paper_add = 7
+		}
+
+		level_scaled = {
+			building_employment_academics_add = 4500
+			building_employment_clerks_add = 200
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_pop_qualifications_mult = 0.15
+			state_education_access_add = 0.04
+		}
+	}
+}
+pm_school_highschool = {
+	texture = "gfx/interface/icons/production_method_icons/highschool.dds"
+
+	pollution_generation = 1
+
+	unlocking_technologies = {
+		philosophical_pragmatism
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_services_add = 30
+			goods_input_paper_add = 15
+		}
+
+		level_scaled = {
+			building_employment_academics_add = 5500
+			building_employment_clerks_add = 100
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_pop_qualifications_mult = 0.2
+			state_education_access_add = 0.05
+		}
+	}
+}
+pm_school_community_college = {
+	texture = "gfx/interface/icons/production_method_icons/community_college.dds"
+
+	pollution_generation = 1
+
+	unlocking_technologies = {
+		psychoanalysis
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_services_add = 40
+			goods_input_paper_add = 28
+		}
+
+		level_scaled = {
+			building_employment_academics_add = 6500
+			building_employment_clerks_add = 50
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_pop_qualifications_mult = 0.25
+			state_education_access_add = 0.07
+		}
+	}
+}
+pm_secular_academia = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_academics.dds"
+	
+	disallowing_laws = {
+		law_state_religion
+	}
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 200
+		}
+	}			
+}
+pm_privately_owned_schooling = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 100
+		}
+		unscaled = {
+			building_capitalists_shares_add = 5
+		}
+	}
+}

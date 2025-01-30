@@ -1,0 +1,38 @@
+﻿l_russian:
+ KZH:0 "Младший жуз"
+ KZH_ADJ:0 "Младшежузск"
+ OZH:0 "Средний жуз"
+ OZH_ADJ:0 "Среднежузск"
+ UZH:0 "Старший жуз"
+ UZH_ADJ:0 "Старшежузск"
+
+ dyn_c_kazakh_republic:0 "Казахская республика"
+ dyn_c_kazakh_republic_adj:0 "Казахск"
+ dyn_c_kazakh_khanate:0 "Казахский каганат"
+ dyn_c_kazakh_khanate_adj:0 "Казахск"
+ dyn_c_kazakh_alash_autonomy:0 "Алашская Автономия"
+ dyn_c_kazakh_alash_autonomy_adj:0 "Алашск"
+ dyn_c_united_netherlands_adj:0 "Нидерландск"
+
+RU_ML_ADJ_dyn_c_united_netherlands:0 "Нидерландск"
+
+RU_ML_ADJ_KZH:0 "Младшежусск"
+RU_CL_DP_KZH:0 "Младшему Жузу"
+RU_CL_TP_KZH:0 "Младшим Жузом"
+RU_CL_RP_KZH:0 "Младшего Жуза"
+RU_CL_PP_KZH:0 "Младшем Жузе"
+RU_CL_VP_KZH:0 "Младший Жуз"
+
+RU_ML_ADJ_OZH:0 "Среднежусск"
+RU_CL_DP_OZH:0 "Среднему Жузу"
+RU_CL_TP_OZH:0 "Средним Жузом"
+RU_CL_RP_OZH:0 "Среднего Жуза"
+RU_CL_PP_OZH:0 "Среднем Жузе"
+RU_CL_VP_OZH:0 "Средний Жуз"
+
+RU_ML_ADJ_UZH:0 "Старшежусск"
+RU_CL_DP_UZH:0 "Старшему Жузу"
+RU_CL_TP_UZH:0 "Старшим Жузом"
+RU_CL_RP_UZH:0 "Старшего Жуза"
+RU_CL_PP_UZH:0 "Старшем Жузе"
+RU_CL_VP_UZH:0 "Старший Жуз"

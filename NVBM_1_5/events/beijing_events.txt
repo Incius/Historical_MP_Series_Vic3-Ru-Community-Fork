@@ -1,0 +1,176 @@
+namespace = peking_convention
+
+peking_convention.2 = {
+	type = country_event
+	placement = ROOT
+
+	title = peking_convention.2.t
+	desc = peking_convention.2.d
+	flavor = peking_convention.2.f
+	
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_capitalists_meeting.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/capitalists_meeting"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	
+	
+	duration = 3
+	
+	immediate = {
+		s:STATE_JETISY = {
+			random_scope_state = {
+				limit = {
+					exists = c:CHI
+					owner = {
+						c:CHI = THIS
+					}
+				}
+				save_scope_as = jetisy_scope
+			}
+		}
+		s:STATE_OUTER_MANCHURIA = {
+			random_scope_state = {
+				limit = {
+					exists = c:CHI
+					owner = {
+						c:CHI = THIS
+					}
+				}
+				save_scope_as = outer_manchuria_scope
+			}
+		}
+		s:STATE_TUVA = {
+			random_scope_state = {
+				limit = {
+					exists = c:CHI
+					owner = {
+						c:CHI = THIS
+					}
+				}
+				save_scope_as = tuva_scope
+			}
+		}
+		s:STATE_TOMSK = {
+			random_scope_state = {
+				limit = {
+					exists = c:CHI
+					owner = {
+						c:CHI = THIS
+					}
+				}
+				save_scope_as = tuva_scope
+			}
+		}
+		s:STATE_KIRGHIZIA = {
+			random_scope_state = {
+				limit = {
+					exists = c:CHI
+					owner = {
+						c:CHI = THIS
+					}
+				}
+				save_scope_as = tuva_scope
+			}
+		}
+	}
+	
+	option = {
+		name = peking_convention.2.a
+		default_option = yes
+		s:STATE_JETISY = {
+			add_homeland = russian
+			random_scope_state = {
+				limit = {
+					exists = c:CHI
+					owner = {
+						c:CHI = THIS
+					}
+				}
+			set_state_owner = c:RUS
+			}
+		}
+		s:STATE_OUTER_MANCHURIA = {
+			add_homeland = russian
+			random_scope_state = {
+				limit = {
+					exists = c:CHI
+					owner = {
+						c:CHI = THIS
+					}
+				}
+			set_state_owner = c:RUS
+			}
+		}
+		s:STATE_TUVA = {
+			add_homeland = russian
+			random_scope_state = {
+				limit = {
+					exists = c:CHI
+					owner = {
+						c:CHI = THIS
+					}
+				}
+			set_state_owner = c:RUS
+			}
+		}
+		s:STATE_JETISY = {
+			add_homeland = russian
+			random_scope_state = {
+				limit = {
+					exists = c:CHI
+					owner = {
+						c:CHI = THIS
+					}
+				}
+			set_state_owner = c:RUS
+			}
+		}
+		s:STATE_OUTER_MANCHURIA = {
+			add_homeland = russian
+			random_scope_state = {
+				limit = {
+					exists = c:CHI
+					owner = {
+						c:CHI = THIS
+					}
+				}
+			set_state_owner = c:RUS
+			}
+		}
+		s:STATE_TOMSK = {
+			add_homeland = russian
+			random_scope_state = {
+				limit = {
+					exists = c:CHI
+					owner = {
+						c:CHI = THIS
+					}
+				}
+			set_state_owner = c:RUS
+			}
+		}
+		s:STATE_KIRGHIZIA = {
+			add_homeland = russian
+			random_scope_state = {
+				limit = {
+					exists = c:CHI
+					owner = {
+						c:CHI = THIS
+					}
+				}
+			set_state_owner = c:RUS
+			}
+		}
+	}
+	option = {
+		name = peking_convention.2.b
+		change_relations = {
+			country = c:CHI
+			value = -50
+	}
+}
+}

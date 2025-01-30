@@ -1,0 +1,40 @@
+﻿l_english:
+ #TUTORIAL: Replace the text between the strings (" ") with the journal entry's name\title
+ je_minor_defense_buff:0 "Strugle for defense"
+ je_minor_defense_buff_goal:0 "We waited patiently enough"
+ je_minor_defense_buff_reason:0 "We are encircled by aggressive countries! We have to do something!"
+
+je_italy_unity_buff:0 "Avanti Savoia!"
+je_italy_unity_buff_reason:0 ""Avanti Savoia!" (English: Go Savoy!) was the patriotic battle cry of the Italian Royal Army during World War I and to a lesser extent, World War II. Infantrymen would scream this motto when launching an offensive attack, namely against the Austro-Hungarians."
+
+je_new_world_spa:0 "Reconquista!"
+je_new_world_spa_reason:0 "The Reconquista was a centuries-long series of battles by Christian states to expel the Muslims (Moors), who from the 8th century ruled most of the Iberian Peninsula. Now it is time for a new Reconquista! We shall take back what is ours. By force, if needed..."
+
+je_china_education_debuff:0 "Chinese educational program"
+je_china_education_debuff_reason:0 "In order to eliminate total illiteracy, we must first give rights to our own citizens. The concepts of human rights and labor collectives look promising."
+
+je_india_education_debuff:0 "Hindu educational program"
+je_india_education_debuff_reason:0 "In order to eliminate total illiteracy, we must first give rights to our own citizens. The concepts of human rights and labor collectives look promising."
+
+je_sick_man_education_goal:2 "Increase the literacy rate of your people by 15%."
+je_brazil_argentina:0 "Pearl of America"
+je_brazil_argentina_reason:0 "In the absence of Argentina in Patagonia, Brazil has established its power in the region. Now the whole world knows that South America is the New Beacon of Freedom"
+
+je_beijing_convention:0 "Convention of Peking"
+je_beijing_convention_reason:0 "The treaty also confirmed the cession the entirety of what is now known as Outer Manchuria to the Russian Empire, with Russia achieving the strategic goal of sealing off Chinese access to the Sea of Japan. It granted Russia the right to the Ussuri krai, a part of the modern day Primorye, the territory that corresponded with the ancient Manchu province of East Tartary. See Treaty of Aigun (1858), Treaty of Nerchinsk (1689) and Sino-Russian border conflicts."
+
+je_conquer_far_east:0 "Conquest of Primorye and Southern Siberia"
+je_conquer_far_east_reason:0 "If this region could not be taken over by peace, then we only have one last argument left..."
+
+je_guayana_south_america:0 "Drive Europeans out of Guayana"
+je_guayana_south_america_reason:0 "Liberation of South America is almost complete, just a little bit more!"
+
+prussian_reform_action:0 "Von Moltke's Reform"
+prussian_reform_action_reason:0 "In an effort to achieve greater readiness of the army, he simplified the transition of the army from civilian to martial law by reducing the time required for this (territorial staffing system). The most accurate supply of each military unit with all the materiel necessary for wartime, the most carefully calculated military horse and military carriage duty, and, finally, the pedantic calculation of all military mobilization work by the hour - this is what Moltke sought and achieved."
+
+je_arab_unity_buff:0 "Unite the tribes"
+je_arab_unity_buff_reason:0 "After long wanderings in the desert, the tribes of Arabia must stand under a single banner, or they will be destined to perish in the sands..."
+ara_unite_je:0 "We have to form Arabia"
+
+je_foa_unity_buff:0 "United and Free"
+je_foa_unity_buff_reason:0 "Bolivar's dream have to be achieved! Forward!"

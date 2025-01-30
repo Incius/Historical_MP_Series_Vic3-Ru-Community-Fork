@@ -1,0 +1,282 @@
+namespace = religion_country
+
+
+religion_country.1 = {
+	type = country_event
+	hidden = yes
+	placement = root
+	duration = 1
+	
+	trigger = {
+	}
+	
+	immediate = {
+	
+		if = {
+			limit = {
+				AND = {
+					religion = rel:catholic
+					NOT = {
+						OR = {
+							has_law = law_type:law_freedom_of_conscience
+							has_law = law_type:law_total_separation
+							has_law = law_type:law_state_atheism
+							has_modifier = catholic_buff
+						}
+					}
+				}
+			}
+			add_modifier = {
+				name = catholic_buff
+				months = 11
+			}
+		}
+		else_if = {
+			limit = {
+				AND = {
+					religion = rel:sunni
+					NOT = {
+						OR = {
+							has_law = law_type:law_freedom_of_conscience
+							has_law = law_type:law_total_separation
+							has_law = law_type:law_state_atheism
+							has_modifier = sunni_buff
+						}
+					}
+				}
+			}
+			add_modifier = {
+				name = sunni_buff
+				months = 11
+			}
+		}	
+		else_if = {
+			limit = {
+				AND = {
+					religion = rel:oriental_orthodox
+					NOT = {
+						OR = {
+							has_law = law_type:law_freedom_of_conscience
+							has_law = law_type:law_total_separation
+							has_law = law_type:law_state_atheism
+							has_modifier = coptic_buff
+						}
+					}
+				}
+			}
+			add_modifier = {
+				name = coptic_buff
+				months = 11
+			}
+		}
+		else_if = {
+			limit = {
+				AND = {
+					religion = rel:gelugpa
+					NOT = {
+						OR = {
+							has_law = law_type:law_freedom_of_conscience
+							has_law = law_type:law_total_separation
+							has_law = law_type:law_state_atheism
+							has_modifier = gelugpa_buff
+						}
+					}
+				}
+			}
+			add_modifier = {
+				name = gelugpa_buff
+				months = 11
+			}
+		}
+		else_if = {
+			limit = {
+				AND = {
+					religion = rel:hindu
+					NOT = {
+						OR = {
+							has_law = law_type:law_freedom_of_conscience
+							has_law = law_type:law_total_separation
+							has_law = law_type:law_state_atheism
+							has_modifier = hindu_buff
+						}
+					}
+				}
+			}
+			add_modifier = {
+				name = hindu_buff
+				months = 11
+			}
+		}
+		else_if = {
+			limit = {
+				AND = {
+					religion = rel:jewish
+					NOT = {
+						OR = {
+							has_law = law_type:law_freedom_of_conscience
+							has_law = law_type:law_total_separation
+							has_law = law_type:law_state_atheism
+							has_modifier = jewish_buff
+						}
+					}
+				}
+			}
+			add_modifier = {
+				name = jewish_buff
+				months = 11
+			}
+		}
+		else_if = {
+			limit = {
+				AND = {
+					religion = rel:mahayana
+					NOT = {
+						OR = {
+							has_law = law_type:law_freedom_of_conscience
+							has_law = law_type:law_total_separation
+							has_law = law_type:law_state_atheism
+							has_modifier = mahayana_buff
+						}
+					}
+				}
+			}
+			add_modifier = {
+				name = mahayana_buff
+				months = 11
+			}
+		}
+		else_if = {
+			limit = {
+				AND = {
+					religion = rel:orthodox
+					NOT = {
+						OR = {
+							has_law = law_type:law_freedom_of_conscience
+							has_law = law_type:law_total_separation
+							has_law = law_type:law_state_atheism
+							has_modifier = orthodox_buff
+						}
+					}
+				}
+			}
+			add_modifier = {
+				name = orthodox_buff
+				months = 11
+			}
+		}
+		else_if = {
+			limit = {
+				AND = {
+					religion = rel:protestant
+					NOT = {
+						OR = {
+							has_law = law_type:law_freedom_of_conscience
+							has_law = law_type:law_total_separation
+							has_law = law_type:law_state_atheism
+							has_modifier = protestant_buff
+						}
+					}
+				}
+			}
+			add_modifier = {
+				name = protestant_buff
+				months = 11
+			}
+		}
+		else_if = {
+			limit = {
+				AND = {
+					religion = rel:shiite
+					NOT = {
+						OR = {
+							has_law = law_type:law_freedom_of_conscience
+							has_law = law_type:law_total_separation
+							has_law = law_type:law_state_atheism
+							has_modifier = shiite_buff
+						}
+					}
+				}
+			}
+			add_modifier = {
+				name = shiite_buff
+				months = 11
+			}
+		}
+		else_if = {
+			limit = {
+				AND = {
+					religion = rel:shinto
+					NOT = {
+						OR = {
+							has_law = law_type:law_freedom_of_conscience
+							has_law = law_type:law_total_separation
+							has_law = law_type:law_state_atheism
+							has_modifier = shinto_buff
+						}
+					}
+				}
+			}
+			add_modifier = {
+				name = shinto_buff
+				months = 11
+			}
+		}
+		else_if = {
+			limit = {
+				AND = {
+					religion = rel:sikh
+					NOT = {
+						OR = {
+							has_law = law_type:law_freedom_of_conscience
+							has_law = law_type:law_total_separation
+							has_law = law_type:law_state_atheism
+							has_modifier = sikh_buff
+						}
+					}
+				}
+			}
+			add_modifier = {
+				name = sikh_buff
+				months = 11
+			}
+		}
+		else_if = {
+			limit = {
+				AND = {
+					religion = rel:theravada
+					NOT = {
+						OR = {
+							has_law = law_type:law_freedom_of_conscience
+							has_law = law_type:law_total_separation
+							has_law = law_type:law_state_atheism
+							has_modifier = theravada_buff
+						}
+					}
+				}
+			}
+			add_modifier = {
+				name = theravada_buff
+				months = 11
+			}
+		}
+		else_if = {
+			limit = {
+				AND = {
+					religion = rel:animist
+					NOT = {
+						OR = {
+							has_law = law_type:law_freedom_of_conscience
+							has_law = law_type:law_total_separation
+							has_law = law_type:law_state_atheism
+							has_modifier = animist_buff
+						}
+					}
+				}
+			}
+			add_modifier = {
+				name = animist_buff
+				months = 11
+			}
+		}										
+	}
+}

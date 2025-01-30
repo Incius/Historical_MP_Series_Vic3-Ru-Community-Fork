@@ -1,0 +1,16 @@
+﻿l_english:
+ doctrine_of_lapse_brit:0 "Consolidate the Raj"
+ doctrine_of_lapse_brit_desc:0 "We can incorporate various princely states into our Crown Jewel"
+ realpolitick:0 "Realpolitick"
+ realpolitick_desc:1 "Intenrational relations are a matter of reason and profit, not ethics or ideology"
+ notification_zz_colony_development_major_name:0 "[SCOPE.sState('colony_notification_state').GetName] has become a @major_colony_icon!#I Major Colony#!"
+ notification_zz_colony_development_major_desc:0 "[SCOPE.sState('colony_notification_state').GetName] has grown sufficiently and is now classified as  @major_colony_icon!#I Major Colony#! granting us a [concept_claim] on the entirety of [SCOPE.sState('colony_notification_state').GetStateRegion.GetName]."
+ notifiaction_zz_colony_development_major_tooltip:0 "#header $notification_zz_colony_development_major_name$#!\n$TOOLTIP_DELIMITER$\n$notification_zz_colony_development_major_desc$"
+ notification_zz_colony_development_major_other_name:0 "[SCOPE.sCountry('colonizer_notification_country').GetFlagTextIcon] [SCOPE.sState('colony_notification_state').GetName] became a @major_colony_icon!#I Major Colony#!"
+ notification_zz_colony_development_major_other_desc:0 "[SCOPE.sCountry('colonizer_notification_country').GetFlagTextIcon] [SCOPE.sState('colony_notification_state').GetName] has grown sufficiently enough to be classified as a @major_colony_icon!#I Major Colony#! granting [SCOPE.sCountry('colonizer_notification_country').GetName] a [concep... <skipped 96 characters> ...
+ notification_zz_colony_development_major_other_tooltip:0 "#header $notification_zz_colony_development_major_other_name$\n$TOOLTIP_DELIMITER$\n$notification_zz_colony_development_major_other_desc$"
+ pm_wooden_buildings_vanilla:0 "Wooden Buildings"
+ pm_iron_frame_buildings_vanilla:0 "Iron-Frame Buildings"
+ pm_steel_frame_buildings_vanilla:0 "Steel-Frame Buildings"
+ pm_arc_welded_buildings_vanilla:0 "Arc-Welded Buildings"
+ ngf_birth_modifier:0 "German Nationalism"

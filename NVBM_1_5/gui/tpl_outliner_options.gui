@@ -1,0 +1,29 @@
+template "tpl_outliner_options" {
+
+	using = tpl_outliner_options_general
+
+	using = tpl_outliner_options_buildings
+	using = tpl_outliner_options_commander
+	using = tpl_outliner_options_diplomacy
+	using = tpl_outliner_options_fronts
+	using = tpl_outliner_options_goods
+	using = tpl_outliner_options_ig
+	using = tpl_outliner_options_markets
+	using = tpl_outliner_options_states
+	using = tpl_outliner_options_diplomaticplay
+}
+
+template "tpl_outliner_options_general" {
+	option_row = {
+		blockoverride "text" {
+			text = "BETTEROUTLINER_OPTION_TWOCOLUMN"
+		}
+
+		blockoverride "input" {
+			button_checkbox = {
+				onclick = "[GetVariableSystem.Toggle('betteroutliner_option_twocolumn')]"
+				checked = "[GetVariableSystem.Exists('betteroutliner_option_twocolumn')]"
+			}
+		}
+	}
+}

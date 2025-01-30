@@ -1,0 +1,127 @@
+je_beijing_convention = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	group = je_group_historical_content
+	is_shown_when_inactive = {
+		exists = c:RUS
+		exists = c:CHI
+		c:RUS = ROOT
+		s:STATE_JETISY = {
+			any_scope_state = {
+				owner = {
+					c:CHI = THIS
+				}
+			}
+		}
+		s:STATE_OUTER_MANCHURIA = {
+			any_scope_state = {
+				owner = {
+					c:CHI = THIS
+				}
+			}
+		}
+		s:STATE_TUVA = {
+			any_scope_state = {
+				owner = {
+					c:CHI = THIS
+				}
+			}
+		}
+	}
+	
+	possible = {
+		c:CHI = {
+			relations:ROOT >= relations_threshold:cordial
+		}
+	}
+	
+	complete = {
+		AND = {
+			c:CHI = {
+				relations:ROOT >= relations_threshold:neutral
+			}
+			has_technology_researched = nationalism
+		}
+	}
+	
+	on_complete = {
+		if = {
+			limit = {
+				s:STATE_JETISY = {
+					any_scope_state = {
+						owner = {
+							c:CHI = THIS
+						}
+					}
+				}
+				s:STATE_OUTER_MANCHURIA = {
+					any_scope_state = {
+						owner = {
+							c:CHI = THIS
+						}
+					}
+				}
+				s:STATE_TUVA = {
+					any_scope_state = {
+						owner = {
+							c:CHI = THIS
+						}
+					}
+				}
+				s:STATE_TOMSK = {
+					any_scope_state = {
+						owner = {
+							c:CHI = THIS
+						}
+					}
+				}
+				s:STATE_KIRGHIZIA = {
+					any_scope_state = {
+						owner = {
+							c:CHI = THIS
+						}
+					}
+				}
+			}
+			c:CHI = { trigger_event = { id = peking_convention.2 } }
+		}
+		else = {
+			s:STATE_JETISY = {
+				add_claim = c:RUS 
+			}
+			s:STATE_OUTER_MANCHURIA = {
+				add_claim = c:RUS 
+			}
+			s:STATE_TUVA = {
+				add_claim = c:RUS 
+			}
+			s:STATE_TOMSK = {
+				add_claim = c:RUS 
+			}
+			s:STATE_KIRGHIZIA = {
+				add_claim = c:RUS 
+			}
+		}
+	}
+	
+	weight = 100
+
+}
+je_conquer_far_east = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	group = je_group_historical_content
+
+	complete = {
+		c:RUS = {
+			owns_entire_state_region = STATE_JETISY
+			owns_entire_state_region = STATE_OUTER_MANCHURIA
+			owns_entire_state_region = STATE_TUVA
+			owns_entire_state_region = STATE_TOMSK
+			owns_entire_state_region = STATE_KIRGHIZIA
+		}
+	}
+
+	weight = 100
+
+	inheritable = yes
+}
+

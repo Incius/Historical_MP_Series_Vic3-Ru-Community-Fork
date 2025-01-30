@@ -1,0 +1,616 @@
+﻿namespace = dnf_events
+dnf_events.1 = {
+	type = country_event
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = dnf_events.1.t
+	desc = dnf_events.1.d
+	flavor = dnf_events.1.f
+
+	duration = 3
+
+	trigger = { }
+
+	option = {
+		name = dnf_events.1.a
+            change_tag = DNF
+			add_journal_entry = { type = je_dnf_constitution }	
+			set_variable = {
+				name = dnf_formation_decision_taken
+			}
+			set_global_variable = {
+				name = dnf_formed
+			}
+	}
+}
+
+#Bohemia event
+dnf_events.2 = {
+	type = country_event
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/military_parade"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = dnf_events.2.t
+	desc = dnf_events.2.d
+	flavor = dnf_events.2.f
+	duration = 3
+
+	trigger = { }
+
+	option = {
+		name = dnf_events.2.a
+		default_option = yes
+		add_primary_culture = cu:czech
+
+		add_loyalists = {
+			culture = cu:czech
+			value = 0.15
+			}
+		add_radicals = {
+				culture = cu:south_german
+				value = 0.05
+			}
+		add_radicals = {
+				culture = cu:hungarian
+				value = 0.05
+			}	
+			if = {
+				limit = {
+					any_state = {
+						state_region = { this = s:STATE_SILESIA }
+						owner = ROOT
+						}
+				}
+				every_state = {
+					limit = {
+						state_region = { this = s:STATE_SILESIA }
+						  }
+						  state_region = { add_homeland = czech }
+					}
+			}
+	}
+
+	option = {
+		name = dnf_events.2.b
+		add_primary_culture = cu:czech
+		trigger = {
+			any_state = {
+				state_region = { this = s:STATE_SILESIA }
+				  NOT = { owner = ROOT }
+				}
+			}
+		every_state = {
+			limit = {
+				state_region = { this = s:STATE_SILESIA }
+				  }
+				  state_region = { add_homeland = czech }
+				  owner = {
+					change_relations = {
+						country = ROOT
+						value = -20
+					}
+				  }
+				}
+		add_loyalists = {
+			culture = cu:czech
+			value = 0.15
+			}
+		add_radicals = {
+				culture = cu:south_german
+				value = 0.05
+			}
+		add_radicals = {
+				culture = cu:hungarian
+				value = 0.05
+			}	
+	}
+}
+
+#Romanian event
+dnf_events.3 = {
+	type = country_event
+	event_image = { video = "gfx/event_pictures/unspecific_politicians_arguing.bk2" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/before_the_battle"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = dnf_events.3.t
+	desc = dnf_events.3.d
+	flavor = dnf_events.3.f
+	duration = 3
+
+	trigger = {}
+
+	option = {
+		default_option = yes
+		name = dnf_events.3.a
+		add_primary_culture = cu:romanian
+		
+		add_loyalists = {
+			culture = cu:romanian
+			value = 0.10
+		}	
+		add_radicals = {
+				culture = cu:south_german
+				value = 0.05
+		}
+		if = {
+			limit = { 
+				any_country = {
+				is_subject_of = ROOT
+				any_scope_state = {
+					state_region = { is_homeland = cu:romanian }
+					}
+				}
+			}	
+			every_subject_or_below = {
+				every_scope_state = {
+					limit = {
+						state_region = { is_homeland = cu:romanian }
+					}
+					set_state_owner = ROOT
+				}
+			}
+			change_infamy = 8
+
+		}
+	}
+	option = {
+		name = dnf_events.3.b
+
+		add_radicals = {
+				culture = cu:romanian
+				value = 0.10
+			}	
+	}
+	
+}
+
+#Galician event
+dnf_events.4 = {
+	type = country_event
+
+	event_image = { video = "gfx/event_pictures/unspecific_politicians_arguing.bk2" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/before_the_battle"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = dnf_events.4.t
+	desc = dnf_events.4.d
+	flavor = dnf_events.4.f
+	duration = 3
+
+	trigger = {}
+	
+	option = {
+	default_option = yes
+		name = dnf_events.4.a
+		s:STATE_LESSER_POLAND = {
+			add_claim = c:DNF
+		}
+		add_primary_culture = cu:polish
+		add_loyalists = {
+			culture = cu:polish
+			value = 0.10
+			}
+		add_radicals = {
+				culture = cu:ukrainian
+				value = 0.10
+			}
+		add_radicals = {
+				culture = cu:south_german
+				value = 0.05
+			}	
+		c:DNF = {
+			change_relations = {
+				country = c:RUS
+				value = -20 
+				}
+			}	
+		c:DNF = {
+			change_relations = {
+				country = c:PRU
+				value = -20 
+				}
+			}
+		if = { 
+			limit = { 
+				c:KRA = { 
+				is_subject_of = ROOT
+					}
+				}
+			annex = c:KRA
+		}		
+	}
+	
+	option = {
+		name = dnf_events.4.b
+		s:STATE_LESSER_POLAND = {
+			add_claim = c:DNF
+		}
+		s:STATE_VOLHYNIA = {
+			add_claim = c:DNF
+		}
+		add_primary_culture = cu:ukrainian
+		add_primary_culture = cu:polish
+		add_loyalists = {
+				culture = cu:ukrainian
+				value = 0.10
+			}
+		add_loyalists = {
+				culture = cu:polish
+				value = 0.10
+			}
+		add_radicals = {
+				culture = cu:south_german
+				value = 0.05
+			}
+		ROOT = {
+			change_relations = {
+				country = c:RUS
+				value = -40
+				}
+			}	
+		ROOT = {
+			change_relations = {
+				country = c:PRU
+				value = -20
+				}
+			}			
+		if = { 
+			limit = { 
+				exists = c:KRA
+				c:KRA = {
+				is_subject_of = ROOT
+					}
+			}
+			annex = c:KRA
+		}		
+	}
+	
+	option = {
+		name = dnf_events.4.c
+		add_primary_culture = cu:ukrainian
+		s:STATE_VOLHYNIA = {
+			add_claim = c:DNF
+		}
+		add_loyalists = {
+				culture = cu:ukrainian
+				value = 0.10
+			}
+		add_radicals = {
+				culture = cu:polish
+				value = 0.10
+			}
+		add_radicals = {
+				culture = cu:south_german
+				value = 0.05
+			}
+		c:DNF = {
+			change_relations = {
+				country = c:RUS
+				value = -20 
+				}
+			}			
+	}
+	
+	option = {
+		name = dnf_events.4.e
+		
+		add_radicals = {
+				culture = cu:ukrainian
+				value = 0.05
+			}
+		add_radicals = {
+				culture = cu:polish
+				value = 0.05
+			}
+		c:DNF = {
+			change_relations = {
+				country = c:RUS
+				value = 15 
+					}
+			}			
+	}
+	
+}
+
+#Italian event - removed due to difficulties preventing nation formation
+dnf_events.5 = {
+	type = country_event
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/before_the_battle"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = dnf_events.5.t
+	desc = dnf_events.5.d
+	flavor = dnf_events.5.f
+	duration = 3
+
+	trigger = {}
+
+	option = {
+		name = dnf_events.5.a
+		add_primary_culture = cu:north_italian
+
+		add_loyalists = {
+			culture = cu:north_italian
+			value = 0.10
+			}	
+		add_radicals = {
+				culture = cu:south_german
+				value = 0.05
+			}	
+	}
+	option = {
+	default_option = yes
+		name = dnf_events.5.b
+		add_radicals = {
+				culture = cu:north_italian
+				value = 0.05
+				}
+	}	
+}
+
+#Croatia event
+dnf_events.6 = {
+	type = country_event
+	event_image = { video = "gfx/event_pictures/unspecific_politicians_arguing.bk2" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/before_the_battle"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = dnf_events.6.t
+	desc = dnf_events.6.d
+	flavor = dnf_events.6.f
+	duration = 3
+
+	trigger = {}
+
+	option = {
+	default_option = yes
+		name = dnf_events.6.a
+		add_primary_culture = cu:croat
+
+		add_loyalists = {
+			culture = cu:croat
+			value = 0.10
+		}		
+		add_radicals = {
+				culture = cu:south_german
+				value = 0.05
+			}
+	}	
+	option = {
+		name = dnf_events.6.b
+		add_radicals = {
+				culture = cu:croat
+				value = 0.10
+			}
+	}
+	
+}
+#DNF Constitution Completed
+dnf_events.7 = {
+	type = country_event
+	event_image = {
+		video = "gfx/event_pictures/unspecific_world_fair.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/military_parade"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = dnf_events.7.t
+	desc = dnf_events.7.d
+	flavor = dnf_events.7.f
+	duration = 3
+
+	trigger = { }
+
+	option = {
+	name = dnf_events.7.a
+	default_option = yes	
+	}
+	
+}
+
+#DNF Possible Journal Entry Complete
+dnf_events.8 = {
+	type = country_event
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = dnf_events.8.t
+	desc = dnf_events.8.d
+	flavor = dnf_events.8.f
+	duration = 3
+
+	trigger = { }
+
+	option = {
+		name = dnf_events.8.a
+
+		change_tag = DNF
+		add_journal_entry = { type = je_dnf_constitution }
+
+		set_variable = {
+			name = dnf_formation_decision_taken
+		}
+		set_global_variable = {
+			name = dnf_formed
+		}
+		default_option = yes
+	}
+	option = {
+		name = dnf_events.8.b
+		set_variable = {
+			name = dnf_decision_available
+			}
+		}
+	
+}
+
+#Forming Germany event
+dnf_events.9 = {
+	type = country_event
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_springtime_of_nations.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/springtime_of_nation"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = dnf_events.9.t
+	desc = dnf_events.9.d
+	flavor = dnf_events.9.f
+	duration = 3
+
+	trigger = {}
+
+	option = {
+	name = dnf_events.9.a
+	
+		custom_tooltip = {
+			text = dnf_release
+			create_country = {
+				tag = DNF
+				origin = ROOT
+				state = s:STATE_CENTRAL_HUNGARY.region_state:GER
+				on_created = {
+					c:GER = {
+						every_scope_state = {
+							limit = {
+								OR = { 
+									state_region = { is_homeland = cu:hungarian }
+									state_region = { is_homeland = cu:croat }
+									state_region = { is_homeland = cu:romanian }
+									state_region = { is_homeland = cu:czech }
+									state_region = { is_homeland = cu:slovene }
+									state_region = { is_homeland = cu:slovak }
+								}
+							}
+							set_state_owner = c:DNF
+						}
+						s:STATE_EAST_GALICIA = {
+							every_scope_state = {
+								set_state_owner = c:DNF
+							}
+						}
+						s:STATE_WEST_GALICIA = {
+							every_scope_state = {
+								set_state_owner = c:DNF
+							}
+						}
+					}
+					c:DNF = {
+						ig:ig_intelligentsia = {
+							add_ruling_interest_group = yes
+						}
+					}
+				add_primary_culture = cu:czech
+				add_primary_culture = cu:romanian
+				add_primary_culture = cu:croat
+					
+				}
+			}
+			c:GER = {
+				if = {
+					limit = {
+						has_law = law_type:law_monarchy
+					}
+					create_diplomatic_pact = {
+						country = c:DNF
+						type = personal_union
+					}
+				}
+				else = {
+					create_diplomatic_pact = {
+						country = c:DNF
+						type = puppet
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = dnf_events.9.b
+		default_option = yes
+		add_radicals = {
+			value = 0.3
+			culture = cu:romanian
+		}
+		add_radicals = {
+			value = 0.3
+			culture = cu:czech
+		}
+		add_radicals = {
+			value = 0.3
+			culture = cu:hungarian
+
+		}
+		add_radicals = {
+			value = 0.3
+			culture = cu:slovak
+		}
+		add_radicals = {
+			value = 0.3
+			culture = cu:croat
+		}
+		add_radicals = {
+			value = 0.3
+			culture = cu:slovene
+		}
+		
+	}
+}
+
+namespace = dnf_events_soviet
+
+dnf_events_soviet.1 = {
+	type = country_event
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = dnf_events_soviet.1.t
+	desc = dnf_events_soviet.1.d
+	flavor = dnf_events_soviet.1.f
+	duration = 3
+
+	trigger = {}
+
+	option = {
+	name = dnf_events_soviet.1.a
+	custom_tooltip = {
+		text = dnf_sovietname
+	set_variable = { name = dnf_soviet_federation }
+		}
+	}
+
+}

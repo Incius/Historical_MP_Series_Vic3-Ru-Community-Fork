@@ -1,0 +1,7 @@
+tgr_inflation_report = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/goods.dds"
+
+	notification_type = feed
+	months = 1
+}

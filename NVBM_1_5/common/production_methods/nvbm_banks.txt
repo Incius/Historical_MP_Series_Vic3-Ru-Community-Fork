@@ -1,0 +1,99 @@
+# Central Bank
+pm_central_bank_operations = {
+	texture = "gfx/interface/icons/production_method_icons/central_bank_operations.dds"
+	is_default = yes
+	
+	disallowing_laws = {
+		law_council_republic
+		law_cooperative_ownership
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 50
+			country_gold_reserve_limit_mult = 0.05
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 35
+			goods_input_services_add = 15
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 10000
+		}
+	}
+}
+pm_central_bank_operations_communist = {
+	texture = "gfx/interface/icons/production_method_icons/central_bank_operations.dds"
+	is_default = yes
+	
+	unlocking_laws = {
+		law_council_republic
+		law_cooperative_ownership
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 50
+			country_gold_reserve_limit_mult = 0.05
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 35
+			goods_input_services_add = 15
+		}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 10000
+		}
+	}
+}
+
+pm_issue_new_banknotes = {
+	texture = "gfx/interface/icons/production_method_icons/issue_new_banknotes.dds"
+		
+	country_modifiers = {
+		unscaled = { 
+			country_minting_mult = 0.1
+			country_gold_reserve_limit_mult = 0.05
+			country_loan_interest_rate_add = -0.05
+			country_bureaucracy_mult = -0.1
+			country_quarterly_inflation_mult = 0.05
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 45
+		}
+	}
+}
+
+pm_no_central_policy = {
+	texture = "gfx/interface/icons/production_method_icons/no_central_policy.dds"
+	is_default = yes
+
+}
+
+pm_reduce_banknotes = {
+	texture = "gfx/interface/icons/production_method_icons/reduce_banknotes.dds"
+
+	country_modifiers = {
+		unscaled = { 
+			country_loan_interest_rate_add = 0.05
+			country_bureaucracy_mult = -0.1
+			country_quarterly_inflation_mult = -0.05
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 30
+		}
+	}
+}

@@ -1,0 +1,18 @@
+﻿l_english:
+ rule_zz_scramble_for_africa:0 "Scramble For Africa Trigger"
+ setting_default_tgr_default_scramble:0 "NVBM Default"
+ setting_default_tgr_default_scramble_desc:0 "- At least 3 Great Powers researched Civilizing Mission technology \n - At least 4 Great Powers have a colonial institution \n - Game date is 1860.1.1 or later"
+ setting_scramble_game_date_only:0 "Game date only"
+ setting_scramble_game_date_only_desc:0 "Only requirement for Scramble For Africa is: \n - Game date is 1860.1.1 or later"
+ setting_scramble_tech_and_institution_only:0 "Technology and Colonial Institution only"
+ setting_scramble_tech_and_institution_only_desc:0 "Requirements for Scramble For Africa are: \n - At least 3 Great Powers researched Civilizing Mission technology \n - At least 4 Great Powers have a colonial institution"
+ setting_scramble_institution_only:0 "Colonial Institution only"
+ setting_scramble_institution_only_desc:0 "Only requirement for Scramble For Africa is: \n - At least 4 Great Powers have a colonial institution"
+ setting_scramble_tech_only:0 "Technology only"
+ setting_scramble_tech_only_desc:0 "Only requirement for Scramble For Africa is: \n - At least 3 Great Powers researched Civilizing Mission technology"
+ 
+ rule_zz_tgr_conference_state:0 "Scramble For Africa"
+ setting_conference_enabled:0 "Enabled"
+ setting_conference_enabled_desc:0 "Scramble For Africa and Berlin Conference mechanics are enabled"
+ setting_conference_disabled:0 "Disabled"
+ setting_conference_disabled_desc:0 "Scramble For Africa and Berlin Conference mechanics are disabled"

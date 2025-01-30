@@ -1,0 +1,23 @@
+﻿l_russian:
+   #hereditary_aristocracy: "Hereditary Aristocracy"
+  # Categories
+  # Culture Technology
+  # Economy Technology
+  # Military Technology
+  ### Technology Tooltips
+  ##joint_stock_companies: "Joint Stock Companies"
+  ##joint_stock_companies_desc: "A joint stock company is one whose ownership is divided into a number of shares which are held unequally by many investors, who derive dividends from the company according to the size of the portion they own. This allows trading of partial ownership and investment by both rich and middle-class businessmen."
+  ##lenders_of_last_resort: "Lenders of Last Resort"
+  ##lenders_of_last_resort_desc: "State-owned central banks are large enough to come to the rescue of smaller commercial banks, such as during bank runs. This can prevent a financial crisis spreading to other sectors of the economy. Often, even the promise of rescue in times of difficulty is enough to prevent bank runs occurring in the first place. Some 'critics' claim that such a promise will encourage risky behavior by the commercial banks, but these 'critics' are surely just anarchists looking to wreck the nation's economic security, as bankers are some of the most trustworthy people to walk the halls of power."
+  ##limited_liability: "Limited Liability"
+  ##limited_liability_desc: "A limited liability company draws a legal distinction between the company and its owners. This helps prevent the bankruptcy of a company ruining the personal lives of the investors, as creditors will not try to haul off the furniture of failed businessmen to recoup losses. This makes investing less risky, if perhaps less satisfying to watch from afar. As a separate legal entity, the company has its own finances that must be audited and taxed."
+  ##marketing_desc: "Promotional schemes to grab more market share or create a new market from scratch were devised by Josiah Wedgwood, leader of the expanding pottery industry at the dawn of the Industrial Revolution."
+  ##paper_money: "Paper Money"
+  ##paper_money_desc: "A kind of promissory note issued by a bank, paper money allows private citizens to move and exchange large volumes of currency without the danger and discomfit of gold or silver coins which cannot be divided and are heavy to carry. Thus, commercial exchanges are easier and safer."
+  ##regulated_private_notes: "Regulated Private Notes"
+  ##regulated_private_notes_desc: "Bankers realized hundreds of years ago that their customers only rarely demand back their deposits all at once. By issuing loans in excess of their reserves in the form of private bank notes, bankers could make even more money from interest. Unfortunately, when all the bank's customers do demand their deposits at once, there will not be enough reserves. With better communications technology, these 'bank runs' become more frequent. To prevent bank runs, governments can restrict the issuance of private notes only to banks that meet certain criteria of fiduciary responsibility, such as being close personal friends to the finance minister."
+ needle_guns:0 "Игольчатое ружьё"
+ needle_guns_desc:0 "Первый тип нарезного ружья (винтовки) заряжавшийся с казённой части бумажным патроном. При спуске курка игла затвора прокалывала дно бумажной гильзы патрона и воспламеняла ударный состав капсюля, находившийся на донце пули. Пуля легко входила в нарезы, а бумажная гильза сгорала вместе с пороховыми газами, а её остатки выбрасывались через ствол. Ружьё предложено в 1827 году немецким оружейником И. Н. Дрейзе, после многочисленных безуспешных попыток стрельбы унитарным патроном из ружей, заряжавшихся с дула. Первый образец введён в прусской армии в 1840 году. Прусские военные высоко оценили качества нового оружия и держали его данные в секрете, обозначив в документах туманным «лёгкое капсюльное ружье 1841 г.»"
+ 
+combat_unit_type_needle_infantry:0 "Пехота с игольчатыми ружьями"
+combat_unit_type_needle_infantry_desc:0 "Пехотинцы с новейшим эксперементальным оружием"

@@ -1,0 +1,20 @@
+concept_inflation_from_gdp_growth = {}
+concept_inflation = {is_loading_tip = yes}
+concept_quarterly_inflation = {}
+concept_vital_goods = {}
+concept_currency_standard_law = {}
+concept_vital_expensive_goods = {}
+concept_goods_shortages = {}
+concept_cheap_goods = {}
+concept_expensive_goods = {}
+concept_vital_goods_shortages = {}
+concept_cheap_good = {}
+concept_goods_shortage = {}
+concept_expensive_good = {}
+concept_vital_expensive_good = {}
+concept_vital_good_shortage = {}
+concept_good_shortage = {}
+concept_shortage = {}
+concept_expensive = {}
+concept_why10 = {}
+concept_central_policy = {}

@@ -1,0 +1,29 @@
+﻿building_input_tobacco_add = {
+	good = no
+	percent = no	
+}
+
+building_input_liquor_add = {
+	good = no
+	percent = no	
+}
+
+building_input_wine_add = {
+	good = no
+	percent = no	
+}
+
+building_input_coffee_add = {
+	good = no
+	percent = no	
+}
+
+building_input_tools_add = {
+	good = no
+	percent = no	
+}
+
+building_input_transportation_add = {
+	good = no
+	percent = no	
+}

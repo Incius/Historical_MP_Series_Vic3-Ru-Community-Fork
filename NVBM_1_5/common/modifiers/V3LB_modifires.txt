@@ -1,0 +1,295 @@
+modifier_expelled_from_government_petition = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	interest_group_approval_add = -5
+	interest_group_pol_str_mult = -0.15
+}
+
+nationalism_minor_defense = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	unit_defense_mult = 0.3 }
+
+italy_unity_buff = {
+		icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+		unit_defense_mult = 0.1
+		unit_offense_mult = 0.3}
+reconquista = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+		unit_offense_mult = 0.3}
+china_education_debuff = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	state_education_access_add = -0.1
+	country_society_tech_cost_mult = -0.05
+}
+japan_military_reward_nvbm = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	country_military_tech_cost_mult = -0.20
+}
+
+japan_diplomatic_reward_nvbm = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_influence_mult = 0.2
+	country_improve_relations_speed_mult = 0.25
+	country_damage_relations_speed_mult = 0.25
+	country_society_tech_cost_mult = -0.1
+}
+
+japan_production_reward_nvbm = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_railway_throughput_mult = 0.4
+	country_production_tech_cost_mult = -0.15
+	building_economy_of_scale_level_cap_add = 10
+}
+advance_of_tech = {
+		icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+		country_production_tech_cost_mult = -0.15
+		country_military_tech_cost_mult = -0.15
+	}
+brazil_construction = {
+		icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+		state_construction_mult = 0.25
+}
+brazil_migration = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_migration_pull_mult = 0.25
+}
+japan_iwakura_mission = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_tech_spread_mult = 1
+}
+control_korea_1 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_prestige_mult = 0.05
+	building_group_bg_manufacturing_tax_mult = 0.2
+	country_authority_mult = 0.2
+}
+control_korea_2 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_prestige_mult = 0.05
+	building_group_bg_manufacturing_tax_mult = 0.1
+	country_authority_mult = 0.05
+}
+foa_unity_buff = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+		unit_defense_mult = 0.1
+		unit_offense_mult = 0.3
+		state_birth_rate_mult = 0.015
+}
+ara_unity_buff = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+		unit_defense_mult = 0.1
+		unit_offense_mult = 0.3
+		state_birth_rate_mult = 0.015
+}
+sunni_buff = {
+	icon = gfx/interface/icons/religion_icons/sunni.dds
+	state_birth_rate_mult = 0.03
+	state_tax_capacity_mult = 0.05
+	country_society_tech_cost_mult = -0.05
+	country_tech_spread_mult = 0.15
+}
+catholic_buff = {
+	icon = gfx/interface/icons/religion_icons/catholic.dds
+	state_birth_rate_mult = 0.015
+	country_authority_mult = 0.1
+	state_education_access_add = 0.1
+	country_society_tech_cost_mult = -0.1
+	country_tech_spread_mult = 0.1
+}
+coptic_buff = {
+	icon = gfx/interface/icons/religion_icons/coptic.dds
+	state_birth_rate_mult = 0.02
+	country_authority_mult = 0.05
+	unit_defense_mult = 0.1
+	unit_offense_mult = 0.1
+}
+gelugpa_buff = {
+	icon = gfx/interface/icons/religion_icons/gelugpa.dds
+	state_birth_rate_mult = 0.01
+	country_authority_mult = 0.1
+	state_education_access_add = 0.1
+	country_bureaucracy_mult = 0.05
+	state_radicals_from_discrimination_mult = -1.0
+}
+hindu_buff = {
+	icon = gfx/interface/icons/religion_icons/hindu.dds
+	state_birth_rate_mult = 0.01
+	country_authority_mult = 0.1
+	state_education_access_add = 0.1
+	country_bureaucracy_mult = 0.05
+	state_infrastructure_mult = 0.05
+	country_tech_spread_mult = 0.15
+}
+jewish_buff = {
+	icon = gfx/interface/icons/religion_icons/jewish.dds
+	state_birth_rate_mult = 0.04
+	country_authority_mult = 0.1
+	unit_defense_mult = 0.2
+	unit_offense_mult = 0.2
+	country_production_tech_cost_mult = -0.05
+	country_military_tech_cost_mult = -0.05
+	country_tech_spread_mult = 0.2
+}
+mahayana_buff = {
+	icon = gfx/interface/icons/religion_icons/mahayana.dds
+	state_birth_rate_mult = 0.01
+	country_authority_mult = 0.1
+	state_education_access_add = 0.1
+	country_bureaucracy_mult = 0.05
+	state_radicals_from_discrimination_mult = -1.0
+}
+orthodox_buff = {
+	icon = gfx/interface/icons/religion_icons/orthodox.dds
+	state_birth_rate_mult = 0.02
+	country_authority_mult = 0.2
+	unit_defense_mult = 0.1
+	unit_supply_consumption_mult = -0.1
+}
+protestant_buff = {
+	icon = gfx/interface/icons/religion_icons/protestant.dds
+	state_birth_rate_mult = 0.01
+	country_authority_mult = 0.1
+	state_education_access_add = 0.1
+	country_bureaucracy_mult = 0.05
+	state_infrastructure_mult = 0.05
+	country_tech_spread_mult = 0.1
+	country_production_tech_cost_mult = -0.05
+}
+shiite_buff = {
+	icon = gfx/interface/icons/religion_icons/shiite.dds
+	state_birth_rate_mult = 0.03
+	country_authority_mult = 0.1
+	state_education_access_add = 0.1
+	country_bureaucracy_mult = 0.05
+	state_infrastructure_mult = 0.05
+	country_tech_spread_mult = 0.15
+	country_production_tech_cost_mult = -0.05
+	country_military_tech_cost_mult = -0.05
+	unit_defense_mult = 0.1
+	unit_offense_mult = 0.1
+}
+shinto_buff = {
+	icon = gfx/interface/icons/religion_icons/shinto.dds
+	state_birth_rate_mult = 0.015
+	country_authority_mult = 0.1
+	state_education_access_add = 0.15
+	country_bureaucracy_mult = 0.05
+	state_infrastructure_mult = 0.05
+	country_tech_spread_mult = 0.2
+	country_production_tech_cost_mult = -0.05
+	country_military_tech_cost_mult = -0.05
+	unit_defense_mult = 0.1
+	unit_offense_mult = 0.1
+}
+sikh_buff = {
+	icon = gfx/interface/icons/religion_icons/sikh.dds
+	state_birth_rate_mult = 0.015
+	country_authority_mult = 0.1
+	state_education_access_add = 0.1
+	country_bureaucracy_mult = 0.05
+	state_infrastructure_mult = 0.05
+	country_tech_spread_mult = 0.05
+	unit_defense_mult = 0.1
+	unit_offense_mult = 0.1
+}
+theravada_buff = {
+	icon = gfx/interface/icons/religion_icons/theravada.dds
+	state_birth_rate_mult = 0.01
+	country_authority_mult = 0.1
+	country_bureaucracy_mult = 0.05
+	state_infrastructure_mult = 0.05
+	country_tech_spread_mult = 0.1
+}
+animist_buff = {
+	icon = gfx/interface/icons/religion_icons/animist.dds
+	state_birth_rate_mult = 0.01
+	country_authority_mult = 0.1
+	country_bureaucracy_mult = 0.05
+	state_infrastructure_mult = 0.05
+	country_quarterly_inflation_mult = -0.1
+}
+
+india_education_debuff = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	state_education_access_add = -0.05
+}
+modifier_prussian_reform = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+		unit_defense_mult = 0.1
+		unit_offense_mult = 0.3
+		country_production_tech_cost_mult = -0.05
+		country_military_tech_cost_mult = -0.05
+}
+literacy_army_1_modifier = {
+	icon = gfx/interface/icons/generic_icons/profitability_01.dds
+	state_conscription_rate_mult = -0.30
+	unit_supply_consumption_mult = -0.20
+	country_war_exhaustion_casualties_mult = -0.15
+	country_tech_spread_mult = 0.15
+}
+
+literacy_army_2_modifier = {
+	icon = gfx/interface/icons/generic_icons/profitability_04.dds
+	state_conscription_rate_mult = -0.15
+	country_war_exhaustion_casualties_mult = -0.10
+	country_tech_spread_mult = 0.05
+}
+
+literacy_army_3_modifier = {
+	icon = gfx/interface/icons/generic_icons/profitability_07.dds
+	state_conscription_rate_mult = 0.1
+	unit_supply_consumption_mult = 0.10
+	country_war_exhaustion_casualties_mult = -0.05
+	unit_provinces_captured_mult = 0.1
+}
+
+literacy_army_4_modifier = {
+	icon = gfx/interface/icons/generic_icons/profitability_10.dds
+	state_conscription_rate_mult = 0.2
+	unit_supply_consumption_mult = 0.15
+	country_war_exhaustion_casualties_mult = 0.05
+	unit_provinces_captured_mult = 0.20
+}
+
+literacy_army_5_modifier = {
+	icon = gfx/interface/icons/generic_icons/profitability_13.dds
+	state_conscription_rate_mult = 0.3
+	unit_supply_consumption_mult = 0.20
+	country_war_exhaustion_casualties_mult = 0.1
+	unit_provinces_captured_mult = 0.30
+}
+literacy_from_pops_1 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_production_tech_spread_mult = 0.025
+}
+literacy_from_pops_2 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_military_tech_spread_mult = 0.025
+}
+literacy_from_pops_3 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_society_tech_spread_mult = 0.025
+}
+literacy_from_pops_4 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_production_tech_spread_mult = 0.05
+}
+literacy_from_pops_5 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_military_tech_spread_mult = 0.05
+}
+literacy_from_pops_6 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_society_tech_spread_mult = 0.05
+}
+literacy_from_pops_7 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_production_tech_spread_mult = 0.075
+}
+literacy_from_pops_8 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_military_tech_spread_mult = 0.075
+}
+literacy_from_pops_9 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_society_tech_spread_mult = 0.075
+}

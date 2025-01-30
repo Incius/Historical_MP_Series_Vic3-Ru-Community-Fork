@@ -1,0 +1,15 @@
+###
+
+
+ngf_birth_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_accepted_birth_rate_mult = 0.2
+	state_primary_birth_rate_mult
+}
+
+fra_secular_legacy = { #URGENT
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	state_accepted_birth_rate_mult = -0.3
+}
+
+

@@ -1,0 +1,97 @@
+﻿l_russian:
+  ask_for_guarantee: "Предложить [Concept('concept_guarantee', 'Гарантии')]"
+  ask_for_guarantee_desc: "#header $ask_for_guarantee$#!\n$TOOLTIP_DELIMITER$\n [concept_diplomatic_pact] который устанавливает [Concept('concept_guarantee', 'Гарантию')] Независимости на [Concept('concept_country', 'Страну')] которая является целью запроса."
+  concept_guarantee: "Гарантия"
+  concept_guarantees: "Гарантии"
+  concept_guaranteed: "Имеет Гарантии"
+  concept_guarantee_desc: "[Concept('concept_guarantee', 'Гарантия')] независимости другого государства от агрессии третьей стороны! Гарантированное государство будет иметь заступника в [Concept('concept_diplomatic_play', 'Дипломатической игре')] будучи целью дипломатической игры!"
+
+  ask_for_guarantee_action_name: "Запросить гарантию"
+  ask_for_guarantee_action_propose_name: "Запросить[Concept('concept_guarantee', 'Гарантию')]"
+  ask_for_guarantee_action_break_name: "Отозвать [Concept('concept_guarantee', 'Гарантию')]"
+  ask_for_guarantee_action_notification_name: "[Concept('concept_guarantee', '$concept_guaranteed$')] by [TARGET_COUNTRY.GetName]"
+  ask_for_guarantee_action_notification_desc: "Мы получили [Concept('concept_guarantee', 'Гарантию Независимости')] от [TARGET_COUNTRY.GetName]."
+
+  ask_for_guarantee_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] [Concept('concept_guarantee', '$concept_guaranteed$')] от [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]."
+  ask_for_guarantee_proposal_notification_name: "Запрос [Concept('concept_guarantee', 'Гарантии')] независимости!"
+  ask_for_guarantee_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] запрашивает [Concept('concept_guarantee', 'Гарантию Независимости')] от нас."
+  ask_for_guarantee_proposal_notification_effects_desc: "$ask_for_guarantee_desc$"
+  ask_for_guarantee_proposal_accepted_name: "[Concept('concept_guarantee', '$concept_guarantee$')] Принята"
+  ask_for_guarantee_proposal_accepted_desc: "Государство [TARGET_COUNTRY.GetName] приняло запрос [Concept('concept_guarantee', 'Гарантии')]."
+  ask_for_guarantee_proposal_declined_name: "[Concept('concept_guarantee', 'Гарантия')] отклонена"
+  ask_for_guarantee_proposal_declined_desc: "Государство [TARGET_COUNTRY.GetName] отклонило наш запрос о [Concept('concept_guarantee', 'Гараннтии')]."
+  ask_for_guarantee_action_notification_break_name: "[Concept('concept_guarantee', 'Гарантия')] от страны [INITIATOR_COUNTRY.GetName] была отозвана"
+  ask_for_guarantee_action_notification_break_desc: "Государство [INITIATOR_COUNTRY.GetName] отозвало свою [Concept('concept_guarantee', 'Гарантию')] данную нам."
+  ask_for_guarantee_proposal_third_party_accepted_name: "[Concept('concept_guarantee', 'Гарантия')] Независимости подписана"
+  ask_for_guarantee_proposal_third_party_accepted_desc: "[TARGET_COUNTRY.GetName] получила [Concept('concept_guarantee', 'Гарантию Независимости')] от [INITIATOR_COUNTRY.GetName]."
+  ask_for_guarantee_proposal_third_party_declined_name: "[Concept('concept_guarantee', 'Гарантия')] отклонена"
+  ask_for_guarantee_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] отказались от получения [Concept('concept_guarantee', 'Гарантии')] Независимости от [INITIATOR_COUNTRY.GetName]."
+  ask_for_guarantee_action_notification_third_party_break_name: "[Concept('concept_guarantee', '$concept_guarantee$')] снята"
+  ask_for_guarantee_action_notification_third_party_break_desc: "[INITIATOR_COUNTRY.GetName] сняли [Concept('concept_guarantee', 'Гарантию Независимости')] с [TARGET_COUNTRY.GetName]."
+  
+  ask_for_guarantee_effect_desc_global: "[Concept('concept_guarantee', 'Гарантия')] независимости для [concept_country]"
+  ask_for_guarantee_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] [Concept('concept_guarantee', '$concept_guarantees$')] [TARGET_COUNTRY.GetName]"
+  ask_for_guarantee_effect_desc_third: "[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] получает [Concept('concept_guarantee', 'Гарантию')] от страны [COUNTRY.GetName]"
+  
+  ask_for_guarantee_trigger_desc_global: "[Concept('concept_guarantee', '$concept_guaranteed$')]"
+  ask_for_guarantee_trigger_false_desc_global: "#b Не#! [Concept('concept_guarantee', '$concept_guaranteed$')]"
+  ask_for_guarantee_trigger_desc_first: "Государство [TARGET_COUNTRY.GetName] [Concept('concept_guarantee', '$concept_guaranteed$')] от государства [COUNTRY.GetAdjectiveNoFlag]"
+  ask_for_guarantee_trigger_false_desc_first: "[TARGET_COUNTRY.GetName] #b Не#! [Concept('concept_guarantee', '$concept_guaranteed$')] от государства [COUNTRY.GetAdjectiveNoFlag]"
+  ask_for_guarantee_trigger_desc_third: "[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] [Concept('concept_guarantee', 'Гарантируется')] державой [COUNTRY.GetName]"
+  ask_for_guarantee_trigger_false_desc_third: "[COUNTRY.GetName] #b не#!  [Concept('concept_guarantee', '$concept_guaranteed$')] от государства [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]"
+
+
+
+
+
+
+
+  guarantee_another_country: "$concept_guarantee$"
+  guarantee_another_country_desc: "#header $ask_for_guarantee$#!\n$TOOLTIP_DELIMITER$\n [concept_diplomatic_pact] который устанавливает [Concept('concept_guarantee', 'Гарантию')] Независимости на [Concept('concept_country', 'Страну')]."
+  concept_give_guarantee: "Дать Гарантию"
+  concept_give_guarantees: "Дать Гарантии"
+  concept_give_guaranteed: "Гарантированно"
+  concept_guarantee_another_country_desc: "[Concept('concept_guarantee', 'Гарантия')] независимости другого государства от агрессии третьей стороны! Гарантированное государство будет иметь заступника в [Concept('concept_diplomatic_play', 'Дипломатической игре')] будучи целью дипломатической игры!"
+
+  guarantee_another_country_action_name: "Дать [Concept('concept_guarantee', 'Гарантию')]"
+  guarantee_another_country_action_propose_name: "Дать [Concept('concept_guarantee', 'Гарантию')]"
+  guarantee_another_country_action_break_name: "Окончить [Concept('concept_guarantee', 'Гарантию')]"
+  guarantee_another_country_action_notification_name: "[Concept('concept_guarantee', '$concept_guaranteed$')] by [INITIATOR_COUNTRY.GetName]"
+  guarantee_another_country_action_notification_desc: "We have gained a [Concept('concept_guarantee', '$concept_guarantee$')] from [INITIATOR_COUNTRY.GetName]."
+
+  guarantee_another_country_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] is [Concept('concept_guarantee', '$concept_guaranteed$')] by [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]."
+  guarantee_another_country_proposal_notification_name: "Granted us a [Concept('concept_guarantee', '$concept_guarantee$')] of independence!"
+  guarantee_another_country_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] granted us a [Concept('concept_guarantee', '$concept_guaranteed$')]."
+  guarantee_another_country_proposal_notification_effects_desc: "$guarantee_another_country_desc$"
+  guarantee_another_country_proposal_accepted_name: "[Concept('concept_guarantee', '$concept_guarantee$')] Granted"
+  guarantee_another_country_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] accepted our [Concept('concept_guarantee', '$concept_guarantee$')] on them."
+  guarantee_another_country_proposal_declined_name: "[Concept('concept_guarantee', '$concept_guarantee$')] Declined"
+  guarantee_another_country_proposal_declined_desc: "[TARGET_COUNTRY.GetName] declined our [Concept('concept_guarantee', '$concept_guarantee$')] of them."
+  guarantee_another_country_action_notification_break_name: "[Concept('concept_guarantee', '$concept_guarantee$')] from [INITIATOR_COUNTRY.GetName] was revoked"
+  guarantee_another_country_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] has revoked their [Concept('concept_guarantee', '$concept_guarantee$')] of us."
+  guarantee_another_country_proposal_third_party_accepted_name: "[Concept('concept_guarantee', '$concept_guarantee$')] of Independence Signed"
+  guarantee_another_country_proposal_third_party_accepted_desc: "[TARGET_COUNTRY.GetName] [Concept('concept_guarantee', '$concept_guaranteed$')] [INITIATOR_COUNTRY.GetName]."
+  guarantee_another_country_proposal_third_party_declined_name: "[Concept('concept_guarantee', '$concept_guarantee$')] Rejected"
+  guarantee_another_country_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] refused to [Concept('concept_guarantee', '$concept_guarantee$')] the independence of [INITIATOR_COUNTRY.GetName]."
+  guarantee_another_country_action_notification_third_party_break_name: "[Concept('concept_guarantee', '$concept_guarantee$')] Revoked"
+  guarantee_another_country_action_notification_third_party_break_desc: "[INITIATOR_COUNTRY.GetName] revoked their [Concept('concept_guarantee', '$concept_guarantee$')] of [TARGET_COUNTRY.GetName]."
+  
+  guarantee_another_country_effect_desc_global: "[Concept('concept_guarantee', '$concept_guarantees$')] the independence of a [concept_country]"
+  guarantee_another_country_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] [Concept('concept_guarantee', '$concept_guarantees$')] [TARGET_COUNTRY.GetName]"
+  guarantee_another_country_effect_desc_third: "[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] becomes [Concept('concept_guarantee', '$concept_guaranteed$')] by [COUNTRY.GetName]"
+  
+  guarantee_another_country_trigger_desc_global: "Is [Concept('concept_guarantee', '$concept_guaranteed$')]"
+  guarantee_another_country_trigger_false_desc_global: "Is #b not#! [Concept('concept_guarantee', '$concept_guaranteed$')]"
+  guarantee_another_country_trigger_desc_first: "[TARGET_COUNTRY.GetName] is [Concept('concept_guarantee', '$concept_guaranteed$')] by [COUNTRY.GetAdjectiveNoFlag]"
+  guarantee_another_country_trigger_false_desc_first: "[TARGET_COUNTRY.GetName] is #b not#! [Concept('concept_guarantee', '$concept_guaranteed$')] by [COUNTRY.GetAdjectiveNoFlag]"
+  guarantee_another_country_trigger_desc_third: "[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] is [Concept('concept_guarantee', '$concept_guaranteed$')] by [COUNTRY.GetName]"
+  guarantee_another_country_trigger_false_desc_third: "[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] is #b not#! [Concept('concept_guarantee', '$concept_guaranteed$')] by [COUNTRY.GetName]"
+
+
+  break_guarantee_action_name: "Убрать [Concept('concept_guarantee', 'гарантию')]"
+  break_guarantee: "Убрать Гарантию"
+  break_guarantee_desc: "#header $break_guarantee$#!\n$TOOLTIP_DELIMITER$\n [concept_diplomatic_action], убирающее [Concept('concept_guarantee', 'Гарантию')] Независимости, для объявленной нами [Concept('concept_country', 'страны')]."
+  break_guarantee_action_notification_name: "[Concept('concept_guarantee', '$concept_guarantee$')] была снята!"
+  break_guarantee_action_notification_desc: "[INITIATOR_COUNTRY.GetName] убрали [Concept('concept_guarantee', 'гарантию')] с нас."
+  break_guarantee_action_notification_effects_desc: "$break_guarantee_desc$"
+  break_guarantee_action_notification_third_party_desc:0 "Государство [INITIATOR_COUNTRY.GetName] убирает [Concept('concept_guarantee', 'гарантию')] с #tooltippable_name #tooltip:[TARGET_COUNTRY.GetTooltipTag],DATA_COUNTRY_NAME_TOOLTIP,CountryTooltip [TARGET_COUNTRY.GetFlagTextIcon][TARGET_COUNTRY.GetCustom('RU_CL_TP')]#!#!.""

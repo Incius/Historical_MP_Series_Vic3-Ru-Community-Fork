@@ -1,0 +1,11 @@
+﻿l_russian:
+    
+    intervene_in_war.tt:0 "Вступить в [Concept('concept_war', 'войну')] где [SCOPE.sCountry('target_country_scope').GetName] [concept_war_leader]"
+    intervene_in_war:0 "Вмешаться в войну"
+    intervene_in_war_action_name:0 "Вступить в войну страны [TARGET_COUNTRY.GetName]"
+    intervene_in_war_desc:0 "Это [concept_diplomatic_action] позволяет вам вмешаться в [Concept('concept_war', 'войну'] где цель является [Concept('concept_war_leader', 'лидером войны')]."
+    intervene_in_war_action_notification_name:0 "Страна [INITIATOR_COUNTRY.GetName] вмешательство в военный кофликт страны [TARGET_COUNTRY.GetName]"
+    intervene_in_war_action_notification_desc:0 "Страна [INITIATOR_COUNTRY.GetName] объявила о своей готовности оказать полную военную поддержку стране [TARGET_COUNTRY.GetName] в этой войне. [INITIATOR_COUNTRY.GetAdjective] вооруженные силы окажут посильную помощь [TARGET_COUNTRY.GetCustom('RU_CL_DP')]#!#!] военным в их военных операциях."
+    intervene_in_war_action_notification_third_party_name:0 "[INITIATOR_COUNTRY.GetAdjective] вмешательство в военный кофликт страны [TARGET_COUNTRY.GetName]"
+    intervene_in_war_action_notification_third_party_desc:0 "Страна [INITIATOR_COUNTRY.GetName] объявила о своей готовности оказать полную военную поддержку стране [TARGET_COUNTRY.GetName] в этой войне. [INITIATOR_COUNTRY.GetCustom('RU_CL_VP')]#!#!] вооруженные силы окажут посильную помощь [TARGET_COUNTRY.GetCustom('RU_CL_DP')]#!#!] военным в их военных операциях."
+    

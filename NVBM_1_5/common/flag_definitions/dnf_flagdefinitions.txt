@@ -1,0 +1,52 @@
+DNF = {
+	flag_definition = {
+		coa = DNF		
+		subject_canton = DNF
+		priority = 1
+	}
+	flag_definition = {
+		coa = DNF_republic
+		subject_canton = DNF_republic
+		priority = 10
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = DNF_dictatorship
+		subject_canton = DNF_dictatorship
+		priority = 20
+		trigger = { 
+			coa_def_dictatorship_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = DNF_theocracy
+		subject_canton = DNF_theocracy
+		priority = 10
+		trigger = { 
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = DNF_communist
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	
+	flag_definition = {
+		coa = DNF_germansubject
+		priority = 1000
+		trigger = {
+			exists = c:GER
+				c:GER = {
+					has_diplomatic_pact = {
+					who = c:DNF
+						type = puppet
+				}
+			}
+		}	
+	}
+}

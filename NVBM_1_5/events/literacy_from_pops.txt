@@ -1,0 +1,205 @@
+namespace = literacy_from_pops
+
+
+literacy_from_pops.1 = {
+	type = country_event
+	placement = root
+
+	title = literacy_from_pops.1.t
+	desc = literacy_from_pops.1.d
+	flavor = literacy_from_pops.1.f
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_russian_serfs.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/russian_serfs"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+	
+	trigger = {
+				AND = {
+					total_population >= 100000000
+					total_population < 150000000
+					NOT = {
+						total_population >= 150000000
+						OR = {
+							has_modifier = literacy_from_pops_1
+							has_modifier = literacy_from_pops_2
+							has_modifier = literacy_from_pops_3
+							has_modifier = literacy_from_pops_4
+							has_modifier = literacy_from_pops_5
+							has_modifier = literacy_from_pops_6
+							has_modifier = literacy_from_pops_7
+							has_modifier = literacy_from_pops_8
+							has_modifier = literacy_from_pops_9
+						}
+					}
+			}
+	}
+	
+	immediate = {
+
+	}
+
+	option = { #production
+		name = literacy_from_pops.a
+		default_option = yes
+		add_modifier = {
+			name = literacy_from_pops_1
+			months = 9
+		}
+	}
+	option = { #military
+		name = literacy_from_pops.b
+		add_modifier = {
+			name = literacy_from_pops_2
+			months = 9
+		}
+	}
+	option = { #society
+		name = literacy_from_pops.c
+		add_modifier = {
+			name = literacy_from_pops_3
+			months = 9
+		}
+	}
+}
+
+literacy_from_pops.2 = {
+	type = country_event
+	placement = root
+
+	title = literacy_from_pops.1.t
+	desc = literacy_from_pops.1.d
+	flavor = literacy_from_pops.1.f
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_russian_serfs.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/russian_serfs"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+	
+	trigger = {
+				AND = {
+					total_population >= 150000000
+					total_population < 200000000
+					NOT = {
+						total_population >= 200000000
+						OR = {
+							has_modifier = literacy_from_pops_1
+							has_modifier = literacy_from_pops_2
+							has_modifier = literacy_from_pops_3
+							has_modifier = literacy_from_pops_4
+							has_modifier = literacy_from_pops_5
+							has_modifier = literacy_from_pops_6
+							has_modifier = literacy_from_pops_7
+							has_modifier = literacy_from_pops_8
+							has_modifier = literacy_from_pops_9
+						}
+					}
+			}
+	}
+	
+	immediate = {
+
+	}
+
+	option = { #production
+		name = literacy_from_pops.a
+		default_option = yes
+		add_modifier = {
+			name = literacy_from_pops_4
+			months = 9
+		}
+	}
+	option = { #military
+		name = literacy_from_pops.b
+		add_modifier = {
+			name = literacy_from_pops_5
+			months = 9
+		}
+	}
+	option = { #society
+		name = literacy_from_pops.c
+		add_modifier = {
+			name = literacy_from_pops_6
+			months = 9
+		}
+	}
+}
+
+literacy_from_pops.3 = {
+	type = country_event
+	placement = root
+
+	title = literacy_from_pops.1.t
+	desc = literacy_from_pops.1.d
+	flavor = literacy_from_pops.1.f
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_russian_serfs.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/russian_serfs"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+	
+	trigger = {
+				AND = {
+					total_population >= 200000000
+					NOT = {
+						OR = {
+							has_modifier = literacy_from_pops_1
+							has_modifier = literacy_from_pops_2
+							has_modifier = literacy_from_pops_3
+							has_modifier = literacy_from_pops_4
+							has_modifier = literacy_from_pops_5
+							has_modifier = literacy_from_pops_6
+							has_modifier = literacy_from_pops_7
+							has_modifier = literacy_from_pops_8
+							has_modifier = literacy_from_pops_9
+						}
+					}
+				}
+	}
+	
+	immediate = {
+
+	}
+
+	option = { #production
+		name = literacy_from_pops.a
+		default_option = yes
+		add_modifier = {
+			name = literacy_from_pops_7
+			months = 9
+		}
+	}
+	option = { #military
+		name = literacy_from_pops.b
+		add_modifier = {
+			name = literacy_from_pops_8
+			months = 9
+		}
+	}
+	option = { #society
+		name = literacy_from_pops.c
+		add_modifier = {
+			name = literacy_from_pops_9
+			months = 9
+		}
+	}
+}
+

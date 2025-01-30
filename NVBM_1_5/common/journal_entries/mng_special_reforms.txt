@@ -1,0 +1,46 @@
+﻿prussian_reform_action = {
+	icon = "gfx/interface/icons/war_goals/unify_germany.dds"
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+		exists = c:PRU
+		c:PRU = THIS
+	}
+	possible = {
+
+		has_law = law_type:law_professional_army
+		ig:ig_landowners = {
+			is_powerful = yes
+			is_in_government = yes
+		}
+	}
+
+	complete = {
+		has_technology_researched = breech_loading_artillery
+		has_technology_researched = triage
+	}
+
+	on_complete = {
+		add_modifier = {
+			name = modifier_prussian_reform
+			years = 10
+		}
+		show_as_tooltip = {			
+			add_loyalists = {
+				value = 0.1
+				pop_type = officers
+			}
+			add_loyalists = {
+				value = 0.1
+				pop_type = soldiers
+			}
+		}
+	}
+
+	invalid = {
+		NOT = { has_law = law_type:law_professional_army }
+	}
+
+	weight = 100
+	should_be_pinned_by_default = yes
+}

@@ -1,0 +1,13 @@
+﻿l_russian:
+    intervene_in_war.tt:0 "Вступить в любую[concept_war] где [SCOPE.sCountry('target_country_scope').GetName] является [concept_war_leader]"
+    intervene_in_war.ttt:0 "Недолжен иметь [concept_truce] с потенциальными оппонентами" 
+    intervene_in_war:0 "Вмешательство в войну"
+    intervene_in_war_action_name:0 "Вступить в [TARGET_COUNTRY.GetAdjective] Войну"
+    intervene_in_war_desc:0 "Это [concept_diplomatic_action] дает инициатору вступить в любую [concept_war] где страна-цель является [concept_war_leader]."
+    intervene_in_war_action_notification_name:0 "[INITIATOR_COUNTRY.GetAdjective] Intervention in [TARGET_COUNTRY.GetName]"
+    intervene_in_war_action_notification_desc:0 "[INITIATOR_COUNTRY.GetName] has announced that it will give full military support to [TARGET_COUNTRY.GetName] in its war. The [INITIATOR_COUNTRY.GetAdjective] Armed Forces will now join the [TARGET_COUNTRY.GetAdjective] Armed Forces in its military operations."
+    intervene_in_war_proposal_notification_name:0 "Proposal for [INITIATOR_COUNTRY.GetName] to intervene"
+    intervene_in_war_proposal_notification_desc:0 "[INITIATOR_COUNTRY.GetName] has announced that it wishes to give full military support to us in our war."
+    intervene_in_war_action_notification_third_party_name:0 "[INITIATOR_COUNTRY.GetAdjective] Intervention in [TARGET_COUNTRY.GetName]"
+    intervene_in_war_action_notification_third_party_desc:0 "[INITIATOR_COUNTRY.GetName] has announced that it will give full military support to [TARGET_COUNTRY.GetName] in its war. The [INITIATOR_COUNTRY.GetAdjective] Armed Forces will now join the [TARGET_COUNTRY.GetAdjective] Armed Forces in its military operations."
+    

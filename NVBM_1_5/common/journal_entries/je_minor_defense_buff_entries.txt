@@ -1,0 +1,228 @@
+﻿##TUTORIAL: Replace je_minor_defense_buff with whatever name you wanna give your journal entry
+je_minor_defense_buff = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	group = je_group_internal_affairs
+	is_shown_when_inactive = {
+		OR = {
+			AND = {
+				c:NET = ROOT
+			}
+			AND = {
+				c:SPA = ROOT
+			}
+			AND = {
+				c:TUR = ROOT
+			}
+			AND = {
+				c:BRZ = ROOT
+			}
+			AND = {
+				c:JAP = ROOT
+			}
+			AND = {
+				c:MEX = ROOT
+			}
+			AND = {
+				c:SWE = ROOT
+			}
+			AND = {
+				c:EGY = ROOT
+			}
+			AND = {
+				c:SAF = ROOT
+			}
+			AND = {
+				c:PER = ROOT
+			}
+						}
+		NOT = { has_modifier = nationalism_minor_defense }
+	}
+	
+	
+	
+	complete = {
+		has_technology_researched = nationalism
+	}
+	
+	
+	on_complete = {
+		trigger_event = { 
+			id = V3LB_technology_events.1 
+		}
+	}
+	
+	weight = 100
+	should_be_pinned_by_default = yes
+}
+je_italy_unity_buff = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	group = je_group_internal_affairs
+	is_shown_when_inactive = {
+		OR = {
+			country_has_primary_culture = cu:north_italian
+			country_has_primary_culture = cu:south_italian
+		}
+	}
+	complete = {
+		has_technology_researched = general_staff
+	}
+	
+	
+	on_complete = {
+		trigger_event = { 
+			id = V3LB_technology_events.2
+		}
+		s:STATE_LOMBARDY = {
+			add_claim = ROOT
+		}
+		s:STATE_VENETIA = {
+			add_claim = ROOT
+		}
+		s:STATE_ISTRIA = {
+			add_claim = ROOT
+		}
+		s:STATE_SOUTH_TYROL = {
+			add_claim = ROOT
+		}
+	}
+	
+	weight = 100
+	should_be_pinned_by_default = yes
+}
+je_foa_unity_buff = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	group = je_group_internal_affairs
+	is_shown_when_inactive = {
+		c:FOA = THIS
+	}
+	complete = {
+		c:FOA = { owns_entire_state_region = STATE_GUAYANA }
+	}
+	
+	on_complete = {
+		add_modifier = {
+			name = foa_unity_buff
+		months = 120
+		}
+		
+	}
+	
+	weight = 100
+	should_be_pinned_by_default = yes
+}
+
+je_new_world_spa = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	group = je_group_internal_affairs
+	is_shown_when_inactive = {
+		c:SPA = ROOT
+		NOT = { has_variable = new_world_spa }
+	}
+	
+	complete = {
+		owns_entire_state_region = STATE_BOLIVAR
+		owns_entire_state_region = STATE_MIRANDA
+		owns_entire_state_region = STATE_ZULIA
+		owns_entire_state_region = STATE_GUAVIARE
+		owns_entire_state_region = STATE_CUNDINAMARCA
+		owns_entire_state_region = STATE_CAUCA
+		owns_entire_state_region = STATE_ANTIOQUIA
+		owns_entire_state_region = STATE_PANAMA
+		owns_entire_state_region = STATE_PASTAZA
+		owns_entire_state_region = STATE_ECUADOR
+	}
+
+	on_complete = {
+		trigger_event = { 
+			id = V3LB_technology_events.3 
+		}
+	}
+	
+	weight = 100
+	should_be_pinned_by_default = yes
+}
+je_brazil_argentina = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	group = je_group_internal_affairs
+	is_shown_when_inactive = {
+			AND = {
+			c:BRZ = ROOT
+			}	
+
+		NOT = { has_modifier = brazil_migration }
+	}
+	
+	complete = {
+		owns_entire_state_region = STATE_BUENOS_AIRES
+		owns_entire_state_region = STATE_SANTA_FE
+		owns_entire_state_region = STATE_URUGUAY
+		owns_entire_state_region = STATE_LA_PAMPA
+		owns_entire_state_region = STATE_CHACO
+		owns_entire_state_region = STATE_TUCUMAN
+		owns_entire_state_region = STATE_JUJUY
+		owns_entire_state_region = STATE_RIO_NEGRO
+		owns_entire_state_region = STATE_CORRIENTES
+		owns_entire_state_region = STATE_ALTO_PARAGUAY
+	}
+
+	on_complete = {
+		trigger_event = { 
+			id = V3LB_technology_events.4 
+		}	
+	}
+	
+	weight = 100
+	should_be_pinned_by_default = yes
+}
+ragamuffin_war = {
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	group = je_group_internal_affairs
+
+	complete = {
+		OR = {
+			NOT = { exists = c:PNI }
+			NOT = {
+				any_scope_war = {
+					is_war_participant = c:PNI
+				}
+			}
+		}
+	}
+
+	on_complete = {
+		if = {
+			limit = { exists = c:PNI }
+			trigger_event = { id = south_america.5 }
+		}
+		else = {
+			trigger_event = { id = south_america_bra.1 }
+		}
+	}
+
+	should_be_pinned_by_default = yes
+
+}
+je_arab_unity_buff = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	group = je_group_internal_affairs
+
+	complete = {
+		custom_tooltip = {
+				text = ara_unite_je
+				}
+		hidden_trigger = {
+			exists = c:ARA
+		}
+	}
+	
+	
+	on_complete = {
+		add_modifier = { 
+			name = ara_unity_buff
+			months = -1
+		}
+	}
+	
+	weight = 100
+	should_be_pinned_by_default = yes
+}

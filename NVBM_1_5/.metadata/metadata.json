@@ -1,0 +1,12 @@
+{
+  "name" : "NVBM_1_5_13",
+  "id" : "",
+  "version" : "4.1.8",
+  "supported_game_version" : "1.*.*",
+  "short_description" : "",
+  "tags" : ["Graphics","Economy And Buildings"],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}

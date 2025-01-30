@@ -1,0 +1,40 @@
+﻿l_english:
+#イベント・ジャーナル関連
+  je_ainu_frontier: "Hokkaido Development Commission"
+  je_ainu_frontier_reason: "The development of Japan's large northern island was seen as a means to defend Japan from a rapidly developing and expansionist Russia. Development also promised to yield the needed natural resources for a growing capitalist economy."
+  je_ainu_frontier_status: "Colonize the island of Hokkaido."
+
+  je_the_line_of_advantage: "The Line of Advantage"
+  je_the_line_of_advantage_reason: "Korea is a dagger pointed at the heart of Japan. The independence and security of the nation depend first upon the protection of the line of sovereignty and then the line of advantage. If we wish to maintain the nation's independence among the powers of the world at the present time, it is not enough to guard only the line of sovereignty; we must also defend the line of advantage."
+  je_the_line_of_advantage_status: "Secure a buffer state against our enemies."
+
+  journal_flavor_japan.1.t: "The Iwakura Mission"
+  journal_flavor_japan.1.d: "With the policy of Sakoku coming to and end, scholars and officials prepare a voyage to bring back knowledge from abroad."
+  journal_flavor_japan.1.f: "The Iwakura Mission or Iwakura Embassy was a Japanese diplomatic voyage to the United States and Europe by leading statesmen and scholars. The aim of the mission was threefold; to gain recognition for the japanese government under [ROOT.GetCountry.GetRuler.GetFullName]; to begin preliminary renegotiation of the unequal treaties with the dominant world powers; and to make a comprehensive study of modern industrial, political, military and educational systems and structures in the United States and Europe."
+  journal_flavor_japan.1.a: "May their journey be enlightening."
+
+  journal_flavor_japan.2.t: "The Line of Advantage"
+  journal_flavor_japan.2.d: "[ROOT.GetCountry.GetRuler.GetFullName] has succesfully established the line of advantage to protect the sovereignty of Japan."
+  journal_flavor_japan.2.f: "The Korean peninsula has been pacified, and the [SCOPE.GetRootScope.GetCountry.GetAdjectiveNoFlag] sphere of influence has reached the manchurian border. We can now safely wage war away from the homeland, but would doing so be wise?"
+  journal_flavor_japan.2.a: "We must extend the line further to protect our conquests."
+  journal_flavor_japan.2.b: "Japan is safe at last."
+
+  journal_flavor_japan.3.t: "The Hokkaido Development Commission"
+  journal_flavor_japan.3.d: "The Development Commission encourages settlers to come to Hokkaido."
+  journal_flavor_japan.3.f: "The tondenhei were military settler colonists recruited to develop and defend Japan's northern frontier in Hokkaidō and Karafuto against foreign nations, particularly Imperial [SCOPE.sCountry('rus_scope').GetNameNoFlag]. Thousands of tondenhei took up the offer, albeit at the expense of [SCOPE.sCountry('ain_scope').GetNameNoFlag]."
+  journal_flavor_japan.3.a: "Hokkaido belongs to the Japanese."
+  journal_flavor_japan.3.b: "We should focus our efforts elsewhere."
+
+  journal_flavor_japan.4.t: "Japanese Settlers"
+  journal_flavor_japan.4.d: "Japense settlers claim our territory."
+  journal_flavor_japan.4.f: "Military settlers known as the tondenhei flock to our lands by the thousands. What should be our course of action?"
+  journal_flavor_japan.4.a: "We are hopelessly outnumbered and outgunned."
+  journal_flavor_japan.4.b: "If they want our land, they will have to fight for it!"
+
+  je_open_japan:0 "The Black Ships"
+  je_open_japan_reason:0 "Foreigners are trying to force open our ports!"
+  open_japan.1.t:0 "The Arrival of the Black Ships"
+  open_japan.1.d:0 "The Opening of Japan"
+  open_japan.1.f:0 "A squadron of foreign ships has arrived in one of our ports, demanding the opening of the Japanese markets. If we refuse, we may suffer the fate of China in the Opium Wars. If we submit, over 200 years of isolation will come to an end and the Land of the Rising Sun will be forever changed."
+  open_japan.1.a:0 "We will never submit to these barbarians!"
+  open_japan.1.b:0 "We must endure the unendurable."

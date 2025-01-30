@@ -1,0 +1,3 @@
+﻿l_russian:
+ BABYLON_NAVAL_INVASION_RIGHT_CLICK_MENU_TOOLTIP: "[Character.GetFullName] отправится выполнять высадку с моря[ConcatIfNeitherEmpty('\n$TOOLTIP_DELIMITER$\n', GetDesc( MapInteractions.AccessMapInteractionCharacter.GetNavalInvasionCommand( Character.Self, State.Self ) ) )] [ConcatIfNeitherEmpty('\n', State.GetCustom('naval_invasion_state_tooltip'))]"
+ BABYLON_NAVAL_INVASION_STATE_TOOLTIP: "@red_cross! Провинции в [State.GetStateRegion.GetStrategicRegion.GetName] принадлежащие [State.GetOwner.GetName] уже подвержены морскому вторжению"

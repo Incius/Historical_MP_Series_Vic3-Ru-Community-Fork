@@ -1,0 +1,7 @@
+decentralizednations = {
+	color = { 224 218 207 }
+
+	possible = {
+		is_country_type = decentralized
+	}
+}

@@ -1,0 +1,21 @@
+generate_inflation_report_decision = {
+	is_shown = {
+		custom_tooltip = {
+			text = wehavegeneratedfirstreport
+			has_variable = first_count_gdp_inflation_varr
+		}
+		is_ai = no
+		always = no # Now via topbar, by clicking on inflation glow button
+	}
+
+	possible = {
+		#
+	}
+	
+	when_taken = {
+		trigger_event = {
+			id = inflation.1
+			popup = yes
+		}
+	}
+}

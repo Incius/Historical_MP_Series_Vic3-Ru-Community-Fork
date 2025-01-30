@@ -1,0 +1,34 @@
+﻿doctrine_of_lapse_brit = {
+	is_shown = {
+		exists = c:GBR
+		root = c:GBR
+		NOT = { has_variable = doctrine_of_lapse_ended }
+		c:BIC = {
+			is_subject_of = ROOT
+		}
+	}
+
+	possible = {
+		is_at_war = no
+		custom_tooltip = {
+			text = doctrine_of_lapse_cooldown_tt
+			NOT = { has_variable = doctrine_of_lapse_cooldown }
+		}
+		c:BIC = {
+			is_subject_of = ROOT
+			is_subject_type = subject_type_puppet
+		}
+	}
+
+	when_taken = {
+		trigger_event = { id = raj.2alt days = 0 popup = yes }
+		set_variable = {
+			name = doctrine_of_lapse_cooldown
+			years = 2
+		}
+	}
+
+	ai_chance = {
+		base = 5
+	}
+}

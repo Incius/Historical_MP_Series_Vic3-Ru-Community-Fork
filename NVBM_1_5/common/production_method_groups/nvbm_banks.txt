@@ -1,0 +1,20 @@
+# Central Bank
+pmg_base_building_central_bank = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_central_bank_operations
+		pm_central_bank_operations_communist
+	}
+}
+
+pmg_central_policy = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+
+	production_methods = {
+		pm_no_central_policy
+		pm_issue_new_banknotes
+		pm_reduce_banknotes
+	}
+}

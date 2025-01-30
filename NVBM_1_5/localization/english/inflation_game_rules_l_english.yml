@@ -1,0 +1,7 @@
+﻿l_english:
+ rule_zz_infaltion_reports_gr:0 "[concept_quarterly_inflation] Report Notifications"
+ setting_inflation_reports_enabled:0 "Enabled"
+ setting_inflation_reports_enabled_desc:0 "Every 4 months, you will get a notification about your [concept_quarterly_inflation] report. Some people may find them spammy, hence this game rule exists."
+ setting_inflation_reports_disabled:0 "Disabled"
+ setting_inflation_reports_disabled_desc:0 "[concept_inflation] will still be enabled, but you won't get the [concept_quarterly_inflation] report notifications."
+ 

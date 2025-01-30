@@ -1,0 +1,12 @@
+﻿l_russian:
+  
+  # Common
+ # pm_base:0 "Base"  
+  # Barracks
+  
+ pm_needle_infantry:0 "Пехота с игольчатыми ружьями"
+ 
+ ###
+
+ pm_needle_infantry_conscription:0 "$pm_needle_infantry$"
+ 

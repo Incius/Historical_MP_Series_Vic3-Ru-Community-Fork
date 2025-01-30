@@ -1,0 +1,94 @@
+namespace = separate_market_events
+
+# On Action Event
+separate_market_events.1 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		any_diplomatic_play = { 
+			has_play_goal = independence
+			OR = {
+				initiator_is = root
+				target_is = root
+			}
+		}
+		is_subject = yes
+	}
+
+	immediate = {
+		make_independent = yes
+		every_diplomatic_play = { 
+			limit = {
+				has_play_goal = independence
+				OR = {
+					initiator_is = root
+					target_is = root
+				}
+			}
+
+			if = {
+				limit = {
+					initiator_is = root
+				}
+				if = {
+					limit = {
+						root.overlord = {
+							AND = {
+								is_country_type = recognized
+								country_rank > rank_value:minor_power	
+							}
+						}
+					}
+					add_war_goal = {
+						holder = target 
+						target_country = root
+						type = make_dominion
+					}
+				}
+				else = {
+					add_war_goal = {
+						holder = target
+						target_country = root
+						type = make_vassal
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					target_is = root
+					NOT = {
+						has_play_goal = make_puppet
+						has_play_goal = make_vassal
+						has_play_goal = make_dominion
+						has_play_goal = annex_country
+					}
+				}
+				if = {
+					limit = {
+						root.overlord = {
+							AND = {
+								is_country_type = recognized
+								country_rank > rank_value:minor_power	
+							}
+						}
+					}
+					add_war_goal = {
+						holder = initiator 
+						target_country = root
+						type = make_dominion
+					}
+				}
+				else = {
+					add_war_goal = {
+						holder = initiator
+						target_country = root
+						type = make_vassal
+					}
+				}
+				
+			}
+		}
+		
+	}
+}

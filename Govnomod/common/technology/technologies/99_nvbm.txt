@@ -1,0 +1,392 @@
+### ERA 1
+
+empiricism = {
+	# Unlocks Total Separation - Church and State Law
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/empiricism.dds"
+	category = society
+	
+	modifier = {
+		country_influence_mult = 0.1
+		country_diplomatic_play_maneuvers_add = 10
+		country_institution_schools_max_investment_add = 1
+		state_education_access_wealth_add = 0.005
+	}
+	
+	unlocking_technologies = {
+		academia
+	}
+	
+	ai_weight = {
+		value = 1.5 # Important in general
+	}
+}
+
+#unification ai buff
+mass_communication = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/mass_communication.dds"
+	category = society
+	
+	modifier = {
+		country_authority_mult = 0.1
+	}
+	
+	unlocking_technologies = {
+		democracy
+	}
+	
+	ai_weight = {
+		value = 1.5 # Important in general
+		
+		# Extra-important for major unifications
+		if = {
+			limit = { 
+				OR = {
+					country_has_primary_culture = cu:north_german
+					country_has_primary_culture = cu:south_german
+					country_has_primary_culture = cu:north_italian
+					country_has_primary_culture = cu:south_italian
+				}				
+			}
+			add = 3
+		}	
+		
+		if = {
+			limit = {
+				OR = {
+					country_has_primary_culture = cu:north_italian
+					country_has_primary_culture = cu:south_italian
+				}
+				any_country = {
+					has_journal_entry = je_risorgimento
+				}
+			}
+			multiply = 3
+		}
+	}
+
+}
+### ERA 2
+#unification ai buff
+nationalism = {
+	# Unlocks the Immigration Controls Law in Migration
+	# New leaders may spawn with the Ethno-Nationalist Ideology
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/nationalism.dds"
+	category = society
+	
+	modifier = {
+		country_authority_mult = 0.1
+	}
+	
+	unlocking_technologies = {
+		mass_communication
+		international_relations
+	}
+
+	on_researched = {
+		if = {
+			limit = {
+				NOT = { has_variable = nationalism_researched }
+			}
+			custom_tooltip = {
+				text = unlock_national_agitation_tt
+				set_variable = nationalism_researched
+			}
+		}
+	}
+	ai_weight = {
+		value = 2 # Important in general
+		
+		# Extra-important for major unifications
+		if = {
+			limit = { 
+				OR = {
+					country_has_primary_culture = cu:north_german
+					country_has_primary_culture = cu:south_german
+					country_has_primary_culture = cu:north_italian
+					country_has_primary_culture = cu:south_italian
+				}				
+			}
+			add = 3
+		}	
+		
+		if = {
+			limit = {
+				OR = {
+					country_has_primary_culture = cu:north_italian
+					country_has_primary_culture = cu:south_italian
+				}
+				any_country = {
+					has_journal_entry = je_risorgimento
+				}
+			}
+			multiply = 3
+		}
+	}
+}
+
+psychiatry = {
+	# Adds 2 to Power bloc mandate in 01_power_bloc_values
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/psychiatry.dds"
+	category = society
+	
+	modifier = {
+		country_influence_mult = 0.1
+		country_diplomatic_play_maneuvers_add = 10
+		state_bureaucracy_population_base_cost_factor_mult = -0.05
+		power_bloc_modifier = {
+			power_bloc_mandate_progress_mult=0.3
+		}
+	}
+
+	
+	unlocking_technologies = {
+		empiricism
+	}
+	
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+philosophical_pragmatism = {
+	# Adds 4 to Power bloc mandate in 01_power_bloc_values
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/philosophical_pragmatism.dds"
+	category = society
+	
+	modifier = {
+		country_influence_mult = 0.1
+		country_diplomatic_play_maneuvers_add = 10
+		state_bureaucracy_population_base_cost_factor_mult = -0.05
+		country_infamy_generation_mult = -0.15
+	}
+	power_bloc_modifier = {
+			power_bloc_mandate_progress_mult=0.3
+		}
+	unlocking_technologies = {
+		psychiatry
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+
+psychoanalysis = {
+	# Adds 8 to Power bloc mandate in 01_power_bloc_values
+	# Should provide additional methods for dealing with negative psychological character traits
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/psychoanalysis.dds"
+	category = society
+	
+	modifier = {
+		country_institution_schools_max_investment_add = 1
+	}
+
+
+	unlocking_technologies = {
+		philosophical_pragmatism
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+realpolitick = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/multilateral_alliances.dds"
+	category = society
+	
+	modifier = {
+		country_influence_mult = 0.1
+		country_diplomatic_play_maneuvers_add = 10
+		country_infamy_generation_mult = -0.15
+	}
+
+	unlocking_technologies = {
+		philosophical_pragmatism
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+multilateral_alliances = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/multilateral_alliances.dds"
+	category = society
+	
+	modifier = {
+		country_infamy_generation_mult = -0.25
+		country_allow_multiple_alliances_bool = yes
+	}
+	
+	unlocking_technologies = {	
+		pan-nationalism
+	}
+	
+	ai_weight = {
+		value = 1
+		
+		if = {
+			limit = { country_rank >= rank_value:great_power }
+			add = 2
+		}
+	}
+}
+
+analytical_philosophy = {
+	# Adds 16 to Power bloc mandate in 01_power_bloc_values
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/analytical_philosophy.dds"
+	category = society
+	
+	modifier = {
+		country_influence_mult = 0.2
+		country_diplomatic_play_maneuvers_add = 20
+		state_bureaucracy_population_base_cost_factor_mult = -0.05
+	}
+	
+	unlocking_technologies = {
+		psychoanalysis
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+behaviorism = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/behaviorism.dds"
+	category = society
+	
+	modifier = {
+		country_influence_mult = 0.1
+		country_diplomatic_play_maneuvers_add = 10
+		state_bureaucracy_population_base_cost_factor_mult = -0.05
+		country_infamy_generation_mult = -0.15
+	}
+	
+	unlocking_technologies = {
+		realpolitick
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+war_propaganda = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/war_propaganda.dds"
+	category = military
+
+	modifier = {
+		unit_morale_loss_mult = -0.05
+		state_conscription_rate_mult = 0.2
+		country_war_exhaustion_casualties_mult = -0.15
+	}
+	
+	unlocking_technologies = {	
+		enlistment_offices
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+trench_works = {
+	# Unlocks Officer Training PM in Barracks
+	# Unlocks Barbed Wire Fences in Livestock Ranches
+	# Unlocks Trench Infantry
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/trench_works.dds"
+	category = military
+	
+	unlocking_technologies = {
+		general_staff
+		electric_telegraph
+		military_statistics
+	}
+	
+	modifier = {
+		# defensive bonus, either to the army or ideally to fortifications
+		unit_army_defense_mult = 0.1
+	}
+
+	ai_weight = {
+		value = 2 # important for everyone
+	}
+}
+
+defense_in_depth = {
+	# Increases defense
+	# Unlock Delay Order?
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/defense_in_depth.dds"
+	category = military
+	
+	modifier = {
+		# defensive bonus, either to the army or ideally to fortifications
+		unit_army_defense_mult = 0.1
+	}
+	
+	unlocking_technologies = {	
+		trench_works
+		handcranked_machine_gun
+		war_propaganda
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+concrete_fortifications = {
+	# Increases defense
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/concrete_fortifications.dds"
+	category = military
+	
+	modifier = {
+		# build the maginot line and be completely unstoppable, forever, especially if you're France
+		# bonus to general defensiveness or specifically to forts if they become a thing
+		unit_army_defense_mult = 0.2
+	}
+	
+	unlocking_technologies = {	
+		defense_in_depth
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+mobile_armor = {
+	# Unlocks Tanks PM in Vehicles Industries
+	# Unlocks Tanks, Planes and Tanks PM in Barracks
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/mobile_armor.dds"
+	category = military
+	
+	unlocking_technologies = {	
+		concrete_fortifications
+		nco_training
+		stormtroopers
+	}
+	
+	ai_weight = {
+		value = 1.5 # Important tech in general
+	}
+}

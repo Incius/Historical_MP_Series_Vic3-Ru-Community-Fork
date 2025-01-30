@@ -1,0 +1,153 @@
+﻿### ERA 3
+
+needle_guns = {
+	# Unlocks Bolt Action Rifles PM in Arms Industry
+	# Global Unlock for Needle Guns PM in Barracks
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/needle_rifles.dds"
+	category = military
+	
+	unlocking_technologies = {	
+		general_staff
+		repeaters
+	}
+	
+	ai_weight = {
+		value = 2 # important for everyone
+	}
+}
+
+### ERA 4
+
+bolt_action_rifles = {
+	# Unlocks Bolt Action Rifles PM in Arms Industry
+	# Global Unlock for Bolt Action Rifles PM in Barracks
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/bolt_action_rifles.dds"
+	category = military
+	
+	unlocking_technologies = {	
+		needle_guns
+	}
+	
+	ai_weight = {
+		value = 2 # important for everyone
+	}
+}
+
+trench_works = {
+	# Unlocks Officer Training PM in Barracks
+	# Unlocks Barbed Wire Fences in Livestock Ranches
+	# Unlocks Trench Infantry
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/trench_works.dds"
+	category = military
+	
+	unlocking_technologies = {
+		defense_in_depth
+		needle_guns
+	}
+	
+	ai_weight = {
+		value = 2 # important for everyone
+	}
+}
+
+defense_in_depth = {
+	# Increases defense
+	# Unlock Delay Order?
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/defense_in_depth.dds"
+	category = military
+	
+	modifier = {
+		# defensive bonus, either to the army or ideally to fortifications
+		unit_army_defense_mult = 0.1
+	}
+	
+	unlocking_technologies = {	
+		military_statistics
+		needle_guns
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+### ERA 5
+
+concrete_fortifications = {
+	# Increases defense
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/concrete_fortifications.dds"
+	category = military
+	
+	modifier = {
+		# build the maginot line and be completely unstoppable, forever, especially if you're France
+		# bonus to general defensiveness or specifically to forts if they become a thing
+		unit_army_defense_mult = 0.1
+	}
+	
+	unlocking_technologies = {	
+		defense_in_depth
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+
+military_aviation = {
+	# Unlocks Vehicles Industries
+	# Unlocks Tanks, Planes and Tanks PM in Barracks
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/military_aviation.dds"
+	category = military
+	
+	modifier = {
+		# increased oil consumption
+		# increased recon/scouting/go fast
+	}
+	
+	unlocking_technologies = {	
+		military_statistics
+		concrete_fortifications
+	}
+	
+	ai_weight = {
+		value = 1.5 # Important tech in general
+	}
+}
+
+nco_training = {
+	# Unlocks Advanced Officer Training PM in Barracks
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/nco_training.dds"
+	category = military
+	
+	unlocking_technologies = {
+		concrete_fortifications
+		stormtroopers
+	}
+	
+	ai_weight = {
+		value = 2 # Important tech in general
+	}
+}
+
+chemical_warfare = {
+	# Unlocks Chemical Artillery PM in Barracks
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/chemical_warfare.dds"
+	category = military
+	
+	unlocking_technologies = {	
+		nco_training
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}

@@ -1,0 +1,42 @@
+﻿NDiplomacy = {
+	DEFAULT_TRUCE_MONTHS = 60
+	PEACE_DEAL_DURATION_IN_DAYS = 30
+	PEACE_DEAL_COOLDOWN_IN_DAYS = 120
+	DEFAULT_FORCED_PACT_MONTHS = 12
+	OBLIGATION_FORCED_PACT_MONTHS = 120
+	EXPEL_DIPLOMATS_MONTHS = 60
+	OBLIGATION_MONTHS = 120
+
+	DIPLOMATIC_ACTION_COOLDOWN_DAYS = 0				# Number of days you must wait between diplomatic actions/proposals
+	DIPLOMATIC_ACTION_PENDING_APPROVAL_DAYS = 14	# Number of days before a pending action is auto-declined
+	
+	DIPLOMATIC_PACT_COST_DEFAULT = 0					# The default maintenance in Diplomatic Capital for a pact
+	DIPLOMATIC_PACT_COST_MULT_FROM_INFAMOUS = 0.25		# Maintenance cost of a pact is increased by this when at Infamous level of infamy
+	DIPLOMATIC_PACT_COST_MULT_FROM_NOTORIOUS = 0.50		# Maintenance cost of a pact is increased by this when at Notorious level of infamy
+	DIPLOMATIC_PACT_COST_MULT_FROM_PARIAH = 1.00		# Maintenance cost of a pact is increased by this when at Pariah level of infamy
+				
+	RIVALRY_BASE_SCALING = 1.0						
+	RIVALRY_SCALING_PER_INTEREST = 0.5	
+	RIVALRY_MAX_SCALING = 2	
+	RIVALRY_LOWER_RANK_SCALING_MULT = 0.5
+
+	MIN_RELATIONS = -100
+	MAX_RELATIONS = 100
+	START_RELATIONS = 0
+	RELATIONS_THRESHOLD_FRIENDLY = 80
+	RELATIONS_THRESHOLD_AMICABLE = 50
+	RELATIONS_THRESHOLD_CORDIAL = 20
+	RELATIONS_THRESHOLD_POOR = -20
+	RELATIONS_THRESHOLD_COLD = -50
+	RELATIONS_THRESHOLD_HOSTILE = -80
+	REQUIRED_IMPROVE_RELATIONS_PROGRESS = 100		# How much change relations progress is needed to increase relations by 1 point
+	REQUIRED_DAMAGE_RELATIONS_PROGRESS = -100		# How much change relations progress is needed to decrease relations by 1 point
+	
+	MIN_INFAMY = 0							# Infamy can't be lower than this
+	MAX_INFAMY = 1000						# Infamy can't be higher than this
+	START_INFAMY = 0						# This is the default amount of infamy countries start with
+	INFAMY_THRESHOLD_INFAMOUS = 25			# Above this, countries are considered infamous and get related penalties
+	INFAMY_THRESHOLD_NOTORIOUS = 50			# Above this, countries are considered notorious and get related penalties
+	INFAMY_THRESHOLD_PARIAH = 80			# Above this, countries are considered pariah and get related penalties
+	BASE_YEARLY_INFAMY_DECAY_RATE = 5.0 	# Decay rate of infamy per year
+}

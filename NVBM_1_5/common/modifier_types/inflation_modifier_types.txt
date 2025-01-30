@@ -1,0 +1,13 @@
+country_inflation_mult = {
+	neutral = yes
+	percent = yes
+}
+country_quarterly_inflation_mult = {
+	neutral = yes
+	percent = yes
+}
+state_building_central_bank_max_level_add = {
+	good = yes
+	percent = no
+	num_decimals = 0
+}

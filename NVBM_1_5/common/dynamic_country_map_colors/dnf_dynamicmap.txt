@@ -1,0 +1,9 @@
+﻿dnf_communist = {
+	color = "dnf_soviet"
+
+	possible = {
+		exists = c:DNF
+		THIS = c:DNF
+		has_law = law_type:law_council_republic
+	}
+}

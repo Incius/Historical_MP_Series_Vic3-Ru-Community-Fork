@@ -1,0 +1,5 @@
+﻿l_english:
+ POWER_BLOC_MANDATE_PROGRESS_BASE: "From [PowerBloc.GetRankFormatted] Ranking and Technology"
+ TOOLTIP_LOCKED_PRINCIPLE_SLOT_3_DURING_FORMATION: "Available when your [concept_power_bloc_rank] is #v ##6#! or better and you have at least #v 4 #! [Concept('concept_power_bloc_member', '$concept_power_bloc_members_short$')]"
+ TOOLTIP_LOCKED_PRINCIPLE_SLOT_4_DURING_FORMATION: "Available when your [concept_power_bloc_rank] is #v ##4#! or better and you have at least #v 8 #! [Concept('concept_power_bloc_member', '$concept_power_bloc_members_short$')]"
+ building_war_machine_industry: "Machine industries"

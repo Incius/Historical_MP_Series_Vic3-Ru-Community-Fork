@@ -1,0 +1,117 @@
+dnf_formation_decision = {
+
+	ai_chance = {
+		base = 0
+			
+		modifier = {
+			trigger = { exists = c:GER }
+			add = 10
+		}
+		modifier = {
+			trigger = { 
+				OR = {
+					has_law = law_type:law_parliamentary_republic
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:council_republic
+				}
+			 }
+			add = 100
+		}
+		modifier = {
+			trigger = { 
+					has_law = law_type:law_multicultural
+				}
+			add = 50
+			}
+		modifier = {
+			trigger = { 
+				has_ruling_interest_group = ig_trade_unions
+			}
+			add = 20
+		}
+	}
+
+	is_shown = {
+		exists = c:AUS
+		this = c:AUS
+		NOT = { has_variable = dnf_formation_decision_taken }
+	}
+	
+	possible = {
+		country_has_primary_culture = cu:hungarian
+		any_scope_state = {
+			state_region = {
+				is_homeland = cu:hungarian
+			}
+		}
+			custom_tooltip = {
+				text = dnf_available
+				has_variable = dnf_decision_available
+
+			has_technology_researched = pan-nationalism
+			has_technology_researched = egalitarianism	
+
+			OR = {
+						has_law = law_type:law_wealth_voting
+						has_law = law_type:law_census_voting
+						has_law = law_type:law_universal_suffrage
+					}
+
+			OR = {		
+						has_law = law_type:law_racial_segregation
+						has_law = law_type:law_cultural_exclusion
+						has_law = law_type:law_multicultural
+					}
+
+			}
+
+			custom_tooltip = {
+				text = dnf_invalid
+			calc_true_if = {
+				any_scope_state = {
+					state_region = {
+						is_homeland = cu:slovak
+					}
+				}
+				any_scope_state = {
+					state_region = {
+						is_homeland = cu:romanian
+					}
+				}
+				any_scope_state = {
+					state_region = {
+						is_homeland = cu:czech
+					}
+				}
+				any_scope_state = {
+					state_region = {
+						is_homeland = cu:polish
+					}
+				}
+				any_scope_state = {
+					state_region = {
+						is_homeland = cu:croat
+					}
+				}
+				any_scope_state = {
+					state_region = {
+						is_homeland = cu:serb
+					}
+				}
+				any_scope_state = {
+					state_region = {
+						is_homeland = cu:ukrainian
+					}
+				}
+				amount >= 4
+			}
+		}
+		
+	}	
+	when_taken = {	
+		trigger_event = {
+			id = dnf_events.1
+			popup = yes
+		}	
+	}
+}

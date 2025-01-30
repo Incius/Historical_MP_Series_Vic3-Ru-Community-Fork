@@ -1,0 +1,41 @@
+subject_autonomy_being_lowered_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	#country_influence_add = -200
+	#country_bureaucracy_mult = -0.05
+	#country_expenses_add = 10000
+	country_expenses_add = 1
+}
+
+subject_autonomy_being_increased_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	#country_influence_add = 200
+	#country_bureaucracy_mult = 0.05
+	#country_tax_income_add = 10000
+	country_tax_income_add = 1
+}
+
+subject_autonomy_being_lowered_overlord_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_influence_add = -200
+	country_bureaucracy_mult = -0.05
+	country_expenses_add = 10000
+}
+
+subject_autonomy_being_increased_overlord_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_influence_add = 200
+	country_bureaucracy_mult = 0.05
+	country_tax_income_add = 10000
+}
+
+subject_autonomy_being_lowered_overlord_timed_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_bureaucracy_mult = -0.05
+	country_expenses_add = 10000
+}
+
+subject_autonomy_being_increased_overlord_timed_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_bureaucracy_mult = 0.05
+	country_tax_income_add = 10000
+}

@@ -1,0 +1,7 @@
+﻿l_russian:
+ migration_button_cooldown_tt: "Не использовал последние #Bold 8#! лет"
+ same_state_religion: "Общая религия"
+ je_brazil_navy_goal: "Следующее верно в течении 20 лет:"
+ pedro.2.d: "[SCOPE.gsInterestGroup('landowners_scope').GetName] терпели многие угнетения во время правления [SCOPE.sCharacter('pedro_scope').GetPrimaryRoleTitle] [SCOPE.sCharacter('pedro_scope').GetFirstName]. Многие теперь противники [GetLawType('law_monarchy').GetName] в пользу [SCOPE.sIdeology('elitist_scope').GetName] [GetLawType('law_republic').GetName]."
+ je_pedro_republic_reason: "Прогрессивные республиканцы обратились к императору с планом, согласно которому в [ROOT.GetCountry.GetAltName('RU_CL_PP')] мирным путём установится [GetLawType('law_presidential_republic').GetName|l], и первым президентом страны станет сам Педру."
+ 

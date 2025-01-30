@@ -1,0 +1,121 @@
+namespace = army_with_literacy_events
+
+
+army_with_literacy_events.1 = {
+	type = country_event
+	hidden = yes
+	placement = root
+	duration = 1
+	
+	trigger = {
+	}
+	
+	immediate = {
+	
+		if = {
+			limit = {
+				AND = {
+					literacy_rate >= 0.00
+					literacy_rate < 0.20
+					NOT = {
+						OR = {
+							has_modifier = literacy_army_1_modifier
+							has_modifier = literacy_army_2_modifier
+							has_modifier = literacy_army_3_modifier
+							has_modifier = literacy_army_4_modifier
+							has_modifier = literacy_army_5_modifier
+						}
+					}
+				}
+			}
+			add_modifier = {
+				name = literacy_army_1_modifier
+				months = 1
+			}
+		}
+			
+		else_if = {
+			limit = {
+				AND = {
+					literacy_rate >= 0.20 
+					literacy_rate < 0.40
+					NOT = {
+						OR = {
+							has_modifier = literacy_army_1_modifier
+							has_modifier = literacy_army_2_modifier
+							has_modifier = literacy_army_3_modifier
+							has_modifier = literacy_army_4_modifier
+							has_modifier = literacy_army_5_modifier
+						}
+					}
+				}
+			}
+			add_modifier = {
+				name = literacy_army_2_modifier
+				months = 1
+			}
+		}	
+			
+		else_if = {
+			limit = {
+				AND = {
+					literacy_rate >= 0.40 
+					literacy_rate < 0.60
+					NOT = {
+						OR = {
+							has_modifier = literacy_army_1_modifier
+							has_modifier = literacy_army_2_modifier
+							has_modifier = literacy_army_3_modifier
+							has_modifier = literacy_army_4_modifier
+							has_modifier = literacy_army_5_modifier
+						}
+					}
+				}
+			}
+			add_modifier = {
+				name = literacy_army_3_modifier
+				months = 1
+			}
+		}		
+			
+		else_if = {
+			limit = {
+				AND = {
+					literacy_rate >= 0.60 
+					literacy_rate < 0.80
+					NOT = {
+						OR = {
+							has_modifier = literacy_army_1_modifier
+							has_modifier = literacy_army_2_modifier
+							has_modifier = literacy_army_3_modifier
+							has_modifier = literacy_army_4_modifier
+							has_modifier = literacy_army_5_modifier
+						}
+					}
+				}
+			}
+			add_modifier = {
+				name = literacy_army_4_modifier
+				months = 1
+			}
+		}
+			
+		else = {
+			limit = {
+				NOT = {
+					OR = {
+						has_modifier = literacy_army_1_modifier
+						has_modifier = literacy_army_2_modifier
+						has_modifier = literacy_army_3_modifier
+						has_modifier = literacy_army_4_modifier
+						has_modifier = literacy_army_5_modifier
+					}
+				}
+			}
+			add_modifier = {
+				name = literacy_army_5_modifier
+				months = 1
+			}
+		}
+	}
+}

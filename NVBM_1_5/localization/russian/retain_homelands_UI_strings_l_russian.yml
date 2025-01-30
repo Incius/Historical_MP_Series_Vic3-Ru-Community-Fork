@@ -1,0 +1,6 @@
+﻿l_russian:
+ gpo_release_country_subject_text:1 "Вы уверены, что хотите освободить [ReleaseCountryWindow.GetCountryCreation.GetName] в качестве [concept_subject] [concept_country] для [GetPlayer.GetName]?\n"
+ gpo_release_country_independent_text:1 "Вы уверены, что хотите освободить [ReleaseCountryWindow.GetCountryCreation.GetName] в качестве независимой [concept_country]?\n"
+ gpo_release_country_reward:1 "Они получат следующие регионы:\n"
+ gpo_retain:0 "Оставить себе свои родные регионы"
+ # $COUNTRY_REWARDS$

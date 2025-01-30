@@ -1,0 +1,12 @@
+﻿l_english:
+  
+  # Common
+ # pm_base:0 "Base"  
+  # Barracks
+  
+ pm_needle_infantry:0 "Needle Infantry"
+ 
+ ###
+
+ pm_needle_infantry_conscription:0 "$pm_needle_infantry$"
+ 

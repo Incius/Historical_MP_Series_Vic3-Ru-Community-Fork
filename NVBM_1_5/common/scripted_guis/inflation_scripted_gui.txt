@@ -1,0 +1,15 @@
+fire_inflation_event = {
+	scope = country
+	
+    effect = {
+		if = {
+			limit = {
+				has_variable = first_count_gdp_inflation_varr
+			}
+			trigger_event = {
+				id = inflation.1
+				popup = yes
+			}
+		}
+    }
+}

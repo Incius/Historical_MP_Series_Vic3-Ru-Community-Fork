@@ -1,0 +1,50 @@
+# This is executed last among all history
+GLOBAL = {
+	every_country = {
+		set_variable = {
+			name = quarterly_pulse
+			value = 0
+		}
+		set_variable = {
+			name = inflation
+			value = 0
+		}
+		trigger_event = {
+			id = inflation.7
+			days = 1
+		}
+	}
+	every_country = {
+		limit = {
+			capital = {
+				OR = {
+					state_in_europe = yes
+					state_in_americas = yes
+				}
+			}
+			NOT = {
+				this = c:GBR
+				this = c:USA
+			}
+		}
+		activate_law = law_type:law_silver_standard
+	}
+	c:EGY = {
+		activate_law = law_type:law_silver_standard
+	}
+	c:JAP = {
+		activate_law = law_type:law_silver_standard
+	}
+	every_country = {
+		limit = {
+			is_subject_of = c:GBR
+		}
+		activate_law = law_type:law_silver_standard
+	}
+	c:GBR = {
+		activate_law = law_type:law_gold_standard
+	}
+	c:USA = {
+		activate_law = law_type:law_gold_standard
+	}
+}

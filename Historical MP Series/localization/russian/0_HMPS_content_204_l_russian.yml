@@ -1,0 +1,6 @@
+﻿l_russian:
+  
+  je_agricultural_development: "Кофейная река"
+  je_agricultural_development_reason: "[ROOT.GetCountry.GetName] облада[ROOT.GetCountry.GetCustom('RU_CL_END_T')] обширными плодородными землями и климатом, подходящим для выращивания выгодных товарных культур. Это открывает возможность обогатить нацию и принести [ROOT.GetCountry.GetAdjectiveNoFormatting|l]им товарам мировую известность."
+  je_agricultural_development_goal: "Увеличить количество [Concept('concept_buy_orders', 'приказов о покупке')] кофе на бразильском рынке на 150%"
+  je_agricultural_development_goal_dummy: "Увеличить количество [Concept('concept_buy_orders', 'приказов о покупке')] кофе на бразильском рынке на 100%"

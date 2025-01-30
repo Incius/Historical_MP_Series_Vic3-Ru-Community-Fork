@@ -1,0 +1,27 @@
+﻿l_english:
+ 
+ pmg_supplies:0 "Army Supplies"
+ pmg_naval_supplies:0 "Naval Supplies"
+ pmg_supplies_conscription:0 "Conscription Supplies"
+ 
+ pm_supplies_hard:0 "Harsh Supplies"
+ pm_supplies_not_enough:0 "Not Enough Supplies"
+ pm_supplies_soso:0 "So so Supplies"
+ pm_supplies_normal:0 "Normal Supplies"
+ pm_supplies_not_bad:0 "Not bad Supplies"
+ pm_supplies_affluent:0 "Affluent Supplies"
+ pm_supplies_luxurious:0 "Luxurious Supplies"
+ 
+ pm_naval_supplies_hard:0 "Harsh Supplies"
+ pm_naval_supplies_not_enough:0 "Not Enough Supplies"
+ pm_naval_supplies_soso:0 "So so Supplies"
+ pm_naval_supplies_normal:0 "Normal Supplies"
+ pm_naval_supplies_not_bad:0 "Not bad Supplies"
+ pm_naval_supplies_affluent:0 "Affluent Supplies"
+ pm_naval_supplies_luxurious:0 "Luxurious Supplies"
+
+ modifier_building_input_tobacco_add:0 "@tobacco! tobacco input per level"
+ modifier_building_input_tobacco_add_desc:0 "The amount of @tobacco! tobacco consumed by buildings"
+ 
+ modifier_building_input_coffee_add:0 "@coffee! coffee input per level"
+ modifier_building_input_coffee_add_desc:0 "The amount of @coffee! coffee consumed by buildings"

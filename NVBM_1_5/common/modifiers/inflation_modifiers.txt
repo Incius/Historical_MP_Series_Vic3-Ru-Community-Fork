@@ -1,0 +1,92 @@
+modifier_inflation_gdp_growth = { # Normal positive modifiers
+	icon = gfx/interface/icons/invention_icons/central_planning.dds
+	country_quarterly_inflation_mult = 0.01
+}
+modifier_inflation_minor = { # Normal positive modifiers
+	icon = gfx/interface/icons/invention_icons/central_planning.dds
+	country_inflation_mult = 0.01
+	state_poor_standard_of_living_add = -0.015
+	state_middle_standard_of_living_add = -0.015
+	state_capitalists_investment_pool_contribution_add = 0.015
+	country_loan_interest_rate_mult = 0.03
+	building_group_bg_agriculture_throughput_mult = -0.0175
+	building_group_bg_ranching_throughput_mult = -0.00175
+	building_group_bg_mining_throughput_mult = -0.00175
+	building_group_bg_plantations_throughput_mult = -0.00175
+	building_group_bg_manufacturing_throughput_mult = -0.00175
+	country_trade_route_cost_mult = 0.002
+	country_trade_route_competitiveness_mult = -0.001
+	country_trade_route_quantity_mult = -0.02
+	interest_group_approval_add = -0.03
+}
+modifier_inflation_minor_over10 = { # Normal positive modifiers
+	icon = gfx/interface/icons/invention_icons/central_planning.dds
+	country_inflation_mult = 0.01
+	state_poor_standard_of_living_add = -0.015
+	state_middle_standard_of_living_add = -0.015
+	country_loan_interest_rate_mult = 0.03
+	building_group_bg_agriculture_throughput_mult = -0.0175
+	building_group_bg_ranching_throughput_mult = -0.00175
+	building_group_bg_mining_throughput_mult = -0.00175
+	building_group_bg_plantations_throughput_mult = -0.00175
+	building_group_bg_manufacturing_throughput_mult = -0.00175
+	country_trade_route_cost_mult = 0.002
+	country_trade_route_competitiveness_mult = -0.001
+	country_trade_route_quantity_mult = -0.02
+	interest_group_approval_add = -0.03
+}
+modifier_deflation_minor = { # Will turn into negative
+	icon = gfx/interface/icons/invention_icons/central_planning.dds
+	country_inflation_mult = 0.01
+	state_rich_standard_of_living_add = 0.03
+	state_capitalists_investment_pool_contribution_add = 0.015
+	country_loan_interest_rate_mult = -0.004
+	building_construction_sector_throughput_mult = 0.01
+}
+modifier_inflation = { # Normal positive modifiers
+	icon = gfx/interface/icons/invention_icons/central_planning.dds
+	country_inflation_mult = 0.01
+	state_poor_standard_of_living_add = -0.05
+	state_middle_standard_of_living_add = -0.05
+	state_capitalists_investment_pool_contribution_add = 0.015
+	country_loan_interest_rate_mult = 0.01
+	building_group_bg_agriculture_throughput_mult = -0.005
+	building_group_bg_ranching_throughput_mult = -0.005
+	building_group_bg_mining_throughput_mult = -0.005
+	building_group_bg_plantations_throughput_mult = -0.005
+	building_group_bg_manufacturing_throughput_mult = -0.005
+	country_trade_route_cost_mult = 0.01
+	country_trade_route_competitiveness_mult = -0.01
+	country_trade_route_quantity_mult = -0.01
+	interest_group_approval_add = -0.1
+}
+modifier_inflation_over10 = { # Normal positive modifiers
+	icon = gfx/interface/icons/invention_icons/central_planning.dds
+	country_inflation_mult = 0.01
+	state_poor_standard_of_living_add = -0.05
+	state_middle_standard_of_living_add = -0.05
+	country_loan_interest_rate_mult = 0.01
+	building_group_bg_agriculture_throughput_mult = -0.005
+	building_group_bg_ranching_throughput_mult = -0.005
+	building_group_bg_mining_throughput_mult = -0.005
+	building_group_bg_plantations_throughput_mult = -0.005
+	building_group_bg_manufacturing_throughput_mult = -0.005
+	country_trade_route_cost_mult = 0.01
+	country_trade_route_competitiveness_mult = -0.01
+	country_trade_route_quantity_mult = -0.01
+	interest_group_approval_add = -0.1
+}
+modifier_deflation = { # Will turn into negative
+	icon = gfx/interface/icons/invention_icons/central_planning.dds
+	country_inflation_mult = 0.01
+	state_rich_standard_of_living_add = 0.5
+	state_capitalists_investment_pool_contribution_add = 0.04
+	country_loan_interest_rate_mult = 0.05
+	building_construction_sector_throughput_mult = 0.01
+}
+unstableconomy_inflation = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	state_capitalists_investment_pool_contribution_add = -0.15
+	state_rich_standard_of_living_add = -0.5
+	country_loan_interest_rate_add = 0.05
+}

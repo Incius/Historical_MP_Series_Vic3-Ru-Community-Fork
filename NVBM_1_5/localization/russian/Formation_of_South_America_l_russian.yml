@@ -1,0 +1,9 @@
+﻿l_russian:
+ FOA:0 "Соединенные Штаты Южной Америки"
+ FOA_ADJ:0 "Южноамериканск"
+ Formation_of_South_America_diplomatic_play_Unify_South_America:0 "Объединить Южную Америку"
+ Formation_of_South_America_diplomatic_play_Unify_South_America_tooltip:0 "#header Начать дипломатическую игру в попытке $Formation_of_South_America_diplomatic_play_Unify_South_America$ [concept_diplomatic_play]#!\n$TOOLTIP_DELIMITER$\n$Formation_of_South_America_diplomatic_play_Unify_South_America_desc$"
+ Formation_of_South_America_diplomatic_play_Unify_South_America_desc:0 "[WAR_GOAL.GetHolder.GetName] попыта[WAR_GOAL.GetHolder.GetCustom('RU_CL_END_T')]ся аннексировать все малые #tooltippable_name [WAR_GOAL.GetCountryFormation.GetAdjective|l]ие#! страны."
+ Formation_of_South_America_diplomatic_play_Leadership_South_America:0 "Южноамериканское лидерство"
+ Formation_of_South_America_diplomatic_play_Leadership_South_America_tooltip:0 "Определяет начальной [Concept('concept_war_goal', 'целью войны')] устранение выбранной [Concept('concept_country', 'страны')] в качестве [Concept('concept_unification_candidate', 'кандидата')] на [Concept('concept_unification', 'крупное объединение')] Южной Америки."
+ Formation_of_South_America_diplomatic_play_Leadership_South_America_desc:0 "Определяет начальной [Concept('concept_war_goal', 'целью войны')] устранение выбранной [Concept('concept_country', 'страны')] в качестве [Concept('concept_unification_candidate', 'кандидата')] на [Concept('concept_unification', 'крупное объединение')] Южной Америки."

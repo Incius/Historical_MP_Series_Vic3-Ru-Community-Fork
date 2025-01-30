@@ -1,0 +1,408 @@
+﻿je_dnf_constitution = {
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	group = je_group_internal_affairs
+	complete = {
+		scope:journal_entry = {
+			is_goal_complete = yes
+		}
+		
+	}
+	immediate = {
+		set_variable = {
+			name = dnf_con_timer
+			value = 0
+		}
+	}
+	on_monthly_pulse = {
+		effect = {
+			change_variable = {
+				name = dnf_con_timer
+				add = 1
+			}	
+				#Bohemia event
+			if = {
+                    limit = {
+                        root.var:dnf_con_timer = 1
+						any_scope_region = {
+							is_homeland = cu:czech 
+							owner = c:DNF
+							}
+                    	}
+					trigger_event = { id = dnf_events.2 popup = yes }	
+					}	
+				#Croatia event	
+			if = {
+                    limit = {
+                        root.var:dnf_con_timer = 2
+						any_scope_region = {
+							is_homeland = cu:croat
+							owner = c:DNF
+							}
+                    }
+					trigger_event = { id = dnf_events.6 popup = yes }	
+					}
+				#Romania event	
+			if = {
+                    limit = {
+                        root.var:dnf_con_timer = 3
+						any_scope_region = {
+							is_homeland = cu:romanian
+							owner = c:DNF
+							}
+                    }
+					trigger_event = { id = dnf_events.3 popup = yes }	
+					}
+				#Galicia event	
+			if = {
+                    limit = {
+                        root.var:dnf_con_timer = 4
+						any_scope_region = {
+							owner = c:DNF
+									OR = {
+										is_homeland = cu:polish
+										is_homeland = cu:ukrainian
+									}
+							}
+                    }
+					
+					trigger_event = { id = dnf_events.4 popup = yes }	
+					}			
+					
+		}
+	}
+	current_value = {
+		value = root.var:dnf_con_timer
+	}	
+	goal_add_value = {
+		value = 5
+	}
+
+	on_complete = {	
+		trigger_event = { id = dnf_events.7 }	
+	}
+
+	invalid = {
+		NOT = {
+			this = c:DNF
+		}
+	}
+	
+	
+	weight = 500
+	can_revolution_inherit = no
+	progressbar = yes
+	should_be_pinned_by_default = yes
+}
+
+je_dnf_possible = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	group = je_group_internal_affairs
+	is_shown_when_inactive = {
+		exists = c:AUS
+		ROOT = c:AUS
+	}
+
+	possible = {
+		OR = { 
+			has_technology_researched = nationalism
+			cu:hungarian = {
+				NOT = { culture_is_discriminated_in = ROOT }
+			}
+		}
+		is_subject = no
+		hidden_trigger = {
+			NOT = { has_variable = dnf_formation_decision_taken }
+		}
+	}
+	
+	complete = {
+		country_has_primary_culture = cu:hungarian
+			
+			has_technology_researched = pan-nationalism
+			has_technology_researched = egalitarianism	
+
+			OR = {
+						has_law = law_type:law_wealth_voting
+						has_law = law_type:law_census_voting
+						has_law = law_type:law_universal_suffrage
+					}
+
+			OR = {		
+						has_law = law_type:law_racial_segregation
+						has_law = law_type:law_cultural_exclusion
+						has_law = law_type:law_multicultural
+					}
+
+			any_scope_state = {
+				state_region = {
+					is_homeland = cu:hungarian
+				}
+			}
+				
+	}
+
+	immediate = { }
+
+	on_complete = {	
+		trigger_event = { id = dnf_events.8 popup = yes }	
+	}
+
+	invalid = {
+		OR = {
+			custom_tooltip = {
+				text = dnf_invalid
+			calc_true_if = {
+				any_scope_state = {
+					state_region = {
+						is_homeland = cu:slovak
+					}
+				}
+				any_scope_state = {
+					state_region = {
+						is_homeland = cu:romanian
+					}
+				}
+				any_scope_state = {
+					state_region = {
+						is_homeland = cu:czech
+					}
+				}
+				any_scope_state = {
+					state_region = {
+						is_homeland = cu:polish
+					}
+				}
+				any_scope_state = {
+					state_region = {
+						is_homeland = cu:croat
+					}
+				}
+				any_scope_state = {
+					state_region = {
+						is_homeland = cu:serb
+					}
+				}
+				any_scope_state = {
+					state_region = {
+						is_homeland = cu:ukrainian
+					}
+				}
+				amount <= 4
+			}
+		}
+
+			NOT = {
+				this = c:AUS
+			}
+		}
+	}
+	
+	
+	weight = 10
+	should_be_pinned_by_default = no
+}
+
+
+je_dnf_dissolution = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+		OR = {
+			AND = {
+				exists = c:GER
+				ROOT = c:GER
+			}
+			AND = {
+				exists = c:DNF
+				ROOT = c:DNF
+			}
+		}
+	}
+
+	possible = {
+
+	custom_tooltip = {
+		text = dnf_dis_possible
+		OR = { 
+			AND = {
+				exists = c:GER
+				ROOT = c:GER
+			}
+			AND = {
+				exists = c:DNF
+				ROOT = c:DNF
+			}
+		}
+		has_global_variable = dnf_formed
+		calc_true_if = {
+			owns_entire_state_region = STATE_POMERANIA
+			owns_entire_state_region = STATE_ELBE
+			owns_entire_state_region = STATE_WESTPHALIA
+			owns_entire_state_region = STATE_ANHALT
+			owns_entire_state_region = STATE_RHINELAND
+			owns_entire_state_region = STATE_NORTH_RHINE
+			owns_entire_state_region = STATE_SCHLESWIG_HOLSTEIN
+			owns_entire_state_region = STATE_HANNOVER
+			owns_entire_state_region = STATE_BRUNSWICK
+			owns_entire_state_region = STATE_SAXONY
+			owns_entire_state_region = STATE_HESSE
+			owns_entire_state_region = STATE_MECKLENBURG
+			owns_entire_state_region = STATE_SILESIA
+			owns_entire_state_region = STATE_WEST_PRUSSIA
+			owns_entire_state_region = STATE_EAST_PRUSSIA
+			owns_entire_state_region = STATE_POSEN
+			owns_entire_state_region = STATE_ALSACE_LORRAINE
+			amount >= 3
+			}
+	}
+
+	}
+		
+	
+	complete = {
+		custom_tooltip = {
+			text = dnf_dis_complete
+				exists = c:GER
+				ROOT = c:GER
+				has_global_variable = dnf_formed
+					capital = { 
+						OR = {
+							state_region = s:STATE_AUSTRIA
+							state_region = s:STATE_TYROL
+							state_region = s:STATE_SOUTH_TYROL
+							state_region = s:STATE_STYRIA
+						}
+					}
+
+		}
+	}
+
+	on_complete = {	
+		trigger_event = { id = dnf_events.9 popup = yes }	
+	}
+
+	invalid = {
+			calc_true_if = {
+				any_scope_state = {
+					state_region = {
+						is_homeland = cu:slovak
+					}
+				}
+				any_scope_state = {
+					state_region = {
+						is_homeland = cu:romanian
+					}
+				}
+				any_scope_state = {
+					state_region = {
+						is_homeland = cu:czech
+					}
+				}
+				any_scope_state = {
+					state_region = {
+						is_homeland = cu:polish
+					}
+				}
+				any_scope_state = {
+					state_region = {
+						is_homeland = cu:croat
+					}
+				}
+				any_scope_state = {
+					state_region = {
+						is_homeland = cu:serb
+					}
+				}
+				any_scope_state = {
+					state_region = {
+						is_homeland = cu:ukrainian
+					}
+				}
+				amount <= 4
+			}		
+	}
+	
+	
+	weight = 1
+	should_be_pinned_by_default = no
+}
+
+je_dnf_communism = {
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+		exists = c:DNF
+		ROOT = c:DNF
+		has_technology_researched = socialism
+
+	}
+
+	possible = {
+		exists = c:DNF
+		ROOT = c:DNF
+		has_law = law_type:law_council_republic
+	}
+
+	immediate = {
+		set_variable = {
+		name = dnf_soviet_countdown
+		value = 0
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					exists = c:DNF
+					ROOT = c:DNF
+					has_law = law_type:law_total_separation
+					OR = {		
+						has_law = law_type:law_cultural_exclusion
+						has_law = law_type:law_multicultural
+					}
+				}
+				change_variable = {
+					name = dnf_soviet_countdown
+					add = 1
+				}
+			}
+
+	}
+	}
+
+	complete = {
+		exists = c:DNF
+		ROOT = c:DNF
+		scope:journal_entry = {
+			is_goal_complete = yes
+		}
+		OR = {		
+			has_law = law_type:law_cultural_exclusion
+			has_law = law_type:law_multicultural
+		}
+		has_law = law_type:law_total_separation
+	}
+
+	invalid = {
+		NOT = { has_law = law_type:law_council_republic }
+		NOT = { ROOT = c:DNF }
+		has_variable = dnf_soviet_federation
+	}
+
+	on_complete = {
+			trigger_event = { id = dnf_events_soviet.1 popup = yes }
+	}
+	current_value = {
+		value = root.var:dnf_soviet_countdown
+	}
+	goal_add_value = {
+		add = 1
+	}
+
+	weight = 0
+	should_be_pinned_by_default = no
+
+}

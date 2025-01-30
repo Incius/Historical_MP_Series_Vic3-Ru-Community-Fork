@@ -1,0 +1,15 @@
+﻿l_russian:
+  # Army Model group
+ lawgroup_army_model:0 "Законы о призыве"
+ lawgroup_army_model_desc:0 "How your army is organized and regulated."
+  
+ law_peasant_levies:0 "Крестьянское ополчение"
+ law_peasant_levies_desc:0 "The army's main force comes from conscripted infantry with zero to basic training."
+ law_national_militia:0 "Частичный призыв"
+ law_national_militia_desc:0 "The standing army is small, but local militias can be activated to defend their homes."
+ law_mass_conscription:0 "Обязательная служба"
+ law_mass_conscription_desc:0 "Large numbers of infantry conscripts can be activated as needed to supplement the professional army."
+ law_professional_army:0 "Профессионально-Волонтерская армия" #Volunteer Military is HMPS original name
+ law_professional_army_desc:0 "The army consists of well-trained, professional regulars."
+  
+ EFFECTS_ON_ACCEPTANCE_law_language_discrimination: "#tooltippable #tooltip:$BREAKDOWN_TAG$ Среднее влияние на Попы с низким уровнем принятия#!#!"

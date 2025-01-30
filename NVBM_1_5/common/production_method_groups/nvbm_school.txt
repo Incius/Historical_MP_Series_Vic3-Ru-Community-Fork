@@ -1,0 +1,26 @@
+pmg_school_administration = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_school_clergy
+		pm_school_private
+		pm_school_public
+	}
+}
+pmg_base_school = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_school_primary
+		pm_school_secondary
+		pm_school_highschool
+		pm_school_community_college
+	}
+}
+pmg_ownership_capital_building_schooling = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_secular_academia
+		pm_privately_owned_schooling
+	}
+}

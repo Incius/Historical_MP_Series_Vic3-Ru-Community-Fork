@@ -1,0 +1,6 @@
+﻿l_russian:
+ rule_zz_infaltion_reports_gr:0 "Уведомление об отчете о [concept_quarterly_inflation]"
+ setting_inflation_reports_enabled:0 "Включить"
+ setting_inflation_reports_enabled_desc:0 "Каждые 4 месяца вы будете получать уведомление о вашем отчете о [concept_quarterly_inflation]. Некоторые люди могут посчитать их спамом, поэтому существует это правило игры."
+ setting_inflation_reports_disabled:0 "Выключить"
+ setting_inflation_reports_disabled_desc:0 "[concept_inflation] по-прежнему будет включен, но вы не получите уведомление о вашем отчете о [concept_quarterly_inflation]."

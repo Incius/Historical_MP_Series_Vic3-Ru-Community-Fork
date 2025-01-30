@@ -1,0 +1,12 @@
+on_monthly_pulse_country = {
+	events = {
+		inflation.6
+		inflation.9
+		inflation.10
+	}
+}
+on_yearly_pulse_country = {
+	events = {
+		inflation.7
+	}
+}

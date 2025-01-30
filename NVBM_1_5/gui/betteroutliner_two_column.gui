@@ -1,0 +1,74 @@
+template fullscreen_hide_two_column {
+	visible = "[And(Not(Not(GetVariableSystem.Exists('betteroutliner_option_twocolumn'))), Not(Or(Or(InformationPanelBar.IsPanelOpen('politics'), InformationPanelBar.IsPanelOpen('politics_panel_change_law')), InformationPanelBar.IsPanelOpen('tech_tree'))))]"
+}
+
+types betteroutliner {
+
+	type betteroutliner_two_column = 
+	vbox {
+		visible = "[And( And( Not( IsPauseMenuShown ), Not( IsGameOverScreenShown )), GetMetaPlayer.GetPlayedOrObservedCountry.IsValid)]"
+		layoutpolicy_horizontal = preferred
+		layoutpolicy_vertical = expanding
+		margin_top = 70 #margin construction info
+		
+		hbox = {
+			layoutpolicy_vertical = expanding
+
+			### erste box stellt einspaltigen outliner dar, wenn zweispaltig aktiv, alles außer feed ausblenden
+			vbox = {
+				layoutpolicy_vertical = expanding
+				
+				hbox = {
+					layoutpolicy_horizontal = expanding
+
+					expand = {}
+					outliner_wars = {
+						visible = "[And(Not(GetVariableSystem.Exists('betteroutliner_option_twocolumn')), Not(Or(Or(InformationPanelBar.IsPanelOpen('politics'), InformationPanelBar.IsPanelOpen('politics_panel_change_law')), InformationPanelBar.IsPanelOpen('tech_tree'))))]"
+					}
+				}
+				
+				hbox = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+
+					expand = {}
+					outliner = {
+						visible = "[Not(GetVariableSystem.Exists('betteroutliner_option_twocolumn'))]"
+						using = outliner_size
+						size = { 360 0 }
+						layoutpolicy_vertical = expanding
+					}
+				}
+
+				expand = {}
+				message_feed_widget = {
+					using = fullscreen_hide
+				}
+			}
+
+			vbox = {
+				visible = "[GetVariableSystem.Exists('betteroutliner_option_twocolumn')]"
+				layoutpolicy_vertical = expanding
+				
+				hbox = {
+					layoutpolicy_horizontal = expanding
+
+					expand = {}
+					outliner_wars = {
+						visible = "[And(GetVariableSystem.Exists('betteroutliner_option_twocolumn'), Not(Or(Or(InformationPanelBar.IsPanelOpen('politics'), InformationPanelBar.IsPanelOpen('politics_panel_change_law')), InformationPanelBar.IsPanelOpen('tech_tree'))))]"
+					}
+				}
+
+				outliner = {
+					using = outliner_size
+					size = { 360 0 }
+					layoutpolicy_vertical = expanding
+				}
+			}
+
+		}
+
+
+	}
+
+}

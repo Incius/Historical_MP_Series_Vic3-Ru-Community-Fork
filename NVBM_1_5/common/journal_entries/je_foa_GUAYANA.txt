@@ -1,0 +1,39 @@
+je_guayana_south_america = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	group = je_group_internal_affairs
+	is_shown_when_inactive = {
+		exists = c:FOA
+		c:FOA = ROOT
+		s:STATE_GUAYANA = {
+			any_scope_state = {
+				owner = {
+					NOT = {
+						c:FOA = THIS
+				}
+			}
+		}
+	}
+	}
+	
+	possible = {
+		OR = {
+			has_interest_marker_in_region = region_gran_colombia
+			owns_entire_state_region = STATE_PARA
+		}
+
+	}
+	
+	complete = {
+			c:FOA = { owns_entire_state_region = STATE_GUAYANA }
+		}
+	
+	on_complete = {
+	add_modifier = {
+		name = advance_of_tech
+		months = 60
+	}	
+
+	}
+	
+	weight = 100
+}

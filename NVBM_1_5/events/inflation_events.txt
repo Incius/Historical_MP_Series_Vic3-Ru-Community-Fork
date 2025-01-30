@@ -1,0 +1,983 @@
+namespace = inflation
+
+inflation.1 = { # Quarterly Inflation Report - Goods Shortages
+	type = country_event
+    placement = ROOT
+	
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/capitalists_meeting"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	title = inflation.1.t
+	desc = {
+		first_valid = {
+			triggered_desc = { # 30 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_30
+				}
+				desc = inflation.1.d.x30
+			}
+			triggered_desc = { # 29 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_29
+				}
+				desc = inflation.1.d.x29
+			}
+			triggered_desc = { # 28 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_28
+				}
+				desc = inflation.1.d.x28
+			}
+			triggered_desc = { # 27 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_27
+				}
+				desc = inflation.1.d.x27
+			}
+			triggered_desc = { # 26 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_26
+				}
+				desc = inflation.1.d.x26
+			}
+			triggered_desc = { # 25 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_25
+				}
+				desc = inflation.1.d.x25
+			}
+			triggered_desc = { # 24 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_24
+				}
+				desc = inflation.1.d.x24
+			}
+			triggered_desc = { # 23 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_23
+				}
+				desc = inflation.1.d.x23
+			}
+			triggered_desc = { # 22 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_22
+				}
+				desc = inflation.1.d.x22
+			}
+			triggered_desc = { # 21 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_21
+				}
+				desc = inflation.1.d.x21
+			}
+			triggered_desc = { # 20 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_20
+				}
+				desc = inflation.1.d.x20
+			}
+			triggered_desc = { # 19 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_19
+				}
+				desc = inflation.1.d.x19
+			}
+			triggered_desc = { # 18 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_18
+				}
+				desc = inflation.1.d.x18
+			}
+			triggered_desc = { # 17 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_17
+				}
+				desc = inflation.1.d.x17
+			}
+			triggered_desc = { # 16 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_16
+				}
+				desc = inflation.1.d.x16
+			}
+			triggered_desc = { # 15 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_15
+				}
+				desc = inflation.1.d.x15
+			}
+			triggered_desc = { # 14 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_14
+				}
+				desc = inflation.1.d.x14
+			}
+			triggered_desc = { # 13 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_13
+				}
+				desc = inflation.1.d.x13
+			}
+			triggered_desc = { # 12 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_12
+				}
+				desc = inflation.1.d.x12
+			}
+			triggered_desc = { # 11 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_11
+				}
+				desc = inflation.1.d.x11
+			}
+			triggered_desc = { # 10 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_10
+				}
+				desc = inflation.1.d.x10
+			}
+			triggered_desc = { # 9 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_9
+				}
+				desc = inflation.1.d.x9
+			}
+			triggered_desc = { # 8 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_8
+				}
+				desc = inflation.1.d.x8
+			}
+			triggered_desc = { # 7 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_7
+				}
+				desc = inflation.1.d.x7
+			}
+			triggered_desc = { # 6 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_6
+				}
+				desc = inflation.1.d.x6
+			}
+			triggered_desc = { # 5 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_5
+				}
+				desc = inflation.1.d.x5
+			}
+			triggered_desc = { # 4 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_4
+				}
+				desc = inflation.1.d.x4
+			}
+			triggered_desc = { # 3 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_3
+				}
+				desc = inflation.1.d.x3
+			}
+			triggered_desc = { # 2 shortages
+				trigger = {
+					exists = scope:shortage_good_inflation_2
+				}
+				desc = inflation.1.d.x2
+			}
+			triggered_desc = { # 1 shortage
+				trigger = {
+					exists = scope:shortage_good_inflation_1
+				}
+				desc = inflation.1.d.x1
+			}
+			triggered_desc = { # default, no shortages
+				trigger = {
+					always = yes
+				}
+				desc = inflation.1.d
+			}
+		}
+	}
+	flavor = inflation.1.f
+
+	duration = 3
+
+    trigger = {
+		# decision: generate_inflation_report_decision
+    }
+
+    immediate = {
+        save_scope_as = root_scope
+		every_in_list = {
+			variable = goods_expensive_inflation
+			if = { limit = { NOT = { exists = scope:expensive_good_inflation_1 } } save_scope_as = expensive_good_inflation_1 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_2 } } save_scope_as = expensive_good_inflation_2 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_3 } } save_scope_as = expensive_good_inflation_3 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_4 } } save_scope_as = expensive_good_inflation_4 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_5 } } save_scope_as = expensive_good_inflation_5 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_6 } } save_scope_as = expensive_good_inflation_6 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_7 } } save_scope_as = expensive_good_inflation_7 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_8 } } save_scope_as = expensive_good_inflation_8 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_9 } } save_scope_as = expensive_good_inflation_9 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_10 } } save_scope_as = expensive_good_inflation_10 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_11 } } save_scope_as = expensive_good_inflation_11 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_12 } } save_scope_as = expensive_good_inflation_12 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_13 } } save_scope_as = expensive_good_inflation_13 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_14 } } save_scope_as = expensive_good_inflation_14 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_15 } } save_scope_as = expensive_good_inflation_15 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_16 } } save_scope_as = expensive_good_inflation_16 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_17 } } save_scope_as = expensive_good_inflation_17 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_18 } } save_scope_as = expensive_good_inflation_18 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_19 } } save_scope_as = expensive_good_inflation_19 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_20 } } save_scope_as = expensive_good_inflation_20 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_21 } } save_scope_as = expensive_good_inflation_21 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_22 } } save_scope_as = expensive_good_inflation_22 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_23 } } save_scope_as = expensive_good_inflation_23 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_24 } } save_scope_as = expensive_good_inflation_24 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_25 } } save_scope_as = expensive_good_inflation_25 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_26 } } save_scope_as = expensive_good_inflation_26 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_27 } } save_scope_as = expensive_good_inflation_27 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_28 } } save_scope_as = expensive_good_inflation_28 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_29 } } save_scope_as = expensive_good_inflation_29 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_30 } } save_scope_as = expensive_good_inflation_30 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_31 } } save_scope_as = expensive_good_inflation_31 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_32 } } save_scope_as = expensive_good_inflation_32 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_33 } } save_scope_as = expensive_good_inflation_33 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_34 } } save_scope_as = expensive_good_inflation_34 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_35 } } save_scope_as = expensive_good_inflation_35 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_36 } } save_scope_as = expensive_good_inflation_36 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_37 } } save_scope_as = expensive_good_inflation_37 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_38 } } save_scope_as = expensive_good_inflation_38 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_39 } } save_scope_as = expensive_good_inflation_39 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_40 } } save_scope_as = expensive_good_inflation_40 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_41 } } save_scope_as = expensive_good_inflation_41 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_42 } } save_scope_as = expensive_good_inflation_42 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_43 } } save_scope_as = expensive_good_inflation_43 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_44 } } save_scope_as = expensive_good_inflation_44 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_45 } } save_scope_as = expensive_good_inflation_45 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_46 } } save_scope_as = expensive_good_inflation_46 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_47 } } save_scope_as = expensive_good_inflation_47 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_48 } } save_scope_as = expensive_good_inflation_48 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_49 } } save_scope_as = expensive_good_inflation_49 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_50 } } save_scope_as = expensive_good_inflation_50 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_51 } } save_scope_as = expensive_good_inflation_51 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_52 } } save_scope_as = expensive_good_inflation_52 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_53 } } save_scope_as = expensive_good_inflation_53 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_54 } } save_scope_as = expensive_good_inflation_54 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_55 } } save_scope_as = expensive_good_inflation_55 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_56 } } save_scope_as = expensive_good_inflation_56 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_57 } } save_scope_as = expensive_good_inflation_57 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_58 } } save_scope_as = expensive_good_inflation_58 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_59 } } save_scope_as = expensive_good_inflation_59 } else = { if = { limit = { NOT = { exists = scope:expensive_good_inflation_60 } } save_scope_as = expensive_good_inflation_60 } else = { } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } }
+		}
+		every_in_list = {
+			variable = goods_shortages_inflation
+			if = { limit = { NOT = { exists = scope:shortage_good_inflation_1 } } save_scope_as = shortage_good_inflation_1 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_2 } } save_scope_as = shortage_good_inflation_2 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_3 } } save_scope_as = shortage_good_inflation_3 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_4 } } save_scope_as = shortage_good_inflation_4 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_5 } } save_scope_as = shortage_good_inflation_5 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_6 } } save_scope_as = shortage_good_inflation_6 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_7 } } save_scope_as = shortage_good_inflation_7 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_8 } } save_scope_as = shortage_good_inflation_8 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_9 } } save_scope_as = shortage_good_inflation_9 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_10 } } save_scope_as = shortage_good_inflation_10 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_11 } } save_scope_as = shortage_good_inflation_11 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_12 } } save_scope_as = shortage_good_inflation_12 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_13 } } save_scope_as = shortage_good_inflation_13 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_14 } } save_scope_as = shortage_good_inflation_14 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_15 } } save_scope_as = shortage_good_inflation_15 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_16 } } save_scope_as = shortage_good_inflation_16 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_17 } } save_scope_as = shortage_good_inflation_17 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_18 } } save_scope_as = shortage_good_inflation_18 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_19 } } save_scope_as = shortage_good_inflation_19 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_20 } } save_scope_as = shortage_good_inflation_20 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_21 } } save_scope_as = shortage_good_inflation_21 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_22 } } save_scope_as = shortage_good_inflation_22 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_23 } } save_scope_as = shortage_good_inflation_23 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_24 } } save_scope_as = shortage_good_inflation_24 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_25 } } save_scope_as = shortage_good_inflation_25 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_26 } } save_scope_as = shortage_good_inflation_26 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_27 } } save_scope_as = shortage_good_inflation_27 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_28 } } save_scope_as = shortage_good_inflation_28 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_29 } } save_scope_as = shortage_good_inflation_29 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_30 } } save_scope_as = shortage_good_inflation_30 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_31 } } save_scope_as = shortage_good_inflation_31 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_32 } } save_scope_as = shortage_good_inflation_32 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_33 } } save_scope_as = shortage_good_inflation_33 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_34 } } save_scope_as = shortage_good_inflation_34 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_35 } } save_scope_as = shortage_good_inflation_35 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_36 } } save_scope_as = shortage_good_inflation_36 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_37 } } save_scope_as = shortage_good_inflation_37 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_38 } } save_scope_as = shortage_good_inflation_38 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_39 } } save_scope_as = shortage_good_inflation_39 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_40 } } save_scope_as = shortage_good_inflation_40 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_41 } } save_scope_as = shortage_good_inflation_41 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_42 } } save_scope_as = shortage_good_inflation_42 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_43 } } save_scope_as = shortage_good_inflation_43 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_44 } } save_scope_as = shortage_good_inflation_44 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_45 } } save_scope_as = shortage_good_inflation_45 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_46 } } save_scope_as = shortage_good_inflation_46 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_47 } } save_scope_as = shortage_good_inflation_47 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_48 } } save_scope_as = shortage_good_inflation_48 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_49 } } save_scope_as = shortage_good_inflation_49 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_50 } } save_scope_as = shortage_good_inflation_50 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_51 } } save_scope_as = shortage_good_inflation_51 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_52 } } save_scope_as = shortage_good_inflation_52 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_53 } } save_scope_as = shortage_good_inflation_53 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_54 } } save_scope_as = shortage_good_inflation_54 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_55 } } save_scope_as = shortage_good_inflation_55 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_56 } } save_scope_as = shortage_good_inflation_56 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_57 } } save_scope_as = shortage_good_inflation_57 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_58 } } save_scope_as = shortage_good_inflation_58 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_59 } } save_scope_as = shortage_good_inflation_59 } else = { if = { limit = { NOT = { exists = scope:shortage_good_inflation_60 } } save_scope_as = shortage_good_inflation_60 } else = { } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } }
+		}
+		every_in_list = {
+			variable = goods_cheaper_inflation
+			if = { limit = { NOT = { exists = scope:cheap_good_inflation_1 } } save_scope_as = cheap_good_inflation_1 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_2 } } save_scope_as = cheap_good_inflation_2 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_3 } } save_scope_as = cheap_good_inflation_3 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_4 } } save_scope_as = cheap_good_inflation_4 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_5 } } save_scope_as = cheap_good_inflation_5 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_6 } } save_scope_as = cheap_good_inflation_6 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_7 } } save_scope_as = cheap_good_inflation_7 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_8 } } save_scope_as = cheap_good_inflation_8 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_9 } } save_scope_as = cheap_good_inflation_9 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_10 } } save_scope_as = cheap_good_inflation_10 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_11 } } save_scope_as = cheap_good_inflation_11 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_12 } } save_scope_as = cheap_good_inflation_12 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_13 } } save_scope_as = cheap_good_inflation_13 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_14 } } save_scope_as = cheap_good_inflation_14 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_15 } } save_scope_as = cheap_good_inflation_15 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_16 } } save_scope_as = cheap_good_inflation_16 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_17 } } save_scope_as = cheap_good_inflation_17 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_18 } } save_scope_as = cheap_good_inflation_18 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_19 } } save_scope_as = cheap_good_inflation_19 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_20 } } save_scope_as = cheap_good_inflation_20 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_21 } } save_scope_as = cheap_good_inflation_21 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_22 } } save_scope_as = cheap_good_inflation_22 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_23 } } save_scope_as = cheap_good_inflation_23 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_24 } } save_scope_as = cheap_good_inflation_24 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_25 } } save_scope_as = cheap_good_inflation_25 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_26 } } save_scope_as = cheap_good_inflation_26 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_27 } } save_scope_as = cheap_good_inflation_27 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_28 } } save_scope_as = cheap_good_inflation_28 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_29 } } save_scope_as = cheap_good_inflation_29 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_30 } } save_scope_as = cheap_good_inflation_30 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_31 } } save_scope_as = cheap_good_inflation_31 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_32 } } save_scope_as = cheap_good_inflation_32 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_33 } } save_scope_as = cheap_good_inflation_33 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_34 } } save_scope_as = cheap_good_inflation_34 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_35 } } save_scope_as = cheap_good_inflation_35 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_36 } } save_scope_as = cheap_good_inflation_36 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_37 } } save_scope_as = cheap_good_inflation_37 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_38 } } save_scope_as = cheap_good_inflation_38 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_39 } } save_scope_as = cheap_good_inflation_39 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_40 } } save_scope_as = cheap_good_inflation_40 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_41 } } save_scope_as = cheap_good_inflation_41 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_42 } } save_scope_as = cheap_good_inflation_42 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_43 } } save_scope_as = cheap_good_inflation_43 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_44 } } save_scope_as = cheap_good_inflation_44 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_45 } } save_scope_as = cheap_good_inflation_45 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_46 } } save_scope_as = cheap_good_inflation_46 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_47 } } save_scope_as = cheap_good_inflation_47 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_48 } } save_scope_as = cheap_good_inflation_48 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_49 } } save_scope_as = cheap_good_inflation_49 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_50 } } save_scope_as = cheap_good_inflation_50 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_51 } } save_scope_as = cheap_good_inflation_51 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_52 } } save_scope_as = cheap_good_inflation_52 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_53 } } save_scope_as = cheap_good_inflation_53 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_54 } } save_scope_as = cheap_good_inflation_54 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_55 } } save_scope_as = cheap_good_inflation_55 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_56 } } save_scope_as = cheap_good_inflation_56 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_57 } } save_scope_as = cheap_good_inflation_57 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_58 } } save_scope_as = cheap_good_inflation_58 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_59 } } save_scope_as = cheap_good_inflation_59 } else = { if = { limit = { NOT = { exists = scope:cheap_good_inflation_60 } } save_scope_as = cheap_good_inflation_60 } else = { } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } }
+		}
+		every_in_list = {
+			variable = goods_vital_shortages_inflation
+			if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_1 } } save_scope_as = vital_shortage_good_inflation_1 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_2 } } save_scope_as = vital_shortage_good_inflation_2 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_3 } } save_scope_as = vital_shortage_good_inflation_3 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_4 } } save_scope_as = vital_shortage_good_inflation_4 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_5 } } save_scope_as = vital_shortage_good_inflation_5 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_6 } } save_scope_as = vital_shortage_good_inflation_6 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_7 } } save_scope_as = vital_shortage_good_inflation_7 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_8 } } save_scope_as = vital_shortage_good_inflation_8 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_9 } } save_scope_as = vital_shortage_good_inflation_9 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_10 } } save_scope_as = vital_shortage_good_inflation_10 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_11 } } save_scope_as = vital_shortage_good_inflation_11 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_12 } } save_scope_as = vital_shortage_good_inflation_12 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_13 } } save_scope_as = vital_shortage_good_inflation_13 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_14 } } save_scope_as = vital_shortage_good_inflation_14 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_15 } } save_scope_as = vital_shortage_good_inflation_15 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_16 } } save_scope_as = vital_shortage_good_inflation_16 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_17 } } save_scope_as = vital_shortage_good_inflation_17 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_18 } } save_scope_as = vital_shortage_good_inflation_18 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_19 } } save_scope_as = vital_shortage_good_inflation_19 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_20 } } save_scope_as = vital_shortage_good_inflation_20 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_21 } } save_scope_as = vital_shortage_good_inflation_21 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_22 } } save_scope_as = vital_shortage_good_inflation_22 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_23 } } save_scope_as = vital_shortage_good_inflation_23 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_24 } } save_scope_as = vital_shortage_good_inflation_24 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_25 } } save_scope_as = vital_shortage_good_inflation_25 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_26 } } save_scope_as = vital_shortage_good_inflation_26 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_27 } } save_scope_as = vital_shortage_good_inflation_27 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_28 } } save_scope_as = vital_shortage_good_inflation_28 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_29 } } save_scope_as = vital_shortage_good_inflation_29 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_30 } } save_scope_as = vital_shortage_good_inflation_30 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_31 } } save_scope_as = vital_shortage_good_inflation_31 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_32 } } save_scope_as = vital_shortage_good_inflation_32 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_33 } } save_scope_as = vital_shortage_good_inflation_33 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_34 } } save_scope_as = vital_shortage_good_inflation_34 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_35 } } save_scope_as = vital_shortage_good_inflation_35 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_36 } } save_scope_as = vital_shortage_good_inflation_36 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_37 } } save_scope_as = vital_shortage_good_inflation_37 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_38 } } save_scope_as = vital_shortage_good_inflation_38 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_39 } } save_scope_as = vital_shortage_good_inflation_39 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_40 } } save_scope_as = vital_shortage_good_inflation_40 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_41 } } save_scope_as = vital_shortage_good_inflation_41 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_42 } } save_scope_as = vital_shortage_good_inflation_42 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_43 } } save_scope_as = vital_shortage_good_inflation_43 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_44 } } save_scope_as = vital_shortage_good_inflation_44 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_45 } } save_scope_as = vital_shortage_good_inflation_45 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_46 } } save_scope_as = vital_shortage_good_inflation_46 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_47 } } save_scope_as = vital_shortage_good_inflation_47 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_48 } } save_scope_as = vital_shortage_good_inflation_48 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_49 } } save_scope_as = vital_shortage_good_inflation_49 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_50 } } save_scope_as = vital_shortage_good_inflation_50 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_51 } } save_scope_as = vital_shortage_good_inflation_51 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_52 } } save_scope_as = vital_shortage_good_inflation_52 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_53 } } save_scope_as = vital_shortage_good_inflation_53 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_54 } } save_scope_as = vital_shortage_good_inflation_54 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_55 } } save_scope_as = vital_shortage_good_inflation_55 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_56 } } save_scope_as = vital_shortage_good_inflation_56 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_57 } } save_scope_as = vital_shortage_good_inflation_57 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_58 } } save_scope_as = vital_shortage_good_inflation_58 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_59 } } save_scope_as = vital_shortage_good_inflation_59 } else = { if = { limit = { NOT = { exists = scope:vital_shortage_good_inflation_60 } } save_scope_as = vital_shortage_good_inflation_60 } else = { } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } }
+		}
+		every_in_list = {
+			variable = goods_vital_expensive_inflation
+			if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_1 } } save_scope_as = vital_expensive_good_inflation_1 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_2 } } save_scope_as = vital_expensive_good_inflation_2 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_3 } } save_scope_as = vital_expensive_good_inflation_3 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_4 } } save_scope_as = vital_expensive_good_inflation_4 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_5 } } save_scope_as = vital_expensive_good_inflation_5 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_6 } } save_scope_as = vital_expensive_good_inflation_6 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_7 } } save_scope_as = vital_expensive_good_inflation_7 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_8 } } save_scope_as = vital_expensive_good_inflation_8 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_9 } } save_scope_as = vital_expensive_good_inflation_9 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_10 } } save_scope_as = vital_expensive_good_inflation_10 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_11 } } save_scope_as = vital_expensive_good_inflation_11 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_12 } } save_scope_as = vital_expensive_good_inflation_12 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_13 } } save_scope_as = vital_expensive_good_inflation_13 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_14 } } save_scope_as = vital_expensive_good_inflation_14 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_15 } } save_scope_as = vital_expensive_good_inflation_15 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_16 } } save_scope_as = vital_expensive_good_inflation_16 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_17 } } save_scope_as = vital_expensive_good_inflation_17 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_18 } } save_scope_as = vital_expensive_good_inflation_18 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_19 } } save_scope_as = vital_expensive_good_inflation_19 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_20 } } save_scope_as = vital_expensive_good_inflation_20 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_21 } } save_scope_as = vital_expensive_good_inflation_21 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_22 } } save_scope_as = vital_expensive_good_inflation_22 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_23 } } save_scope_as = vital_expensive_good_inflation_23 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_24 } } save_scope_as = vital_expensive_good_inflation_24 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_25 } } save_scope_as = vital_expensive_good_inflation_25 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_26 } } save_scope_as = vital_expensive_good_inflation_26 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_27 } } save_scope_as = vital_expensive_good_inflation_27 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_28 } } save_scope_as = vital_expensive_good_inflation_28 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_29 } } save_scope_as = vital_expensive_good_inflation_29 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_30 } } save_scope_as = vital_expensive_good_inflation_30 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_31 } } save_scope_as = vital_expensive_good_inflation_31 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_32 } } save_scope_as = vital_expensive_good_inflation_32 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_33 } } save_scope_as = vital_expensive_good_inflation_33 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_34 } } save_scope_as = vital_expensive_good_inflation_34 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_35 } } save_scope_as = vital_expensive_good_inflation_35 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_36 } } save_scope_as = vital_expensive_good_inflation_36 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_37 } } save_scope_as = vital_expensive_good_inflation_37 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_38 } } save_scope_as = vital_expensive_good_inflation_38 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_39 } } save_scope_as = vital_expensive_good_inflation_39 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_40 } } save_scope_as = vital_expensive_good_inflation_40 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_41 } } save_scope_as = vital_expensive_good_inflation_41 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_42 } } save_scope_as = vital_expensive_good_inflation_42 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_43 } } save_scope_as = vital_expensive_good_inflation_43 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_44 } } save_scope_as = vital_expensive_good_inflation_44 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_45 } } save_scope_as = vital_expensive_good_inflation_45 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_46 } } save_scope_as = vital_expensive_good_inflation_46 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_47 } } save_scope_as = vital_expensive_good_inflation_47 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_48 } } save_scope_as = vital_expensive_good_inflation_48 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_49 } } save_scope_as = vital_expensive_good_inflation_49 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_50 } } save_scope_as = vital_expensive_good_inflation_50 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_51 } } save_scope_as = vital_expensive_good_inflation_51 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_52 } } save_scope_as = vital_expensive_good_inflation_52 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_53 } } save_scope_as = vital_expensive_good_inflation_53 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_54 } } save_scope_as = vital_expensive_good_inflation_54 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_55 } } save_scope_as = vital_expensive_good_inflation_55 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_56 } } save_scope_as = vital_expensive_good_inflation_56 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_57 } } save_scope_as = vital_expensive_good_inflation_57 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_58 } } save_scope_as = vital_expensive_good_inflation_58 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_59 } } save_scope_as = vital_expensive_good_inflation_59 } else = { if = { limit = { NOT = { exists = scope:vital_expensive_good_inflation_60 } } save_scope_as = vital_expensive_good_inflation_60 } else = { } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } }
+		}
+    }
+    
+	option = {
+		name = inflation.1.a
+		default_option = yes
+		trigger_event = {
+			id = inflation.2
+			popup = yes
+		}
+	}
+	option = {
+		name = CLOSE
+	}
+}
+inflation.2 = { # Quarterly Inflation Report - Vital Goods shortages
+	type = country_event
+    placement = ROOT
+	
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/capitalists_meeting"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	title = inflation.2.t
+	desc = {
+		first_valid = {
+			triggered_desc = { # 6 vital shortages
+				trigger = {
+					exists = scope:vital_shortage_good_inflation_6
+				}
+				desc = inflation.2.d.x6
+			}
+			triggered_desc = { # 5 vital shortages
+				trigger = {
+					exists = scope:vital_shortage_good_inflation_5
+				}
+				desc = inflation.2.d.x5
+			}
+			triggered_desc = { # 4 vital shortages
+				trigger = {
+					exists = scope:vital_shortage_good_inflation_4
+				}
+				desc = inflation.2.d.x4
+			}
+			triggered_desc = { # 3 vital shortages
+				trigger = {
+					exists = scope:vital_shortage_good_inflation_3
+				}
+				desc = inflation.2.d.x3
+			}
+			triggered_desc = { # 2 vital shortages
+				trigger = {
+					exists = scope:vital_shortage_good_inflation_2
+				}
+				desc = inflation.2.d.x2
+			}
+			triggered_desc = { # 1 vital shortage
+				trigger = {
+					exists = scope:vital_shortage_good_inflation_1
+				}
+				desc = inflation.2.d.x1
+			}
+			triggered_desc = { # default, no vital shortages
+				trigger = {
+					always = yes
+				}
+				desc = inflation.2.d
+			}
+		}
+	}
+	flavor = inflation.2.f
+
+	duration = 3
+
+    trigger = {
+        # event inflation.1
+    }
+    
+	option = {
+		name = inflation.2.a
+		default_option = yes
+		trigger_event = {
+			id = inflation.3
+			popup = yes
+		}
+	}
+	option = {
+		name = CLOSE
+	}
+}
+inflation.3 = { # Quarterly Inflation Report - Expensive Goods
+	type = country_event
+    placement = ROOT
+	
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/capitalists_meeting"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	title = inflation.3.t
+	desc = {
+		first_valid = {
+			triggered_desc = { # 30 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_30
+				}
+				desc = inflation.3.d.x30
+			}
+			triggered_desc = { # 29 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_29
+				}
+				desc = inflation.3.d.x29
+			}
+			triggered_desc = { # 28 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_28
+				}
+				desc = inflation.3.d.x28
+			}
+			triggered_desc = { # 27 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_27
+				}
+				desc = inflation.3.d.x27
+			}
+			triggered_desc = { # 26 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_26
+				}
+				desc = inflation.3.d.x26
+			}
+			triggered_desc = { # 25 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_25
+				}
+				desc = inflation.3.d.x25
+			}
+			triggered_desc = { # 24 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_24
+				}
+				desc = inflation.3.d.x24
+			}
+			triggered_desc = { # 23 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_23
+				}
+				desc = inflation.3.d.x23
+			}
+			triggered_desc = { # 22 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_22
+				}
+				desc = inflation.3.d.x22
+			}
+			triggered_desc = { # 21 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_21
+				}
+				desc = inflation.3.d.x21
+			}
+			triggered_desc = { # 20 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_20
+				}
+				desc = inflation.3.d.x20
+			}
+			triggered_desc = { # 19 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_19
+				}
+				desc = inflation.3.d.x19
+			}
+			triggered_desc = { # 18 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_18
+				}
+				desc = inflation.3.d.x18
+			}
+			triggered_desc = { # 17 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_17
+				}
+				desc = inflation.3.d.x17
+			}
+			triggered_desc = { # 16 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_16
+				}
+				desc = inflation.3.d.x16
+			}
+			triggered_desc = { # 15 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_15
+				}
+				desc = inflation.3.d.x15
+			}
+			triggered_desc = { # 14 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_14
+				}
+				desc = inflation.3.d.x14
+			}
+			triggered_desc = { # 13 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_13
+				}
+				desc = inflation.3.d.x13
+			}
+			triggered_desc = { # 12 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_12
+				}
+				desc = inflation.3.d.x12
+			}
+			triggered_desc = { # 11 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_11
+				}
+				desc = inflation.3.d.x11
+			}
+			triggered_desc = { # 10 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_10
+				}
+				desc = inflation.3.d.x10
+			}
+			triggered_desc = { # 9 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_9
+				}
+				desc = inflation.3.d.x9
+			}
+			triggered_desc = { # 8 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_8
+				}
+				desc = inflation.3.d.x8
+			}
+			triggered_desc = { # 7 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_7
+				}
+				desc = inflation.3.d.x7
+			}
+			triggered_desc = { # 6 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_6
+				}
+				desc = inflation.3.d.x6
+			}
+			triggered_desc = { # 5 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_5
+				}
+				desc = inflation.3.d.x5
+			}
+			triggered_desc = { # 4 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_4
+				}
+				desc = inflation.3.d.x4
+			}
+			triggered_desc = { # 3 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_3
+				}
+				desc = inflation.3.d.x3
+			}
+			triggered_desc = { # 2 expensive goods
+				trigger = {
+					exists = scope:expensive_good_inflation_2
+				}
+				desc = inflation.3.d.x2
+			}
+			triggered_desc = { # 1 expensive good
+				trigger = {
+					exists = scope:expensive_good_inflation_1
+				}
+				desc = inflation.3.d.x1
+			}
+			triggered_desc = { # default, no expensive goods
+				trigger = {
+					always = yes
+				}
+				desc = inflation.3.d
+			}
+		}
+	}
+	flavor = inflation.3.f
+
+	duration = 3
+
+    trigger = {
+        # event inflation.2
+    }
+
+    immediate = {
+		#
+    }
+    
+	option = {
+		name = inflation.3.a
+		default_option = yes
+		trigger_event = {
+			id = inflation.4
+			popup = yes
+		}
+	}
+	option = {
+		name = CLOSE
+	}
+}
+inflation.4 = { # Quarterly Inflation Report - vital expensive goods
+	type = country_event
+    placement = ROOT
+	
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/capitalists_meeting"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	title = inflation.4.t
+	desc = {
+		first_valid = {
+			triggered_desc = { # 6 vital expensive goods
+				trigger = {
+					exists = scope:vital_expensive_good_inflation_6
+				}
+				desc = inflation.4.d.x6
+			}
+			triggered_desc = { # 5 vital expensive goods
+				trigger = {
+					exists = scope:vital_expensive_good_inflation_5
+				}
+				desc = inflation.4.d.x5
+			}
+			triggered_desc = { # 4 vital expensive goods
+				trigger = {
+					exists = scope:vital_expensive_good_inflation_4
+				}
+				desc = inflation.4.d.x4
+			}
+			triggered_desc = { # 3 vital expensive goods
+				trigger = {
+					exists = scope:vital_expensive_good_inflation_3
+				}
+				desc = inflation.4.d.x3
+			}
+			triggered_desc = { # 2 vital expensive goods
+				trigger = {
+					exists = scope:vital_expensive_good_inflation_2
+				}
+				desc = inflation.4.d.x2
+			}
+			triggered_desc = { # 1 vital expensive good
+				trigger = {
+					exists = scope:vital_expensive_good_inflation_1
+				}
+				desc = inflation.4.d.x1
+			}
+			triggered_desc = { # default, no vital expensive goods
+				trigger = {
+					always = yes
+				}
+				desc = inflation.4.d
+			}
+		}
+	}
+	flavor = inflation.4.f
+
+	duration = 3
+
+    trigger = {
+        # event inflation.3
+    }
+
+    immediate = {
+		#
+    }
+    
+	option = {
+		name = inflation.4.a
+		default_option = yes
+		trigger_event = {
+			id = inflation.5
+			popup = yes
+		}
+	}
+	option = {
+		name = CLOSE
+	}
+}
+inflation.5 = { # Quarterly Inflation Report - Cheap Goods
+	type = country_event
+    placement = ROOT
+	
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/capitalists_meeting"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	title = inflation.5.t
+	desc = {
+		first_valid = {
+			triggered_desc = { # 30 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_30
+				}
+				desc = inflation.5.d.x30
+			}
+			triggered_desc = { # 29 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_29
+				}
+				desc = inflation.5.d.x29
+			}
+			triggered_desc = { # 28 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_28
+				}
+				desc = inflation.5.d.x28
+			}
+			triggered_desc = { # 27 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_27
+				}
+				desc = inflation.5.d.x27
+			}
+			triggered_desc = { # 26 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_26
+				}
+				desc = inflation.5.d.x26
+			}
+			triggered_desc = { # 25 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_25
+				}
+				desc = inflation.5.d.x25
+			}
+			triggered_desc = { # 24 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_24
+				}
+				desc = inflation.5.d.x24
+			}
+			triggered_desc = { # 23 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_23
+				}
+				desc = inflation.5.d.x23
+			}
+			triggered_desc = { # 22 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_22
+				}
+				desc = inflation.5.d.x22
+			}
+			triggered_desc = { # 21 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_21
+				}
+				desc = inflation.5.d.x21
+			}
+			triggered_desc = { # 20 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_20
+				}
+				desc = inflation.5.d.x20
+			}
+			triggered_desc = { # 19 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_19
+				}
+				desc = inflation.5.d.x19
+			}
+			triggered_desc = { # 18 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_18
+				}
+				desc = inflation.5.d.x18
+			}
+			triggered_desc = { # 17 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_17
+				}
+				desc = inflation.5.d.x17
+			}
+			triggered_desc = { # 16 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_16
+				}
+				desc = inflation.5.d.x16
+			}
+			triggered_desc = { # 15 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_15
+				}
+				desc = inflation.5.d.x15
+			}
+			triggered_desc = { # 14 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_14
+				}
+				desc = inflation.5.d.x14
+			}
+			triggered_desc = { # 13 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_13
+				}
+				desc = inflation.5.d.x13
+			}
+			triggered_desc = { # 12 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_12
+				}
+				desc = inflation.5.d.x12
+			}
+			triggered_desc = { # 11 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_11
+				}
+				desc = inflation.5.d.x11
+			}
+			triggered_desc = { # 10 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_10
+				}
+				desc = inflation.5.d.x10
+			}
+			triggered_desc = { # 9 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_9
+				}
+				desc = inflation.5.d.x9
+			}
+			triggered_desc = { # 8 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_8
+				}
+				desc = inflation.5.d.x8
+			}
+			triggered_desc = { # 7 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_7
+				}
+				desc = inflation.5.d.x7
+			}
+			triggered_desc = { # 6 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_6
+				}
+				desc = inflation.5.d.x6
+			}
+			triggered_desc = { # 5 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_5
+				}
+				desc = inflation.5.d.x5
+			}
+			triggered_desc = { # 4 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_4
+				}
+				desc = inflation.5.d.x4
+			}
+			triggered_desc = { # 3 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_3
+				}
+				desc = inflation.5.d.x3
+			}
+			triggered_desc = { # 2 cheap goods
+				trigger = {
+					exists = scope:cheap_good_inflation_2
+				}
+				desc = inflation.5.d.x2
+			}
+			triggered_desc = { # 1 cheap good
+				trigger = {
+					exists = scope:cheap_good_inflation_1
+				}
+				desc = inflation.5.d.x1
+			}
+			triggered_desc = { # default, no cheap goods
+				trigger = {
+					always = yes
+				}
+				desc = inflation.5.d
+			}
+		}
+	}
+	flavor = inflation.5.f
+
+	duration = 3
+
+    trigger = {
+        # event inflation.4
+    }
+
+    immediate = {
+		#
+    }
+    
+	option = {
+		name = inflation.5.a
+		default_option = yes
+	}
+}
+inflation.6 = { # A method to implement the 'every quarter' pulse, because there's no on_action pulse for it
+	type = country_event
+	placement = root
+	hidden = yes
+	
+	trigger = {
+		#
+	}
+	
+	immediate = {
+		on_quarterly_pulse = yes
+	}
+}
+inflation.7 = { # Calculate year-over-year GDP difference for inflation purposes
+	type = country_event
+	placement = root
+	hidden = yes
+	
+	trigger = {
+		NOT = {
+			is_country_type = decentralized
+		}
+	}
+	
+	immediate = {
+		calculate_year_over_year_gdp_growth_inflation = yes
+	}
+}
+inflation.8 = { # More than 5% change in inflation
+	type = country_event
+    placement = ROOT
+	
+	event_image = {
+		video = "unspecific_factory_closed"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/factory_closed"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	title = inflation.8.t
+	desc = inflation.8.d
+	flavor = inflation.8.f
+
+	duration = 3
+
+    trigger = {
+        # scripted effect: calculate_quarterly_change_in_inflation
+    }
+    
+	option = {
+		name = inflation.8.a
+		default_option = yes
+		add_modifier = {
+			name = unstableconomy_inflation
+			months = 4
+		}
+	}
+}
+inflation.9 = { # An event to recalculate inflation and post the notification if the game rule is enabled
+	type = country_event
+    placement = ROOT
+	hidden = yes
+
+    trigger = {
+        OR = {
+			quarterly_pulse = yes
+			NOT = {
+				has_global_variable = first_inflation_report
+			}
+		}
+		NOT = {
+			is_country_type = decentralized
+		}
+    }
+	
+	immediate = {
+		recalculate_inflation = yes
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = first_inflation_report
+				}
+			}
+			set_global_variable = first_inflation_report
+		}
+		if = {
+			limit = {
+				has_game_rule = inflation_reports_enabled
+			}
+			post_notification = tgr_inflation_report
+		}
+	}
+}
+
+inflation.10 = { # Remove central banks from non-capital states and when a law changes
+	type = country_event
+	placement = root
+	hidden = yes
+	
+	trigger = {
+		random_scope_state = {
+			OR = {
+				has_building = building_central_bank
+			}
+			is_capital = no
+		}
+	}
+	
+	immediate = {
+		random_scope_state = {
+			limit = {
+				has_building = building_central_bank
+				is_capital = no
+			}
+			remove_building = building_central_bank
+		}
+	}
+}

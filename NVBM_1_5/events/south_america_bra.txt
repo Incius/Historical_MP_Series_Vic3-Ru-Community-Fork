@@ -1,0 +1,93 @@
+namespace = south_america_bra
+south_america_bra.1 = { #you won
+	type = country_event
+	placement = ROOT
+	title = south_america.6.t
+	desc = south_america.6.d
+	flavor =  south_america.6.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	trigger = {
+		#triggered by the Ragamuffin JE
+	}
+
+	option = {
+		name = south_america.6.a
+		default_option = yes
+		custom_tooltip = Brazil_tt
+		show_as_tooltip = {
+			every_scope_state = {
+				limit = {
+					region = sr:region_brazil
+				}
+				add_modifier = {
+					name = brazil_construction
+					months = -1
+				} 
+			}
+		}
+				add_modifier = {
+					name = won_ragamuffin_war_integrate
+					months = normal_modifier_time
+				}
+				hidden_effect = {
+					every_scope_state = {
+						limit = {
+								region = sr:region_brazil
+							}
+						}
+						add_modifier = {
+							name = brazil_construction
+							months = -1
+						}
+					}
+				}	
+	
+	
+
+	option = {
+		name = south_america.6.b
+		custom_tooltip = Brazil_tt
+		show_as_tooltip = {
+			every_scope_state = {
+				limit = {
+					region = sr:region_brazil
+				}
+				add_modifier = {
+					name = brazil_construction
+					months = -1
+				} 
+			}
+		}
+				add_modifier = {
+					name = won_ragamuffin_war_ostracize
+					months = normal_modifier_time
+				}
+				add_radicals = {
+				value = 0.1
+				culture = cu:brazilian
+				}
+				hidden_effect = {
+					every_scope_state = {
+						limit = {
+								region = sr:region_brazil
+							}
+						}
+						add_modifier = {
+							name = brazil_construction
+							months = -1
+						}
+					}
+				}
+		
+}

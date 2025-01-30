@@ -1,0 +1,114 @@
+﻿##TUTORIAL: Replace je_minor_defense_buff with whatever name you wanna give your journal entry
+je_china_education_debuff = {
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	group = je_group_internal_affairs
+	is_shown_when_inactive = {
+		OR = {
+			country_has_primary_culture = cu:manchu
+			country_has_primary_culture = cu:mongol
+			country_has_primary_culture = cu:han
+			country_has_primary_culture = cu:min
+			country_has_primary_culture = cu:yue
+			country_has_primary_culture = cu:hakka
+			country_has_primary_culture = cu:tibetan
+			country_has_primary_culture = cu:uighur
+		}
+	}
+	complete = {
+		has_technology_researched = labor_movement
+		has_technology_researched = human_rights
+		}
+	
+	
+	on_complete = {
+		remove_modifier = china_education_debuff
+		trigger_event = { 
+			id = V3LB_game_start_events.2
+		}	
+	}
+	
+	goal_add_value = {
+		add = 2
+	}
+
+	progressbar = yes
+	
+	weight = 100
+	should_be_pinned_by_default = yes
+}
+je_china_recognition = {
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	group = je_group_internal_affairs
+	is_shown_when_inactive = {
+		OR = {
+			country_has_primary_culture = cu:manchu
+			country_has_primary_culture = cu:mongol
+			country_has_primary_culture = cu:han
+			country_has_primary_culture = cu:min
+			country_has_primary_culture = cu:yue
+			country_has_primary_culture = cu:hakka
+			country_has_primary_culture = cu:tibetan
+			country_has_primary_culture = cu:uighur
+		}
+	}
+	complete = {
+		is_subject = no
+		average_sol > 14
+		has_technology_researched = labor_movement
+		has_technology_researched = human_rights
+		has_technology_researched = war_propaganda
+		}
+	
+	
+	on_complete = {
+		set_country_type = colonial
+	}
+	
+	goal_add_value = {
+		add = 2
+	}
+
+	progressbar = yes
+	
+	weight = 100
+	should_be_pinned_by_default = yes
+}
+je_india_recognition = {
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	group = je_group_internal_affairs
+	is_shown_when_inactive = {
+		OR = {
+		AND = {
+			exists = c:BIC
+			this = c:BIC
+			is_country_type = unrecognized
+		}
+		AND = {
+			exists = c:BHT
+			this = c:BHT
+			is_country_type = unrecognized
+		}
+		}
+	}
+	complete = {
+		is_subject = no
+		average_sol > 12
+		has_technology_researched = labor_movement
+		has_technology_researched = human_rights
+		has_technology_researched = war_propaganda
+		}
+	
+	
+	on_complete = {
+		set_country_type = colonial
+	}
+	
+	goal_add_value = {
+		add = 5
+	}
+
+	progressbar = yes
+	
+	weight = 100
+	should_be_pinned_by_default = yes
+}

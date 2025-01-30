@@ -1,0 +1,12 @@
+GLOBAL = {
+	every_country = {
+		trigger_event = {
+			id = religion_country.1
+		}
+	}
+	every_country = {
+		trigger_event = {
+			id = army_with_literacy_events.1
+		}
+	}
+}

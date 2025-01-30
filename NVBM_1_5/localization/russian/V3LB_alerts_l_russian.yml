@@ -1,0 +1,12 @@
+﻿l_russian:
+  # alert_xyz_name = name of the Event
+  # alert_xyz_desc = additional description about the current situation (optional) 
+  # alert_xyz_hint = information that should help the player to be able to understand the situation and how to fix the problem
+  # alert_xyz_action = Where does clicking this take you?
+
+alert_can_take_decisions_name: "Доступно решение"
+alert_can_take_decisions_hint: "Вы можете увидеть как доступные, так и недоступные решения во вкладке «Решения» на панели «Журнал»"
+alert_can_take_decisions_action: "вкладка «Решения» на панели «Журнал»"
+
+
+

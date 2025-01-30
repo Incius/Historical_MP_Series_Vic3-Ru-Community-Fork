@@ -1,0 +1,72 @@
+namespace = V3LB_war_events
+
+V3LB_war_events.1 = { # An event to implement the war support increase every three battles won - When a battle is actually won
+	type = country_event
+    placement = ROOT
+	hidden = yes
+
+    trigger = {
+        # on_actions: on_battle_won
+    }
+	
+	immediate = {
+		add_one_point_to_ws_mechanic = yes
+	}
+}
+V3LB_war_events.2 = { # An event to implement the war support increase every three battles won - When a battle is lost
+	type = country_event
+    placement = ROOT
+	hidden = yes
+
+    trigger = {
+        # on_actions: on_battle_lost
+    }
+	
+	immediate = {
+		reset_ws_mechanic_points = yes
+	}
+}
+V3LB_war_events.3 = { # 3 consecutive battles won - add more war support
+	type = country_event
+    placement = ROOT
+	
+	event_image = {
+		video = "gfx/event_pictures/unspecific_military_parade.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/military_parade"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	title = V3LB_war_events.3.t
+	desc = V3LB_war_events.3.d
+	flavor = V3LB_war_events.3.f
+
+	duration = 1
+
+    trigger = {
+        # scripted effect: add_one_point_to_ws_mechanic
+    }
+	
+	immediate = {
+		random_scope_war = {
+			save_scope_as = ongoing_war
+		}
+		save_scope_as = root_scope
+		ig:ig_armed_forces = {
+			save_scope_as = armed_forces_scope
+		}
+	}
+    
+	option = {
+		name = V3LB_war_events.3.a
+		default_option = yes
+		scope:ongoing_war = {
+			add_war_war_support = {
+				target = ROOT
+				value = 10
+			}
+		}
+	}
+}

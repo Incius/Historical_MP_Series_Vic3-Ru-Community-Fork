@@ -1,0 +1,18 @@
+﻿l_russian:
+ rule_zz_scramble_for_africa:0 "Триггер колониального раздела Африки"
+ setting_default_tgr_default_scramble:0 "По умолчанию в NVBM"
+ setting_default_tgr_default_scramble_desc:0 "- Как минимум 3 Великих державы изучили технологию Цивилизаторская миссия \n - Как минимум 4 державы имеют колониальный институт \n - Дата 1860.1.1 или позднее"
+ setting_scramble_game_date_only:0 "Только дата"
+ setting_scramble_game_date_only_desc:0 "Единственное условие для колониального раздела Африки: \n - Дата 1860.1.1 или позднее"
+ setting_scramble_tech_and_institution_only:0 "Технология и колониальный иститут"
+ setting_scramble_tech_and_institution_only_desc:0 "Условия для колониального раздела Африки: \n - Как минимум 3 Великих державы изучили технологию Цивилизаторская миссия \n - Как минимум 4 державы имеют колониальный институт"
+ setting_scramble_institution_only:0 "Только колониальный институт"
+ setting_scramble_institution_only_desc:0 "Единственное условие для колониального раздела Африки: \n - Как минимум 4 державы имеют колониальный институт"
+ setting_scramble_tech_only:0 "Только технология"
+ setting_scramble_tech_only_desc:0 "Единственное условие для колониального раздела Африки: \n - Как минимум 3 Великих державы изучили технологию Цивилизаторская миссия"
+ 
+ rule_zz_tgr_conference_state:0 "Колониальный раздел Африки"
+ setting_conference_enabled:0 "Включен"
+ setting_conference_enabled_desc:0 "Колониальный раздел Африки и Берлинская конференция включены"
+ setting_conference_disabled:0 "Выключен"
+ setting_conference_disabled_desc:0 "Колониальный раздел Африки и Берлинская конференция выключены"

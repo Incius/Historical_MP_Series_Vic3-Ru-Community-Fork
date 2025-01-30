@@ -1,0 +1,5 @@
+﻿l_russian:
+
+je_the_algerian_departements_tt_1: "Регионы [SCOPE.sState('je_algiers_state_scope').GetStateRegion.GetName], [SCOPE.sState('je_oran_state_scope').GetStateRegion.GetName], и [SCOPE.sState('je_constantine_state_scope').GetStateRegion.GetName] полностью под контролем и [Concept('concept_incorporated_state','$concept_incorporated$')|l], с [concept_turmoil|l] ниже #bold 26%#!."
+je_the_algerian_departements_tt_3: "[SCOPE.sCulture('french_culture_scope').GetName] [Concept('concept_pop','$concept_population$')|l] в [SCOPE.sState('je_algiers_state_scope').GetStateRegion.GetName], [SCOPE.sState('je_oran_state_scope').GetStateRegion.GetName], и [SCOPE.sState('je_constantine_state_scope').GetStateRegion.GetName] больше или равно #bold 2%#!."
+

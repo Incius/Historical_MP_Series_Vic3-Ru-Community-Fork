@@ -1,0 +1,25 @@
+
+@panel_width_minus_10 = 530			# used to be 450
+
+types betteroutliner 
+{
+	type option_row = flowcontainer {
+		min_width = @panel_width_minus_10
+		max_width = @panel_width_minus_10
+		parentanchor = hcenter
+
+		direction = horizontal
+		spacing = 10
+
+		flowcontainer = {
+			textbox = {
+				min_width = 250
+				autoresize = yes
+				align = right
+				block "text" {}
+			}
+		}
+		
+		block "input" {}
+	}
+}

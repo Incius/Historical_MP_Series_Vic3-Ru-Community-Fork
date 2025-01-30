@@ -1,0 +1,239 @@
+﻿check_if_root_is_generic_gdp = {
+	scope = country
+
+	is_shown = {
+		NOT = {
+			OR = {
+				AND = {
+					exists = c:USA
+					OR = {
+						this = c:USA
+						is_subject_of = c:USA
+					}
+				}
+				AND = {
+					exists = c:AUS
+					OR = {
+						this = c:AUS
+						is_subject_of = c:AUS
+					}
+				}
+				AND = {
+					exists = c:FRA
+					OR = {
+						this = c:FRA
+						is_subject_of = c:FRA
+					}
+				}
+				AND = {
+					exists = c:RUS
+					OR = {
+						this = c:RUS
+						is_subject_of = c:RUS
+					}
+				}
+			}
+		}
+	}
+}
+
+you_are_the_relevant_country = {
+	scope = country
+	
+	saved_scopes = { state } 
+	
+    is_shown = {
+		scope:state.owner = {
+			this = root
+		}
+    }
+}
+check_if_root_is_usa_or_subject = {
+	scope = country
+	
+    is_shown = {
+		exists = c:USA
+        OR = {
+			this = c:USA
+			is_subject_of = c:USA
+		}
+    }
+}
+check_if_root_is_usa = {
+	scope = country
+	
+    is_shown = {
+		exists = c:USA
+        this = c:USA
+    }
+}
+check_if_root_is_gbr = {
+	scope = country
+	
+    is_shown = {
+		exists = c:GBR
+        this = c:GBR
+    }
+}
+check_if_root_is_fra_or_subject = {
+	scope = country
+	
+    is_shown = {
+		exists = c:FRA
+        OR = {
+			this = c:FRA
+			is_subject_of = c:FRA
+		}
+    }
+}
+check_if_root_is_fra = {
+	scope = country
+	
+    is_shown = {
+		exists = c:FRA
+        this = c:FRA
+    }
+}
+check_if_root_is_rus_or_subject = {
+	scope = country
+	
+    is_shown = {
+		exists = c:RUS
+        OR = {
+			this = c:RUS
+			is_subject_of = c:RUS
+		}
+    }
+}
+check_if_root_is_aus_or_subject_gulden = {
+	scope = country
+	
+    is_shown = {
+		exists = c:AUS
+        OR = {
+			this = c:AUS
+			is_subject_of = c:AUS
+		}
+		c:AUS = {
+			NOT = {
+				has_law = law_type:law_gold_standard
+			}
+		}
+    }
+}
+check_if_root_is_aus_or_subject_krone = {
+	scope = country
+	
+    is_shown = {
+		exists = c:AUS
+        OR = {
+			this = c:AUS
+			is_subject_of = c:AUS
+		}
+		c:AUS = {
+			has_law = law_type:law_gold_standard
+		}
+    }
+}
+check_if_root_is_tur = {
+	scope = country
+	
+    is_shown = {
+		exists = c:TUR
+        this = c:TUR
+    }
+}
+check_if_root_is_pru = {
+	scope = country
+	
+    is_shown = {
+		exists = c:PRU
+        this = c:PRU
+    }
+}
+check_if_root_is_rus = {
+	scope = country
+	
+    is_shown = {
+		exists = c:RUS
+        this = c:RUS
+    }
+}
+check_if_root_is_aus = {
+	scope = country
+	
+    is_shown = {
+		exists = c:AUS
+        this = c:AUS
+    }
+}
+check_if_root_is_ita = {
+	scope = country
+	
+    is_shown = {
+		exists = c:ITA
+        this = c:ITA
+    }
+}
+check_if_root_is_jap = {
+	scope = country
+	
+    is_shown = {
+		exists = c:JAP
+        this = c:JAP
+    }
+}
+check_if_root_is_generic = {
+	scope = country
+	
+    is_shown = {
+		NOT = {
+			AND = {
+				exists = c:PRU
+				this = c:PRU
+			}
+			AND = {
+				exists = c:RUS
+				this = c:RUS
+			}
+			AND = {
+				exists = c:AUS
+				this = c:AUS
+			}
+			AND = {
+				exists = c:FRA
+				this = c:FRA
+			}
+			AND = {
+				exists = c:ITA
+				this = c:ITA
+			}
+			AND = {
+				exists = c:TUR
+				this = c:TUR
+			}
+			AND = {
+				exists = c:JAP
+				this = c:JAP
+			}
+			AND = {
+				exists = c:USA
+				this = c:USA
+			}
+			AND = {
+				exists = c:GBR
+				this = c:GBR
+			}
+        }
+    }
+}
+is_centralized = {
+	scope = country
+	
+    is_valid = {
+    	NOT = {
+			is_country_type = decentralized
+		}
+    }
+}
+
