@@ -5,7 +5,7 @@
 
 	country_modifiers = {
 		workforce_scaled = {
-			country_construction_add = 1.5
+			country_construction_add = 1.8
 		}
 	}
 
