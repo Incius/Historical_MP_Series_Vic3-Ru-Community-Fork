@@ -821,8 +821,8 @@ NDiplomacy = {
 	
 	WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR = 10000 # The amount of population by which the factor below is multiplied
 	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER = 0.02 # For each WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR population in a country/state, multiply infamy by this
-	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_PER_STATE = 12 # Infamy population multiplier can't be higher than this for each state affected
-	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL = 12 # Infamy population multiplier can't be higher than this, regardless of number of states affected
+	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_PER_STATE = 15 # Infamy population multiplier can't be higher than this for each state affected
+	WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL = 40 # Infamy population multiplier can't be higher than this, regardless of number of states affected
 	WAR_GOAL_INFAMY_HOMELAND_FACTOR = -0.5 # Infamy is adjusted by this if the states taken/puppeted etc are Homelands of the aggressor
 	WAR_GOAL_INFAMY_UNINCORPORATED_FACTOR = -0.5 # Infamy is adjusted by this if the states taken/puppeted etc are unincorporated
 	WAR_GOAL_INFAMY_REBELLING_SUBJECT_MULT = 0.5 # Infamy is multiplied by this for wargoals targeting a rebellious subject
@@ -834,12 +834,12 @@ NDiplomacy = {
 	WAR_GOAL_INFAMY_CONQUER_STATE = 8.0
 	WAR_GOAL_INFAMY_RETURN_STATE = 2.0
 	WAR_GOAL_INFAMY_TAKE_TREATY_PORT = 1.0
-	WAR_GOAL_INFAMY_MAKE_PROTECTORATE = 7.0
+	WAR_GOAL_INFAMY_MAKE_PROTECTORATE = 5.0
 	WAR_GOAL_INFAMY_MAKE_TRIBUTARY = 8.0
 	WAR_GOAL_INFAMY_MAKE_DOMINION = 8.0
 	WAR_GOAL_INFAMY_REDUCE_AUTONOMY = 7.0
-	WAR_GOAL_INFAMY_TRANSFER_SUBJECT = 6.0
-	WAR_GOAL_INFAMY_ANNEX_COUNTRY = 8.0
+	WAR_GOAL_INFAMY_TRANSFER_SUBJECT = 4.0
+	WAR_GOAL_INFAMY_ANNEX_COUNTRY = 7.0
 	WAR_GOAL_INFAMY_REGIME_CHANGE = 4
 	WAR_GOAL_INFAMY_FORCE_NATIONALIZATION = 5.0
 	WAR_GOAL_INFAMY_FOREIGN_INVESTMENT_RIGHTS = 0.25
@@ -1138,7 +1138,7 @@ NPops = {
 	# Acceptance #
 	MIN_ACCEPTANCE_VALUE = 0													# It is both the minimum acceptance value a pop can have as well as the explicit threshold scripted for the first acceptance status [any signed 32 bit value]
 	MAX_ACCEPTANCE_VALUE = 100													# It is both the maximum acceptance value a pop can have as well as the (implied) upper bound of the last acceptance status [> MIN_ACCEPTANCE_VALUE]
-	ACCEPTANCE_FROM_HOMELAND_COMMUNITY = 15
+	ACCEPTANCE_FROM_HOMELAND_COMMUNITY = 10
 	# The amount of acceptance a pop gets from living in their homeland, applied statically on their Cultural Community
 	MIN_REQUIRED_ACCEPTANCE_FOR_MIGRATION = 40		 							# If a pop would have less than this much acceptance in a target state, they won't mass migrate there
 	EXPECTED_ACCEPTANCE_INCREASE_TO_MIGRATE = 20                                # A pop will look to increase their acceptance by this much when mass migrating, but might accept less if mass migration attraction difference is high enough

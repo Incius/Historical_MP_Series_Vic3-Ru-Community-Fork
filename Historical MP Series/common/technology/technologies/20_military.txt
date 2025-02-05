@@ -981,6 +981,7 @@ chemical_warfare = {
 	unlocking_technologies = {	
 		automatic_machine_guns
 		flamethrowers
+		stormtroopers
 	}
 	
 	ai_weight = {
@@ -1020,6 +1021,7 @@ concrete_fortifications = {
 		unit_morale_loss_mult = -0.05
 		# build the maginot line and be completely unstoppable, forever, especially if you're France
 		# bonus to general defensiveness or specifically to forts if they become a thing
+		unit_army_defense_add = 5
 		unit_army_defense_mult = 0.1
 		
 	}
