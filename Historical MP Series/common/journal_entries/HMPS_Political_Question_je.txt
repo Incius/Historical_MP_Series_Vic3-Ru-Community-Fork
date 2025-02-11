@@ -143,7 +143,6 @@ je_napoleons_legacy = {
 	}
 	
 	on_timeout = {
-		set_global_variable = peoples_springtime_happened
 		remove_modifier = modifier_napoleon_announce
 	}
 

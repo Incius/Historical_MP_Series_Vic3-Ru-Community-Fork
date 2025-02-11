@@ -1,0 +1,176 @@
+﻿je_war_deficit = {
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+		is_at_war = yes
+	}
+
+	possible = {
+		OR = {
+			market_capital.market = {
+				mg:small_arms = { 
+					market_goods_pricier > 0.74 
+				}
+			}
+			market_capital.market = {
+				mg:ammunition = { 
+					market_goods_pricier > 0.74 
+				}
+			}
+		}	
+	}
+
+	scripted_progress_bar = arms_progress_bar
+	scripted_progress_bar = ammunition_progress_bar
+
+	immediate = {
+		market_capital.market = {
+			mg:small_arms = {
+				save_scope_as = arms_scope
+			}
+		}
+		market_capital.market = {
+			mg:ammunition = {
+				save_scope_as = ammunition_scope
+			}
+		}
+		root = {
+			save_scope_as = country_scope
+		}
+		trigger_event = { id = war_deficit.1 }
+	}
+
+	complete = {
+		AND = {
+			market_capital.market = {
+				mg:small_arms = { 
+					market_goods_pricier < 0.6 
+				}
+			}
+			market_capital.market = {
+				mg:ammunition = { 
+					market_goods_pricier < 0.6 
+				}
+			}
+			scope:journal_entry = {
+                "scripted_bar_progress(arms_progress_bar)" < 5
+            }
+            scope:journal_entry = {
+                "scripted_bar_progress(ammunition_progress_bar)" < 5
+            }
+		}
+	}
+
+	on_complete = {
+		trigger_event = { id = war_deficit.2 }
+	}
+
+	on_monthly_pulse = {
+		effect={
+			remove_modifier=war_deficit_armsdebuff
+			add_modifier={
+				name = war_deficit_armsdebuff
+    			multiplier = {
+    				value=0
+    				if={
+    					limit={scope:journal_entry = {"scripted_bar_progress(arms_progress_bar)" >12}}
+    					add=1
+    				}
+    				if={
+    					limit={scope:journal_entry = {"scripted_bar_progress(arms_progress_bar)" >24}}
+    					add=1
+    				}
+    				if={
+    					limit={scope:journal_entry = {"scripted_bar_progress(arms_progress_bar)" >36}}
+    					add=1
+    				}
+    				if={
+    					limit={scope:journal_entry = {"scripted_bar_progress(arms_progress_bar)" >48}}
+    					add=1
+    				}
+    				if={
+    					limit={scope:journal_entry = {"scripted_bar_progress(arms_progress_bar)" >60}}
+    					add=1
+    				}
+    				if={
+    					limit={scope:journal_entry = {"scripted_bar_progress(arms_progress_bar)" >72}}
+    					add=1
+    				}
+    				if={
+    					limit={scope:journal_entry = {"scripted_bar_progress(arms_progress_bar)" >84}}
+    					add=1
+    				}
+    				if={
+    					limit={scope:journal_entry = {"scripted_bar_progress(arms_progress_bar)" >96}}
+    					add=1
+    				}
+    				if={
+    					limit={scope:journal_entry = {"scripted_bar_progress(arms_progress_bar)" >108}}
+    					add=1
+    				}
+    				if={
+    					limit={scope:journal_entry = {"scripted_bar_progress(arms_progress_bar)" =120}}
+    					add=1
+    				}
+    			}
+    			is_decaying = no 
+    			months = 2
+    		}
+		}
+		effect={
+			remove_modifier=war_deficit_ammunitiondebuff
+			add_modifier={
+				name = war_deficit_ammunitiondebuff
+    			multiplier = {
+    				value=0
+    				if={
+    					limit={scope:journal_entry = {"scripted_bar_progress(ammunition_progress_bar)" >12}}
+    					add=1
+    				}
+    				if={
+    					limit={scope:journal_entry = {"scripted_bar_progress(ammunition_progress_bar)" >24}}
+    					add=1
+    				}
+    				if={
+    					limit={scope:journal_entry = {"scripted_bar_progress(ammunition_progress_bar)" >36}}
+    					add=1
+    				}
+    				if={
+    					limit={scope:journal_entry = {"scripted_bar_progress(ammunition_progress_bar)" >48}}
+    					add=1
+    				}
+    				if={
+    					limit={scope:journal_entry = {"scripted_bar_progress(ammunition_progress_bar)" >60}}
+    					add=1
+    				}
+    				if={
+    					limit={scope:journal_entry = {"scripted_bar_progress(ammunition_progress_bar)" >72}}
+    					add=1
+    				}
+    				if={
+    					limit={scope:journal_entry = {"scripted_bar_progress(ammunition_progress_bar)" >84}}
+    					add=1
+    				}
+    				if={
+    					limit={scope:journal_entry = {"scripted_bar_progress(ammunition_progress_bar)" >96}}
+    					add=1
+    				}
+    				if={
+    					limit={scope:journal_entry = {"scripted_bar_progress(ammunition_progress_bar)" >108}}
+    					add=1
+    				}
+    				if={
+    					limit={scope:journal_entry = {"scripted_bar_progress(ammunition_progress_bar)" =120}}
+    					add=1
+    				}
+    			}
+    			is_decaying = no 
+    			months = 2
+    		}
+		}
+	}
+	weight = 100
+	should_be_pinned_by_default = yes
+}

@@ -679,10 +679,7 @@ types market_panel
 					}
 					blockoverride "right" {		
 
-						dynamicgridbox = {			
-							position = { -12 0 }
-							align = right|nobaseline
-							parentanchor = right|vcenter		
+						dynamicgridbox = {	
 							flipdirection = yes
 							datamodel_wrap = 10
 							datamodel = "[Market.AccessLocalGoods( MarketPanel.GetFilters )]"

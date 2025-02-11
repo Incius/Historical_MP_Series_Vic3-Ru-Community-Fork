@@ -1,0 +1,44 @@
+war_deficit.1={
+	type = country_event
+	placement = ROOT
+	title = war_defecit_title1
+	desc = war_defecit_desc1
+	flavor = war_defecit_flavor1
+
+	duration = 3
+
+	event_image = {
+		video = "unspecific_military_parade"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+
+	option = {
+		name = war_defecit_startok
+	}
+}
+war_deficit.2={
+	type = country_event
+	placement = ROOT
+	title = war_defecit_title1
+	desc = war_defecit_desc1
+	flavor = war_defecit_flavor1
+
+	duration = 3
+
+	event_image = {
+		video = "unspecific_military_parade"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+
+	option = {
+		name = war_defecit_endok
+	}
+}

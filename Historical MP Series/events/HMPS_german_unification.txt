@@ -300,18 +300,18 @@ german_unification.4 = {
 				name = german_unifier_ruler
 			}
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = { c:GER = ROOT }
 			}
 			change_tag = GER
-			IF = {
+			if = {
 				limit = {
 					NOT = { country_has_primary_culture = cu:south_german }
 				}
 				add_primary_culture = cu:south_german
 			}
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						NOT = { country_has_primary_culture = cu:north_german }
@@ -319,7 +319,7 @@ german_unification.4 = {
 				}
 				add_primary_culture = cu:north_german
 			}
-			IF = {
+			if = {
 				limit = {
 					has_variable = prussian_germany
 				}
@@ -347,18 +347,18 @@ german_unification.4 = {
 			value = 0.1
 			culture = cu:south_german
 		}
-		IF = {
+		if = {
 			limit = {
 				NOT = { c:GER = ROOT }
 			}
 			change_tag = GER
-			IF = {
+			if = {
 				limit = {
 					NOT = { country_has_primary_culture = cu:south_german }
 				}
 				add_primary_culture = cu:south_german
 			}
-			IF = {
+			if = {
 				limit = {
 					NOT = {
 						NOT = { country_has_primary_culture = cu:north_german }
