@@ -2231,7 +2231,7 @@ french_pretenders.6 = { # Second Republic
 			save_scope_as = old_ruler_scope
 			exile_character_with_martyrdom = yes
 		}
-		activate_law = law_type:law_type:law_republic
+		
 		if = {
 			limit = {
 				has_law = law_type:law_hereditary_bureaucrats
@@ -2245,26 +2245,30 @@ french_pretenders.6 = { # Second Republic
 		custom_tooltip = {
 			text = exile_old_ruler_tt
 		}
-		set_variable = france_had_revolution
-		random_interest_group = {
-			limit = {
-				is_marginal = no
-				law_stance = {
-					law = law_type:law_republic
-					value > neutral
+		c:FRA ={
+			set_variable = france_had_revolution
+			activate_law = law_type:law_republic
+			
+			if = {
+				limit = {
+					country_has_voting_franchise = yes
+					}
+				call_election = {
+					months = 6
 				}
 			}
-			leader = {
-				set_character_as_ruler = yes
-			}
 		}
-		if = {
-			limit = {
-				country_has_voting_franchise = yes
-			}
-			call_election = {
-				months = 6
-			}
+		random_interest_group = {
+					limit = {
+						is_marginal = no
+						law_stance = {
+							law = law_type:law_republic
+							value > neutral
+						}
+					}
+					leader = {
+						set_character_as_ruler = yes
+					}
 		}
 	}
 }
