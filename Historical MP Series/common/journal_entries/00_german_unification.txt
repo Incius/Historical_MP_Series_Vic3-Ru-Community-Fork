@@ -321,6 +321,10 @@ je_north_german_unification = {
 					}
 				}
 			}
+			custom_tooltip = {
+				text = je_gutter_crown_desc
+				has_variable=gutter_crown_var
+			}
 		}
 	}
 

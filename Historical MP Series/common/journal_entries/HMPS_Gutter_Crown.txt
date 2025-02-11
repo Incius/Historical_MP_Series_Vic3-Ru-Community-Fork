@@ -18,9 +18,14 @@
 		country_rank = rank_value:great_power
 		owner = {
  					any_interest_group = {
- 						is_interest_group_type = ig_landowner
- 						ig_approval > 0
-  						is_marginal = no					
+ 						OR={
+ 							is_interest_group_type = ig_landowners
+ 							is_interest_group_type = ig_armed_forces
+ 						}
+ 						OR={
+ 							ig_approval > 0
+ 							is_marginal = yes
+ 						}					
   					}
   		}
 		custom_tooltip = {

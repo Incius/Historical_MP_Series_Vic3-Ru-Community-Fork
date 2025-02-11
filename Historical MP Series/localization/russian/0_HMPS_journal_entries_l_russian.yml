@@ -81,6 +81,7 @@
  je_napoleons_legacy_t2:0 "The People's Springtime has not yet begun."
  je_springtime_of_the_peoples_t1:0 "The crisis will continue for at least a year"
  je_springtime_of_the_peoples.t2:0 "The Springtime of the Peoples can only occur once."
+ je_springtime_of_the_peoples.t3:0 "The Springtime of the Peoples is over."
  
  je_hungarian_revolt:0 "Hungarian Revolt"
  je_hungarian_revolt_status:0 "A growing movement influenced by French Jacobinism seeks political and social changes despite resistance from conservative forces. Prominent leaders advocate for industrialization, broader democracy, and the abolition of aristocratic privileges."
@@ -157,7 +158,7 @@
  carlist_war_SPC.tt.b:0 "We have failed to eliminate the Christinos."
  liberals_fail_tt:0 "The Liberals fail again!"
  je_gutter_crown.t1:0 "The #variable German National Identity#! [concept_journal_entry] completes"
- je_gutter_crown.t2:0 "The Springtime of the Peoples [concept_journal_entry] has been avoided"
+ je_gutter_crown.t2:0 "The Springtime of the Peoples [concept_journal_entry] ended"
  je_gutter_crown.t3:0 "The Springtime of the Peoples has begun"
  je_german_unification_idea.t1:0 "The Crown in the Gutter [concept_journal_entry] has been completed"
  je_shortform_building_explosives_industry_tooltip:0 "Building is $building_explosives_industry$"

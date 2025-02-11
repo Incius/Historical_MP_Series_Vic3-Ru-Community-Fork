@@ -119,7 +119,11 @@ je_springtime_of_the_peoples = {
 		if = {
 			limit = {
 	       		is_in_power_bloc = yes
-	        	is_power_bloc_leader = yes				
+	        	is_power_bloc_leader = yes
+	        	OR={
+	        		this=c:AUS
+	        		this=c:TUR
+	        	}				
 			}
 			custom_tooltip = {
 				text = sick_man_of_europe_lose_power_bloc

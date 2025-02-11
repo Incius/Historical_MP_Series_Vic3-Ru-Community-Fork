@@ -14,9 +14,18 @@
 		NOT = { country_has_primary_culture = cu:hungarian }
 		OR = {
 			has_technology_researched = political_agitation
+			AND={
+				custom_tooltip = {
+					text = je_german_unification_idea_trigger_desc
+					has_variable = je_german_unification_idea
+				}
+				has_technology_researched = pan-nationalism
+			}
 			custom_tooltip = {
-				text = je_german_unification_idea_trigger_desc
-				has_variable = je_german_unification_idea
+				text = je_german_unification_idea.t1
+				any_country = {
+					has_variable = gutter_crown_var
+				}
 			}
 		}
 		custom_tooltip = {
@@ -49,15 +58,21 @@ ITA = {
 			country_has_primary_culture = cu:north_italian
 			country_has_primary_culture = cu:south_italian
 		}
-		any_country = {
-			filter = {
-				OR = {
-					country_has_primary_culture = cu:north_italian
-					country_has_primary_culture = cu:south_italian				
+		OR = {
+			any_country = {
+				filter = {
+					OR = {
+						country_has_primary_culture = cu:north_italian
+						country_has_primary_culture = cu:south_italian				
+					}
 				}
-			}
 			has_technology_researched = nationalism	
-			percent >= 0.33
+			percent >= 0.70
+			}
+			custom_tooltip = {
+				text = je_springtime_of_the_peoples.t3
+				has_global_variable = peoples_springtime_happened
+			}
 		}
 	}
 }

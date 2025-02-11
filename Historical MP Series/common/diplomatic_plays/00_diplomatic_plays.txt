@@ -844,7 +844,15 @@ dp_unify_germany = {
 	possible = {
 		NOT = { exists = c:GER }
 		NOT = { is_country_type = decentralized }
-		has_technology_researched = pan-nationalism
+		OR={
+			has_technology_researched = pan-nationalism
+			custom_tooltip = {
+				text = je_german_unification_idea.t1
+				any_country = {
+					has_variable = gutter_crown_var
+				}
+			}
+		}
 		NOT = { has_variable = abandoned_germany }
 		NOT = { country_has_primary_culture = cu:hungarian }
 		custom_tooltip = {
