@@ -29,45 +29,36 @@ arms_progress_bar = {
 			subtract = {
 				desc = "arms_proficit_desc"
 				value = 5
-			}
-		}
-		if = {
-			limit = {
- 				market_capital.market = {
-					mg:small_arms = { 
-						market_goods_pricier < 0.60 
+				if = {
+					limit = {
+ 						market_capital.market = {
+							mg:small_arms = { 
+									market_goods_pricier < 0.60 
+							}
+						}
 					}
+					add = 5
 				}
-			}
-			subtract = {
-				desc = "arms_proficit_desc"
-				value = 15
-			}
-		}
-		if = {
-			limit = {
- 				market_capital.market = {
-					mg:small_arms = { 
-						market_goods_pricier < 0.50 
+				if = {
+					limit = {
+ 						market_capital.market = {
+							mg:small_arms = { 
+									market_goods_pricier < 0.50 
+							}
+						}
 					}
+					add = 10
 				}
-			}
-			subtract = {
-				desc = "arms_proficit_desc"
-				value = 20
-			}
-		}
-		if = {
-			limit = {
- 				market_capital.market = {
-					mg:small_arms = { 
-						market_goods_pricier < 0.40 
+				if = {
+					limit = {
+ 						market_capital.market = {
+							mg:small_arms = { 
+									market_goods_pricier < 0.40 
+							}
+						}
 					}
+				add = 10
 				}
-			}
-			subtract = {
-				desc = "arms_proficit_desc"
-				value = 50
 			}
 		}
 	}
@@ -106,47 +97,38 @@ ammunition_progress_bar = {
 				}
 			}
 			subtract = {
-				desc = "ammuniton_proficit_desc"
+				desc = "ammunition_proficit_desc"
 				value = 5
-			}
-		}
-		if = {
-			limit = {
- 				market_capital.market = {
-					mg:ammunition = { 
-						market_goods_pricier < 0.60 
+				if = {
+					limit = {
+ 						market_capital.market = {
+							mg:ammunition = { 
+									market_goods_pricier < 0.60 
+							}
+						}
 					}
+					add = 5
 				}
-			}
-			subtract = {
-				desc = "ammunition_proficit_desc"
-				value = 15
-			}
-		}
-		if = {
-			limit = {
- 				market_capital.market = {
-					mg:ammunition = { 
-						market_goods_pricier < 0.50 
+				if = {
+					limit = {
+ 						market_capital.market = {
+							mg:ammunition = { 
+									market_goods_pricier < 0.50 
+							}
+						}
 					}
+					add = 10
 				}
-			}
-			subtract = {
-				desc = "ammunition_proficit_desc"
-				value = 25
-			}
-		}
-		if = {
-			limit = {
- 				market_capital.market = {
-					mg:ammunition = { 
-						market_goods_pricier < 0.40 
+				if = {
+					limit = {
+ 						market_capital.market = {
+							mg:ammunition = { 
+									market_goods_pricier < 0.40 
+							}
+						}
 					}
+				add = 10
 				}
-			}
-			subtract = {
-				desc = "ammunition_proficit_desc"
-				value = 50
 			}
 		}
 	}

@@ -1,14 +1,16 @@
+namespace = war_deficit
+
 war_deficit.1={
 	type = country_event
 	placement = ROOT
-	title = war_defecit_title1
-	desc = war_defecit_desc1
-	flavor = war_defecit_flavor1
+	title = war_deficit_title1
+	desc = war_deficit_desc1
+	flavor = war_deficit_flavor1
 
 	duration = 3
 
 	event_image = {
-		video = "unspecific_military_parade"
+		video = "unspecific_factory_closed"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -17,15 +19,16 @@ war_deficit.1={
 
 
 	option = {
-		name = war_defecit_startok
+		name = war_deficit_startok
 	}
 }
+
 war_deficit.2={
 	type = country_event
 	placement = ROOT
-	title = war_defecit_title1
-	desc = war_defecit_desc1
-	flavor = war_defecit_flavor1
+	title = war_deficit_title2
+	desc = war_deficit_desc2
+	flavor = war_deficit_flavor2
 
 	duration = 3
 
@@ -39,6 +42,6 @@ war_deficit.2={
 
 
 	option = {
-		name = war_defecit_endok
+		name = war_deficit_endok
 	}
 }

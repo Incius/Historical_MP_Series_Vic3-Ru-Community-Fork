@@ -54,12 +54,14 @@
 					market_goods_pricier < 0.6 
 				}
 			}
-			scope:journal_entry = {
-                "scripted_bar_progress(arms_progress_bar)" < 5
-            }
-            scope:journal_entry = {
-                "scripted_bar_progress(ammunition_progress_bar)" < 5
-            }
+			custom_tooltip = {
+				text = arms_progress_bar_less_than
+				scope:journal_entry ={"scripted_bar_progress(arms_progress_bar)" < 5}
+			}
+			custom_tooltip = {
+				text = ammunition_progress_bar_less_than
+				scope:journal_entry ={"scripted_bar_progress(ammunition_progress_bar)" < 5}
+			}
 		}
 	}
 
@@ -70,14 +72,13 @@
 	on_monthly_pulse = {
 		effect={
 			remove_modifier=war_deficit_armsdebuff
-			add_modifier={
-				name = war_deficit_armsdebuff
-    			multiplier = {
-    				value=0
-    				if={
-    					limit={scope:journal_entry = {"scripted_bar_progress(arms_progress_bar)" >12}}
-    					add=1
-    				}
+    		if={
+    			limit={scope:journal_entry = {"scripted_bar_progress(arms_progress_bar)" >12}}
+    			add_modifier={
+				    name = war_deficit_armsdebuff
+    				multiplier = {
+    					value=1
+
     				if={
     					limit={scope:journal_entry = {"scripted_bar_progress(arms_progress_bar)" >24}}
     					add=1
@@ -118,17 +119,14 @@
     			is_decaying = no 
     			months = 2
     		}
-		}
-		effect={
-			remove_modifier=war_deficit_ammunitiondebuff
-			add_modifier={
-				name = war_deficit_ammunitiondebuff
-    			multiplier = {
-    				value=0
-    				if={
-    					limit={scope:journal_entry = {"scripted_bar_progress(ammunition_progress_bar)" >12}}
-    					add=1
-    				}
+    		}
+    		remove_modifier=war_deficit_ammunitiondebuff
+    		if={
+    			limit={scope:journal_entry = {"scripted_bar_progress(ammunition_progress_bar)" >12}}
+    			add_modifier={
+					name = war_deficit_ammunitiondebuff
+    				multiplier = {
+    					value=1
     				if={
     					limit={scope:journal_entry = {"scripted_bar_progress(ammunition_progress_bar)" >24}}
     					add=1
@@ -168,6 +166,7 @@
     			}
     			is_decaying = no 
     			months = 2
+    			}
     		}
 		}
 	}

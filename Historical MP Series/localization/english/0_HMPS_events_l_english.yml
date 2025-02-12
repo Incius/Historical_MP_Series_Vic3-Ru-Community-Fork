@@ -547,3 +547,12 @@
  temporary_tax_cut_consumption_tax: "Tax Cuts"
  temporary_tax_cut_corp_tax: "Tax Cuts"
  temporary_tax_cut_poll_tax: "Tax Cuts"
+
+ war_deficit_title1:0 "Army Shortages"
+ war_deficit_desc1:0 "Our Army doesnt receive enough supplies. If we dont do something, the army will lose its ability to fight! "
+ war_deficit_flavor1:0 "One gun for each five..."
+ war_deficit_startok:0 "We need to fix this!"
+ war_deficit_title2:0 "End of the Army Shortages!"
+ war_deficit_desc2:0 "All shortages are over, victory will surely be ours now!"
+ war_deficit_flavor2:0 "Five guns for each five!"
+ war_deficit_endok:0 "Now we need to actually win"

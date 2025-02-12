@@ -144,6 +144,7 @@ je_napoleons_legacy = {
 	
 	on_timeout = {
 		remove_modifier = modifier_napoleon_announce
+		set_global_variable = peoples_springtime_avoided
 	}
 
 	fail = {

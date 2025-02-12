@@ -544,3 +544,12 @@
  temporary_tax_cut_consumption_tax: "Tax Cuts"
  temporary_tax_cut_corp_tax: "Tax Cuts"
  temporary_tax_cut_poll_tax: "Tax Cuts"
+
+ war_deficit_title1:0 "Снарядный голод!"
+ war_deficit_desc1:0 "Наша армия не получает достаточно оснащенияб если мы не исправим это быстро, её способность сражаться будет падать!"
+ war_deficit_flavor1:0 "Одна пушка на пятерых.."
+ war_deficit_startok:0 "Нужно срочно это исправить!"
+ war_deficit_title2:0 "Конец снарядного голода!"
+ war_deficit_desc2:0 "Дефициты были побежденыб победа будет за нами!"
+ war_deficit_flavor2:0 "Пять пушек на пятерых!"
+ war_deficit_endok:0 "Теперь нам нужно выиграть саму войну"
