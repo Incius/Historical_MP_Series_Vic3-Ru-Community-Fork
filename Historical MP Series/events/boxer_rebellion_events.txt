@@ -211,7 +211,7 @@ boxer_rebellion_events.3 = {
 		chi_add_1_fracture = yes
 		
 		add_radicals = {
-			value = very_large_radicals
+			value = large_radicals
 			culture = cu:han
 		}
 		ai_chance = {

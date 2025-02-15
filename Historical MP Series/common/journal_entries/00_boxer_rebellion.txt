@@ -21,7 +21,19 @@
 		}
     }
     possible = {
-        has_technology_researched = nationalism
+
+        has_law = law_type:law_monarchy
+        country_has_primary_culture = cu:manchu
+        OR={
+            AND={
+                is_player = yes
+                has_technology_researched = pan-nationalism
+            }
+            AND={
+                is_player = no
+                has_technology_researched = nationalism
+            }
+        }
         any_state = {
         	state_region = { is_homeland = cu:han }
 	        NOT = { owner = ROOT }

@@ -20,7 +20,16 @@
 		NOT = { has_law = law_type:law_republic }
     }
     possible = {
-        has_technology_researched = pan-nationalism
+    	OR={
+    		AND={
+			    is_player = yes
+			    has_technology_researched = political_agitation
+    		}
+    		AND={
+    			is_player = no
+    			has_technology_researched = pan-nationalism
+    		}
+    	}
         NOT = { has_law = law_type:law_republic }
 		hidden_trigger = {
 			NOT = { has_global_variable = xinhai_je_happened }

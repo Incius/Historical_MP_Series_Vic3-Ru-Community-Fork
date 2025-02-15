@@ -1,4 +1,4 @@
-﻿je_chinese_industry = {
+je_chinese_industry = {
 	icon = "gfx/interface/icons/event_icons/event_industry.dds"
 	
 	group = je_group_historical_content
@@ -114,6 +114,85 @@ je_chinese_agriculture = {
 				}
 			}
 			change_variable = { name = legitimist_progress_from_farms divide = 400 }
+			if={
+				limit={scope:journal_entry = {"scripted_bar_progress(chinese_agriculture_progress_bar)" >= 10}}
+				remove_modifier = modifier_agricultural_econ_agri_debuff
+				add_modifier = {
+					name = modifier_agricultural_econ_agri_debuff
+					multiplier = 0.9
+				}
+			}
+			else_if={
+				limit={scope:journal_entry = {"scripted_bar_progress(chinese_agriculture_progress_bar)" >= 20}}
+				remove_modifier = modifier_agricultural_econ_agri_debuff
+				add_modifier = {
+					name = modifier_agricultural_econ_agri_debuff
+					multiplier = 0.8
+				}
+			}
+			else_if={
+				limit={scope:journal_entry = {"scripted_bar_progress(chinese_agriculture_progress_bar)" >= 30}}
+				remove_modifier = modifier_agricultural_econ_agri_debuff
+				add_modifier = {
+					name = modifier_agricultural_econ_agri_debuff
+					multiplier = 0.7
+				}
+			}
+			else_if={
+				limit={scope:journal_entry = {"scripted_bar_progress(chinese_agriculture_progress_bar)" >= 40}}
+				remove_modifier = modifier_agricultural_econ_agri_debuff
+				add_modifier = {
+					name = modifier_agricultural_econ_agri_debuff
+					multiplier = 0.6
+				}
+			}
+			else_if={
+				limit={scope:journal_entry = {"scripted_bar_progress(chinese_agriculture_progress_bar)" >= 50}}
+				remove_modifier = modifier_agricultural_econ_agri_debuff
+				add_modifier = {
+					name = modifier_agricultural_econ_agri_debuff
+					multiplier = 0.5
+				}
+			}
+			else_if={
+				limit={scope:journal_entry = {"scripted_bar_progress(chinese_agriculture_progress_bar)" >= 60}}
+				remove_modifier = modifier_agricultural_econ_agri_debuff
+				add_modifier = {
+					name = modifier_agricultural_econ_agri_debuff
+					multiplier = 0.4
+				}
+			}
+			else_if={
+				limit={scope:journal_entry = {"scripted_bar_progress(chinese_agriculture_progress_bar)" >= 70}}
+				remove_modifier = modifier_agricultural_econ_agri_debuff
+				add_modifier = {
+					name = modifier_agricultural_econ_agri_debuff
+					multiplier = 0.3
+				}
+			}
+			else_if={
+				limit={scope:journal_entry = {"scripted_bar_progress(chinese_agriculture_progress_bar)" >= 80}}
+				remove_modifier = modifier_agricultural_econ_agri_debuff
+				add_modifier = {
+					name = modifier_agricultural_econ_agri_debuff
+					multiplier = 0.2
+				}
+			}
+			else_if={
+				limit={scope:journal_entry = {"scripted_bar_progress(chinese_agriculture_progress_bar)" >= 90}}
+				remove_modifier = modifier_agricultural_econ_agri_debuff
+				add_modifier = {
+					name = modifier_agricultural_econ_agri_debuff
+					multiplier = 0.1
+				}
+			}
+			else={
+				remove_modifier = modifier_agricultural_econ_agri_debuff
+				add_modifier = {
+					name = modifier_agricultural_econ_agri_debuff
+					multiplier = 1
+				}
+			}
 		}
 	}
 

@@ -1,10 +1,10 @@
 war_deficit_armsdebuff = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
-    unit_offense_mult = -0.01
-    unit_defense_mult = -0.01
+    unit_offense_mult = -0.05
+    unit_defense_mult = -0.03
 }
 war_deficit_ammunitiondebuff = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
-    unit_offense_mult = -0.01
-    unit_defense_mult = -0.01
+    unit_offense_mult = -0.05
+    unit_defense_mult = -0.02
 }
