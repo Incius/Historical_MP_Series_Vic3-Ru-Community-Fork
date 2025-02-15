@@ -172,6 +172,7 @@ law_autocracy = {
 		country_officers_pol_str_mult = 0.5
 		country_authority_add = 300
 		country_authority_mult = 0.20
+		state_migration_pull_mult = -0.1
 	}
 	
 	can_enact = {
@@ -258,6 +259,7 @@ law_oligarchy = {
 		country_capitalists_pol_str_mult = 0.5
 		country_authority_add = 200
 		country_authority_mult = 0.15
+		state_migration_pull_mult = -0.05
 	}
 	
 	can_enact = {
@@ -802,6 +804,7 @@ law_census_voting = {
 		country_voting_power_from_literacy_add = 30
 		state_migration_pull_mult = 0.05
 		country_authority_add = 50
+		
 	}
 	
 	can_enact = {
