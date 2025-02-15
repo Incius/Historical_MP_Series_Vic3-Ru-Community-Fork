@@ -76,8 +76,8 @@
 		appeasement_trade_agreement_broken
 		appeasement_alliance_broken
 		appeasement_defensive_pact_broken
-		appeasement_military_assistance_broken
 		appeasement_foreign_investment_agreement_broken
+		appeasement_military_assistance_broken
 		appeasement_rivalry_declared
 		appeasement_embargo_declared
 		appeasement_diplomatic_demand_made
@@ -357,27 +357,64 @@
 				every_active_law = {
 					if = {
 						limit = {
+							scope:target_country = {
+								has_law = PREV.type
+							}
 							ROOT = {
 								law_stance = {
 									law = PREV.type
-									value >= approve
+									value = approve
 								}
 							}
 						}
 						add = 5
 					}
-					else_if = {
+					if = {
 						limit = {
+							scope:target_country = {
+								has_law = PREV.type
+							}
 							ROOT = {
 								law_stance = {
 									law = PREV.type
-									value <= disapprove
+									value = strongly_approve
+								}
+							}
+						}
+						add = 10
+					}
+					if = {
+						limit = {
+							scope:target_country = {
+								has_law = PREV.type
+							}
+							ROOT = {
+								law_stance = {
+									law = PREV.type
+									value = disapprove
 								}
 							}
 						}
 						add = -5
 					}
+					if = {
+						limit = {
+							scope:target_country = {
+								has_law = PREV.type
+							}
+							ROOT = {
+								law_stance = {
+									law = PREV.type
+									value = strongly_disapprove
+								}
+							}
+						}
+						add = -10
+					}
 				}
+
+									
+
 				
 				max = 100
 				min = -100				
@@ -445,6 +482,7 @@
 					add = 10
 				}
 			}
+			}
 
 			desc = "primary_culture_similarity"
 		}
@@ -474,7 +512,7 @@
 				}
 				else_if = {
 					limit = {
-						scope:target_country.capital = {
+					scope:target_country.capital = {
 							state_religious_acceptance = {
 								target = ROOT.owner.religion
 								value < religious_acceptance_medium
@@ -1197,27 +1235,64 @@ lobby_anti_country = {
 				every_active_law = {
 					if = {
 						limit = {
+							scope:target_country = {
+								has_law = PREV.type
+							}
 							ROOT = {
 								law_stance = {
 									law = PREV.type
-									value >= approve
+									value = approve
 								}
 							}
 						}
 						add = -5
 					}
-					else_if = {
+					if = {
 						limit = {
+							scope:target_country = {
+								has_law = PREV.type
+							}
 							ROOT = {
 								law_stance = {
 									law = PREV.type
-									value <= disapprove
+									value = strongly_approve
+								}
+							}
+						}
+						add = -10
+					}
+					if = {
+						limit = {
+							scope:target_country = {
+								has_law = PREV.type
+							}
+							ROOT = {
+								law_stance = {
+									law = PREV.type
+									value = disapprove
 								}
 							}
 						}
 						add = 5
 					}
+					if = {
+						limit = {
+							scope:target_country = {
+								has_law = PREV.type
+							}
+							ROOT = {
+								law_stance = {
+									law = PREV.type
+									value = strongly_disapprove
+								}
+							}
+						}
+						add = 10
+					}
 				}
+
+									
+
 				
 				max = 100
 				min = -100				
@@ -1225,12 +1300,11 @@ lobby_anti_country = {
 				if = {
 					limit = { is_lobby_formation_reason_ideology = yes }
 					multiply = 1.5
-				}					
-				
+				}
+
 				desc = "enacted_laws"
 			}
 		}
-
 		### Culture
 		add = {
 			if = {
@@ -1753,39 +1827,76 @@ lobby_pro_overlord = {
 				every_active_law = {
 					if = {
 						limit = {
+							scope:target_country = {
+								has_law = PREV.type
+							}
 							ROOT = {
 								law_stance = {
 									law = PREV.type
-									value >= approve
+									value = approve
 								}
 							}
 						}
 						add = 5
 					}
-					else_if = {
+					if = {
 						limit = {
+							scope:target_country = {
+								has_law = PREV.type
+							}
 							ROOT = {
 								law_stance = {
 									law = PREV.type
-									value <= disapprove
+									value = strongly_approve
+								}
+							}
+						}
+						add = 10
+					}
+					if = {
+						limit = {
+							scope:target_country = {
+								has_law = PREV.type
+							}
+							ROOT = {
+								law_stance = {
+									law = PREV.type
+									value = disapprove
 								}
 							}
 						}
 						add = -5
 					}
+					if = {
+						limit = {
+							scope:target_country = {
+								has_law = PREV.type
+							}
+							ROOT = {
+								law_stance = {
+									law = PREV.type
+									value = strongly_disapprove
+								}
+							}
+						}
+						add = -10
+					}
 				}
+
+								
 				
 				max = 100
-				min = -100
+				min = -100				
 				
 				if = {
 					limit = { is_lobby_formation_reason_ideology = yes }
 					multiply = 1.5
 				}
-				
+
 				desc = "enacted_laws"
 			}
 		}
+
 
 		### Culture
 		add = {
@@ -1919,7 +2030,6 @@ lobby_pro_overlord = {
 				}
 			}
 		}
-		
 		### Colonial Government for India
 		if = {
 			limit = {
@@ -2164,27 +2274,63 @@ lobby_anti_overlord = {
 				every_active_law = {
 					if = {
 						limit = {
+							scope:target_country = {
+								has_law = PREV.type
+							}
 							ROOT = {
 								law_stance = {
 									law = PREV.type
-									value >= approve
+									value = approve
 								}
 							}
 						}
 						add = -5
 					}
-					else_if = {
+					if = {
 						limit = {
+							scope:target_country = {
+								has_law = PREV.type
+							}
 							ROOT = {
 								law_stance = {
 									law = PREV.type
-									value <= disapprove
+									value = strongly_approve
+								}
+							}
+						}
+						add = -10
+					}
+					if = {
+						limit = {
+							scope:target_country = {
+								has_law = PREV.type
+							}
+							ROOT = {
+								law_stance = {
+									law = PREV.type
+									value = disapprove
 								}
 							}
 						}
 						add = 5
 					}
+					if = {
+						limit = {
+							scope:target_country = {
+								has_law = PREV.type
+							}
+							ROOT = {
+								law_stance = {
+									law = PREV.type
+									value = strongly_disapprove
+								}
+							}
+						}
+						add = 10
+					}
 				}
+
+								
 				
 				max = 100
 				min = -100				
@@ -2192,7 +2338,7 @@ lobby_anti_overlord = {
 				if = {
 					limit = { is_lobby_formation_reason_ideology = yes }
 					multiply = 1.5
-				}				
+				}
 
 				desc = "enacted_laws"
 			}
@@ -2273,7 +2419,6 @@ lobby_anti_overlord = {
 								target = ROOT.owner.religion
 								value < religious_acceptance_medium
 							}
-						}
 					}
 					add = 25
 				}
@@ -2449,7 +2594,6 @@ lobby_anti_overlord = {
 				desc = "relations_negative"
 			}
 		}
-		
 		### British India
 		if = {
 			limit = {

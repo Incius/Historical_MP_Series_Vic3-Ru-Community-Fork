@@ -848,7 +848,8 @@ dp_unify_germany = {
 			has_technology_researched = pan-nationalism
 			custom_tooltip = {
 				text = je_german_unification_idea.t1
-				any_country = {
+				AND={
+					country_has_primary_culture = cu:north_german
 					has_variable = gutter_crown_var
 				}
 			}

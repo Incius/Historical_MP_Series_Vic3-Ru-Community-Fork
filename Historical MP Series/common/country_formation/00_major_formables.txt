@@ -23,7 +23,8 @@
 			}
 			custom_tooltip = {
 				text = je_german_unification_idea.t1
-				any_country = {
+				AND={
+					country_has_primary_culture = cu:north_german
 					has_variable = gutter_crown_var
 				}
 			}
