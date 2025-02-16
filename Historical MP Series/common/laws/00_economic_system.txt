@@ -128,7 +128,7 @@ law_agrarianism = {
 		
 		building_nationalization_investment_return_add = 0.5
 		country_government_dividends_reinvestment_add = 0.5
-		country_government_dividends_efficiency_add = 0.45
+		country_government_dividends_efficiency_add = 0.40
 		
 		country_disable_nationalization_without_compensation_bool = yes
 	}
@@ -203,7 +203,7 @@ law_interventionism = {
 		
 		building_nationalization_investment_return_add = 0.5
 		country_government_dividends_reinvestment_add = 0.25
-		country_government_dividends_efficiency_add = 0.60
+		country_government_dividends_efficiency_add = 0.50
 		
 		country_disable_nationalization_without_compensation_bool = yes
 	}
@@ -280,11 +280,11 @@ law_laissez_faire = {
 	}
 	
 	modifier = {
-		country_loan_interest_rate_mult = -0.25
-		state_shopkeepers_investment_pool_contribution_add = 0.2
-		state_shopkeepers_investment_pool_efficiency_mult = 1
+		country_loan_interest_rate_mult = -0.15
+		state_shopkeepers_investment_pool_efficiency_mult = 0.1
+		state_shopkeepers_investment_pool_efficiency_mult = 0.25
+		state_capitalists_investment_pool_efficiency_mult = 0.25
 		state_capitalists_investment_pool_contribution_add = 0.1
-		state_capitalists_investment_pool_efficiency_mult = 0.5
 		country_private_construction_allocation_mult = 0.75
 		country_leverage_resistance_mult = -0.25
 		
@@ -374,6 +374,7 @@ law_cooperative_ownership = {
 		building_group_bg_manufacturing_allowed_collectivization_add = 1.0
 		building_group_bg_mining_allowed_collectivization_add = 1.0
 		building_group_bg_extraction_allowed_collectivization_add = 1.0
+		building_group_bg_logging_allowed_collectivization_add = 1.0
 		building_group_bg_power_allowed_collectivization_add = 1.0
 		building_group_bg_private_infrastructure_allowed_collectivization_add = 1.0
 		building_group_bg_arts_allowed_collectivization_add = 1.0
