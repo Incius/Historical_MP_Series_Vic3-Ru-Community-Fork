@@ -23,6 +23,8 @@ great_power = {
 	prestige_average_threshold = 5.0
 	prestige_relative_threshold = 0.75
 
+	infamy_target_scaling = 0.1
+
 	valid_country_types = {
 		recognized
 		colonial
@@ -49,6 +51,8 @@ major_power = {
 	prestige_average_threshold = 2.5
 	prestige_relative_threshold = 0.5
 
+	infamy_target_scaling = 0.2
+
 	valid_country_types = {
 		recognized
 		colonial
@@ -67,12 +71,13 @@ major_power = {
 minor_power = {
 	rank_value = 4
 	icon_index = 2
+
+	infamy_target_scaling = 0.3
 	
 	enforce_subject_rank_check = yes
 
 	prestige_average_threshold = 0.6
 	prestige_relative_threshold = 0.15
-	
 	valid_country_types = {
 		recognized
 		colonial
@@ -121,6 +126,7 @@ unrecognized_major_power = {
 
 	prestige_average_threshold = 2.5
 	prestige_relative_threshold = 0.5
+	infamy_target_scaling = -0.1
 
 	valid_country_types = {
 		unrecognized
