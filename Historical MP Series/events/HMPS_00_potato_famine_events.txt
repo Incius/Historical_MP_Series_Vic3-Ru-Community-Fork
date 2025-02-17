@@ -203,6 +203,7 @@ potato_blight.5 = {
 	
 	immediate = {
 		set_variable = irish_event_var
+		
 	}
 	
 	option = {
