@@ -4844,6 +4844,16 @@ movement_reactionary = {
 				value = 2
 			}
 		}
+		#block for liberal PB agitators
+		if = {
+			limit = {
+				has_ideology =ideology:ideology_radical
+				has_ideology =ideology:ideology_reformer
+			}
+			multiply = {
+				value = 0.1
+			}
+		}
 	}
 
 	pop_support_trigger = {
