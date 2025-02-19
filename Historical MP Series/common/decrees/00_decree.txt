@@ -159,7 +159,7 @@ decree_emergency_relief = {
 				}
 				any_scope_pop = {
 					percent >= 0.2
-					is_in_starvation = yes
+					is_in_mild_starvation = yes
 				}
 			}
 	}
