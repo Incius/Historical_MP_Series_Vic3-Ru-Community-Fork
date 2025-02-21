@@ -364,10 +364,10 @@ law_cooperative_ownership = {
 	}
 	
 	modifier = {
-		state_shopkeepers_investment_pool_efficiency_mult = 0.5
-		state_shopkeepers_investment_pool_contribution_add = 0.2
-		state_farmers_investment_pool_efficiency_mult = 0.5
-		state_farmers_investment_pool_contribution_add = 0.2
+		state_shopkeepers_investment_pool_efficiency_mult = 0.25
+		state_shopkeepers_investment_pool_contribution_add = 0.1
+		state_farmers_investment_pool_efficiency_mult = 0.25
+		state_farmers_investment_pool_contribution_add = 0.1
 		country_private_construction_allocation_mult = 0.35
 		country_government_dividends_reinvestment_add = 1.0
 		

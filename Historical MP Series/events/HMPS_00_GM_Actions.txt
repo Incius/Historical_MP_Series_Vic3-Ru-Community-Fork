@@ -124,6 +124,7 @@ gm_actions.1 = {
 	
 	option = {
 		name = gm_actions.1.j
+
 		every_country = {
 			limit = {
 				has_truce_with = scope:recipient
@@ -136,6 +137,8 @@ gm_actions.1 = {
 		}
 		remove_global_variable = GM_taking_action
 	}
+
+
 	
 	
 	#Modifiers
@@ -150,7 +153,24 @@ gm_actions.1 = {
 			}
 		}
 	}
+	#Give Recognition
+	option = {
+		name = gm_actions.1.l
+		trigger = {
+			any_country = {
+				has_variable = actionee
+				has_journal_entry = je_earn_recognition
+			}
+		}
+		trigger_event = {
+			id = gm_actions.18
+			days = 0
+			popup = yes
+		}
+	}
 	
+
+
 	#Radicals/Loyalists
 	
 	#Disable GM decision
@@ -464,3 +484,123 @@ gm_actions.17 = {
 	}
 	
 }
+
+#recognition
+gm_actions.18 = {
+	type = country_event
+	placement = ROOT
+	title = gm_actions.3.t
+	#desc = gm_actions.3.d
+	#flavor = gm_actions.3.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	duration = 1
+	
+	trigger = {
+		#triggered by gm_actions.1
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = actionee
+			}
+			save_scope_as = recipient
+		}
+	}
+	option = {
+		default_option = yes
+		name = gm_actions.3.z
+		scope:recipient = {
+			je:je_earn_recognition = {
+						add_progress = { value = 0 name = earn_recognition_progress_bar }
+			}
+		}
+	}
+	option = {
+		name = gm_actions.3.a
+		scope:recipient = {
+			je:je_earn_recognition = {
+						add_progress = { value = 10 name = earn_recognition_progress_bar }
+			}
+		}
+	}
+	option = {
+		name = gm_actions.3.b
+		scope:recipient = {
+			je:je_earn_recognition = {
+						add_progress = { value = 20 name = earn_recognition_progress_bar }
+			}
+		}
+	}
+	option = {
+		name = gm_actions.3.c
+		scope:recipient = {
+			je:je_earn_recognition = {
+						add_progress = { value = 30 name = earn_recognition_progress_bar }
+			}
+		}
+	}
+	option = {
+		name = gm_actions.3.e
+		scope:recipient = {
+			je:je_earn_recognition = {
+						add_progress = { value = 40 name = earn_recognition_progress_bar }
+			}
+		}
+	}
+	option = {
+		name = gm_actions.3.g
+		scope:recipient = {
+			je:je_earn_recognition = {
+						add_progress = { value = 50 name = earn_recognition_progress_bar }
+			}
+		}
+	}
+	option = {
+		name = gm_actions.3.h
+		scope:recipient = {
+			je:je_earn_recognition = {
+						add_progress = { value = 60 name = earn_recognition_progress_bar }
+			}
+		}
+	}
+	option = {
+		name = gm_actions.3.i
+		scope:recipient = {
+			je:je_earn_recognition = {
+						add_progress = { value = 70 name = earn_recognition_progress_bar }
+			}
+		}
+	}
+	option = {
+		name = gm_actions.3.j
+		scope:recipient = {
+			je:je_earn_recognition = {
+						add_progress = { value = 80 name = earn_recognition_progress_bar }
+			}
+		}
+	}
+	option = {
+		name = gm_actions.3.k
+		scope:recipient = {
+			je:je_earn_recognition = {
+						add_progress = { value = 90 name = earn_recognition_progress_bar }
+			}
+		}
+	}
+	option = {
+		name = gm_actions.3.l
+		scope:recipient = {
+			je:je_earn_recognition = {
+						add_progress = { value = 100 name = earn_recognition_progress_bar }
+			}
+		}
+	}

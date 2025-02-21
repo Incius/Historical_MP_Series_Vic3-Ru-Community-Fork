@@ -173,13 +173,14 @@
 							is_pop_type = clergymen
 							is_pop_type = officers
 							is_pop_type = farmers
+							is_pop_type = peasants
 						}				
 					}
 					
 					subtract = 0.95
 				}
 				else = {
-					subtract = 0.75
+					subtract = 0.25
 				}
 			}			
 		}
