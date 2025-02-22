@@ -2,8 +2,10 @@
 	effect = {
 		#Initializing
 		if = {
+
 			limit = {
 				has_global_variable = pb_started
+				
 				OR = {
 					region = sr:region_france
 					region = sr:region_rhine
@@ -11,6 +13,7 @@
 					region = sr:region_north_germany
 					region = sr:region_england
 					region = sr:region_north_sea_coast
+					region = sr:region_baltic
 				}
 				#OR = { #I will delude myself into thinking HARF will come back
 				#	has_modifier = modifier_agri_HARF_neg_40
@@ -20,114 +23,115 @@
 				NOT ={state_region = s:STATE_ICELAND}
 				NOT ={state_region = s:STATE_GREENLAND}
 			}
+			set_global_variable = {
+				name = potato_blight_happened
+			}
+			set_global_variable = {
+				name = potato_blight_magn_global
+				value = 5
+				years = 1
+			}
 			random_list = {
-				1={
+				1 = {
 					set_global_variable = {
-						name = potato_blight_happened
-					}
-					set_global_variable = {
-						name = potato_blight_magn_global
-						value = 5
+						name = potato_blight_length
 						years = 1
-					}
-					random_list = {
-						3 = {
-							set_global_variable = {
-								name = potato_blight_length
-								years = 2
-							}
-						}
-						5 = {
-							set_global_variable = {
-								name = potato_blight_length
-								years = 3
-							}
-						}
-						2 = {
-							set_global_variable = {
-								name = potato_blight_length
-								years = 4
-							}
-						}
-						1 = {
-							set_global_variable = {
-								name = potato_blight_length
-								years = 5
-							}
-						}
-					}
-					set_variable = {
-						name = potato_blight_origin
-						years = 1
-					}
-					state_region = {
-						add_state_trait = state_trait_potato_blight
-						every_scope_state = {
-							#if = {
-							#	limit = {
-							#		has_modifier = modifier_agri_HARF_neg_40
-							#	}
-							#	remove_modifier = modifier_agri_HARF_neg_40
-							#}
-							#if = {
-							#	limit = {
-							#		has_modifier = modifier_agri_HARF_neg_30
-							#	}
-							#	remove_modifier = modifier_agri_HARF_neg_30
-							#}
-							add_modifier = {
-								name = potato_blight_modifier
-								multiplier = global_var:potato_blight_magn_global
-							}
-						}
-					}
-					ROOT.owner = {
-						trigger_event = {
-							id = potato_blight.1
-							popup = yes
-							days = 1
-						}
-					}
-					if = {
-						limit = {
-							OR = {
-								state_region = s:STATE_MUNSTER
-								state_region = s:STATE_LEINSTER
-								state_region = s:STATE_ULSTER
-								state_region = s:STATE_CONNAUGHT
-							}
-						}
-						add_modifier = {
-							name = modifier_irish_emigration
-							years = 30
-						}
-							}
-					every_country = {
-						limit = {
-							capital = {
-								OR = {
-									region = sr:region_france
-									region = sr:region_rhine
-									region = sr:region_south_germany
-									region = sr:region_north_germany
-									region = sr:region_england
-									region = sr:region_north_sea_coast
-								}
-							}
-							NOT = { this = root.owner }
-						}
-						trigger_event = {
-							id = potato_blight.2
-							days = 1
-						
-						}
 					}
 				}
-				50={}
+				3 = {
+					set_global_variable = {
+						name = potato_blight_length
+						years = 2
+					}
+				}
+				5 = {
+					set_global_variable = {
+						name = potato_blight_length
+						years = 3
+					}
+				}
+				2 = {
+					set_global_variable = {
+						name = potato_blight_length
+						years = 4
+					}
+				}
+				1 = {
+					set_global_variable = {
+						name = potato_blight_length
+						years = 5
+					}
+				}
+			}
+			set_variable = {
+				name = potato_blight_origin
+				years = 1
+			}
+			state_region = {
+				add_state_trait = state_trait_potato_blight
+				every_scope_state = {
+					#if = {
+					#	limit = {
+					#		has_modifier = modifier_agri_HARF_neg_40
+					#	}
+					#	remove_modifier = modifier_agri_HARF_neg_40
+					#}
+					#if = {
+					#	limit = {
+					#		has_modifier = modifier_agri_HARF_neg_30
+					#	}
+					#	remove_modifier = modifier_agri_HARF_neg_30
+					#}
+					add_modifier = {
+						name = potato_blight_modifier
+						multiplier = global_var:potato_blight_magn_global
+					}
+				}
+			}
+			ROOT.owner = {
+				trigger_event = {
+					id = potato_blight.1
+					popup = yes
+					days = 1
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						state_region = s:STATE_MUNSTER
+						state_region = s:STATE_LEINSTER
+						state_region = s:STATE_ULSTER
+						state_region = s:STATE_CONNAUGHT
+					}
+				}
+				add_modifier = {
+					name = modifier_irish_emigration
+					years = 30
+				}
+			}
+			every_country = {
+				limit = {
+					capital = {
+						OR = {
+							region = sr:region_france
+							region = sr:region_rhine
+							region = sr:region_south_germany
+							region = sr:region_north_germany
+							region = sr:region_england
+							region = sr:region_north_sea_coast
+						}
+					}
+					NOT = { this = root.owner }
+				}
+				trigger_event = {
+					id = potato_blight.2
+					days = 1
+				
+				}
 			}
 		}
 		#Spreading
-		else_if ={
+		else_if = {
 			limit = {
 				has_global_variable = potato_blight_magn_global
 				NOT = { has_global_variable = potato_blight_over }
@@ -173,7 +177,7 @@
 				}
 			}
 			random_list = {
-				15 = {
+				10 = {
 					change_global_variable = {
 						name = potato_blight_magn_global
 						add = -1
@@ -216,8 +220,6 @@
 			}
 			random_list = {
 				1 = {
-					
-					
 					if={
 						limit={
 							NOT={state_region = s:STATE_MUNSTER}
@@ -291,26 +293,9 @@
 							#	}
 							#	remove_modifier = modifier_agri_HARF_pos_40
 							#}
-							if={
-								limit = {
-										state_region = s:STATE_MUNSTER
-										state_region = s:STATE_LEINSTER
-										state_region = s:STATE_ULSTER
-										state_region = s:STATE_CONNAUGHT
-								}
-								add_modifier = {
-									name = potato_blight_modifier
-									multiplier = {
-											value=global_var:potato_blight_magn_global
-											add=4
-										}
-								}
-							}
-							else={
-									add_modifier = {
-										name = potato_blight_modifier
-										multiplier = global_var:potato_blight_magn_global
-									}
+							add_modifier = {
+								name = potato_blight_modifier
+								multiplier = global_var:potato_blight_magn_global
 							}
 						}
 					}
@@ -382,8 +367,6 @@
 							is_decaying=yes
 						}
 					}
-				}
-				every_scope_state = {
 					remove_modifier = potato_blight_modifier
 					if = {
 						limit = {
@@ -398,7 +381,6 @@
 						remove_modifier = potato_famine_relief_unincorporated
 					}
 				}
-
 			}
 			set_global_variable = {
 				name = pb_over_delay
