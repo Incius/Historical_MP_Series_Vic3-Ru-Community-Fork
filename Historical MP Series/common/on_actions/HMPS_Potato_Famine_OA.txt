@@ -5,7 +5,7 @@
 
 			limit = {
 				has_global_variable = pb_started
-				
+				state_region = s:STATE_CONNAUGHT
 				OR = {
 					region = sr:region_france
 					region = sr:region_rhine
