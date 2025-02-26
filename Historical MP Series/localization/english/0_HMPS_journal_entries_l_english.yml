@@ -253,3 +253,6 @@
  ammunition_progress_bar_less_than:0 "Ammunitions Deficit Severity is less than 5/120"
  ammunition_deficit_desc:0 "Shortage of Ammunitions on the market"
  ammunition_proficit_desc:0 "No Shortage of Ammunitions on the market"
+je_SAF_boers:0 "The Issue of the Boers"
+je_SAF_boers_reason:0 "The Dutch settlers, or [GetCulture('boer').GetName], have settled in the cape since the 1400s. Any hope of building a new nation will have to consider the [GetCulture('boer').GetName] in its formation. We should aim for greater rights and autonomy for the other white settlers."
+boers_incorporated:0 "All above [GetCulture('boer').GetName] homelands are Incorporated"
