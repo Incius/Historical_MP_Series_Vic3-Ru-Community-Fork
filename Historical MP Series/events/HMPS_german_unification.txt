@@ -337,7 +337,11 @@ german_unification.4 = {
 	option = {
 		name = german_unification.4.b
 		trigger = {
-			NOT = { has_variable = prussian_germany }
+			OR={
+				has_variable = gutter_crown_var
+				NOT = { has_variable = prussian_germany }
+			}
+
 		}
 		add_loyalists = {
 			value = 0.1
@@ -371,6 +375,7 @@ german_unification.4 = {
 	option = {
 		name = german_unification.4.c
 		trigger = {
+			NOT={has_variable=gutter_crown_var}
 			has_variable = prussian_germany
 		}
 		remove_variable = prussian_germany

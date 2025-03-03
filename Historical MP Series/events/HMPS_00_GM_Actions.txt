@@ -600,7 +600,8 @@ gm_actions.18 = {
 		name = gm_actions.3.l
 		scope:recipient = {
 			je:je_earn_recognition = {
-						add_progress = { value = 100 name = earn_recognition_progress_bar }
+						add_progress = { value = 100 name= earn_recognition_progress_bar }
 			}
 		}
+	remove_global_variable = GM_taking_action
 	}
