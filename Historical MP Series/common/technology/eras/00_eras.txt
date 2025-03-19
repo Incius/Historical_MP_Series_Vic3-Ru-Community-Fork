@@ -13,11 +13,11 @@ era_3 = { #1862-1886
 }
 
 era_4 = { #1887-1911
-	technology_cost = 18000 # +5500 +44%
+	technology_cost = 23000 # +5k HMPR +5500 +44%
 }
 
 era_5 = { #1911-1936
-	technology_cost = 26000 # +8000 +44%
+	technology_cost = 32000 # +9k HMPR+8000 +44%
 }
 
 era_6 = { #1936+
