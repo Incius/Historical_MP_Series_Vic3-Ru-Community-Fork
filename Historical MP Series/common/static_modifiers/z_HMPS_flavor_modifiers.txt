@@ -734,6 +734,8 @@ prolonged_war = {
 	interest_group_in_government_attraction_mult = -0.20
 	country_loan_interest_rate_add = 0.08
 	country_loan_interest_rate_mult = 0.10
+	political_movement_radicalism_add = 0.05
+	interest_group_in_opposition_approval_add = -4
 }
 
 modifier_hun_post_rev = {

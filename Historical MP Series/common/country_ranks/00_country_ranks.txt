@@ -20,8 +20,8 @@ great_power = {
 	
 	diplo_pact_cost = 2.0
 	
-	prestige_average_threshold = 5.0
-	prestige_relative_threshold = 0.75
+	prestige_average_threshold = 6.0
+	prestige_relative_threshold = 0.8
 
 	infamy_target_scaling = 0.1
 
