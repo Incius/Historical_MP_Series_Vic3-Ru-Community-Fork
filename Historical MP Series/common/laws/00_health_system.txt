@@ -77,7 +77,7 @@ law_private_health_insurance = {
 	
 	institution = institution_health_system
 	institution_modifier = {
-		state_mortality_wealth_mult = -0.00100
+		state_mortality_wealth_mult = -0.0012
 		interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.1
 		state_upper_strata_standard_of_living_add = 0.5
 		state_middle_strata_standard_of_living_add = 0.25
