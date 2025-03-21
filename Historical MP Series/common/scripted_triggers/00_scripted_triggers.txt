@@ -284,7 +284,6 @@ countries_are_valid_rivals = {
 			OR = {
 				country_rank = rank_value:great_power
 				country_rank = rank_value:major_power
-				country_rank = rank_value:minor_power
 			}
 		}		
 	}

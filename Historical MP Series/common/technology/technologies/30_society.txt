@@ -847,7 +847,7 @@ human_rights = {
 	}
 	
 	unlocking_technologies = {
-		egalitarianism
+		civil_rights
 	}
 	
 	ai_weight = {
@@ -1287,7 +1287,7 @@ central_planning = {
 
 
 civil_rights = {
-	era = era_3
+	era = era_2
 	texture = "gfx/interface/icons/invention_icons/civil_rights.dds"
 	category = society
 	
@@ -1295,7 +1295,7 @@ civil_rights = {
 	}
 	
 	unlocking_technologies = {
-		human_rights
+		egalitarianism
 	}
 	
 	ai_weight = {
@@ -1399,7 +1399,7 @@ political_agitation = {
 		anarchism
 		socialism
 		corporatism
-		civil_rights
+		human_rights
 	}
 	
 	ai_weight = {
@@ -1691,7 +1691,7 @@ paved_roads = {
 ### ERA 6
 
 multiculturalism = {
-	era = era_5
+	era = era_4
 	texture = "gfx/interface/icons/invention_icons/civil_rights_2.dds"
 	category = society
 	
@@ -1699,8 +1699,8 @@ multiculturalism = {
 	}
 	
 	unlocking_technologies = {
-		political_agitation
 		anarchism
+		civil_rights
 	}
 	
 	ai_weight = {

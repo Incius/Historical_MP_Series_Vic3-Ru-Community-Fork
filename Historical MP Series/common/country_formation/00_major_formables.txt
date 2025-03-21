@@ -19,7 +19,7 @@
 					text = je_german_unification_idea_trigger_desc
 					has_variable = je_german_unification_idea
 				}
-				has_technology_researched = pan-nationalism
+
 			}
 			custom_tooltip = {
 				text = je_german_unification_idea.t1
