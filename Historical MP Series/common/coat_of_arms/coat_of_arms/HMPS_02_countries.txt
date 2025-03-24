@@ -156,3 +156,19 @@ GER_iron_cross = {
 		instance = { scale = { 0.55 0.55 } position = { 0.445 0.5 } }
 	}
 }
+IBE = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "purple"
+	
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = color2
+		color2 = color3
+	}
+	textured_emblem = {
+		texture = "te_coa_spanish_republic.dds"
+		instance = { position = { 0.5 0.51 }scale = { 0.45 0.45 } } 
+	}
+}

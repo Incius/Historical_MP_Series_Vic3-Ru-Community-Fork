@@ -417,3 +417,14 @@ SAF = {
 	cultures = { british }
 	capital = STATE_CAPE_COLONY
 }
+
+IBE = {
+	color = "republican_spain_purple"
+	
+	country_type = recognized
+
+	tier = empire
+	
+	cultures = { spanish catalan portuguese basque galician }
+	capital = STATE_TOLEDO
+}
