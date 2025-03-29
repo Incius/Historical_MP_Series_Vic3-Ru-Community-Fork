@@ -345,7 +345,7 @@ law_technocracy = {
 	}
 
 	unlocking_technologies = {
-		central_archives 
+		corporatism
 	}
 	
 	can_enact = {

@@ -419,7 +419,8 @@ SAF = {
 }
 
 IBE = {
-	color = "republican_spain_purple"
+	color = "yellow"
+
 	
 	country_type = recognized
 
