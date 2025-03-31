@@ -781,7 +781,7 @@ principle_divine_economics_1 = {
 		
 		# New PM for Financial Districts/Manor Houses unlocked via trigger
 		state_clergymen_investment_pool_efficiency_mult = 1.0
-		state_clergymen_investment_pool_contribution_add = 0.60	
+		state_clergymen_investment_pool_contribution_add = 0.15	
 	}
 
 	ai_weight = {
@@ -808,16 +808,16 @@ principle_exploit_members_1 = {
 
 	leader_modifier = {
 		# Modifiers from previous level(s)		
-		country_authority_mult = 0.2
+		country_authority_mult = 0.4
 		# Increase leader influence
-		country_influence_mult = 0.2
+		country_influence_mult = 0.4
 	}
 	
 	non_leader_modifier = {
 		# Modifiers from previous level(s)		
-		country_authority_mult = -0.2
+		country_authority_mult = -0.4
 		# Reduce non-leader influence
-		country_influence_mult = -0.2
+		country_influence_mult = -0.4
 	}
 
 	power_bloc_modifier = {
@@ -860,6 +860,13 @@ principle_sacred_civics_1 = {
 	visible = {
 		has_dlc_feature = power_bloc_features
 	}
+	power_bloc_modifier = {
+		power_bloc_mandate_progress_per_great_power_member_add = 10
+		power_bloc_mandate_progress_per_major_power_member_add = 5
+		power_bloc_mandate_progress_per_minor_power_member_add = 2
+		power_bloc_mandate_progress_per_unrecognized_major_power_member_add = 2
+		power_bloc_mandate_progress_per_unrecognized_regional_power_member_add = 1
+	}
 
 	member_modifier = {
 		# Modifiers from previous level(s)		
@@ -868,11 +875,7 @@ principle_sacred_civics_1 = {
 		#HMPS
 		country_leverage_generation_mult = 0.25
 		interest_group_ig_devout_approval_add = 10
-		power_bloc_mandate_progress_per_great_power_member_add = 10
-		power_bloc_mandate_progress_per_major_power_member_add = 5
-		power_bloc_mandate_progress_per_minor_power_member_add = 2
-		power_bloc_mandate_progress_per_unrecognized_major_power_member_add = 2
-		power_bloc_mandate_progress_per_unrecognized_regional_power_member_add = 1
+
 	}
 
 	leader_modifier = {
