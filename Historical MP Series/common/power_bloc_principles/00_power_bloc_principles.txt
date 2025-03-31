@@ -12,11 +12,13 @@ principle_construction_1 = {
 
 	member_modifier = {
 		building_group_bg_construction_infrastructure_usage_mult = -0.75
-		
 		# Members can form Construction type Companies unlock triggers in the company
 		# Members can form Construction type Companies unlock triggers in the company
 	}
-	
+
+	leader_modifier = {
+		building_construction_sector_throughput_add = 0.30
+	}
 	ai_weight = {
 		value = 100
 		
@@ -261,17 +263,21 @@ principle_aggressive_coordination_1 = {
 
 	power_bloc_modifier = {	
 		# Reduces cohesion
-		power_bloc_cohesion_add = -10
+		power_bloc_cohesion_add = -20
 	}
 	
 	member_modifier = {
 		# Modifiers from previous level(s)
 		country_initiator_war_goal_maneuver_cost_mult = -0.3
-		country_war_exhaustion_casualties_mult = -0.15
+		country_war_exhaustion_casualties_mult = -0.30
 	
 		# Countries forced to join diplomatic plays of members, other countries are not happy about this threat
 		country_join_power_bloc_member_in_plays_bool = yes
 		
+		
+	}
+
+	leader_modifier = {
 		unit_offense_mult = 0.10
 	}
 	
@@ -775,7 +781,7 @@ principle_divine_economics_1 = {
 		
 		# New PM for Financial Districts/Manor Houses unlocked via trigger
 		state_clergymen_investment_pool_efficiency_mult = 1.0
-		state_clergymen_investment_pool_contribution_add = 0.05	
+		state_clergymen_investment_pool_contribution_add = 0.60	
 	}
 
 	ai_weight = {
@@ -861,7 +867,12 @@ principle_sacred_civics_1 = {
 		country_reduced_liberty_desire_same_religion_bool = yes
 		#HMPS
 		country_leverage_generation_mult = 0.25
-		interest_group_ig_devout_approval_add = 5
+		interest_group_ig_devout_approval_add = 10
+		power_bloc_mandate_progress_per_great_power_member_add = 10
+		power_bloc_mandate_progress_per_major_power_member_add = 5
+		power_bloc_mandate_progress_per_minor_power_member_add = 2
+		power_bloc_mandate_progress_per_unrecognized_major_power_member_add = 2
+		power_bloc_mandate_progress_per_unrecognized_regional_power_member_add = 1
 	}
 
 	leader_modifier = {
