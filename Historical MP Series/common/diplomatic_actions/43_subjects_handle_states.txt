@@ -43,7 +43,14 @@
 		is_capital = no
 		is_under_colonization = no
 		OR = {
-			scope:target_country = { is_adjacent_to_state = root } # can always give away states that are adjacent to the subject
+			AND = {
+				scope:target_country = { is_adjacent_to_state = root }
+				is_incorporated = no
+			}
+			AND = {
+				scope:target_country = { is_adjacent_to_state = root }
+				is_homeland_of_country_cultures = scope:target_country
+			}
 			AND = {
 				is_homeland_of_country_cultures = scope:target_country
 				has_port = yes
