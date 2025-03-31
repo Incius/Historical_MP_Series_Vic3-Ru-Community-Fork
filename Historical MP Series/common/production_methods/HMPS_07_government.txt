@@ -135,13 +135,13 @@ pm_scholastic_education = {
 	
 	country_modifiers = {
 		workforce_scaled = { 
-			country_tech_spread_add = 0.5
+			country_tech_spread_add = 0.2
 		}
 	}
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 30
+			goods_input_paper_add = 5
 		}
 		level_scaled = {
 			building_employment_clerks_add = 1500
@@ -152,8 +152,6 @@ pm_scholastic_education = {
 	state_modifiers = {
 		workforce_scaled = { 
 			state_pop_qualifications_mult = 0.1
-			state_education_access_add = 0.025
-			state_migration_pull_mult = 0.01
 		}
 	}
 }
@@ -167,13 +165,13 @@ pm_philosophy_department = {
 	
 	country_modifiers = {
 		workforce_scaled = { 
-			country_tech_spread_add = 1
+			country_tech_spread_add = 0.4
 		}
 	}
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 60
+			goods_input_paper_add = 10
 		}
 		level_scaled = {
 			building_employment_clerks_add = 1750
@@ -184,8 +182,6 @@ pm_philosophy_department = {
 	state_modifiers = {
 		workforce_scaled = { 
 			state_pop_qualifications_mult = 0.15
-			state_education_access_add = 0.05
-			state_migration_pull_mult = 0.02
 		}	
 	}
 }
@@ -199,13 +195,13 @@ pm_analytical_philosophy_department = {
 	
 	country_modifiers = {
 		workforce_scaled = { 
-			country_tech_spread_add = 2
+			country_tech_spread_add = 0.6
 		}
 	}
 	
 	building_modifiers = {
 		workforce_scaled = { 
-			goods_input_paper_add = 90
+			goods_input_paper_add = 15
 		}
 		level_scaled = {
 			building_employment_clerks_add = 2000
@@ -216,8 +212,6 @@ pm_analytical_philosophy_department = {
 	state_modifiers = {
 		workforce_scaled = { 
 			state_pop_qualifications_mult = 0.20
-			state_education_access_add = 0.075
-			state_migration_pull_mult = 0.03
 		}	
 	}
 }	
@@ -231,7 +225,7 @@ pm_secular_academia = {
 	
 	building_modifiers = {
 		level_scaled = {
-			building_employment_academics_add = 4000
+			building_employment_academics_add = 2000
 		}
 	}			
 }
@@ -247,7 +241,7 @@ pm_religious_academia = {
 	building_modifiers = {
 		level_scaled = {
 			building_employment_clergymen_add = 1000
-			building_employment_academics_add = 3000
+			building_employment_academics_add = 1000
 		}
 	}			
 }
