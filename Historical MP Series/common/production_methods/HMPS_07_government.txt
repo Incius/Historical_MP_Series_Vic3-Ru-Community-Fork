@@ -135,7 +135,7 @@ pm_scholastic_education = {
 	
 	country_modifiers = {
 		workforce_scaled = { 
-			country_tech_spread_add = 0.2
+			country_tech_spread_add = 0.5
 		}
 	}
 	
@@ -165,7 +165,7 @@ pm_philosophy_department = {
 	
 	country_modifiers = {
 		workforce_scaled = { 
-			country_tech_spread_add = 0.4
+			country_tech_spread_add = 0.8
 		}
 	}
 	
@@ -195,7 +195,7 @@ pm_analytical_philosophy_department = {
 	
 	country_modifiers = {
 		workforce_scaled = { 
-			country_tech_spread_add = 0.6
+			country_tech_spread_add = 1.4
 		}
 	}
 	
