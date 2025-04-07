@@ -124,11 +124,11 @@ law_agrarianism = {
 		state_clergymen_investment_pool_contribution_add = 0.2
 		state_farmers_investment_pool_efficiency_mult = 0.5
 		state_capitalists_investment_pool_efficiency_mult = -0.25
-		country_private_construction_allocation_mult = 0.5
+		country_private_construction_allocation_mult = 0.25
 		
 		building_nationalization_investment_return_add = 0.5
-		country_government_dividends_reinvestment_add = 0.5
-		country_government_dividends_efficiency_add = 0.45
+		country_government_dividends_reinvestment_add = 0.25
+		country_government_dividends_efficiency_add = 0.55
 		
 		country_disable_nationalization_without_compensation_bool = yes
 	}
@@ -202,7 +202,7 @@ law_interventionism = {
 		country_private_construction_allocation_mult = 0.5
 		
 		building_nationalization_investment_return_add = 0.5
-		country_government_dividends_reinvestment_add = 0.25
+		country_government_dividends_reinvestment_add = 0.5
 		country_government_dividends_efficiency_add = 0.55
 		
 		country_disable_nationalization_without_compensation_bool = yes
