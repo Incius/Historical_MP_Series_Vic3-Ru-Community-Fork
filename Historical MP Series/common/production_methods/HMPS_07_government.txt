@@ -46,7 +46,7 @@ pm_basic_port = {
 	}
 	state_modifiers = {
 		workforce_scaled = {
-			state_market_access_price_impact = 0.018
+			state_market_access_price_impact = 0.01
 			state_infrastructure_add = 5
 		}
 	}
@@ -80,7 +80,7 @@ pm_industrial_port = {
 	}
 	state_modifiers = {
 		workforce_scaled = {
-			state_market_access_price_impact = 0.037
+			state_market_access_price_impact = 0.02
 			state_infrastructure_add = 7.5
 		}
 	}	
@@ -113,7 +113,7 @@ pm_modern_port = {
 	}
 	state_modifiers = {
 		workforce_scaled = {
-			state_market_access_price_impact = 0.037
+			state_market_access_price_impact = 0.03
 			state_infrastructure_add = 10
 		}
 	}

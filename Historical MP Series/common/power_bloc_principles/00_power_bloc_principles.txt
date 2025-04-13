@@ -52,7 +52,7 @@ principle_internal_trade_1 = {
 		tariff_import_outside_power_bloc_mult = 0.2
 		tariff_export_outside_power_bloc_mult = 0.2
 		state_infrastructure_mult = 0.1
-		country_company_throughtput_add = 0.4
+		country_company_throughput_bonus_add = 0.4
 		
 		# Cheaper port connections
 		country_port_connection_cost_mult = -0.25
