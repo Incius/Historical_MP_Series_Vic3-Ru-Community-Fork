@@ -91,9 +91,9 @@ NPolitics = {
 
 	MOVEMENT_IMMEDIATE_RADICALISM_FROM_ENACTMENT = 1.0 # This multiplier of target radicalism impact from law enactment is applied immediately on start of enactment
 	MOVEMENT_IMMEDIATE_RADICALISM_FROM_CANCELLATION = -0.5 # This multiplierof target radicalism impact from law enactment is applied immediately on cancellation of enactment
-	MOVEMENT_RADICALISM_FROM_ACTIVE_LAW_STANCE = -0.075 # Multiplied by a movement's stance on each active law (positive stance = negative radicalism)
+	MOVEMENT_RADICALISM_FROM_ACTIVE_LAW_STANCE = -0.05 # Multiplied by a movement's stance on each active law (positive stance = negative radicalism)
 	MOVEMENT_RADICALISM_FROM_ENACTED_LAW_STANCE = -0.25 # Multiplied by a movement's comparative stance on currently or recently enacted law (positive stance = negative radicalism)
-	MOVEMENT_RADICALISM_FROM_RADICAL_SUPPORTERS = 1.25 # Scales against fraction of radicals among movement supporters
+	MOVEMENT_RADICALISM_FROM_RADICAL_SUPPORTERS = 1.0 # Scales against fraction of radicals among movement supporters
 	MOVEMENT_RADICALISM_FROM_LOYALIST_SUPPORTERS = -0.75 # Scales against fraction of loyalists among movement supporters
 	MOVEMENT_RADICALISM_FROM_SUPPRESSION = 0.0 # Suppressed movements become this much more radical 
 	MOVEMENT_RADICALISM_FROM_BOLSTERING = 0.0 # Bolstered movements become this much less radical 
@@ -213,7 +213,7 @@ NPolitics = {
 	CIVIL_WAR_UPRISING_NAVY_FRACTION_CLOUT_FACTOR = 0.25 # Target fraction of the navy that should rebel, multiplied by insurrectionary IG clout in the area
 	
 	CIVIL_WAR_MAX_PROGRESS_AT_CHECKPOINT = 0.25	# A civil war can advance at most this amount per checkpoint, regardless of radicalism
-	MIN_RADICALISM_FOR_CIVIL_WAR_PROGRESSION = 0.85	# A political movement must have this much radicalism for a civil war to start organizing
+	MIN_RADICALISM_FOR_CIVIL_WAR_PROGRESSION = 0.95	# A political movement must have this much radicalism for a civil war to start organizing
 	MIN_RADICALISM_FOR_CIVIL_WAR_START = 1.0		# Allow a civil war to start at this amount of radicalism or more
 	CIVIL_WAR_PROGRESS_DECAY = 0.1					# The progress of civil wars with insufficient support decays at this rate
 	CIVIL_WAR_PROGRESS_RADICALISM_WEIGHT = 0.2  	# civil wars gain progress based on the movement's radicalism, multiplied by this weight (may be affected by modifiers)
