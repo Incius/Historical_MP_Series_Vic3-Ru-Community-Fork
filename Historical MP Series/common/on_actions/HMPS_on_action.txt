@@ -839,7 +839,7 @@ HMPS_1848_Radicals = {
 				}
 				capital = {
 					radical_fraction = {
-						value > 0.25
+						value > 0.4
 					}
 				}
 				NOT = { has_variable = 1848_radical_capital_var }

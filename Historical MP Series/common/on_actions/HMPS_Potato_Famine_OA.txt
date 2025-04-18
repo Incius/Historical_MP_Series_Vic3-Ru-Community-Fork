@@ -334,7 +334,7 @@
 					}
 					change_global_variable = {
 						name = global_1848_progress
-						add = 10
+						add = 15
 					}
 				}
 				every_country = {
