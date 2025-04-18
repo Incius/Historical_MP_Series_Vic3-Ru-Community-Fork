@@ -320,6 +320,7 @@ stock_exchange = {
 	modifier = {
 		country_trade_route_cost_mult = -0.25
 		country_max_companies_add = 1
+		state_market_access_price_impact = 0.05
 	}
 	
 	unlocking_technologies = {
@@ -603,6 +604,7 @@ central_banking = {
 	modifier = {
 		country_minting_mult = 0.1
 		country_loan_interest_rate_add = -0.02
+		state_market_access_price_impact = 0.025
 	}	
 	
 	unlocking_technologies = {
@@ -1188,6 +1190,7 @@ investment_banks = {
 	modifier = {
 		country_max_companies_add = 1
 		state_urbanization_per_level_mult = -0.1
+		state_market_access_price_impact = 0.025
 	}	
 	
 	unlocking_technologies = {
@@ -1429,6 +1432,7 @@ international_exchange_standards = {
 	modifier = {
 		country_minting_mult = 0.1
 		country_loan_interest_rate_add = -0.02
+		state_market_access_price_impact = 0.025
 	}
 	
 	unlocking_technologies = {
@@ -1614,6 +1618,7 @@ modern_financial_instruments = {
 		country_minting_mult = 0.1
 		country_loan_interest_rate_add = -0.02
 		country_government_dividends_efficiency_add = 0.05
+		state_market_access_price_impact = 0.025
 	}
 	unlocking_technologies = {
 		international_exchange_standards
@@ -1631,6 +1636,7 @@ macroeconomics = {
 	
 	modifier = {
 		country_max_companies_add = 1
+		state_market_access_price_impact = 0.025
 	}
 	
 	unlocking_technologies = {
