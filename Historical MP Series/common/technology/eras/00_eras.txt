@@ -5,11 +5,11 @@ era_1 = { #Pre-1836
 }
 
 era_2 = { #1836-1861
-	technology_cost = 8250 # HMPS Change, vanilla is 10000
+	technology_cost = 11000 # HMPS Change, vanilla is 10000
 }
 
 era_3 = { #1862-1886
-	technology_cost = 13500 # +3500 +38%
+	technology_cost = 14000 # +3500 +38%
 }
 
 era_4 = { #1887-1911

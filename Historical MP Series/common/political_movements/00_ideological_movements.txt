@@ -5131,7 +5131,7 @@ movement_reactionary = {
 		owner ?= {
 			add = {
 				value = country_turmoil
-				divide = 0.25
+				divide = 0.3
 				desc = "COUNTRY_TURMOIL"
 			}	
 		}
