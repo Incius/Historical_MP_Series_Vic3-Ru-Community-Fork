@@ -856,17 +856,23 @@ dp_unify_germany = {
 		}
 		NOT = { has_variable = abandoned_germany }
 		NOT = { country_has_primary_culture = cu:hungarian }
-		custom_tooltip = {
-			text = no_confederation_of_the_rhine_tt
-			NOT = {
-				exists = c:RHN
-			}
-		}
+		#
+		#custom_tooltip = {
+		#	text = no_confederation_of_the_rhine_tt
+		#	NOT = {
+		#		exists = c:RHN
+		#	}
+		#}
 	}
 	
 	on_weekly_pulse = {}
+
 	
-	on_war_begins = {}
+	on_war_begins = {
+		scope:initiator = {
+			give_claims_on_germany = yes
+		}
+	}
 
 	on_war_end = {}
 }
