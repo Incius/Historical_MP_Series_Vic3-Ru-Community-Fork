@@ -141,7 +141,7 @@ pm_scholastic_education = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 30
+			goods_input_paper_add = 20
 		}
 		level_scaled = {
 			building_employment_clerks_add = 1500
@@ -173,7 +173,7 @@ pm_philosophy_department = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 60
+			goods_input_paper_add = 40
 		}
 		level_scaled = {
 			building_employment_clerks_add = 1750
@@ -205,7 +205,7 @@ pm_analytical_philosophy_department = {
 	
 	building_modifiers = {
 		workforce_scaled = { 
-			goods_input_paper_add = 90
+			goods_input_paper_add = 60
 		}
 		level_scaled = {
 			building_employment_clerks_add = 2000
