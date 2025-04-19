@@ -12,11 +12,13 @@ principle_construction_1 = {
 
 	member_modifier = {
 		building_group_bg_construction_infrastructure_usage_mult = -0.75
-		
+		state_building_construction_sector_max_level_add = 20
 		# Members can form Construction type Companies unlock triggers in the company
 		# Members can form Construction type Companies unlock triggers in the company
 	}
-	
+	leader_modifier = {
+		building_construction_sector_throughput_add = 0.10
+	}
 	ai_weight = {
 		value = 100
 		
@@ -49,7 +51,7 @@ principle_internal_trade_1 = {
 		tariff_import_outside_power_bloc_mult = 0.2
 		tariff_export_outside_power_bloc_mult = 0.2
 		state_infrastructure_mult = 0.1
-		
+		country_company_throughput_bonus_add = 0.4
 		# Cheaper port connections
 		country_port_connection_cost_mult = -0.25
 	}
@@ -468,9 +470,9 @@ principle_transport_1 = {
 	member_modifier = {
 		# Modifiers from previous level(s)
 		country_convoys_capacity_mult = 0.2
-		state_infrastructure_from_population_mult = 0.25
-		state_infrastructure_from_population_max_mult = 0.25 
-		
+		state_infrastructure_from_population_mult = 0.50
+		state_infrastructure_from_population_max_mult = 0.50 
+		building_railway_throughput_add = 0.3
 		# Increased land trade capacity
 		market_land_trade_capacity_add = 100
 		
@@ -617,7 +619,7 @@ principle_foreign_investment_1 = {
 	member_modifier = {
 		# Modifiers from previous level(s)	
 		country_nationalization_cost_non_members_mult = -0.5
-
+		state_capitalists_investment_pool_efficiency_mult = 0.2
 		# This modifier is just here to generate a tooltip. It doesn't actually do anything on its own
 		country_higher_leverage_from_economic_dependence_bool = yes
 	}
@@ -695,7 +697,7 @@ principle_freedom_of_movement_1 = {
 	
 	member_modifier = {
 		# Modifiers from previous level(s)	
-		state_migration_quota_mult = 0.25
+		state_migration_quota_mult = 0.15
 		country_mass_migration_attraction_mult = 0.1	
 	}
 
@@ -775,7 +777,7 @@ principle_divine_economics_1 = {
 		
 		# New PM for Financial Districts/Manor Houses unlocked via trigger
 		state_clergymen_investment_pool_efficiency_mult = 1.0
-		state_clergymen_investment_pool_contribution_add = 0.05	
+		state_clergymen_investment_pool_contribution_add = 0.15	
 	}
 
 	ai_weight = {
