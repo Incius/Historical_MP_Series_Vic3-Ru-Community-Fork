@@ -332,7 +332,6 @@ german_unification.3 = {
 	trigger = {
 		NOT = { has_global_variable = bismarck_variable }
 		ig:ig_landowners = {
-			is_powerful = yes
 			is_in_government = yes
 		}
 		OR = {
