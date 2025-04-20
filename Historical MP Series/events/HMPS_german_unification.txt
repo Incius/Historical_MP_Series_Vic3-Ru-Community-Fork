@@ -78,7 +78,7 @@ german_unification.1 = {
 			}
 		}
 	}
-
+}
 	option = {
 		name = german_unification.1.a
 		default_option = yes
