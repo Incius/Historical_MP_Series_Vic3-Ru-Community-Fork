@@ -230,7 +230,10 @@ pm_diesel_pump_building_iron_mine = {
 			building_employment_engineers_add = 500
 		}
 	}
-)
+}
+
+
+
 pm_atmospheric_engine_pump_building_lead_mine = {
 	texture = "gfx/interface/icons/production_method_icons/pumps.dds"
 
