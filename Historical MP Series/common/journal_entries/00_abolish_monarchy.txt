@@ -91,7 +91,7 @@ je_abolish_monarchy = {
 	}
 
 	goal_add_value = {
-		add = 60
+		add = 120
 	}
 
 	progressbar = yes
