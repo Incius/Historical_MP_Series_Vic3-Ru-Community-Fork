@@ -1,0 +1,37 @@
+﻿l_russian:
+ 
+mobilization_option_handcranked_machinegunners: "Ручные пулемётчики"
+mobilization_option_handcranked_machinegunners_desc: "Используйте ручных пулемётчиков для эффективного укрепления позиционной обороны."
+
+character_battle_condition_charge_after_a_successful_bombardment_mult: "[GetBattleCondition('battle_condition_charge_after_a_successful_bombardment').GetName]$modifier_character_battle_condition_suffix$"
+character_battle_condition_charge_after_a_successful_bombardment_mult_desc: "$modifier_character_battle_condition_desc_prefix$[GetBattleCondition('battle_condition_charge_after_a_successful_bombardment').GetName]$modifier_character_battle_condition_desc_suffix$"
+
+character_battle_condition_chemical_weapons_attack_and_bombardment_mult: "[GetBattleCondition('battle_condition_chemical_weapons_attack_and_bombardment').GetName]$modifier_character_battle_condition_suffix$"
+character_battle_condition_chemical_weapons_attack_and_bombardment_mult_desc: "$modifier_character_battle_condition_desc_prefix$[GetBattleCondition('battle_condition_chemical_weapons_attack_and_bombardment').GetName]$modifier_character_battle_condition_desc_suffix$"
+
+character_battle_condition_dug_in_with_machinegun_mult: "[GetBattleCondition('battle_condition_dug_in_with_machinegun').GetName]$modifier_character_battle_condition_suffix$"
+character_battle_condition_dug_in_with_machinegun_mult_desc: "$modifier_character_battle_condition_desc_prefix$[GetBattleCondition('battle_condition_dug_in_with_machinegun').GetName]$modifier_character_battle_condition_desc_suffix$"
+
+battle_condition_charge_after_a_successful_bombardment: "Успешный обстрел траншей"
+battle_condition_charge_after_a_successful_bombardment_desc: "Для успешного обстрела необходимы быстрый отвод тепла артиллерией, точное наблюдение наблюдателей и точные характеристики стрельбы из центра управления огнем, и даже если все приготовления завершены, это непростая задача, потому что мы должны рассчитать время непосредственно перед атакой пехоты."
+
+battle_condition_dug_in_with_machinegun: "Окоп с пулемётом"
+battle_condition_dug_in_with_machinegun_desc: "Командир лично контролировал строительство полевого укрепления."
+
+battle_condition_chemical_weapons_attack: "Применение химического оружия"
+battle_condition_chemical_weapons_attack_desc: "Нам удалось эффективно применить химическое оружие с учётом погоды и направления ветра. Остаётся только молиться, чтобы прогноз и ветер не изменились."
+battle_condition_chemical_weapons_attack_2: "Применение химического оружия"
+battle_condition_chemical_weapons_attack_2_desc: "Нам удалось эффективно применить химическое оружие с учётом погоды и направления ветра. Остаётся только молиться, чтобы прогноз и ветер не изменились."
+
+battle_condition_chemical_weapons_attack_and_bombardment: "Химическая атака и обстрел траншей"
+battle_condition_chemical_weapons_attack_and_bombardment_desc: "Чтобы противостоять врагу при химической атаке, необходимо не только использовать химическое оружие с учётом погодных условий и ветра, но и точно определить момент наступления пехоты."
+battle_condition_chemical_weapons_attack_and_bombardment_2: "Химическая атака и обстрел траншей"
+battle_condition_chemical_weapons_attack_and_bombardment_2_desc: "Чтобы противостоять врагу при химической атаке, необходимо не только использовать химическое оружие с учётом погодных условий и ветра, но и точно определить момент наступления пехоты."
+
+battle_condition_chemical_weapons_defense: "Ношение противогаза"
+battle_condition_chemical_weapons_defense_desc: "Быстро надеть защитное снаряжение в траншее после применения врагом химического оружия — непростая задача."
+battle_condition_chemical_weapons_defense_2: "Ношение противогаза"
+battle_condition_chemical_weapons_defense_2_desc: "Быстро надеть защитное снаряжение в траншее после применения врагом химического оружия — непростая задача."
+
+battle_condition_primitive_combined_arms: "Примитивное взаимодействие родов войск"
+battle_condition_primitive_combined_arms_desc: "Сразу после артиллерийской подготовки эффективен, но трудновыполним скоординированный прорыв обороны силами пехоты и бронетехники."
