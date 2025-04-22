@@ -42,7 +42,7 @@ NCountry = {
 	CONSTRUCTION_QUEUE_INCREMENT_CONTROL = 10 # Increment/Decrement used for buildings construction queue when holding down Ctrl
 	WEEKS_TO_STORE_LOYALIST_RADICAL_STATISTICS = 52 # Number of weeks of statistics for loyalists/radicals that is stored and shown
 	INCORPORATION_TIME_SAME_CULTURE = 2				# Years if the state is a Homeland of one of the country's primary cultures
-	INCORPORATION_TIME_SAME_HERITAGE = 6			# Years if the state is a Homeland of a culture that matches of one of the country's primary cultures' Heritage traits
+	INCORPORATION_TIME_SAME_HERITAGE = 5			# Years if the state is a Homeland of a culture that matches of one of the country's primary cultures' Heritage traits
 	INCORPORATION_TIME_SAME_TRAIT = 10				# Years if the state is a Homeland of a culture with any trait in common with a country's primary cultures
 	INCORPORATION_TIME_NO_MATCH = 20				# Years if the state's Homeland cultures have nothing in common with the country's primary cultures
 	JOURNAL_ENTRY_UPDATE_ACTIVE = 8					# Number of ticks between each update of Active (Possible) Journal Entries, can be overriden on journal entry type
@@ -80,16 +80,16 @@ NPolitics = {
 	MOVEMENT_SUPPORT_WEALTH_SUPPORT_FRACTION = 0.33 # This fraction a political movement's total support comes from its wealth support
 	
 	MOVEMENT_WEEKLY_RADICALISM_CHANGE = 0.01 # How much does a movement's radicalism change towards its calculated target each week
-	MOVEMENT_MONTHLY_RADICALS_THRESHOLD = 0.4 # At this level of radicalism, movement supporters start being radicalized each month at an amount scaled by the radicalism value
-	MOVEMENT_MONTHLY_RADICALS_SCALING_MIN = 0.01 # The minimum % of supporters radicalized each month when above the radicalization threshold
-	MOVEMENT_MONTHLY_RADICALS_SCALING_MAX = 0.05 # The maximum % of supporters radicalized each month when above the radicalization threshold 
+	MOVEMENT_MONTHLY_RADICALS_THRESHOLD = 0.5 # At this level of radicalism, movement supporters start being radicalized each month at an amount scaled by the radicalism value
+	MOVEMENT_MONTHLY_RADICALS_SCALING_MIN = 0.008 # The minimum % of supporters radicalized each month when above the radicalization threshold
+	MOVEMENT_MONTHLY_RADICALS_SCALING_MAX = 0.035 # The maximum % of supporters radicalized each month when above the radicalization threshold 
 	MOVEMENT_LOYALISTS_ON_APPROVED_ENACTMENT = 0.25 # The % of supporters who become more loyal when a law the movement approves of is enacted
 	
 	# Movements with less radicalism than this do not impact law enactment chances
 	# Additionally, movement radicalism won't drop lower than than this when enactment of a law they care about is underway, so lowered radicalism from enactment doesn't end up counterproductive
 	MOVEMENT_MIN_RADICALISM_FOR_LAW_ENACTMENT_IMPACT = 0.25 
 
-	MOVEMENT_IMMEDIATE_RADICALISM_FROM_ENACTMENT = 1.0 # This multiplier of target radicalism impact from law enactment is applied immediately on start of enactment
+	MOVEMENT_IMMEDIATE_RADICALISM_FROM_ENACTMENT = 0.7 # This multiplier of target radicalism impact from law enactment is applied immediately on start of enactment
 	MOVEMENT_IMMEDIATE_RADICALISM_FROM_CANCELLATION = -0.5 # This multiplierof target radicalism impact from law enactment is applied immediately on cancellation of enactment
 	MOVEMENT_RADICALISM_FROM_ACTIVE_LAW_STANCE = -0.05 # Multiplied by a movement's stance on each active law (positive stance = negative radicalism)
 	MOVEMENT_RADICALISM_FROM_ENACTED_LAW_STANCE = -0.25 # Multiplied by a movement's comparative stance on currently or recently enacted law (positive stance = negative radicalism)
@@ -132,7 +132,7 @@ NPolitics = {
 	STARTUP_MIN_LEGITIMACY_IG_BARRIER = 40 # Min legitimacy when on startup we allow to remove IGs from goverment that decrease legitimacy
 	APPROVAL_THRESHOLD_ANGRY = -10		# At this or below approval, IG is considered angry
 	APPROVAL_THRESHOLD_UNHAPPY = -5		# At this or below approval, IG is considered unhappy
-	APPROVAL_THRESHOLD_HAPPY = 8		# At this or above approval, IG is considered happy
+	APPROVAL_THRESHOLD_HAPPY = 5		# At this or above approval, IG is considered happy
 	APPROVAL_THRESHOLD_LOYAL = 15		# At this or above approval, IG is considered loyal
 	CHANGED_LAW_APPROVAL_MONTHS = 60 # How many months does the approval/disapproval for a law change linger after said law chain
 	
@@ -233,8 +233,8 @@ NPolitics = {
 	REVOLUTION_LOST_REBEL_IG_RADICALS_REDUCED_PERCENTAGE = 0.25	# The number of radicals of pops will additionally decrease by this amount when a revolution is crushed (relative to membership in defeated IGs)
 	REVOLUTION_WON_LOYAL_IG_RADICALS_REDUCED_PERCENTAGE = 0.5	# The number of radicals of pops will additionally decrease by this amount when a revolution is crushed (relative to membership in victorious IGs)
 	
-	IG_SUPPRESSION_COST = 200						# The amount of AUT it costs to Suppress an IG
-	IG_BOLSTER_COST = 200							# The amount of AUT it costs to Bolster an IG
+	IG_SUPPRESSION_COST = 100						# The amount of AUT it costs to Suppress an IG
+	IG_BOLSTER_COST = 100							# The amount of AUT it costs to Bolster an IG
 	DEFAULT_GOODS_TAX_COST = 100					# The amount of AUT it costs to tax a good by default
 
 	TURMOIL_STATE_EFFECTS_THRESHOLD = 0.25				# How much turmoil a state needs to have before it gets any state-wide effects
@@ -302,7 +302,7 @@ NPolitics = {
 }
 
 NEconomy = {
-	MIN_CONSTRUCTION_EFFICIENCY = 0.25					# Construction efficiency cannot go below this amount
+	MIN_CONSTRUCTION_EFFICIENCY = 0.15					# Construction efficiency cannot go below this amount
 
 	# The number of times the initializewealth function is run during setup
 	# The more times you run this the more accurate setup will be for Pop wealth compared to income
@@ -312,7 +312,7 @@ NEconomy = {
 	COUNTRY_GDP_MODIFIER_MAX_MULTIPLIER = 200000		# The country_gdp modifier multiplier cannot be higher than this
 	
 	ECONOMY_OF_SCALE_START_LEVEL = 10					# Level at which buildings start getting economy of scale bonuses. Levels lower than this value provide no bonus [>=1]
-	ECONOMY_OF_SCALE_NATIONALIZED_FRACTION_MULT = 0.75	# Non-government building economy of scale modifier if multiplied by (1 - the fraction of nationalized levels * this)
+	ECONOMY_OF_SCALE_NATIONALIZED_FRACTION_MULT = 0.5	# Non-government building economy of scale modifier if multiplied by (1 - the fraction of nationalized levels * this)
 
 	IN_DEFAULT_MINIMUM_PENALTY_SCALE = 0.1				# This amount of the 'in default' throughput penalty is applied right away
 	IN_DEFAULT_DAYS_TO_FULL_PENALTY = 365				# How many days of being in default does it take to get the full throughput penalty
@@ -368,9 +368,9 @@ NEconomy = {
 	TRADE_ROUTE_BUREAUCRACY_COST = 20					# The cost in BUR per trade route
 	TRADE_ROUTE_START_LEVEL = 1							# All new trade routes start at this level
 	TRADE_ROUTE_MAX_LEVEL = 2500						# Trade routes cannot be higher level than this
-	TRADE_ROUTE_MIN_TOTAL_IMPORTS = 1					# This amount of a good can always be imported to a market even if there is no demand
-	TRADE_ROUTE_DEFAULT_GOODS_QUANTITY = 10				# Base quantity traded from trade routes, if not otherwise specified in goods type
-	TRADE_ROUTE_ECONOMY_OF_SCALE = 0.10					# Each level of trade route after the first adds this % to desired trade quantity
+	TRADE_ROUTE_MIN_TOTAL_IMPORTS = 5					# This amount of a good can always be imported to a market even if there is no demand
+	TRADE_ROUTE_DEFAULT_GOODS_QUANTITY = 2				# Base quantity traded from trade routes, if not otherwise specified in goods type
+	TRADE_ROUTE_ECONOMY_OF_SCALE = 0.20					# Each level of trade route after the first adds this % to desired trade quantity
 	TRADE_ROUTE_ECONOMY_OF_SCALE_MAX_LEVEL = 1000		# After this level, trade route economy of scale no longer increases the amount per level
 	TRADE_ROUTE_REQUIRED_CONVOY_BUFFER = 0.05			# Trade routes may not increase level if you wouldn't end up with at least this 'buffer' of produced convoys
 
@@ -1060,8 +1060,8 @@ NPops = {
 	WEALTH_PROGRESS_DECREASE_DEFICIT_MULT = 5
 
 	LOYALTIES_GAIN_GRACE_PERIOD_SHORT = "1836.6.1"		# Until this date, only a scaling part of the Radicals and Loyalists gained from SOL changes will be applied if the Short game rule is applied
-	LOYALTIES_GAIN_GRACE_PERIOD_LONG = "1841.1.1"		# Until this date, only a scaling part of the Radicals and Loyalists gained from SOL changes will be applied if the Long game rule is applied
-	LOYALTIES_GAIN_GRACE_PERIOD_EXTRA_LONG = "1846.1.1"	# Until this date, only a scaling part of the Radicals and Loyalists gained from SOL changes will be applied if the Extra Long game rule is applied
+	LOYALTIES_GAIN_GRACE_PERIOD_LONG = "1836.6.1"		# Until this date, only a scaling part of the Radicals and Loyalists gained from SOL changes will be applied if the Long game rule is applied
+	LOYALTIES_GAIN_GRACE_PERIOD_EXTRA_LONG = "1836.6.1"	# Until this date, only a scaling part of the Radicals and Loyalists gained from SOL changes will be applied if the Extra Long game rule is applied
 	RADICALS_MAX_FROM_LOW_SOL = 0.15				# If pop is already this % radical, don't add more radicals from low SOL (Scales by delta between SoL and expected min SoL)
 	RADICALS_MAX_FROM_DISCRIMINATION = 0.5		# If pop is already this % radical, don't add more radicals from discrimination (Scales by literacy)
 	RADICALS_MONTHLY_FROM_LOW_SOL = 0.002		# Scales by delta between SoL and expected min SoL
