@@ -72,8 +72,6 @@ surveyor = {
 		battle_defense_owned_province_mult = 0.1
 		character_battle_condition_charted_terrain_mult = 2
 		character_battle_condition_good_visibility_mult = 1
-		character_battle_condition_charge_after_a_successful_bombardment_mult = 0.25	#mod
-		character_battle_condition_chemical_weapons_attack_and_bombardment_mult = 0.25	#mod
 	}
 
 	possible = {
@@ -93,7 +91,7 @@ forest_commander = {
 	texture = gfx/interface/icons/character_trait_icons/forest_commander.dds
 
 	command_modifier = {
-		unit_defense_forested_mult = 0.25
+		unit_defense_forested_mult = 0.15
 	}
 
 	possible = {
@@ -135,7 +133,7 @@ mountain_commander = {
 	texture = gfx/interface/icons/character_trait_icons/mountain_commander.dds
 
 	command_modifier = {
-		unit_defense_elevated_mult = 0.25
+		unit_defense_elevated_mult = 0.15
 	}
 
 	possible = {
@@ -162,8 +160,6 @@ basic_artillery_commander = {
 		unit_combat_unit_type_mobile_artillery_offense_mult = 0.05
  		character_battle_condition_aggressive_maneuver_mult = 1
  		character_battle_condition_mud_mult = 0.5
-		character_battle_condition_charge_after_a_successful_bombardment_mult = 0.5		#mod
-		character_battle_condition_chemical_weapons_attack_and_bombardment_mult = 0.5	#mod
  	}
 
  	possible = {
@@ -268,6 +264,7 @@ basic_artillery_commander = {
  	}
 
  	replace = {
+		inexperienced
  	}
 
  	value = 1
@@ -284,8 +281,6 @@ experienced_artillery_commander = {
 		unit_combat_unit_type_mobile_artillery_offense_mult = 0.1
 		character_battle_condition_aggressive_maneuver_mult = 2
 		character_battle_condition_mud_mult = 0.5
-		character_battle_condition_charge_after_a_successful_bombardment_mult = 1.0		#mod
-		character_battle_condition_chemical_weapons_attack_and_bombardment_mult = 1.0	#mod
 	}
 
 	possible = {
@@ -383,8 +378,6 @@ expert_artillery_commander = {
 		unit_combat_unit_type_mobile_artillery_offense_mult = 0.15
 		character_battle_condition_aggressive_maneuver_mult = 3
 		character_battle_condition_mud_mult = 0.5
-		character_battle_condition_charge_after_a_successful_bombardment_mult = 1.5		#mod
-		character_battle_condition_chemical_weapons_attack_and_bombardment_mult = 1.5	#mod
 	}
 
 	possible = {
@@ -581,8 +574,6 @@ basic_offensive_planner = {
 
 	command_modifier = {
 		unit_offense_mult = 0.05
-		character_battle_condition_charge_after_a_successful_bombardment_mult = 0.25	#mod
-		character_battle_condition_chemical_weapons_attack_and_bombardment_mult = 0.25	#mod
 	}
 
 	possible = {
@@ -600,6 +591,7 @@ basic_offensive_planner = {
 	weight = 20
 
 	replace = {
+		inexperienced
 	}
 
 	value = 1
@@ -612,8 +604,6 @@ experienced_offensive_planner = {
 	command_modifier = {
 		unit_offense_mult = 0.1
 		character_battle_condition_surprise_maneuver_mult = 0.5
-		character_battle_condition_charge_after_a_successful_bombardment_mult = 0.50	#mod
-		character_battle_condition_chemical_weapons_attack_and_bombardment_mult = 0.50	#mod
 	}
 
 	possible = {
@@ -635,10 +625,8 @@ expert_offensive_planner = {
 	texture = "gfx/interface/icons/character_trait_icons/expert_offensive_planner.dds"
 
 	command_modifier = {
-		unit_offense_mult = 0.2
+		unit_offense_mult = 0.15
 		character_battle_condition_surprise_maneuver_mult = 1.5
-		character_battle_condition_charge_after_a_successful_bombardment_mult = 0.75	#mod
-		character_battle_condition_chemical_weapons_attack_and_bombardment_mult	= 0.75	#mod
 	}
 
 	possible = {
@@ -660,9 +648,8 @@ basic_defensive_strategist = {
 	texture = "gfx/interface/icons/character_trait_icons/basic_defensive_strategist.dds"
 
 	command_modifier = {
-		unit_defense_mult = 0.1
+		unit_defense_mult = 0.05
 		character_battle_condition_dug_in_mult = 1
-		character_battle_condition_dug_in_with_machinegun_mult = 1 #mod
 		character_battle_condition_camouflaged_mult = 1
 	}
 
@@ -681,6 +668,7 @@ basic_defensive_strategist = {
 	weight = 20
 
 	replace = {
+		inexperienced
 	}
 
 	value = 1
@@ -691,9 +679,8 @@ experienced_defensive_strategist = {
 	texture = "gfx/interface/icons/character_trait_icons/experienced_defensive_strategist.dds"
 
 	command_modifier = {
-		unit_defense_mult = 0.2
+		unit_defense_mult = 0.1
 		character_battle_condition_dug_in_mult = 2
-		character_battle_condition_dug_in_with_machinegun_mult = 2 #mod
 		character_battle_condition_camouflaged_mult = 2
 	}
 
@@ -716,9 +703,8 @@ expert_defensive_strategist = {
 	texture = "gfx/interface/icons/character_trait_icons/expert_defensive_strategist.dds"
 
 	command_modifier = {
-		unit_defense_mult = 0.3
+		unit_defense_mult = 0.15
 		character_battle_condition_dug_in_mult = 3
-		character_battle_condition_dug_in_with_machinegun_mult = 3 #mod
 		character_battle_condition_camouflaged_mult = 3
 	}
 
@@ -743,8 +729,8 @@ basic_naval_commander = {
 	texture = "gfx/interface/icons/character_trait_icons/basic_naval_commander.dds"
 
 	command_modifier = {
-		unit_offense_mult = 0.1
-		unit_defense_mult = 0.1
+		unit_offense_mult = 0.05
+		unit_defense_mult = 0.05
 	}
 
 	possible = {
@@ -762,6 +748,7 @@ basic_naval_commander = {
 	weight = 20
 
 	replace = {
+		inexperienced
 	}
 
 	value = 1
@@ -772,8 +759,8 @@ experienced_naval_commander = {
 	texture = "gfx/interface/icons/character_trait_icons/experienced_naval_commander.dds"
 
 	command_modifier = {
-		unit_offense_mult = 0.2
-		unit_defense_mult = 0.2
+		unit_offense_mult = 0.1
+		unit_defense_mult = 0.1
 		character_battle_condition_rough_waters_mult = -0.25
 	}
 
@@ -796,8 +783,8 @@ expert_naval_commander = {
 	texture = "gfx/interface/icons/character_trait_icons/expert_naval_commander.dds"
 
 	command_modifier = {
-		unit_offense_mult = 0.3
-		unit_defense_mult = 0.3
+		unit_offense_mult = 0.15
+		unit_defense_mult = 0.15
 		character_battle_condition_rough_waters_mult = -0.5
 	}
 
@@ -862,7 +849,7 @@ experienced_convoy_raider = {
 
 	command_modifier = {
 		character_convoy_raiding_mult = 0.5
-		unit_combat_unit_type_submarine_offense_mult = 0.15
+		unit_combat_unit_type_submarine_offense_mult = 0.1
 	}
 
 	possible = {
@@ -933,8 +920,6 @@ traditionalist_commander = {
 	command_modifier = {
 		character_command_limit_mult = 0.1
 		unit_combat_unit_type_carrier_offense_mult = -0.1
-		character_battle_condition_charge_after_a_successful_bombardment_mult = -0.5	#mod
-		character_battle_condition_chemical_weapons_attack_and_bombardment_mult = -0.5	#mod
 	}
 
 	# Reminder: this would only come into effect if this Commander is or becomes a Ruler
@@ -992,7 +977,7 @@ popular_commander = {
 	}
 
 	agitator_modifier = {
-		interest_group_pol_str_mult = 0.01
+		political_movement_pop_attraction_mult = 0.05
 	}
 
 	# Reminder: this would only come into effect if this Commander is or becomes an Interest Group Leader
@@ -1051,7 +1036,7 @@ celebrity_commander = {
 	}
 
 	agitator_modifier = {
-		interest_group_pol_str_mult = 0.025
+		political_movement_pop_attraction_mult = 0.10
 	}
 
 	# Reminder: this would only come into effect if this Commander is or becomes an Interest Group Leader
@@ -1173,6 +1158,7 @@ basic_diplomat = {
 	}
 
 	replace = {
+		inexperienced
 	}
 
 	value = 1
@@ -1317,6 +1303,7 @@ basic_colonial_administrator  = {
 	}
 
 	replace = {
+		inexperienced
 	}
 
 	value = 1
@@ -1399,7 +1386,7 @@ basic_political_operator = {
 	}
 
 	agitator_modifier = {
-		interest_group_pol_str_mult = 0.025
+		political_movement_pop_attraction_mult = 0.05
 	}
 
 	interest_group_modifier = {
@@ -1440,6 +1427,7 @@ basic_political_operator = {
 	}
 
 	replace = {
+		inexperienced
 	}
 
 	value = 1
@@ -1454,7 +1442,7 @@ experienced_political_operator = {
 	}
 
 	agitator_modifier = {
-		interest_group_pol_str_mult = 0.05
+		political_movement_pop_attraction_mult = 0.10
 	}
 
 	interest_group_modifier = {
@@ -1507,7 +1495,7 @@ expert_political_operator = {
 	}
 
 	agitator_modifier = {
-		interest_group_pol_str_mult = 0.1
+		political_movement_pop_attraction_mult = 0.15
 	}
 
 	interest_group_modifier = {
@@ -1560,8 +1548,6 @@ inspirational_orator = {
 	}
 
 	agitator_modifier = {
-		interest_group_pol_str_mult = 0.025
-		interest_group_pop_attraction_mult = 0.05
 	}
 
 	interest_group_modifier = {
@@ -1595,8 +1581,6 @@ demagogue = {
 	}
 
 	agitator_modifier = {
-		interest_group_pol_str_mult = 0.05
-		interest_group_pop_attraction_mult = 0.075
 	}
 
 	interest_group_modifier = {
@@ -1630,8 +1614,6 @@ firebrand = {
 	}
 
 	agitator_modifier = {
-		interest_group_pol_str_mult = 0.075
-		interest_group_pop_attraction_mult = 0.125
 	}
 
 	interest_group_modifier = {
@@ -1720,7 +1702,7 @@ bandit = {
 	texture = "gfx/interface/icons/character_trait_icons/bandit.dds"
 
 	character_modifier = {
-		character_popularity_add = -50
+		character_popularity_add = -25
 	}
 
 	command_modifier = {
@@ -1728,8 +1710,7 @@ bandit = {
 	}
 
 	agitator_modifier = {
-		interest_group_in_government_approval_add = 1
-		interest_group_in_opposition_approval_add = -1
+		political_movement_radicalism_add = 0.15
 	}
 
 	interest_group_modifier = {
@@ -1744,8 +1725,15 @@ bandit = {
 	}
 
 	possible = {
-		NOT = { age < define:NCharacters|ADULT_AGE }
-		NOT = { has_role = agitator }
+		OR = {
+			has_role = agitator
+			this.interest_group = {
+				OR = {
+					is_interest_group_type = ig_rural_folk
+					is_interest_group_type = ig_trade_unions
+				}
+			}
+		}
 	}
 
 	weight = {
@@ -1788,8 +1776,6 @@ erudite = {
 	}
 
 	agitator_modifier = {
-		country_academics_pol_str_mult = 0.10
-		country_bureaucrats_pol_str_mult = 0.05
 	}
 
 	# I AM THE VERY MODEL OF A MODERN MAJOR GENERAL
@@ -1840,12 +1826,10 @@ literary = {
 
 	country_modifier = {
 		country_prestige_mult = 0.05
-		country_infamy_decay_mult = 0.25
+		country_infamy_decay_mult = 0.1
 	}
 
 	agitator_modifier = {
-		interest_group_in_government_approval_add = 1
-		interest_group_in_opposition_approval_add = -1
 	}
 
 	command_modifier = {
@@ -1875,6 +1859,7 @@ literary = {
 	}
 
 	replace = {
+		inexperienced
 	}
 }
 
@@ -1884,7 +1869,6 @@ engineer = {
 
 	command_modifier = {
 		character_battle_condition_dug_in_mult = 1
-		character_battle_condition_dug_in_with_machinegun_mult = 1 #mod
 		character_battle_condition_logistics_secured_mult = 1
 	}
 
@@ -1895,7 +1879,6 @@ engineer = {
 	}
 
 	agitator_modifier = {
-		interest_group_pol_str_mult = 0.05
 	}
 
 	interest_group_modifier = {
@@ -1939,7 +1922,6 @@ master_bureaucrat = {
 	}
 
 	agitator_modifier = {
-		interest_group_pol_str_mult = 0.05
 	}
 
 	command_modifier = {
@@ -1975,6 +1957,7 @@ master_bureaucrat = {
 	}
 
 	replace = {
+		inexperienced
 	}
 }
 
@@ -1992,8 +1975,6 @@ political_appointee = {
 	}
 
 	agitator_modifier = {
-		interest_group_in_government_approval_add = 1
-		interest_group_in_opposition_approval_add = -1
 	}
 
 	command_modifier = {
@@ -2013,4 +1994,141 @@ political_appointee = {
 
 	replace = {
 	}
+}
+
+inept = {
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/inept.dds"
+	character_modifier = {
+		character_popularity_add = -15
+	}
+	country_modifier = {
+		country_legitimacy_base_add = -5
+	}
+	agitator_modifier = {
+		political_movement_pop_attraction_mult = -0.1
+	}
+	command_modifier = {
+		unit_morale_recovery_mult = -0.25
+		unit_defense_mult = -0.1
+		unit_offense_mult = -0.1
+	}
+	interest_group_modifier = {
+		interest_group_pol_str_mult = -0.1
+	}
+	weight = {
+		value = 1
+	}
+	possible = {
+		NOT = { age < define:NCharacters|ADULT_AGE }
+	}
+	replace = {
+	}
+}
+inexperienced = {
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/inexperienced.dds"
+	character_modifier = {
+		character_popularity_add = 10 # Has youthful energy
+	}
+	country_modifier = {
+		country_legitimacy_base_add = -5
+	}
+	agitator_modifier = {
+		political_movement_pop_attraction_mult = -0.05
+	}
+	command_modifier = {
+		unit_morale_recovery_mult = 0.10
+		unit_defense_mult = -0.05
+		unit_offense_mult = -0.05
+	}
+	interest_group_modifier = {
+		interest_group_pol_str_mult = -0.05
+	}
+	weight = {
+		value = 1
+		if = {
+			limit = {
+				age <= 30
+			}
+			multiply = 2
+		}
+		else_if = {
+			limit = {
+				age <= 28
+			}
+			multiply = 3
+		}
+		else_if = {
+			limit = {
+				age <= 26
+			}
+			multiply = 4
+		}
+		else_if = {
+			limit = {
+				age <= 24
+			}
+			multiply = 5
+		}
+	}
+	possible = {
+		NOT = { age < define:NCharacters|ADULT_AGE }
+	}
+	replace = {
+	}
+}
+social_bandit = {
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/social_banditry.dds"
+	character_modifier = {
+		character_popularity_add = 25
+	}
+	command_modifier = {
+		unit_morale_damage_mult = 0.1
+	}
+	agitator_modifier = {
+		political_movement_radicalism_add = 0.15
+	}
+	interest_group_modifier = {
+		interest_group_in_government_approval_add = 2
+		interest_group_in_opposition_approval_add = -2
+	}
+	country_modifier = {
+		country_prestige_mult = -0.05
+		country_infamy_decay_mult = -0.5
+		country_authority_add = 100
+	}
+	possible = {
+		NOT = { age < define:NCharacters|ADULT_AGE }
+		OR = {
+			has_role = agitator
+			this.interest_group = {
+				OR = {
+					is_interest_group_type = ig_rural_folk
+					is_interest_group_type = ig_trade_unions
+				}
+			}
+		}
+	}
+	weight = {
+		value = 0.25
+		if = {
+			limit = {
+				owner ?= {
+					is_country_type = unrecognized
+				}
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				has_role = agitator
+			}
+			multiply = 4
+		}
+	}
+	replace = {
+	}
+	value = 2
 }
