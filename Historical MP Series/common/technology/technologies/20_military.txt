@@ -980,8 +980,6 @@ chemical_warfare = {
 	
 	unlocking_technologies = {	
 		automatic_machine_guns
-		flamethrowers
-		stormtroopers
 	}
 	
 	ai_weight = {

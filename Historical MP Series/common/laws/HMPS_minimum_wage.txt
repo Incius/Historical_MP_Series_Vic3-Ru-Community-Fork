@@ -9,6 +9,8 @@ law_no_minimum_wage = {
 	
 	progressiveness = -50
 	
+
+
 	can_enact = {
 		always = yes
 	}
@@ -33,6 +35,10 @@ law_low_minimum_wage = {
 	
 	progressiveness = -25
 	
+	unlocking_technologies = {
+		labor_movement
+	}
+
 	can_enact = {
 		always = yes
 	}
@@ -58,6 +64,10 @@ law_moderate_minimum_wage = {
 	
 	progressiveness = 0
 	
+	unlocking_technologies = {
+		anarchism
+	}
+
 	can_enact = {
 		always = yes
 	}
@@ -83,6 +93,10 @@ law_high_minimum_wage = {
 	
 	progressiveness = 25
 	
+	unlocking_technologies = {
+		macroeconomics
+	}
+
 	can_enact = {
 		always = yes
 	}

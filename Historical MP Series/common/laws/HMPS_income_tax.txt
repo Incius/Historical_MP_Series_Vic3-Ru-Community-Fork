@@ -75,7 +75,7 @@ law_moderate_income_tax = {
 	}
 	
 	unlocking_technologies = {
-		central_banking
+		investment_banks
 	}
 	
 	modifier = {
@@ -115,7 +115,7 @@ law_high_income_tax = {
 	}
 	
 	unlocking_technologies = {
-		identification_documents
+		modern_financial_instruments
 	}
 	
 	modifier = {

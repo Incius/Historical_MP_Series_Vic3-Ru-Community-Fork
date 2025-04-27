@@ -13,11 +13,11 @@
 		}
 	}
 
-	state_modifiers = {
-		level_scaled = {
-			state_construction_mult = -0.014
-		}
-	}
+#	state_modifiers = {
+#		level_scaled = {
+#			state_construction_mult = -0.014
+#		}
+#	}
 }
 
 pm_market_squares = {
@@ -39,11 +39,11 @@ pm_market_squares = {
 		}
 	}
 
-	state_modifiers = {
-		level_scaled = {
-			state_construction_mult = -0.008
-		}
-	}
+#	state_modifiers = {
+#		level_scaled = {
+#			state_construction_mult = -0.008
+#		}
+#	}
 }
 
 pm_covered_markets = {
@@ -66,11 +66,11 @@ pm_covered_markets = {
 		}
 	}
 
-	state_modifiers = {
-		level_scaled = {
-			state_construction_mult = -0.005
-		}
-	}
+#	state_modifiers = {
+#		level_scaled = {
+#			state_construction_mult = -0.005
+#		}
+#	}
 }
 
 pm_arcades = {
@@ -94,11 +94,11 @@ pm_arcades = {
 		}
 	}
 
-	state_modifiers = {
-		level_scaled = {
-			state_construction_mult = -0.003
-		}
-	}
+#	state_modifiers = {
+#		level_scaled = {
+#			state_construction_mult = -0.003
+#		}
+#	}
 
 	required_input_goods = electricity
 }
