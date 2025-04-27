@@ -646,8 +646,8 @@ NMilitary = {
 	BASE_BATTALION_CONVOY_COST = 10				# Cost in convoys per Battalion for shipping lanes
 
 	FRONT_MARKER_ADVANTAGE_PREDICTION_MIN_COMBAT_POWER = 0.01 # Used as a minimum value when calculating the Front Advantage
-	BATTLE_CONDITION_MIN_TICKS_BETWEEN_UPDATE_DEFAULT = 40	# Unless otherwise specified on the battle condition type, battle conditions will not update until at least this many ticks has passed
-	BATTLE_CONDITION_CHANCE_TO_UPDATE_PER_EXTRA_TICK = 0.01 # For each tick that has passed since the minimum number of ticks, this chance to refresh battle conditions (i.e. 13 ticks after min, there's 13% chance of switching)
+	BATTLE_CONDITION_MIN_TICKS_BETWEEN_UPDATE_DEFAULT = 4	# Unless otherwise specified on the battle condition type, battle conditions will not update until at least this many ticks has passed
+	BATTLE_CONDITION_CHANCE_TO_UPDATE_PER_EXTRA_TICK = 0.10 # For each tick that has passed since the minimum number of ticks, this chance to refresh battle conditions (i.e. 13 ticks after min, there's 13% chance of switching)
 
 	DEFAULT_ORDER_GENERAL = "defend"						# Default order for generals
 	DEFAULT_ORDER_ADMIRAL = "interception_coast"			# Default order for admirals
