@@ -16,10 +16,6 @@ principle_construction_1 = {
 		# Members can form Construction type Companies unlock triggers in the company
 		# Members can form Construction type Companies unlock triggers in the company
 	}
-
-	leader_modifier = {
-		building_construction_sector_throughput_add = 0.30
-	}
 	ai_weight = {
 		value = 100
 		
