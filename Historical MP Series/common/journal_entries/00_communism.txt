@@ -20,10 +20,10 @@
 				is_political_movement_type = movement_anarchist
 				is_political_movement_type = movement_communist
 			}
-			AND = {
+		}
+		AND = {
 			has_technology_researched = socialism
 			has_technology_researched = anarchism
-			}
 		}
 	}
 
