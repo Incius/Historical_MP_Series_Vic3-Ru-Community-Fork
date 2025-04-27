@@ -490,6 +490,9 @@ paris_commune.3 = {
 			}
 			save_scope_as = paris_scope
 		}
+		call_election = {
+ 					months = 2
+  		}
 	}
 
 	option = {
