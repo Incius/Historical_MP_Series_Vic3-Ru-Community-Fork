@@ -1354,7 +1354,7 @@ malaria_prevention = {
 	modifier = {
 		country_institution_colonial_affairs_max_investment_add = 1
 		country_institution_health_system_max_investment_add = 1
-		country_infamy_decay_mult = 0.40
+		country_infamy_decay_mult = 0.2
 	}
 	
 	unlocking_technologies = {
@@ -1511,7 +1511,7 @@ multilateral_alliances = {
 		country_diplomatic_play_maneuvers_add = 40
 		country_allow_multiple_alliances_bool = yes
 		country_infamy_generation_mult = -0.1
-		country_infamy_decay_mult = 0.80
+		country_infamy_decay_mult = 0.4
 	}
 	
 	unlocking_technologies = {	
@@ -1597,7 +1597,7 @@ mass_propaganda = {
 		state_expected_sol_from_literacy = 1
 		country_agitator_slots_add = 1
 		country_infamy_generation_mult = -0.1
-		country_infamy_decay_mult = 1.40
+		country_infamy_decay_mult = 0.50
 	}
 	
 	unlocking_technologies = {
