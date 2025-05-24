@@ -5,14 +5,14 @@
 
 	country_modifiers = {
 		workforce_scaled = {
-			country_construction_add = 1.8
+			country_construction_add = 2
 		}
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_fabric_add = 25
-			goods_input_wood_add = 75
+			goods_input_fabric_add = 30
+			goods_input_wood_add = 80
 		}
 
 		level_scaled = {
@@ -79,7 +79,7 @@ pm_steel_frame_buildings = {
 
 	country_modifiers = {
 		workforce_scaled = {
-			country_construction_add = 7
+			country_construction_add = 6
 		}
 	}
 
@@ -119,7 +119,7 @@ pm_arc_welded_buildings = {
 		
 	country_modifiers = {
 		workforce_scaled = {
-			country_construction_add = 11
+			country_construction_add = 10
 		}
 	}
 
