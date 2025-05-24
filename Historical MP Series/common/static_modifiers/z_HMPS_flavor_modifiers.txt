@@ -635,9 +635,9 @@ modifier_springtime_je = {
 	country_radicalism_increases_violent_hostility_mult = 0.20
 	country_radicalism_increases_cultural_erasure_mult = 0.20
 	country_radicalism_increases_open_prejudice_mult = 0.20
-	political_movement_radicalism_add = 0.33
+	political_movement_radicalism_add = 0.25
 	#political_movement_support_mult = 0.33
-	country_revolution_progress_mult = 0.33	
+	country_revolution_progress_mult = 0.5
 	country_law_enactment_time_mult = -0.10
 }
 
