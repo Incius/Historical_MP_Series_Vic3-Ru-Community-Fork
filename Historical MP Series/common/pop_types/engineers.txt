@@ -53,7 +53,7 @@
 		if = {
 			limit = {
 				is_peasant_under_serfdom = no 
-				literacy_rate > 0.2
+				literacy_rate > 0.6
 			}
 			# baseline: ( literacy - 0.2 ) * 5 + ( wealth / 20 ), norm 2.5 for Wealth 20 and Literacy 50%
 			add = {
@@ -65,6 +65,78 @@
 			add = {
 				value = wealth
 				divide = 30
+				desc = "QUALIFICATIONS_WEALTH_FACTOR"
+			}
+			if = {
+				limit = {
+					is_pop_type = machinists
+				}
+				multiply = {
+					value = 5
+					desc = "QUALIFICATIONS_FAVORED_TYPE"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = clerks
+				}
+				multiply = {
+					value = 4
+					desc = "QUALIFICATIONS_FAVORED_TYPE"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_peasant_under_serfdom = no 
+				literacy_rate > 0.4
+			}
+			# baseline: ( literacy - 0.2 ) * 5 + ( wealth / 20 ), norm 2.5 for Wealth 20 and Literacy 50%
+			add = {
+				value = literacy_rate
+				subtract = 0.4
+				multiply = 4
+				desc = "QUALIFICATIONS_LITERACY_FACTOR"
+			}
+			add = {
+				value = wealth
+				divide = 40
+				desc = "QUALIFICATIONS_WEALTH_FACTOR"
+			}
+			if = {
+				limit = {
+					is_pop_type = machinists
+				}
+				multiply = {
+					value = 5
+					desc = "QUALIFICATIONS_FAVORED_TYPE"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = clerks
+				}
+				multiply = {
+					value = 4
+					desc = "QUALIFICATIONS_FAVORED_TYPE"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_peasant_under_serfdom = no 
+				literacy_rate > 0.2
+			}
+			# baseline: ( literacy - 0.2 ) * 5 + ( wealth / 20 ), norm 2.5 for Wealth 20 and Literacy 50%
+			add = {
+				value = literacy_rate
+				subtract = 0.2
+				multiply = 2
+				desc = "QUALIFICATIONS_LITERACY_FACTOR"
+			}
+			add = {
+				value = wealth
+				divide = 60
 				desc = "QUALIFICATIONS_WEALTH_FACTOR"
 			}
 			if = {
@@ -101,6 +173,7 @@
 				value = -2
 			}
 		}
+
 	}
 	
 	portrait_age = {

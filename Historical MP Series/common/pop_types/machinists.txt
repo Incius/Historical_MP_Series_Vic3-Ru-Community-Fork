@@ -64,12 +64,32 @@
 	qualifications_growth_desc = "MACHINISTS_QUALIFICATIONS_DESC"
 	qualifications = {
 		# baseline: ( literacy - 0.25 ) * 20, norm 8 for Laborers with Literacy 30%
-		add = {
+		if = {
+			limit = {
+				is_peasant_under_serfdom = no 
+				literacy_rate > 0.25
+			}
+			add = {
 			value = literacy_rate
 			subtract = 0.25
 			min = 0
 			multiply = 20
 			desc = "QUALIFICATIONS_LITERACY_FACTOR"
+			}
+		}
+		else_if = {
+			limit = {
+				is_peasant_under_serfdom = no 
+				literacy_rate > 0.10
+			}
+			add = {
+			value = literacy_rate
+			subtract = 0.1
+			min = 0
+			multiply = 5
+			desc = "QUALIFICATIONS_LITERACY_FACTOR"
+			}
+		}
 		}
 		if = {
 			limit = {
