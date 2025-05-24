@@ -199,7 +199,7 @@ pm_analytical_philosophy_department = {
 	
 	country_modifiers = {
 		workforce_scaled = { 
-			country_tech_spread_add = 2
+			country_tech_spread_add = 1.5
 		}
 	}
 	
