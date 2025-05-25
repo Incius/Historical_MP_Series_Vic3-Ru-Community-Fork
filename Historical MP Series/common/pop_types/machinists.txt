@@ -90,7 +90,6 @@
 			desc = "QUALIFICATIONS_LITERACY_FACTOR"
 			}
 		}
-		}
 		if = {
 			limit = {
 				is_pop_type = laborers
