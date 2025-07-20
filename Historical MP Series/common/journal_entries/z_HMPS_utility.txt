@@ -133,18 +133,20 @@
 			every_country = {
 				limit = {
 					has_law = law_type:law_the_company
-					NOT = {
-						c:BIC ?= this
-					}
+					NOT = { c:BIC ?= this }
+					is_subject = yes
 				}
 				activate_law = law_type:law_traditionalism
 			}
 			every_country = {
 				limit = {
 					is_subject = no
-					has_law = law_type:law_extraction_economy
+					OR = {
+						has_law = law_type:law_extraction_economy
+						has_law = law_type:law_the_company
+					}
 				}
-				activate_law = law_type:law_traditionalism
+				activate_law = law_type:law_agrarianism
 			}
 		}
 	}

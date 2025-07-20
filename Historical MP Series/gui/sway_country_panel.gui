@@ -60,15 +60,18 @@
 					item = {
 						container = {
 							sway_offer_item = {
-								visible = "[Or( DiplomaticPlay.IsPrimaryParticipant(GetPlayer), DiplomaticPlay.IsUndecidedParticipant(GetPlayer) )]"
-								#visible = "[Or(DiplomaticPlay.IsPrimaryParticipant(GetPlayer), And(SwayOffer.WouldAcceptSway(SwayCountryPanel.GetDiplomaticPlay.Self, GetPlayer.Self, SwayCountryPanel.GetCountry),DiplomaticPlay.IsUndecidedParticipant(GetPlayer) ))]"
+								visible = "[SwayOffer.RequiresAnyInput]"
+								onclick = "[RightClickMenuManager.ToggleSwayOfferArticleTypeInput(SwayOffer.Self, PdxGuiWidget.AccessSelf, 'article_input_right_click_menu_right')]"
+							}
+
+							sway_offer_item = {
+								visible = "[And( Not( SwayOffer.RequiresAnyInput ), Or( DiplomaticPlay.IsPrimaryParticipant(GetPlayer), DiplomaticPlay.IsUndecidedParticipant(GetPlayer) ) )]"
 								onclick = "[Execute( SwayCountryPanel.AccessDiplomaticPlay.CreateSway( GetPlayer.Self, SwayCountryPanel.GetCountry, SwayOffer.Self ))]"
 								onclick = "[InformationPanelBar.OpenDiplomaticPlayPanel( DiplomaticPlay.AccessSelf )]"
 							}
 
 							sway_offer_item = {
-								visible = "[DiplomaticPlay.IsBacker(GetPlayer)]"
-								#visible = "[And( SwayOffer.WouldAcceptSway(SwayCountryPanel.GetDiplomaticPlay.Self, GetPlayer.Self, SwayCountryPanel.GetCountry), DiplomaticPlay.IsPrimaryParticipant(GetPlayer))]"
+								visible = "[And(Not(SwayOffer.RequiresAnyInput), DiplomaticPlay.IsBacker(GetPlayer))]"
 								onclick = "[PopupManager.AskConfirmation( SwayCountryPanel.AccessDiplomaticPlay.CreateSway( GetPlayer.Self, SwayCountryPanel.GetCountry, SwayOffer.Self ))]"
 								onclick = "[InformationPanelBar.OpenDiplomaticPlayPanel( DiplomaticPlay.AccessSelf )]"
 							}
@@ -351,7 +354,6 @@
 	
 	type sway_offer_wargoal_type_item = button {
 		onclick = "[SwayCountryPanel.SetSwayOfferWarGoalType(WarGoalType.Self)]"
-		#visible = "[Or( NotEqualTo_CFixedPoint(GetPlayer.GetModifier.GetValueFor('regime_change_allowed'), '(CFixedPoint)0'), Not(EqualTo_string(WarGoalType.GetName, 'Regime Change')) )]"
 		tooltip = "[WarGoalType.GetDesc]"
 		using = default_button
 

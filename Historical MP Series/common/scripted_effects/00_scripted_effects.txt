@@ -227,24 +227,24 @@ warlord_setup_effect = {
 		}			
 	}
 	
-	#every_state = {
-	#	limit = {
-	#		OR = {
-	#			state_region = {
-	#				is_homeland = cu:han
-	#			}
-	#			state_region = {
-	#				is_homeland = cu:manchu
-	#			}
-	#			state_region = s:STATE_HINGGAN
-	#			state_region = s:STATE_ALXA
-	#			state_region = s:STATE_QINGHAI
-	#		}
-	#	}
-	#	this.state_region = {
-	#		add_claim = root
-	#	}
-	#}
+	every_state = {
+		limit = {
+			OR = {
+				state_region = {
+					is_homeland = cu:han
+				}
+				state_region = {
+					is_homeland = cu:manchu
+				}
+				state_region = s:STATE_HINGGAN
+				state_region = s:STATE_ALXA
+				state_region = s:STATE_QINGHAI
+			}
+		}
+		this.state_region = {
+			add_claim = root
+		}
+	}
 }
 warlord_breakaway_setup_effect = {
 	set_country_type = recognized
@@ -950,6 +950,21 @@ clean_up_exile_character_roles = { # scope: character
 		}
 		remove_character_role = admiral
 	}
+}
+
+remove_war_disease_modifier = { #used to remove modifiers from nursing_events.1 and je_war_nursing
+    if = {
+        limit = {
+            has_modifier = war_wounded_disease
+        }
+        remove_modifier = war_wounded_disease
+    }
+    if = {
+        limit = {
+            has_modifier = war_wounded_civilian_assistance
+        }
+        remove_modifier = war_wounded_civilian_assistance
+    }
 }
 
 unification_claims_effect = {

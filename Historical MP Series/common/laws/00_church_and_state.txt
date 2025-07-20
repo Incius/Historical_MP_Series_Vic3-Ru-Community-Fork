@@ -28,12 +28,10 @@ law_state_religion = {
 	modifier = {
 		interest_group_ig_devout_pol_str_mult = 0.3	
 		country_authority_add = 200
-		country_state_religion_wages_mult = 0.1
-		country_non_state_religion_wages_mult = -0.1
 
-		country_acceptance_state_religion_add = 30
-		country_acceptance_shared_religious_trait_add = 0
-		country_acceptance_religion_base_add = -10	
+		country_acceptance_state_religion_add = 20
+		country_acceptance_shared_religious_trait_add = -20
+		country_acceptance_religion_base_add = -20
 
 		country_allow_conversion_violent_hostility_bool = yes
 		country_allow_conversion_cultural_erasure_bool = yes
@@ -122,18 +120,15 @@ law_freedom_of_conscience = {
 	}
 	
 	modifier = {
-		country_state_religion_wages_mult = 0.05
-		country_non_state_religion_wages_mult = -0.05	
-
 		country_acceptance_state_religion_add = 20
-		country_acceptance_shared_religious_trait_add = 15
-		country_acceptance_religion_base_add = 0
+		country_acceptance_shared_religious_trait_add = 0
+		country_acceptance_religion_base_add = -20
 
-		country_allow_conversion_violent_hostility_bool = yes
-		country_allow_conversion_cultural_erasure_bool = yes
+		country_allow_conversion_violent_hostility_bool = no
+		country_allow_conversion_cultural_erasure_bool = no
 		country_allow_conversion_open_prejudice_bool = yes
-		country_allow_conversion_second_rate_citizen_bool = no
-		country_allow_conversion_full_acceptance_bool = no
+		country_allow_conversion_second_rate_citizen_bool = yes
+		country_allow_conversion_full_acceptance_bool = yes
 		country_authority_add = 100
 	}
 	
@@ -222,10 +217,10 @@ law_total_separation = {
 	}
 	
 	modifier = {
-		state_migration_pull_mult = 0.1
-		country_acceptance_state_religion_add = 15
-		country_acceptance_shared_religious_trait_add = 15
-		country_acceptance_religion_base_add = 15
+		state_migration_pull_mult = 0.15
+		country_acceptance_state_religion_add = 0
+		country_acceptance_shared_religious_trait_add = 0
+		country_acceptance_religion_base_add = 0
 
 		country_allow_conversion_violent_hostility_bool = no
 		country_allow_conversion_cultural_erasure_bool = no
@@ -267,12 +262,18 @@ law_state_atheism = {
 	unlocking_technologies = {
 		empiricism
 	}
-
+	
 	disallowing_laws = {
 		law_theocracy
+		law_hindu_caste_enforced
+		law_hindu_caste_codified
+		law_hindu_caste_not_enforced
+		law_affirmative_action
 	}
 
 	can_enact = {
+		NOT = { c:BIC ?= this }
+		NOT = { c:BHT ?= this }
 		ig:ig_devout = {
 			is_in_government = no
 		}
@@ -286,12 +287,12 @@ law_state_atheism = {
 	
 	modifier = {
 		interest_group_ig_devout_pol_str_mult = -0.5
-		state_conversion_mult = 0.25
+		state_conversion_mult = 1#0.5
 		country_authority_add = 200
 		
-		country_acceptance_state_religion_add = 30
+		country_acceptance_state_religion_add = 20
 		country_acceptance_shared_religious_trait_add = 0
-		country_acceptance_religion_base_add = -10
+		country_acceptance_religion_base_add = 0
 		
 		country_state_religion_wages_mult = 0.1
 		country_non_state_religion_wages_mult = -0.1
@@ -304,9 +305,14 @@ law_state_atheism = {
 	}
 
 	on_enact = {
+		
+	}
+	
+	on_activate = {
+		set_state_religion = rel:atheist
 		add_modifier = {
 			name = antireligious_policies
-			months = long_modifier_time
+			days = long_modifier_time
 		}
 		custom_tooltip = {
 			text = state_atheism_conversion_tt
@@ -316,7 +322,7 @@ law_state_atheism = {
 				}
 				convert_population = {
 					target = rel:atheist
-					value = 0.25
+					value = 0.15
 				}
 			}
 		}
@@ -336,10 +342,6 @@ law_state_atheism = {
 				add = 5
 			}
 		}
-	}
-	
-	on_activate = {
-		set_state_religion = rel:atheist
 	}
 	
 	can_impose = {

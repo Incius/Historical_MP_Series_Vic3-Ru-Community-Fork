@@ -24,7 +24,7 @@ urbanization = {
 		state_infrastructure_from_population_max_add = 40	
 		state_building_construction_sector_max_level_add = 10
 		country_max_weekly_construction_progress_add = 10
-		market_land_trade_capacity_add = 150
+		state_urbanization_per_level_mult = -0.3
 	}
 	
 	ai_weight = {
@@ -159,10 +159,6 @@ international_trade = {
 		tech_bureaucracy
 	}
 	
-	modifier = {
-		market_land_trade_capacity_add = 50
-	}
-	
 	ai_weight = {
 		value = 3 # Very important in general
 	}
@@ -203,6 +199,7 @@ corporate_charters = {
 	
 	modifier = {
 		country_max_companies_add = 1
+		country_free_charters_add = 2
 	}	
 	
 	unlocking_technologies = {
@@ -222,6 +219,7 @@ banking = {
 	modifier = {
 		country_minting_mult = 0.1
 		country_loan_interest_rate_add = -0.02
+		state_max_trade_advantage_from_capacity_add = 0.05
 	}
 	
 	unlocking_technologies = {
@@ -318,7 +316,6 @@ stock_exchange = {
 	category = society	
 	
 	modifier = {
-		country_trade_route_cost_mult = -0.25
 		state_market_access_price_impact = 0.05
 		country_max_companies_add = 1
 	}
@@ -376,7 +373,7 @@ empiricism = {
 	category = society
 	
 	modifier = {
-		country_influence_mult = 0.1
+		country_influence_mult = 0.25
 		country_institution_schools_max_investment_add = 1
 		state_education_access_wealth_add = 0.005
 		state_building_university_max_level_add = 3
@@ -464,7 +461,6 @@ modern_sewerage = {
 		state_building_construction_sector_max_level_add = 5
 		country_max_weekly_construction_progress_add = 5
 		state_pollution_reduction_health_mult = -0.1
-		state_urbanization_per_level_mult = -0.1
 		state_harvest_condition_flood_impact_mult = -0.1
 	}
 	
@@ -550,6 +546,7 @@ central_archives = {
 		state_tax_capacity_add = 25
 		state_tax_capacity_mult = 0.01
 		country_institution_home_affairs_max_investment_add = 1
+		state_max_trade_advantage_from_capacity_add = 0.05
 	}
 	
 	unlocking_technologies = {
@@ -623,7 +620,6 @@ joint_stock_companies = {
 	
 	modifier = {
 		country_max_companies_add = 1
-		state_urbanization_per_level_mult = -0.1
 	}	
 	
 	unlocking_technologies = {
@@ -663,7 +659,7 @@ psychiatry = {
 	category = society
 	
 	modifier = {
-		country_influence_mult = 0.1
+		country_influence_mult = 0.25
 		state_bureaucracy_population_base_cost_factor_mult = -0.05
 	}
 	
@@ -902,7 +898,7 @@ feminism = {
 	}
 	
 	unlocking_technologies = {
-		human_rights
+		civil_rights
 	}
 	
 	ai_weight = {
@@ -937,7 +933,6 @@ steel_frame_buildings = {
 		state_infrastructure_from_population_max_add = 20
 		state_building_construction_sector_max_level_add = 10
 		country_max_weekly_construction_progress_add = 5
-		state_urbanization_per_level_mult = -0.1
 		state_harvest_condition_flood_impact_mult = -0.05
 	}
 	
@@ -1170,6 +1165,7 @@ mutual_funds = {
 	modifier = {
 		country_minting_mult = 0.1
 		country_loan_interest_rate_add = -0.02
+		state_max_trade_advantage_from_capacity_add = 0.05
 	}
 	
 	unlocking_technologies = {
@@ -1189,8 +1185,8 @@ investment_banks = {
 	
 	modifier = {
 		country_max_companies_add = 1
-		state_urbanization_per_level_mult = -0.1
 		state_market_access_price_impact = 0.025
+		country_free_charters_add = 1
 	}	
 	
 	unlocking_technologies = {
@@ -1228,7 +1224,7 @@ philosophical_pragmatism = {
 	category = society
 	
 	modifier = {
-		country_influence_mult = 0.1
+		country_influence_mult = 0.25
 		state_bureaucracy_population_base_cost_factor_mult = -0.05
 	}
 	
@@ -1295,7 +1291,7 @@ civil_rights = {
 	}
 	
 	unlocking_technologies = {
-		egalitarianism
+		labor_movement
 	}
 	
 	ai_weight = {
@@ -1315,7 +1311,6 @@ elevator = {
 		state_infrastructure_from_population_max_add = 20
 		state_building_construction_sector_max_level_add = 20
 		country_max_weekly_construction_progress_add = 5
-		state_urbanization_per_level_mult = -0.1
 	}	
 	
 	unlocking_technologies = {
@@ -1433,6 +1428,7 @@ international_exchange_standards = {
 		country_minting_mult = 0.1
 		country_loan_interest_rate_add = -0.02
 		state_market_access_price_impact = 0.025
+		state_max_trade_advantage_from_capacity_add = 0.05
 	}
 	
 	unlocking_technologies = {
@@ -1451,7 +1447,6 @@ corporate_management = {
 	
 	modifier = {
 		country_max_companies_add = 1
-		state_urbanization_per_level_mult = -0.1
 	}	
 	
 	unlocking_technologies = {
@@ -1470,7 +1465,7 @@ psychoanalysis = {
 	category = society
 	
 	modifier = {
-		country_influence_mult = 0.1
+		country_influence_mult = 0.25
 		state_bureaucracy_population_base_cost_factor_mult = -0.05
 	}
 	
@@ -1655,7 +1650,7 @@ behaviorism = {
 	category = society
 	
 	modifier = {
-		country_influence_mult = 0.1
+		country_influence_mult = 0.5
 		state_bureaucracy_population_base_cost_factor_mult = -0.05
 	}
 	
@@ -1675,8 +1670,8 @@ paved_roads = {
 	should_update_map = yes # This technology adds paved roads to the map
 	
 	modifier = {
+		country_max_weekly_construction_progress_add = 5
 		state_infrastructure_from_automobiles_consumption_add = 0.25
-		market_land_trade_capacity_add = 300
 	}
 	
 	unlocking_technologies = {	
@@ -1687,8 +1682,6 @@ paved_roads = {
 		value = 2 # Important for those nice-looking roads!
 	}
 }
-
-### ERA 6
 
 multiculturalism = {
 	era = era_5
@@ -1707,3 +1700,5 @@ multiculturalism = {
 		value = 1
 	}
 }
+
+### ERA 6

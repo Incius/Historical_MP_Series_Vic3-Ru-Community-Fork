@@ -1,0 +1,67 @@
+﻿indonesia_home_rule_decision = {
+	is_shown = {
+		AND = {
+			exists = c:DEI
+			this = c:DEI
+		}
+	}
+
+	possible = {
+		country_has_voting_franchise = yes
+		has_law = law_type:law_elected_bureaucrats
+		has_law = law_type:law_multicultural
+		root.average_sol > 15
+	}
+
+	when_taken = {
+		change_tag = IDN
+		if = {
+			limit = {
+				has_law = law_type:law_extraction_economy
+			}
+			activate_law = law_type:law_agrarianism
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_indonesia_crown_rule
+			}
+			remove_modifier = modifier_indonesia_crown_rule
+		}
+		ig:ig_industrialists = {
+			remove_ideology = ideology_colonialist
+			add_ideology = ideology_laissez_faire
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_law = law_type:law_state_atheism
+				}
+			}
+			if = {
+				limit = {
+					religion_percent_country = {
+						target = rel:sunni
+						value >= 0.5
+					}
+				}
+				set_state_religion = rel:sunni
+				state_religion_switch_effect = yes
+			}
+		}
+		hidden_effect = {
+			add_primary_culture = cu:balinese
+			add_primary_culture = cu:batak
+			add_primary_culture = cu:bornean
+			add_primary_culture = cu:dayak
+			add_primary_culture = cu:javan
+			add_primary_culture = cu:malay
+			add_primary_culture = cu:moluccan
+			add_primary_culture = cu:sumatran
+			recalculate_pop_ig_support = yes
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+}

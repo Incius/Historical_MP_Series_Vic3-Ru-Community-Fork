@@ -348,12 +348,18 @@ conservative_party = {
 	available_for_interest_group = {
 		owner = {
 			country_has_voting_franchise = yes
-			ig:ig_landowners = {
-				is_marginal = no
+			OR = {
+				ig:ig_landowners ?= {
+					is_marginal = no
+				}
+				ig:ig_devout ?= {
+					is_marginal = no
+				}
+				ig:ig_petty_bourgeoisie ?= {
+					is_marginal = no
+				}
 			}
 		}
-		# unions can never be conservative
-		NOT = { is_interest_group_type = ig_trade_unions }
 	}
 	
 	# Root - IG considering joining
@@ -371,6 +377,7 @@ conservative_party = {
 					OR = {
 						has_modifier = modifier_india_crown_rule
 						has_modifier = modifier_india_company_rule
+						has_modifier = modifier_india_company_rule_upgraded
 					}
 				}
 				OR = {
@@ -390,10 +397,35 @@ conservative_party = {
 						has_ideology = ideology:ideology_communist
 						has_ideology = ideology:ideology_vanguardist
 						has_ideology = ideology:ideology_anarchist
-						has_ideology = ideology:ideology_social_democrat
 						has_ideology = ideology:ideology_radical
-						has_ideology = ideology:ideology_atheist
+						has_ideology = ideology:ideology_nihilist
 					}
+				}
+			}
+			add = {
+				value = -20
+				desc = "from_leftist"
+			}
+		}
+		if = { # socialists and radicals won't join conservative parties
+			limit = {
+				NOT = {
+						owner = {
+							AND = {
+								country_is_in_north_america = yes
+								OR = {
+									country_has_primary_culture = cu:yankee
+									country_has_primary_culture = cu:dixie
+								}
+								AND = {
+									has_law = law_type:law_republic
+									has_law = law_type:law_slavery_banned
+								}
+						}
+					}
+				}
+				leader = { 
+					has_ideology = ideology:ideology_social_democrat
 				}
 			}
 			add = {
@@ -425,6 +457,7 @@ conservative_party = {
 			limit = {
 				OR = {
 					has_ideology = ideology:ideology_paternalistic
+					has_ideology = ideology:ideology_magnatial
 					has_ideology = ideology:ideology_stratocratic
 					has_ideology = ideology:ideology_patriarchal
 					has_ideology = ideology:ideology_moralist
@@ -451,7 +484,7 @@ conservative_party = {
 				}
 			}
 			add = {
-				value = 5
+				value = 6
 				desc = "from_jingoist_party_leader"
 			}
 		}
@@ -480,6 +513,15 @@ conservative_party = {
 			add = {
 				value = -5
 				desc = "from_progressive_con"
+			}
+		}
+		if = { # reactionaries like conservatism
+			limit = {
+				has_ideology = ideology:ideology_reactionary
+			}
+			add = {
+				value = 3
+				desc = "from_reactionaries"
 			}
 		}
 		# Abolitionists won't join conservative party
@@ -511,6 +553,7 @@ conservative_party = {
 				OR = {
 					has_ideology = ideology:ideology_plutocratic
 					has_ideology = ideology:ideology_paternalistic
+					has_ideology = ideology:ideology_magnatial
 				}
 				owner = {
 					has_law = law_type:law_universal_suffrage
@@ -672,6 +715,7 @@ conservative_party = {
 				OR = {
 					has_ideology = ideology:ideology_moralist
 					has_ideology = ideology:ideology_paternalistic
+					has_ideology = ideology:ideology_magnatial
 				}
 				owner = {
 					NOR = {
@@ -803,7 +847,7 @@ conservative_party = {
 				scope:number = 3
 			}
 			multiply = {
-				value = 0.25
+				value = 0.05
 				desc = "from_three_prior_members"
 			}
 		}
@@ -812,7 +856,7 @@ conservative_party = {
 				scope:number > 3
 			}
 			multiply = {
-				value = 0.1
+				value = 0.0
 				desc = "from_more_than_three_prior_members"
 			}
 		}
@@ -892,17 +936,6 @@ conservative_party = {
 			add = {
 				value = -5
 				desc = "from_french_monarchist_rival"
-			}
-		}
-		if = {
-			limit = {
-				leader = {
-					has_ideology = ideology:ideology_jacksonian_democrat
-				}
-			}
-			add = {
-				value = 1000
-				desc = "from_jacksonian_democrat"
 			}
 		}
 		if = { # Brazil
@@ -1004,6 +1037,118 @@ conservative_party = {
 			add = {
 				value = 1000
 				desc = "from_jacksonian_democrat"
+			}
+		}
+		if = {
+			limit = { #Democrats tended to do well with land reformers after banning slavery
+				owner = {
+					country_is_in_north_america = yes
+					OR = {
+						country_has_primary_culture = cu:yankee
+						country_has_primary_culture = cu:dixie
+					}
+					AND = {
+						has_law = law_type:law_republic
+						has_law = law_type:law_slavery_banned
+					}
+				}
+				leader = {
+					has_ideology = ideology:ideology_land_reformer
+				}
+			}
+			add = {
+				value = 2
+				desc = "usa_two_party_system"
+			}
+		}
+		if = {
+			limit = { #Democrats tended to do well with rural folk after slavery banned and when market liberals are in the liberal party
+				owner = {
+					country_is_in_north_america = yes
+					OR = {
+						country_has_primary_culture = cu:yankee
+						country_has_primary_culture = cu:dixie
+					}
+					AND = {
+						has_law = law_type:law_republic
+						has_law = law_type:law_slavery_banned
+						has_law = law_type:law_commercialized_agriculture
+					}
+					any_interest_group = {
+						has_party = yes
+						party = {
+							is_party_type = liberal_party
+						}
+						leader = {
+							has_ideology = ideology:ideology_market_liberal
+						}
+					}
+				}
+				is_interest_group_type = ig_rural_folk
+			}
+			add = {
+				value = 3
+				desc = "usa_two_party_system"
+			}
+		}
+		if = {
+			limit = { #Landowner-Trade Union Alliance Against Market Liberals
+				owner = {
+					country_is_in_north_america = yes
+					OR = {
+						country_has_primary_culture = cu:yankee
+						country_has_primary_culture = cu:dixie
+					}
+					AND = {
+						has_law = law_type:law_republic
+						has_law = law_type:law_slavery_banned
+						has_law = law_type:law_commercialized_agriculture
+					}
+					any_interest_group = {
+						has_party = yes
+						party = {
+							is_party_type = liberal_party
+						}
+						leader = {
+							has_ideology = ideology:ideology_market_liberal
+						}
+					}
+				}
+				is_interest_group_type = ig_trade_unions
+			}
+			add = {
+				value = 4
+				desc = "usa_two_party_system"
+			}
+		}
+		if = {
+			limit = { #Trade Unions don't join conservative party if market liberals are in it
+				owner = {
+					country_is_in_north_america = yes
+					OR = {
+						country_has_primary_culture = cu:yankee
+						country_has_primary_culture = cu:dixie
+					}
+					AND = {
+						has_law = law_type:law_republic
+						has_law = law_type:law_slavery_banned
+						has_law = law_type:law_commercialized_agriculture
+					}
+					any_interest_group = {
+						has_party = yes
+						party = {
+							is_party_type = conservative_party
+						}
+						leader = {
+							has_ideology = ideology:ideology_market_liberal
+						}
+					}
+				}
+				is_interest_group_type = ig_trade_unions
+			}
+			add = {
+				value = -10
+				desc = "usa_two_party_system"
 			}
 		}
 		if = { # Also Brazil

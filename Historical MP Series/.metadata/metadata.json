@@ -2,7 +2,7 @@
   "name" : "Historical MP Series RU 2/3",
   "id" : "HMPS",
   "version" : "1.4",
-  "supported_game_version" : "1.8.*",
+  "supported_game_version" : "1.9.*",
   "short_description" : "HMPS Victoria 3",
   "tags" : [
 		"Gameplay",
@@ -13,7 +13,8 @@
     "multiplayer_synchronized" : true,
 		"replace_paths" : [
 			"common/laws",
-			"events/agitators_events/luddite_law_events.txt"
+			"events/agitators_events/luddite_law_events.txt",
+			"common/history/countries/atb - athabaska.txt"
 		]
   }
 }

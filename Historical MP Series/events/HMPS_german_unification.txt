@@ -389,7 +389,7 @@ german_unification.3 = {
 		}
 		add_modifier = {
 			name = realpolitik
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 	option = {
@@ -418,7 +418,7 @@ german_unification.3 = {
 		}
 		add_modifier = {
 			name = germany_aggressive_expansion
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 }

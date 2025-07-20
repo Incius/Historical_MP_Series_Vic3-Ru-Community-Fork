@@ -56,7 +56,7 @@ pedro.1 = {
 		}
 		add_modifier = {
 			name = brz_regency
-			months = long_modifier_time
+			days = long_modifier_time
 		}
 	}
 }
@@ -412,7 +412,7 @@ pedro.6 = {
 		scope:powerful_ig_scope = {
 			add_modifier = {
 				name = pedro_powerful_ig
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		remove_pedropoint_effect = yes
@@ -481,13 +481,19 @@ pedro.7 = {
 		scope:new_brz_monarch_scope = {
 			add_modifier = {
 				name = brz_new_monarch_popular
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			if = {
 				limit = {
 					has_ideology = ideology:ideology_abolitionist
 				}
 				set_ideology = ideology:ideology_humanitarian_royalist
+			}
+		}
+		scope:new_brz_monarch_scope.interest_group ?= {
+			add_modifier = {
+				name = brz_new_monarch_popular_ig
+				days = normal_modifier_time
 			}
 		}
 		every_country = {
@@ -660,7 +666,7 @@ pedro.9 = {
 					has_ideology = ideology:ideology_positivist
 					has_ideology = ideology:ideology_republican_leader
 					has_ideology = ideology:ideology_radical
-					has_ideology = ideology:ideology_atheist
+					has_ideology = ideology:ideology_nihilist
 				}
 			}
 		}
@@ -681,7 +687,7 @@ pedro.9 = {
 						has_ideology = ideology:ideology_positivist
 						has_ideology = ideology:ideology_republican_leader
 						has_ideology = ideology:ideology_radical
-						has_ideology = ideology:ideology_atheist
+						has_ideology = ideology:ideology_nihilist
 					}
 				}
 			}
@@ -778,7 +784,7 @@ pedro.10 = {
 		ruler = {
 			add_modifier = {
 				name = president_pedro_legitimacy
-				months = long_modifier_time
+				days = long_modifier_time
 				is_decaying = yes
 			}
 		}
@@ -808,7 +814,7 @@ pedro.11 = {
 
 	category = enactment
 
-	cooldown = { months = long_modifier_time }
+	cooldown = { days = long_modifier_time }
 	
 	trigger = {
 		has_journal_entry = je_pedro_republic
@@ -897,7 +903,7 @@ pedro.12 = {
 		ig:ig_landowners = {
 			add_modifier = {
 				name = princess_isabel
-				months = long_modifier_time
+				days = long_modifier_time
 				multiplier = -1
 			}
 		}
@@ -929,7 +935,7 @@ pedro.12 = {
 		ig:ig_landowners = {
 			add_modifier = {
 				name = princess_isabel
-				months = long_modifier_time
+				days = long_modifier_time
 				multiplier = 3
 				is_decaying = yes
 			}
@@ -1015,7 +1021,7 @@ pedro.14 = {
 
 	dlc = dlc008
 
-	cooldown = { months = normal_modifier_time }
+	cooldown = { days = normal_modifier_time }
 	
 	trigger = {
 		ruler = {
@@ -1035,7 +1041,7 @@ pedro.14 = {
 		default_option = yes
 		add_modifier = {
 			name = highest_standards_degrees
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 	option = {
@@ -1045,14 +1051,14 @@ pedro.14 = {
 		}
 		add_modifier = {
 			name = highest_standards_trade
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 	option = {
 		name = pedro.14.c
 		add_modifier = {
 			name = highest_standards_construction
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 }

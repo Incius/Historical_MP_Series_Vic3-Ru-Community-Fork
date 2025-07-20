@@ -139,12 +139,6 @@ weekly_devastation_add = {
 	decimals=2
 }
 
-regime_change_allowed = {
-	color=good
-	percent=no
-	decimals=0
-}
-
 country_institution_cost_institution_health_system_mult={
 	decimals=0
 	color=bad
@@ -200,4 +194,43 @@ state_middle_strata_standard_of_living_add={
 state_upper_strata_standard_of_living_add={
 	decimals=2 # Changed from 1 decimal place
 	color=good
+}
+
+country_loan_interest_rate_add={
+	decimals=1
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+country_loan_interest_rate_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+max_oil_indicator = {#HMPS, does nothing but allows for a modifier to indicate how much total discoverable oil is in a state
+	color=neutral
+	decimals=0
+}
+
+max_gold_indicator= {#HMPS, does nothing but allows for a modifier to indicate how much total discoverable gold is in a state
+	color=neutral
+	decimals=0
+}
+
+max_rubber_indicator = {#HMPS, does nothing but allows for a modifier to indicate how much total discoverable rubber is in a state
+	color=neutral
+	decimals=0
+}
+
+yearly_population_replacement = { #HMPS, does nothing, only for a tool tip
+	color=neutral
+	percent=yes
+	decimals=2
 }

@@ -290,6 +290,7 @@ social_democrat_party = {
 					OR = {
 						has_modifier = modifier_india_crown_rule
 						has_modifier = modifier_india_company_rule
+						has_modifier = modifier_india_company_rule_upgraded
 					}
 				}
 				OR = {
@@ -311,6 +312,23 @@ social_democrat_party = {
 			add = {	
 				value = 5
 				desc = from_social_democrat
+			}
+		}
+		if = { #Two party system weighs on the minds of left wing people
+			limit = {
+				owner = {
+					country_is_in_north_america = yes
+					OR = {
+						country_has_primary_culture = cu:yankee
+						country_has_primary_culture = cu:dixie
+					}
+					has_law = law_type:law_republic
+					country_has_voting_franchise = yes
+				}
+			}
+			add = {
+				value = -4
+				desc = "usa_two_party_system"
 			}
 		}
 		if = { # powerful social democrats love social democracy
@@ -402,7 +420,7 @@ social_democrat_party = {
 						has_ideology = ideology:ideology_radical
 						has_ideology = ideology:ideology_reformer
 						has_ideology = ideology:ideology_republican_leader
-						has_ideology = ideology:ideology_atheist
+						has_ideology = ideology:ideology_nihilist
 						has_ideology = ideology:ideology_humanitarian
 						has_ideology = ideology:ideology_humanitarian_royalist
 					}
@@ -505,7 +523,7 @@ social_democrat_party = {
 					has_ideology = ideology:ideology_populist
 					leader = {
 						OR = {
-							has_ideology = ideology:ideology_atheist
+							has_ideology = ideology:ideology_nihilist
 							has_ideology = ideology:ideology_republican_leader
 							has_ideology = ideology:ideology_radical
 						}
@@ -547,6 +565,7 @@ social_democrat_party = {
 					has_ideology = ideology:ideology_proletarian
 					has_ideology = ideology:ideology_agrarian
 					has_ideology = ideology:ideology_paternalistic
+					has_ideology = ideology:ideology_magnatial
 				}
 				owner = {
 					has_law = law_type:law_free_trade
@@ -749,7 +768,7 @@ social_democrat_party = {
 				scope:number = 3
 			}
 			multiply = {
-				value = 0.25
+				value = 0.05
 				desc = "from_three_prior_members"
 			}
 		}
@@ -758,7 +777,7 @@ social_democrat_party = {
 				scope:number > 3
 			}
 			multiply = {
-				value = 0.1
+				value = 0.0
 				desc = "from_more_than_three_prior_members"
 			}
 		}

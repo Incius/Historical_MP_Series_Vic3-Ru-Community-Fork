@@ -127,8 +127,9 @@ law_agrarianism = {
 		country_private_construction_allocation_mult = 0.5
 		
 		building_nationalization_investment_return_add = 0.5
-		country_government_dividends_reinvestment_add = 0.3
-		country_government_dividends_efficiency_add = 0.50
+		country_government_dividends_reinvestment_add = 0.5
+		country_government_dividends_efficiency_add = 0.35
+		country_free_charters_add = 1
 		
 		country_disable_nationalization_without_compensation_bool = yes
 	}
@@ -202,8 +203,9 @@ law_interventionism = {
 		country_private_construction_allocation_mult = 0.5
 		
 		building_nationalization_investment_return_add = 0.5
-		country_government_dividends_reinvestment_add = 0.5
-		country_government_dividends_efficiency_add = 0.55
+		country_government_dividends_reinvestment_add = 0.25
+		country_government_dividends_efficiency_add = 0.5
+		country_free_charters_add = 1
 		
 		country_disable_nationalization_without_compensation_bool = yes
 	}
@@ -281,15 +283,18 @@ law_laissez_faire = {
 	
 	modifier = {
 		country_loan_interest_rate_mult = -0.1
-		state_shopkeepers_investment_pool_efficiency_mult = 0.20
-		state_capitalists_investment_pool_efficiency_mult = 0.20
-		state_capitalists_investment_pool_contribution_add = 0.05
+		state_shopkeepers_investment_pool_efficiency_mult = 0.15
+		state_capitalists_investment_pool_efficiency_mult = 0.15
 		country_private_construction_allocation_mult = 0.75
 		country_leverage_resistance_mult = -0.25
 		
 		country_government_dividends_reinvestment_add = 1.0
-		country_disable_nationalization_bool = yes
+		country_free_charters_add = 2
+		#country_disable_nationalization_bool = yes
+		building_nationalization_cost_mult = 3
+		building_nationalization_investment_return_add = 0.1
 		country_force_privatization_bool = yes
+		country_forbid_monopoly_bool = yes
 	}
 	
 	ai_enact_weight_modifier = { #Petitions
@@ -368,7 +373,8 @@ law_cooperative_ownership = {
 		state_farmers_investment_pool_efficiency_mult = 0.25
 		state_farmers_investment_pool_contribution_add = 0.1
 		country_private_construction_allocation_mult = 0.35
-		country_government_dividends_reinvestment_add = 0.8
+		country_government_dividends_reinvestment_add = 1.0
+		country_free_charters_add = 1
 		
 		building_group_bg_manufacturing_allowed_collectivization_add = 1.0
 		building_group_bg_mining_allowed_collectivization_add = 1.0
@@ -379,9 +385,9 @@ law_cooperative_ownership = {
 		building_group_bg_arts_allowed_collectivization_add = 1.0
 		
 		country_foreign_collectivization_bool = yes
-		country_disable_nationalization_bool = yes
+		#country_disable_privatization_bool = yes
 		country_force_privatization_bool = yes
-		country_company_pay_to_establish_bool = yes
+		#country_company_pay_to_establish_bool = yes #depricated modifier
 	}
 	
 	ai_enact_weight_modifier = { #Petitions
@@ -414,7 +420,7 @@ law_command_economy = {
 	disallowing_laws = {
 		law_serfdom
 		law_anarchy
-		law_independent_executive
+		#law_independent_executive
 		law_dual_executive
 		law_parliamentary_system
 	}
@@ -424,7 +430,10 @@ law_command_economy = {
 	}
 	
 	unlocking_laws = {
-		law_vanguardism
+		#law_vanguardism
+		law_autocracy
+		law_oligarchy
+		law_single_party_state
 	}	
 	
 	on_activate = {
@@ -462,14 +471,17 @@ law_command_economy = {
 		country_bureaucracy_mult = 0.20
 		country_authority_mult = 0.25
 		country_authority_add = 100
+		country_free_charters_add = 1
 		
 		building_nationalization_cost_mult = -0.90
 		building_nationalization_radicals_mult = -0.75
 		country_government_dividends_efficiency_add = 0.7
 		
 		country_leverage_resistance_mult = 0.25
+		country_private_construction_allocation_mult = 0.1
 
 		country_disable_privatization_bool = yes
+		country_forbid_monopoly_bool = yes
 	}
 	
 	ai_will_do = {
@@ -524,30 +536,25 @@ law_extraction_economy = {
 	modifier = {
 		country_liberty_desire_add = -0.5
 	
-		building_group_bg_agriculture_throughput_add = 0.05
-		building_group_bg_ranching_throughput_add = 0.05
-		building_group_bg_plantations_throughput_add = 0.05
-		building_group_bg_mining_throughput_add = 0.05
-		building_group_bg_logging_throughput_add = 0.05
-		building_group_bg_hardwood_throughput_add = 0.05
+		state_harvest_condition_drought_impact_mult= 2.00
+		state_food_security_add = -0.05
+		building_group_bg_agriculture_throughput_add = 0.10
+		building_group_bg_ranching_throughput_add = 0.10
+		building_group_bg_plantations_throughput_add = 0.10
+		building_group_bg_mining_throughput_add = 0.10
+		building_group_bg_logging_throughput_add = 0.10
+		building_group_bg_hardwood_throughput_add = 0.10
+		building_group_bg_manufacturing_throughput_add = -0.10
 		
-		country_aristocrats_pol_str_mult = 0.5
-		country_farmers_pol_str_mult = 0.25
-	
-		state_shopkeepers_investment_pool_efficiency_mult = -0.5
-		state_capitalists_investment_pool_efficiency_mult = -0.25
-		state_farmers_investment_pool_efficiency_mult = -0.75	
-		state_clergymen_investment_pool_efficiency_mult = -0.75	
-		state_aristocrats_investment_pool_efficiency_mult = -0.75
-		country_tech_spread_mult = -0.20
-		state_building_university_max_level_add = -5
-		
-		state_market_access_price_impact = -0.05
+		country_tech_spread_mult = -0.10
+		state_building_university_max_level_add = -10
+		country_free_charters_add = 1
 		
 		country_authority_mult = 0.1
-		country_private_construction_allocation_mult = 0.25
 		country_government_dividends_reinvestment_add = 1.0
+		country_private_construction_allocation_mult = 0.5
 		
+		country_disable_investment_pool_bool = yes
 		country_disable_nationalization_bool = yes
 		country_force_privatization_bool = yes
 	}
@@ -588,24 +595,28 @@ law_the_company = {
 
 	modifier = {
 		country_liberty_desire_add = -0.5
-		state_conscription_rate_mult = -100
+		state_conscription_rate_mult = -1
 		
-		country_aristocrats_pol_str_mult = 0.5
-		country_farmers_pol_str_mult = 0.25
+		#state_harvest_condition_flood_impact_mult = 2.00
+		state_harvest_condition_drought_impact_mult= 4.00
+		state_food_security_add = -0.1
 		
-		country_tech_research_speed_mult = -0.33
-		country_tech_spread_mult = -0.33
-		state_tax_waste_add = 0.05
-		state_turmoil_effects_mult = 0.10
-		state_building_university_max_level_add = -5
 		
-		state_market_access_price_impact = -0.05
+		#country_tech_research_speed_mult = -0.2
+		country_tech_spread_mult = -0.2
+		state_tax_waste_add = 0.10
+		state_building_university_max_level_add = -10
+		
+		building_group_bg_manufacturing_throughput_add = -0.20
 		
 		country_authority_mult = 0.1
+		country_free_charters_add = 1
 		
 		country_disable_investment_pool_bool = yes
+		country_private_construction_allocation_mult = 0.5
 		country_disable_nationalization_bool = yes
 		country_force_privatization_bool = yes
+		
 	}
 
 	ai_will_do = {

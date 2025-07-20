@@ -120,7 +120,7 @@ modifier_inward_china = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
 	country_tech_research_speed_mult = -0.15
 	country_tech_spread_mult = -0.30
-	country_trade_route_competitiveness_mult = -0.5
+	state_trade_advantage_mult = -0.5
 	interest_group_ig_devout_approval_add = 3
 	country_acceptance_shared_cultural_trait_add = -20
 }
@@ -258,7 +258,7 @@ british_lost_opium_wars = {
 	interest_group_ig_industrialists_approval_add = -10
 	interest_group_ig_intelligentsia_approval_add = 4
 	state_turmoil_effects_mult = 0.2
-	country_trade_route_competitiveness_mult = -0.33
+	state_trade_advantage_mult = -0.33
 	country_loan_interest_rate_mult = 0.4
 }
 chinese_treaty_port = {
@@ -394,7 +394,7 @@ rejected_gutter_crown = {
 
 german_confederation_leader = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_trade_route_competitiveness_mult = 0.5
+	state_trade_advantage_mult = 0.5
 	country_prestige_add = 200
 	country_influence_add = 100
 }
@@ -409,6 +409,7 @@ liberal_germany = {
 usa_isolationism = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	state_migration_pull_mult = 0.10
+	country_legitimacy_ideological_incoherence_mult = 0.05
 }
 usa_imperialism = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
@@ -416,6 +417,8 @@ usa_imperialism = {
 	interest_group_ig_armed_forces_pol_str_mult = 0.5
 	interest_group_ig_landowners_approval_add = 5
 	interest_group_ig_landowners_pol_str_mult = 0.25
+	country_legitimacy_headofstate_add = 10
+	country_legitimacy_ideological_incoherence_mult = 0.05
 }
 usa_notoriety = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
@@ -426,7 +429,11 @@ usa_notoriety = {
 	country_authority_mult = -0.25
 	state_radicals_from_political_movements_mult = 0.4
 }
-
+jackson_ensures_var_buren_nominee = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	interest_group_ig_landowners_pol_str_mult = -0.4
+	interest_group_ig_rural_folk_pol_str_mult = 0.65
+}
 ###
 
 overvalued_railroads_building = {
@@ -781,4 +788,28 @@ modifier_war_taxes = {
 modifier_jap_landowner_unrest_1 = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	interest_group_ig_landowners_approval_add = -1
+}
+
+#India Nerf
+india_state_nerf = {
+	icon = gfx/interface/icons/dlc_icons/dlc011.dds
+	state_market_access_price_impact = -0.30
+	state_construction_mult  = -0.30
+}
+
+country_modifier_india_post_homerule_religious_nerf = {
+	icon = gfx/interface/icons/religion_icons/hindu.dds
+	country_acceptance_religion_base_add = -40
+}
+
+#China Indicator
+china_state = {
+	icon = gfx/interface/icons/event_icons/five_races_flag.dds
+}
+
+#China Nerf
+china_state_nerf = {
+	icon = gfx/interface/icons/event_icons/qing_breakup.dds
+	state_market_access_price_impact = -0.30
+	state_construction_mult  = -0.30
 }

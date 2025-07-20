@@ -1,6 +1,6 @@
 ﻿COUNTRIES = {
 	c:BIC ?= {
-		ig:ig_armed_forces = {
+		ig:ig_industrialists = {
 			add_ruling_interest_group = yes
 		}
 		effect_starting_technology_tier_2_tech = yes
@@ -15,8 +15,9 @@
 		activate_law = law_type:law_independent_executive
 		activate_law = law_type:law_total_separation
 		activate_law = law_type:law_tenant_farmers
-		activate_law = law_type:law_cultural_exclusion # English & Anglo-Indian supremacy; no Indians served in the upper echelons of government
-		activate_law = law_type:law_extraction_economy
+		activate_law = law_type:law_frontier_colonization
+		activate_law = law_type:law_national_supremacy # English & Anglo-Indian supremacy; no Indians served in the upper echelons of government
+		activate_law = law_type:law_the_company#law_extraction_economy
 		activate_law = law_type:law_censorship
 		activate_law = law_type:law_migration_controls
 		activate_law = law_type:law_debt_slavery
@@ -35,6 +36,15 @@
 		add_taxed_goods = g:opium
 		add_taxed_goods = g:tobacco
 
+		set_export_tariff_level = { 
+			goods = g:opium
+			level = low_subventions
+		}
+		set_export_tariff_level = { 
+			goods = g:clothes
+			level = high_tariffs
+		}
+
 		set_variable = {
 			name = east_indies_revolt_var
 			value = 0
@@ -47,14 +57,9 @@
 		add_journal_entry = {
 			type = je_uneasy_raj
 		}
-
-		add_company = company_type:company_east_india_company
-		company:company_east_india_company = {
-			set_company_establishment_date = 1600.12.31
-			set_company_state_region = s:STATE_WEST_BENGAL
-		}
 		
 		add_modifier = modifier_india_company_rule
+
 		every_scope_state = {
 			limit = {
 				OR = {
@@ -67,6 +72,5 @@
 				name = modifier_ryotwari_system
 			}
 		}
-		
 	}
 }

@@ -90,6 +90,19 @@
 	s:STATE_SILESIA={
 		region_state:PRU={
 			create_building={
+				building="building_trade_center"
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" }
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:PRU"
+						levels=1
+						region="STATE_SILESIA"
+					}
+				}
+				reserves=1
+			}
+			create_building={
 				building="building_textile_mills"
 				add_ownership={
 					building={
@@ -234,6 +247,19 @@
 				reserves=1
 				activate_production_methods={ "pm_handsewn_clothes"  "pm_traditional_looms" "pm_craftsman_sewing" }
 			}
+			create_building={
+				building="building_trade_center"
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" }
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:RUS"
+						levels=1
+						region="STATE_GREATER_POLAND"
+					}
+				}
+				reserves=1
+			}
 		}
 	}
 	s:STATE_LESSER_POLAND={
@@ -280,6 +306,19 @@
 	s:STATE_WEST_PRUSSIA={
 		region_state:PRU={
 			create_building={
+				building="building_trade_center"
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" }
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:PRU"
+						levels=3
+						region="STATE_WEST_PRUSSIA"
+					}
+				}
+				reserves=1
+			}
+			create_building={
 				building="building_fishing_wharf"
 				add_ownership={
 					building={
@@ -307,6 +346,19 @@
 	}
 	s:STATE_EAST_PRUSSIA={
 		region_state:PRU={
+			create_building={
+				building="building_trade_center"
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" }
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:PRU"
+						levels=2
+						region="STATE_EAST_PRUSSIA"
+					}
+				}
+				reserves=1
+			}
 			create_building={
 				building="building_textile_mills"
 				add_ownership={
@@ -405,6 +457,19 @@
 		}
 		region_state:KRA={
 			create_building={
+				building="building_trade_center"
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" }
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:KRA"
+						levels=1
+						region="STATE_WEST_GALICIA"
+					}
+				}
+				reserves=1
+			}
+			create_building={
 				building="building_university"
 				add_ownership={
 					country={
@@ -481,6 +546,19 @@
 				}
 				reserves=1
 				activate_production_methods={ "pm_wooden_buildings" }
+			}
+			create_building={
+				building="building_artillery_foundries"
+				add_ownership={
+					building={
+						type="building_artillery_foundries"
+						country="c:HUN"
+						levels=1
+						region="STATE_CENTRAL_HUNGARY"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_cannons" "pm_automation_disabled"  }
 			}
 			create_building={
 				building="building_iron_mine"
@@ -568,6 +646,19 @@
 	s:STATE_TRANSDANUBIA={
 		region_state:HUN={
 			create_building={
+				building="building_trade_center"
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" }
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:HUN"
+						levels=3
+						region="STATE_TRANSDANUBIA"
+					}
+				}
+				reserves=1
+			}
+			create_building={
 				building="building_food_industry"
 				add_ownership={
 					building={
@@ -579,6 +670,23 @@
 				}
 				reserves=1
 				activate_production_methods={ "pm_bakery" "pm_disabled_canning" "pm_pot_stills" "pm_manual_dough_processing"  }
+			}
+			create_building={
+				building="building_arms_industry"
+				add_ownership={
+					building={
+						type="building_arms_industry"
+						country="c:HUN"
+						levels=1
+						region="STATE_WEST_SLOVAKIA"
+					}
+					country={
+						country="c:HUN"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_muskets" "pm_automation_disabled"  }
 			}
 			create_building={
 				building="building_vineyard_plantation"
@@ -677,6 +785,19 @@
 				}
 				reserves=1
 				activate_production_methods={ "pm_horizontal_drawer_cabinets" "pm_hereditary_bureaucrats" "pm_religious_bureaucrats" }
+			}
+			create_building={
+				building="building_arms_industry"
+				add_ownership={
+					building={
+						type="building_arms_industry"
+						country="c:HUN"
+						levels=1
+						region="STATE_WEST_SLOVAKIA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_muskets" "pm_automation_disabled"  }
 			}
 			create_building={
 				building="building_furniture_manufacturies"

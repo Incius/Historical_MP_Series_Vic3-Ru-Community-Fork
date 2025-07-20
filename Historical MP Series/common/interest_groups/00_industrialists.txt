@@ -90,6 +90,8 @@
 						OR = {
 							c:DEI ?= this
 							c:ALK ?= this
+							c:HBC ?= this
+							is_country_type = company
 						}
 					}
 				}
@@ -116,6 +118,7 @@
 			ig:ig_industrialists = {
 				remove_ideology = ideology_cultural_chauvinism
 				add_ideology = ideology_cultural_inclusiveness
+				add_ideology = ideology_protectionism
 			}
 		}
 		ig:ig_industrialists = {
@@ -158,8 +161,16 @@
 			is_pop_type = engineers
 			is_pop_type = shopkeepers
 			AND = {
-				exists = c:BIC
-				owner ?= c:BIC
+				OR = {
+					AND = {
+						exists = c:BIC
+						owner ?= c:BIC
+					}
+					AND = {
+						exists = c:DEI
+						owner ?= c:DEI
+					}
+				}
 				OR = {
 					culture ?= {
 						has_discrimination_trait = european_heritage
@@ -209,7 +220,10 @@
 		if = {
 			limit = {
 				owner = {
-					c:BIC ?= this
+					OR = {
+						c:BIC ?= this
+						c:DEI ?= this
+					}
 				}
 				culture = {
 					has_discrimination_trait = european_heritage
@@ -231,7 +245,10 @@
 		if = {
 			limit = {
 				owner = {
-					c:BIC ?= this
+					OR = {
+						c:BIC ?= this
+						c:DEI ?= this
+					}
 				}
 			}
 			if = {
@@ -427,11 +444,19 @@
 		value = 0.5
 	}
 
+	executive_weight = {
+		value = 5.0
+	}
+
 	noble_chance = {
 		value = 0.3
 	}
 
 	female_commander_chance = {
+		value = 0.0
+	}
+
+	female_executive_chance = {
 		value = 0.0
 	}
 
@@ -496,5 +521,11 @@
 	commander_leader_chance = {
 		value = 0.25
 		multiply = ig_commander_leader_chance_mult
+	}
+
+	# The chance that a executive belonging to this IG takes over leadership when it changes
+	# scope:character is the most popular executive in the IG
+	executive_leader_chance = {
+		value = 0.75
 	}
 }

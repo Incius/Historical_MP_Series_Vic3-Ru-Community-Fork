@@ -452,7 +452,7 @@ ideology_moralist = {
 	}
 	
 	lawgroup_free_speech = {
-		law_outlawed_dissent = approve
+		law_outlawed_dissent = strongly_approve
 		law_censorship = approve
 		law_right_of_assembly = neutral
 		law_protected_speech = disapprove
@@ -599,7 +599,7 @@ ideology_patriotic = {
 	}	
 	
 	lawgroup_free_speech = {
-		law_outlawed_dissent = approve
+		law_outlawed_dissent = strongly_approve
 		law_censorship = approve
 		law_right_of_assembly = neutral
 		law_protected_speech = disapprove
@@ -1047,7 +1047,7 @@ ideology_reactionary = {
 	}
 
 	lawgroup_citizenship = {
-		law_ethnostate = approve
+		law_ethnostate = strongly_approve
 		law_national_supremacy = strongly_approve
 		law_racial_segregation = approve
 		law_language_discrimination = neutral
@@ -1075,6 +1075,10 @@ ideology_reactionary = {
 	
 	lawgroup_corporation_tax = {
 		law_high_corporation_tax = strongly_disapprove
+	}
+	
+	lawgroup_income_tax = {
+		law_high_income_tax = strongly_disapprove
 	}
 	
 	lawgroup_minimum_wage = {
@@ -1169,7 +1173,7 @@ ideology_patriarchal = {
 	}
 
 	lawgroup_free_speech = {
-		law_outlawed_dissent = approve
+		law_outlawed_dissent = strongly_approve
 		law_censorship = approve
 		law_right_of_assembly = neutral
 		law_protected_speech = disapprove
@@ -1264,7 +1268,7 @@ ideology_cultural_chauvinism = {
 	icon = "gfx/interface/icons/ideology_icons/cultural_chauvinism.dds"
 	
 	lawgroup_citizenship = {
-		law_ethnostate = neutral
+		law_ethnostate = strongly_approve
 		law_national_supremacy = strongly_approve
 		law_racial_segregation = approve
 		law_language_discrimination = neutral
