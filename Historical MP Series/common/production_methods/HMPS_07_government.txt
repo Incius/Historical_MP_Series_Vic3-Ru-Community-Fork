@@ -18,17 +18,13 @@ pm_scholastic_education = {
 	
 	country_modifiers = {
 		workforce_scaled = { 
-			country_tech_spread_add = 0.5
+			country_tech_spread_add = 2
 		}
 	}
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 20
-		}
-		level_scaled = {
-			building_employment_clerks_add = 1500
-			building_employment_laborers_add = 1500
+			goods_input_paper_add = 40
 		}
 	}
 	
@@ -56,11 +52,7 @@ pm_philosophy_department = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 40
-		}
-		level_scaled = {
-			building_employment_clerks_add = 1750
-			building_employment_laborers_add = 1250
+			goods_input_paper_add = 80
 		}
 	}
 	
@@ -88,11 +80,7 @@ pm_analytical_philosophy_department = {
 	
 	building_modifiers = {
 		workforce_scaled = { 
-			goods_input_paper_add = 60
-		}
-		level_scaled = {
-			building_employment_clerks_add = 2000
-			building_employment_laborers_add = 1000
+			goods_input_paper_add = 120
 		}
 	}
 	
@@ -114,7 +102,7 @@ pm_secular_academia = {
 	
 	building_modifiers = {
 		level_scaled = {
-			building_employment_academics_add = 4000
+			building_employment_academics_add = 10000
 		}
 	}			
 }
@@ -129,8 +117,8 @@ pm_religious_academia = {
 	
 	building_modifiers = {
 		level_scaled = {
-			building_employment_clergymen_add = 1000
-			building_employment_academics_add = 3000
+			building_employment_clergymen_add = 5000
+			building_employment_academics_add = 5000
 		}
 	}			
 }
