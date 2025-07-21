@@ -1234,7 +1234,7 @@ congo_free_state.6 = {
    		s:STATE_BAS_CONGO = {
    			add_claim = ROOT  			
   		}
-		if{
+		if={
 			limit={
 				OR = {
 					has_law = law_type:law_no_colonial_affairs
