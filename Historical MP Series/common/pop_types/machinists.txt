@@ -86,7 +86,7 @@
 			value = literacy_rate
 			subtract = 0.1
 			min = 0
-			multiply = 5
+			multiply = 3
 			desc = "QUALIFICATIONS_LITERACY_FACTOR"
 			}
 		}

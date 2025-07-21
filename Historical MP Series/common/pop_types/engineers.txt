@@ -95,7 +95,7 @@
 			add = {
 				value = literacy_rate
 				subtract = 0.4
-				multiply = 4
+				multiply = 3
 				desc = "QUALIFICATIONS_LITERACY_FACTOR"
 			}
 			add = {
@@ -131,7 +131,7 @@
 			add = {
 				value = literacy_rate
 				subtract = 0.2
-				multiply = 2
+				multiply = 0.5
 				desc = "QUALIFICATIONS_LITERACY_FACTOR"
 			}
 			add = {
