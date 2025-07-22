@@ -1079,7 +1079,6 @@
 					country={
 						country="c:GBR"
 						levels=2
-						region="STATE_HOME_COUNTIES"
 					}
 				}
 				reserves=1
