@@ -20,3 +20,10 @@
  XOR_STATE_TRAIT_HEADER:0 "The traits in the [concept_state]"
  XOR_LABOR_HEADER_BOTH:0 "Both"
  XOR_LABOR_HEADER_COMBINED:0 "Combined"
+ #отображение договоров
+ TAX_INCOME_TREATY: "$TAB$#tooltippable #tooltip:[GetPlayer.GetTooltipTag],TREATY_INCOME_BREAKDOWN,TreatyIncomeTooltip @money![GetPlayer.PredictTreatyIncome|D+=]#!#! от [Concept('budget_treaties', 'договоров')]"
+ EXPENSES_TREATIES: "$TAB$#tooltippable #tooltip:[GetPlayer.GetTooltipTag],TREATY_EXPENSES_BREAKDOWN,TreatyExpenseTooltip @money![GetPlayer.PredictTreatyExpenses|D-]#!#! на [Concept('budget_treaties', 'договоры')]"
+ TREATY_INCOME_BREAKDOWN: "#tooltip_header Treaties#!\nTotal: #v @money![GetPlayer.PredictTreatyIncome|K+]#!\n$TOOLTIP_DELIMITER$\n[GetPlayer.PredictTreatyIncomeDesc]"
+ TREATY_INCOME_FORMAT: "[JoinText('\n', '$MONEY_TRANSFER_DESC$', '$GOODS_TRANSFER_DESC$')]"
+ TREATY_EXPENSES_BREAKDOWN: "#tooltip_header Treaties#!\nTotal: #v #N @money!-[GetPlayer.PredictTreatyExpenses|D-]#!#!\n$TOOLTIP_DELIMITER$\n[GetPlayer.PredictTreatyExpensesDesc]"
+ TREATY_EXPENSES_FORMAT: "[JoinText('\n', '$MONEY_TRANSFER_DESC$', '$GOODS_TRANSFER_DESC$')]"

@@ -11,3 +11,6 @@
  
  POP_POLLUTED_STATE: "[Concept('concept_pop', '$concept_pops$')] живущих в [Concept('concept_state', '$concept_states$')] с высоким [concept_pollution_impact]"
  POP_LOW_SOL: "[Concept('concept_pop', '$concept_pops$')] живущих в [Concept('concept_state', '$concept_states$')] с высоким[concept_expected_sol]"
+ #отображение договоров
+ concept_budget_treaties: "договор"
+ concept_budget_treaties_desc: "[concept_money] collected from or remitted to the other [concept_country] in a [concept_treaty]."
