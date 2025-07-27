@@ -266,7 +266,7 @@ law_racial_segregation = {
 	progressiveness = 0
 	
 	unlocking_technologies = {
-		political_agitation
+		civil_rights
 	}
 
 	can_enact = {

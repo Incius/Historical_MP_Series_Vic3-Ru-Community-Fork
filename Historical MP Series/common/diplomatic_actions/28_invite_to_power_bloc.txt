@@ -313,7 +313,7 @@
 					value = -1000
 				}
 				else = {
-					value = -50
+					value = 0
 				}				
 			}
 

@@ -9,10 +9,6 @@
 
 	complete = {
 		has_law = law_type:law_universal_suffrage
-		OR = {
-			has_law = law_type:law_universal_suffrage
-			has_law = law_type:law_census_voting
-		}
 		has_law = law_type:law_right_of_assembly
 		NOT = { has_law = law_type:law_state_religion }
 		has_technology_researched = nationalism
@@ -24,7 +20,7 @@
  							is_interest_group_type = ig_armed_forces
  						}
  						OR={
- 							ig_approval > 0
+ 							ig_approval > 5
  							is_marginal = yes
  						}					
   					}
