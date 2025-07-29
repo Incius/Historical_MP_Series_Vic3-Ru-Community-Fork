@@ -125,7 +125,6 @@ building_steel_mills = {
 		pmg_steelmaking_process
 		pmg_automation_building_steel_mills
 		pmg_military_conversion_steel
-		pmg_military_conversion_steel
 	}
 	
 	required_construction = construction_cost_very_high
@@ -170,7 +169,6 @@ building_explosives_factory = {
 
 	production_method_groups = {
 		pmg_explosives_building_chemical_plants
-		pmg_military_conversion_explosives
 		pmg_military_conversion_explosives
 	}
 
