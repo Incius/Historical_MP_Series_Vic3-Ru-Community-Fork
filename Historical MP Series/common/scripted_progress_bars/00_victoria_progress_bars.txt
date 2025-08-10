@@ -144,9 +144,7 @@
 					}
 				}
 			}
-			subtract = {
-				desc = "communism_progress_from_loyalists_tt"
-				owner = {
+			owner = {
 				subtract = {
 					desc = "communism_progress_from_loyalists_tt"
 					every_scope_state = {
