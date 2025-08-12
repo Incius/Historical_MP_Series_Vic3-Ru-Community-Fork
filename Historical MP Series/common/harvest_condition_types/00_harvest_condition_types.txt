@@ -9,6 +9,7 @@ drought = {
 	incompatible_with = hailstorm
 	incompatible_with = torrential_rains
 	incompatible_with = moderate_rainfall
+	incompatible_with = tsunami
 	# Incompatible with Drought: flood, frost, hailstorm, heatwave, torrential rains, pollinator surge, optimal sunlight
 	# Replaces heatwave, optimal sunlight, pollinator surge
 
@@ -31,7 +32,6 @@ drought = {
 		building_group_bg_agriculture_throughput_add = -0.05
 		building_group_bg_plantations_throughput_add = -0.05
 		building_group_bg_ranching_throughput_add = -0.05
-		building_group_bg_logging_throughput_add = -0.05
 
 		#Infrastructure
 		building_group_bg_agriculture_infrastructure_usage_mult = 0.1
@@ -40,9 +40,6 @@ drought = {
 
 		#Subsistence
 		state_peasants_consumption_multiplier_add= 0.025
-		
-		#Food Security
-		state_food_security_add = -0.005
 	}
 
 	intensity = {
@@ -99,13 +96,14 @@ flood = {
 	incompatible_with = drought
 	incompatible_with = wildfire
 	incompatible_with = frost
+	incompatible_with = tsunami
 	# Incompatible with flood: frost, wildfire, torrential rains, pollinator surge, optimal sunlight, moderate rainfall, drought
 	# Replaces torrential rains, pollinator surge, optimal sunlight, moderate rainfall
 
 	range = {
 		integer_range = {
-			min = 0
-			max = 0
+			min = 1
+			max = 2
 		}
 	}
 
@@ -128,7 +126,6 @@ flood = {
 		building_group_bg_plantations_throughput_add = -0.05
 		building_group_bg_ranching_throughput_add = -0.05
 		building_group_bg_extraction_throughput_add = -0.05
-		building_group_bg_logging_throughput_add = -0.05
 
 		#Subsistence
 		state_peasants_consumption_multiplier_add = 0.025
@@ -137,7 +134,7 @@ flood = {
 	intensity = {
 		fixed_range = {
 			min = 3
-			max = 10
+			max = 6
 		}
 	}
 
@@ -266,6 +263,7 @@ frost = {
 	incompatible_with = moderate_rainfall
 	incompatible_with = torrential_rains
 	incompatible_with = flood
+	incompatible_with = tsunami
 	# Incompatible with frost: drought, flood, wildfire, locust swarm, heatwave, torrential rains, pollinator surge, optimal sunlight, moderate rainfall
 	# Replaces locust swarm, pollinator surge, optimal sunlight, moderate rainfall
 
@@ -297,6 +295,12 @@ frost = {
 			min = 2
 			max = 4
 		}
+		if = {
+			limit = {
+				has_global_variable = krakatoa_temperature_drop
+			}
+			add = global_var:krakatoa_temperature_drop
+		}
 	}
 
 	chance = {
@@ -306,6 +310,15 @@ frost = {
 				has_harvest_condition = hailstorm
 			}
 			multiply = 1.5
+		}
+		if = {
+			limit = {
+				has_global_variable = krakatoa_temperature_drop
+			}
+			multiply = {
+				value = krakatoa_temperature_drop_harvest_condition_chance_base_mult
+				add = global_var:krakatoa_temperature_drop
+			}
 		}
 	}
 
@@ -325,6 +338,7 @@ wildfire = {
 	incompatible_with = hailstorm
 	incompatible_with = torrential_rains
 	incompatible_with = moderate_rainfall
+	incompatible_with = tsunami
 	# Incompatible with Wildfire: flood, frost, hail, locusts, heatwave, torrential rains, pollinators, optimal sunlight, moderate rainfall
 	# Replaces locusts, heatwave, pollinators, optimal sunlight, moderate rainfall
 
@@ -420,6 +434,7 @@ hailstorm = {
 	incompatible_with = wildfire
 	incompatible_with = heatwave
 	incompatible_with = optimal_sunlight
+	incompatible_with = tsunami
 	# Incompatible with hailstorm: drought, wildfire, locusts, heatwave, pollinators, optimal sunlight, moderate rainfall
 	# Replaces locusts, pollinators, moderate rainfall
 
@@ -450,6 +465,12 @@ hailstorm = {
 			min = 2
 			max = 4
 		}
+		if = {
+			limit = {
+				has_global_variable = krakatoa_temperature_drop
+			}
+			add = global_var:krakatoa_temperature_drop
+		}
 	}
 
 	chance = {
@@ -462,6 +483,15 @@ hailstorm = {
 				}
 			}
 			multiply = 1.3
+		}
+		if = {
+			limit = {
+				has_global_variable = krakatoa_temperature_drop
+			}
+			multiply = {
+				value = krakatoa_temperature_drop_harvest_condition_chance_base_mult
+				add = global_var:krakatoa_temperature_drop
+			}
 		}
 	}
 
@@ -594,7 +624,7 @@ disease_outbreak = {
 	range = {
 		integer_range = {
 			min = 1
-			max = 3
+			max = 1
 		}
 	}
 
@@ -610,7 +640,6 @@ disease_outbreak = {
 		building_group_bg_agriculture_throughput_add = -0.05
 		building_group_bg_plantations_throughput_add = -0.05
 		building_group_bg_ranching_throughput_add = -0.05
-		building_group_bg_logging_throughput_add = -0.05
 
 		#Subsistence
 		state_peasants_consumption_multiplier_add= 0.03
@@ -625,10 +654,40 @@ disease_outbreak = {
 			min = 3
 			max = 7
 		}
+		if = {
+			limit = {
+				has_global_variable = krakatoa_temperature_drop
+			}
+			add = global_var:krakatoa_temperature_drop
+		}
 	}
 
 	chance = {
-		value = 0.0004
+		value = 0.0008
+
+		if = {
+			limit = {
+				has_global_variable = krakatoa_temperature_drop
+			}
+			multiply = {
+				value = krakatoa_temperature_drop_harvest_condition_chance_base_mult
+				add = {
+					value = global_var:krakatoa_temperature_drop
+					multiply = 5
+					if = {
+						limit = {
+							OR = {
+								state_is_in_europe  = yes
+								state_is_in_north_america = yes
+								state_is_in_central_asia = yes
+								state_is_in_east_asia = yes
+							}
+						}
+						add = krakatoa_temperature_drop_disease_outbreak_chance_mult
+					}
+				}
+			}
+		}
 	}
 
 	color = { 78 70 57 }
@@ -714,7 +773,6 @@ torrential_rains = {
 		building_group_bg_plantations_throughput_add = -0.05
 		building_group_bg_ranching_throughput_add = -0.03
 		building_group_bg_extraction_throughput_add = -0.03
-		building_group_bg_logging_throughput_add = -0.03
 
 		#Infra
 		state_infrastructure_mult = -0.1
@@ -724,6 +782,12 @@ torrential_rains = {
 		fixed_range = {
 			min = 2
 			max = 5
+		}
+		if = {
+			limit = {
+				has_global_variable = krakatoa_temperature_drop
+			}
+			add = global_var:krakatoa_temperature_drop
 		}
 	}
 
@@ -737,6 +801,15 @@ torrential_rains = {
 				}
 			}
 			multiply = 1.3
+		}
+		if = {
+			limit = {
+				has_global_variable = krakatoa_temperature_drop
+			}
+			multiply = {
+				value = krakatoa_temperature_drop_harvest_condition_chance_base_mult
+				add = global_var:krakatoa_temperature_drop
+			}
 		}
 	}
 
