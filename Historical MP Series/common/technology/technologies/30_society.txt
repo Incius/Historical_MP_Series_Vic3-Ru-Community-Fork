@@ -1,4 +1,4 @@
-### ERA 1
+﻿### ERA 1
 
 sahara_colonisation = {
 	era = era_1
@@ -704,6 +704,7 @@ nationalism = {
 		country_infamy_decay_mult = 0.10
 		country_infamy_generation_mult = -0.1
 	}
+	
 	unlocking_technologies = {
 		mass_communication
 		international_relations
@@ -1184,8 +1185,8 @@ investment_banks = {
 	category = society
 	
 	modifier = {
-		state_market_access_price_impact = 0.025
 		country_max_companies_add = 1
+		state_market_access_price_impact = 0.025
 		country_free_charters_add = 1
 	}	
 	
